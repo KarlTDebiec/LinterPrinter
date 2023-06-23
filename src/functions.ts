@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 
 export function parseFileList (infile: string): string[] {
-  const text = fs.readFileSync(infile, 'utf8')
-  return text.split('\n').map(file => path.resolve(file))
+  infile = path.resolve(infile)
+  const fileContent = fs.readFileSync(infile, 'utf8')
+  return fileContent.split('\n').map(file => path.resolve(file))
 }
