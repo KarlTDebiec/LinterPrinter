@@ -3,8 +3,8 @@ import * as core from '@actions/core'
 async function run (): Promise<void> {
   try {
     const tool: string = core.getInput('tool')
-    const tool_infile: string = core.getInput('tool_infile')
-    const files_to_annotate_infile: string = core.getInput(
+    const toolInfile: string = core.getInput('tool_infile')
+    const filesToAnnotateInfile: string = core.getInput(
       'files_to_annotate_infile'
     )
     const ms: string = core.getInput('milliseconds')
