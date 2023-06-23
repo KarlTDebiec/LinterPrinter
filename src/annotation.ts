@@ -1,8 +1,8 @@
 export interface Annotation {
   source: string
   level: string
-  file_path: string
-  line: number
+  filePath: string
+  line: number | null
   kind: string
   message: string
 }

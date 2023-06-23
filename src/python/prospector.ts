@@ -9,7 +9,7 @@ export function parseProspectorJSON (infile: string): Annotation[] {
     annotations.push({
       source: 'prospector',
       level: 'warning',
-      file_path: match.location.path,
+      filePath: match.location.path,
       line: parseInt(match.location.line),
       kind: `${match.source}:${match.code}`,
       message: match.message
