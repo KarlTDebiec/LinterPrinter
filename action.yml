@@ -2,10 +2,10 @@ name: 'Karl T Debiec'
 description: 'Annotates GitHub pull requests with output from linters and other tools'
 author: 'Karl T Debiec'
 inputs:
-  milliseconds: # change this
+  milliseconds:
     required: true
     description: 'input description here'
-    default: 'default value if applicable'
+    default: 1000
 runs:
   using: 'node16'
   main: 'dist/index.js'
