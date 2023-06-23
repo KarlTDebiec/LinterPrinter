@@ -1,13 +1,17 @@
 import * as core from '@actions/core'
-import {wait} from './wait'
 
-async function run(): Promise<void> {
+async function run (): Promise<void> {
   try {
+    const tool: string = core.getInput('tool')
+    const tool_infile: string = core.getInput('tool_infile')
+    const files_to_annotate_infile: string = core.getInput(
+      'files_to_annotate_infile'
+    )
     const ms: string = core.getInput('milliseconds')
+
     core.debug(`Waiting ${ms} milliseconds ...`) // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
 
     core.debug(new Date().toTimeString())
-    await wait(parseInt(ms, 10))
     core.debug(new Date().toTimeString())
 
     core.setOutput('time', new Date().toTimeString())

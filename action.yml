@@ -2,10 +2,16 @@ name: 'Karl T Debiec'
 description: 'Annotates GitHub pull requests with output from linters and other tools'
 author: 'Karl T Debiec'
 inputs:
-  milliseconds:
+  tool:
     required: true
-    description: 'input description here'
-    default: 1000
+    description: 'Tool whose output to parse'
+  tool_infile:
+    required: true
+    description: 'File containing output to parse'
+  files_to_annotate_infile:
+    required: true
+    description: 'File containing list of files to annotate'
+    default: .github/outputs/all_changed_and_modified_files.txt
 runs:
   using: 'node16'
   main: 'dist/index.js'
