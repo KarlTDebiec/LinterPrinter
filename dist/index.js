@@ -97,9 +97,17 @@ function run() {
             // Parse files to annotate
             console.log(`filesToAnnotateInfile: ${filesToAnnotateInfile}`);
             const filesToAnnotate = (0, functions_1.parseFileList)(filesToAnnotateInfile);
+            for (const file of filesToAnnotate) {
+                console.log(`file: ${file}`);
+            }
             // Print annotations
             for (const annotation of annotations) {
-                console.log(annotation);
+                console.log(`::${annotation.level} ` +
+                    `file=${annotation.filePath},` +
+                    `line=${annotation.line}::` +
+                    `${annotation.source}[` +
+                    `${annotation.kind}] : ` +
+                    `${annotation.message}`);
                 if (filesToAnnotate.includes(annotation.filePath)) {
                     console.log(annotation);
                 }

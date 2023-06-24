@@ -37,16 +37,25 @@ async function run (): Promise<void> {
     // Parse files to annotate
     console.log(`filesToAnnotateInfile: ${filesToAnnotateInfile}`)
     const filesToAnnotate = parseFileList(filesToAnnotateInfile)
+    for (const file of filesToAnnotate) {
+      console.log(`file: ${file}`)
+    }
 
     // Print annotations
     for (const annotation of annotations) {
-      console.log(annotation)
+      console.log(
+        `::${annotation.level} ` +
+        `file=${annotation.filePath},` +
+        `line=${annotation.line}::` +
+        `${annotation.source}[` +
+        `${annotation.kind}] : ` +
+        `${annotation.message}`
+      )
       if (filesToAnnotate.includes(annotation.filePath)) {
         console.log(annotation)
       }
     }
-  } catch
-  (error) {
+  } catch (error) {
     if (error instanceof Error) core.setFailed(error.message)
   }
 }
