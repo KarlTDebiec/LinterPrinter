@@ -38,14 +38,10 @@ async function run (): Promise<void> {
     let filesToAnnotate = null
     if (filesToAnnotateInfile && filesToAnnotateInfile !== '') {
       filesToAnnotate = parseFileList(filesToAnnotateInfile)
-      for (const file of filesToAnnotate) {
-        console.log(`${file}`)
-      }
     }
 
     // Print annotations
     for (const annotation of annotations) {
-      console.log(JSON.stringify(annotation))
       if (filesToAnnotate === null || filesToAnnotate.includes(annotation.filePath)) {
         console.log(formatAnnotation(annotation))
       }

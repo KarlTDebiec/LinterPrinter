@@ -111,13 +111,9 @@ function run() {
             let filesToAnnotate = null;
             if (filesToAnnotateInfile && filesToAnnotateInfile !== '') {
                 filesToAnnotate = (0, functions_1.parseFileList)(filesToAnnotateInfile);
-                for (const file of filesToAnnotate) {
-                    console.log(`${file}`);
-                }
             }
             // Print annotations
             for (const annotation of annotations) {
-                console.log(JSON.stringify(annotation));
                 if (filesToAnnotate === null || filesToAnnotate.includes(annotation.filePath)) {
                     console.log((0, functions_1.formatAnnotation)(annotation));
                 }
