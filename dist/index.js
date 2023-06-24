@@ -110,7 +110,7 @@ function run() {
             }
             // Print annotations
             for (const annotation of annotations) {
-                console.log(`${annotation}`);
+                console.log(JSON.stringify(annotation));
                 console.log(`::${annotation.level} ` +
                     `file=${annotation.filePath},` +
                     `line=${annotation.line}::` +
@@ -118,7 +118,7 @@ function run() {
                     `${annotation.kind}] : ` +
                     `${annotation.message}`);
                 if (filesToAnnotate.includes(annotation.filePath)) {
-                    console.log(annotation);
+                    console.log('好嘢!');
                 }
             }
         }
