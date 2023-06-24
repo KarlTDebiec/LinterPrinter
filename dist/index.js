@@ -1,7 +1,7 @@
 require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 358:
+/***/ 464:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -17,7 +17,14 @@ function parseFileList(infile) {
     infile = path_1.default.resolve(infile);
     const fileContent = fs_1.default.readFileSync(infile, 'utf8');
     console.log(`fileContent: ${fileContent}`);
-    return fileContent.split('\n').map((file) => path_1.default.resolve(file));
+    const githubWorkspace = process.env.GITHUB_WORKSPACE || '';
+    const filePaths = fileContent.split('\n').map((file) => {
+        const resolvedPath = path_1.default.resolve(file);
+        return resolvedPath.startsWith(githubWorkspace)
+            ? resolvedPath.substring(githubWorkspace.length + 1)
+            : resolvedPath;
+    });
+    return filePaths;
 }
 exports.parseFileList = parseFileList;
 
@@ -67,7 +74,7 @@ const prospector_1 = __nccwpck_require__(118);
 const pydocstyle_1 = __nccwpck_require__(635);
 const mypy_1 = __nccwpck_require__(465);
 const pytest_1 = __nccwpck_require__(611);
-const functions_1 = __nccwpck_require__(358);
+const fileList_1 = __nccwpck_require__(464);
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
@@ -97,12 +104,13 @@ function run() {
             }
             // Parse files to annotate
             console.log(`filesToAnnotateInfile: ${filesToAnnotateInfile}`);
-            const filesToAnnotate = (0, functions_1.parseFileList)(filesToAnnotateInfile);
+            const filesToAnnotate = (0, fileList_1.parseFileList)(filesToAnnotateInfile);
             for (const file of filesToAnnotate) {
                 console.log(`${file}`);
             }
             // Print annotations
             for (const annotation of annotations) {
+                console.log(`${annotation}`);
                 console.log(`::${annotation.level} ` +
                     `file=${annotation.filePath},` +
                     `line=${annotation.line}::` +

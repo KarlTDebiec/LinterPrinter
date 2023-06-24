@@ -3,7 +3,7 @@ import { parseProspectorJSON } from './python/prospector'
 import { parsePydocstyle } from './python/pydocstyle'
 import { parseMypy } from './python/mypy'
 import { parsePytest } from './python/pytest'
-import { parseFileList } from './functions'
+import { parseFileList } from './fileList'
 import { Annotation } from './annotation'
 
 async function run (): Promise<void> {
@@ -43,6 +43,7 @@ async function run (): Promise<void> {
 
     // Print annotations
     for (const annotation of annotations) {
+      console.log(`${annotation}`)
       console.log(
         `::${annotation.level} ` +
         `file=${annotation.filePath},` +
