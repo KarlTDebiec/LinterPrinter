@@ -7,6 +7,7 @@ const annotationRegex =
 export function parseMypy (infile: string): Annotation[] {
   const annotations: Annotation[] = []
   const fileContent = fs.readFileSync(infile, 'utf8')
+  console.log(`infile: ${infile}`)
   console.log(`fileContent: ${fileContent}`)
 
   let lastErrorIndex: number | null = null
