@@ -16,6 +16,7 @@ const path_1 = __importDefault(__nccwpck_require__(17));
 function parseFileList(infile) {
     infile = path_1.default.resolve(infile);
     const fileContent = fs_1.default.readFileSync(infile, 'utf8');
+    console.log(`fileContent: ${fileContent}`);
     return fileContent.split('\n').map((file) => path_1.default.resolve(file));
 }
 exports.parseFileList = parseFileList;
@@ -98,7 +99,7 @@ function run() {
             console.log(`filesToAnnotateInfile: ${filesToAnnotateInfile}`);
             const filesToAnnotate = (0, functions_1.parseFileList)(filesToAnnotateInfile);
             for (const file of filesToAnnotate) {
-                console.log(`file: ${file}`);
+                console.log(`${file}`);
             }
             // Print annotations
             for (const annotation of annotations) {

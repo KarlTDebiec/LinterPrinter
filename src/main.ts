@@ -38,7 +38,7 @@ async function run (): Promise<void> {
     console.log(`filesToAnnotateInfile: ${filesToAnnotateInfile}`)
     const filesToAnnotate = parseFileList(filesToAnnotateInfile)
     for (const file of filesToAnnotate) {
-      console.log(`file: ${file}`)
+      console.log(`${file}`)
     }
 
     // Print annotations
