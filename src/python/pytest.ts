@@ -2,9 +2,9 @@ import * as fs from 'fs'
 import { Annotation } from '../annotation'
 
 interface Section {
-  name: string
-  start: number
-  end: number
+  name: string;
+  start: number;
+  end: number;
 }
 
 const headerRegexes = {
@@ -30,9 +30,9 @@ function parseErrorsSection (body: string): Annotation[] {
 
   for (const match of body.matchAll(errorRegex)) {
     const { filePath, kind, message } = match.groups as {
-      filePath: string
-      kind: string
-      message: string
+      filePath: string;
+      kind: string;
+      message: string;
     }
 
     annotations.push({
@@ -53,10 +53,10 @@ function parseFailuresSection (body: string): Annotation[] {
 
   for (const match of body.matchAll(failureRegex)) {
     const { filePath, line, kind, message } = match.groups as {
-      filePath: string
-      line: string
-      kind: string
-      message: string
+      filePath: string;
+      line: string;
+      kind: string;
+      message: string;
     }
 
     annotations.push({
@@ -77,10 +77,10 @@ function parseWarningsSection (body: string): Annotation[] {
 
   for (const match of body.matchAll(warningRegex)) {
     const { filePath, line, kind, message } = match.groups as {
-      filePath: string
-      line: string
-      kind: string
-      message: string
+      filePath: string;
+      line: string;
+      kind: string;
+      message: string;
     }
 
     if (!filePath.startsWith('.venv/')) {
@@ -118,7 +118,7 @@ export function parsePytest (infile: string): Annotation[] {
   }
 
   // Determine section body locations
-  const bodies: {[key: string]: Section} = {}
+  const bodies: { [key: string]: Section } = {}
   for (let i = 1; i < headers.length; i++) {
     bodies[headers[i - 1].name] = {
       name: headers[i - 1].name,

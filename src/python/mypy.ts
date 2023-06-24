@@ -11,10 +11,10 @@ export function parseMypy (infile: string): Annotation[] {
   let lastErrorIndex: number | null = null
   for (const match of fileContent.matchAll(annotationRegex)) {
     const { filePath, line, kind, message } = match.groups as {
-      filePath: string
-      line: string
-      kind: string
-      message: string
+      filePath: string;
+      line: string;
+      kind: string;
+      message: string;
     }
 
     if (kind === 'error') {
