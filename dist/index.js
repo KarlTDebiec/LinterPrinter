@@ -164,7 +164,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseMypy = void 0;
 const fs = __importStar(__nccwpck_require__(147));
-const annotationRegex = /^\s*(?:(?:(?<filePath>[A-Z]:)?[^:]+):(?<line>\d+):(?<kind>[^:]+):\s*(?<message>[^\n]+))/;
+const annotationRegex = /^\s*(?:(?:(?<filePath>[A-Z]:)?[^:]+):(?<line>\d+):(?<kind>[^:]+):\s*(?<message>[^\n]+))/g;
 function parseMypy(infile) {
     const annotations = [];
     const fileContent = fs.readFileSync(infile, 'utf8');

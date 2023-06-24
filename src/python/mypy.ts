@@ -2,7 +2,7 @@ import * as fs from 'fs'
 import { Annotation } from '../annotation'
 
 const annotationRegex =
-  /^\s*(?:(?:(?<filePath>[A-Z]:)?[^:]+):(?<line>\d+):(?<kind>[^:]+):\s*(?<message>[^\n]+))/
+  /^\s*(?:(?:(?<filePath>[A-Z]:)?[^:]+):(?<line>\d+):(?<kind>[^:]+):\s*(?<message>[^\n]+))/g
 
 export function parseMypy (infile: string): Annotation[] {
   const annotations: Annotation[] = []
