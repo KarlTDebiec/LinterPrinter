@@ -6,7 +6,7 @@ export function parsePydocstyle (infile: string): Annotation[] {
   const fileContent = fs.readFileSync(infile, 'utf8')
   const lines = fileContent.split('\n')
 
-  for (let i = 0; i < lines.length; i += 2) {
+  for (let i = 0; i < lines.length - 1; i += 2) {
     const line = lines[i]
     const issue = lines[i + 1]
 
