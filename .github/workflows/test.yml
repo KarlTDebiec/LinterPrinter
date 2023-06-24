@@ -21,4 +21,6 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ./
         with:
-          milliseconds: 1000
+          tool: prospector
+          tool_infile: .github/outputs/prospector.txt
+          files_to_annotate_infile: .github/outputs/all_changed_and_modified_files.txt

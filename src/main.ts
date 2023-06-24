@@ -44,16 +44,16 @@ async function run (): Promise<void> {
     // Print annotations
     for (const annotation of annotations) {
       console.log(JSON.stringify(annotation))
-      console.log(
-        `::${annotation.level} ` +
-        `file=${annotation.filePath},` +
-        `line=${annotation.line}::` +
-        `${annotation.source}[` +
-        `${annotation.kind}] : ` +
-        `${annotation.message}`
-      )
       if (filesToAnnotate.includes(annotation.filePath)) {
         console.log('好嘢!')
+        console.log(
+          `::${annotation.level} ` +
+            `file=${annotation.filePath},` +
+            `line=${annotation.line}::` +
+            `${annotation.source}[` +
+            `${annotation.kind}] : ` +
+            `${annotation.message}`
+        )
       }
     }
   } catch (error) {
