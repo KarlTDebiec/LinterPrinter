@@ -3,7 +3,7 @@ import { parseProspectorJSON } from './python/prospector'
 import { parsePydocstyle } from './python/pydocstyle'
 import { parseMypy } from './python/mypy'
 import { parsePytest } from './python/pytest'
-import { parseFileList } from './fileList'
+import { formatAnnotation, parseFileList } from './functions'
 import { Annotation } from './annotation'
 
 async function run (): Promise<void> {
@@ -15,14 +15,14 @@ async function run (): Promise<void> {
     )
 
     // Identify tool
-    console.log(`tool: ${tool}`)
     const supportedTools = ['prospector', 'pydocstyle', 'mypy', 'pytest']
     if (!supportedTools.includes(tool)) {
-      throw new Error(`Unsupported tool: ${tool}`)
+      throw new Error(
+        `Unsupported tool: '${tool}', options are ${supportedTools}`
+      )
     }
 
     // Parse tool output
-    console.log(`toolInfile: ${toolInfile}`)
     let annotations: Annotation[] = []
     if (tool === 'prospector') {
       annotations = parseProspectorJSON(toolInfile)
@@ -35,29 +35,25 @@ async function run (): Promise<void> {
     }
 
     // Parse files to annotate
-    console.log(`filesToAnnotateInfile: ${filesToAnnotateInfile}`)
-    const filesToAnnotate = parseFileList(filesToAnnotateInfile)
-    for (const file of filesToAnnotate) {
-      console.log(`${file}`)
+    let filesToAnnotate = null
+    if (filesToAnnotateInfile && filesToAnnotateInfile !== '') {
+      filesToAnnotate = parseFileList(filesToAnnotateInfile)
+      for (const file of filesToAnnotate) {
+        console.log(`${file}`)
+      }
     }
 
     // Print annotations
     for (const annotation of annotations) {
       console.log(JSON.stringify(annotation))
-      if (filesToAnnotate.includes(annotation.filePath)) {
-        console.log('好嘢!')
-        console.log(
-          `::${annotation.level} ` +
-            `file=${annotation.filePath},` +
-            `line=${annotation.line}::` +
-            `${annotation.source}[` +
-            `${annotation.kind}] : ` +
-            `${annotation.message}`
-        )
+      if (filesToAnnotate === null || filesToAnnotate.includes(annotation.filePath)) {
+        console.log(formatAnnotation(annotation))
       }
     }
   } catch (error) {
-    if (error instanceof Error) core.setFailed(error.message)
+    if (error instanceof Error) {
+      core.setFailed(error.message)
+    }
   }
 }
 

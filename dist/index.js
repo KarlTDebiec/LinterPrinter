@@ -1,7 +1,7 @@
 require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 464:
+/***/ 358:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -10,21 +10,28 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.parseFileList = void 0;
+exports.parseFileList = exports.formatAnnotation = void 0;
 const fs_1 = __importDefault(__nccwpck_require__(147));
 const path_1 = __importDefault(__nccwpck_require__(17));
+function formatAnnotation(annotation) {
+    return (`::${annotation.level} ` +
+        `file=${annotation.filePath},` +
+        `line=${annotation.line}::` +
+        `${annotation.source}[` +
+        `${annotation.kind}] : ` +
+        `${annotation.message}`);
+}
+exports.formatAnnotation = formatAnnotation;
 function parseFileList(infile) {
     infile = path_1.default.resolve(infile);
     const fileContent = fs_1.default.readFileSync(infile, 'utf8');
-    console.log(`fileContent: ${fileContent}`);
     const githubWorkspace = process.env.GITHUB_WORKSPACE || '';
-    const filePaths = JSON.parse(fileContent).map((file) => {
+    return JSON.parse(fileContent).map((file) => {
         const resolvedPath = path_1.default.resolve(file);
         return resolvedPath.startsWith(githubWorkspace)
             ? resolvedPath.substring(githubWorkspace.length + 1)
             : resolvedPath;
     });
-    return filePaths;
 }
 exports.parseFileList = parseFileList;
 
@@ -74,7 +81,7 @@ const prospector_1 = __nccwpck_require__(118);
 const pydocstyle_1 = __nccwpck_require__(635);
 const mypy_1 = __nccwpck_require__(465);
 const pytest_1 = __nccwpck_require__(611);
-const fileList_1 = __nccwpck_require__(464);
+const functions_1 = __nccwpck_require__(358);
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
@@ -82,13 +89,11 @@ function run() {
             const toolInfile = core.getInput('tool_infile');
             const filesToAnnotateInfile = core.getInput('files_to_annotate_infile');
             // Identify tool
-            console.log(`tool: ${tool}`);
             const supportedTools = ['prospector', 'pydocstyle', 'mypy', 'pytest'];
             if (!supportedTools.includes(tool)) {
-                throw new Error(`Unsupported tool: ${tool}`);
+                throw new Error(`Unsupported tool: '${tool}', options are ${supportedTools}`);
             }
             // Parse tool output
-            console.log(`toolInfile: ${toolInfile}`);
             let annotations = [];
             if (tool === 'prospector') {
                 annotations = (0, prospector_1.parseProspectorJSON)(toolInfile);
@@ -103,28 +108,25 @@ function run() {
                 annotations = (0, pytest_1.parsePytest)(toolInfile);
             }
             // Parse files to annotate
-            console.log(`filesToAnnotateInfile: ${filesToAnnotateInfile}`);
-            const filesToAnnotate = (0, fileList_1.parseFileList)(filesToAnnotateInfile);
-            for (const file of filesToAnnotate) {
-                console.log(`${file}`);
+            let filesToAnnotate = null;
+            if (filesToAnnotateInfile && filesToAnnotateInfile !== '') {
+                filesToAnnotate = (0, functions_1.parseFileList)(filesToAnnotateInfile);
+                for (const file of filesToAnnotate) {
+                    console.log(`${file}`);
+                }
             }
             // Print annotations
             for (const annotation of annotations) {
                 console.log(JSON.stringify(annotation));
-                if (filesToAnnotate.includes(annotation.filePath)) {
-                    console.log('好嘢!');
-                    console.log(`::${annotation.level} ` +
-                        `file=${annotation.filePath},` +
-                        `line=${annotation.line}::` +
-                        `${annotation.source}[` +
-                        `${annotation.kind}] : ` +
-                        `${annotation.message}`);
+                if (filesToAnnotate === null || filesToAnnotate.includes(annotation.filePath)) {
+                    console.log((0, functions_1.formatAnnotation)(annotation));
                 }
             }
         }
         catch (error) {
-            if (error instanceof Error)
+            if (error instanceof Error) {
                 core.setFailed(error.message);
+            }
         }
     });
 }

@@ -11,7 +11,7 @@ inputs:
   files_to_annotate_infile:
     required: true
     description: 'File containing list of files to annotate'
-    default: .github/outputs/all_changed_and_modified_files.txt
+    default: null
 runs:
   using: 'node16'
   main: 'dist/index.js'
