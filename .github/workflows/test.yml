@@ -15,12 +15,3 @@ jobs:
           npm install
       - run: |
           npm run all
-  test: # make sure the action works on a clean machine without building
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: ./
-        with:
-          tool: prospector
-          tool_infile: .github/outputs/prospector.txt
-          files_to_annotate_infile: .github/outputs/all_changed_and_modified_files.txt

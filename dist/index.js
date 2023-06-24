@@ -18,7 +18,7 @@ function parseFileList(infile) {
     const fileContent = fs_1.default.readFileSync(infile, 'utf8');
     console.log(`fileContent: ${fileContent}`);
     const githubWorkspace = process.env.GITHUB_WORKSPACE || '';
-    const filePaths = fileContent.split('\n').map((file) => {
+    const filePaths = JSON.parse(fileContent).map((file) => {
         const resolvedPath = path_1.default.resolve(file);
         return resolvedPath.startsWith(githubWorkspace)
             ? resolvedPath.substring(githubWorkspace.length + 1)

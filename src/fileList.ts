@@ -7,7 +7,7 @@ export function parseFileList (infile: string): string[] {
   console.log(`fileContent: ${fileContent}`)
 
   const githubWorkspace = process.env.GITHUB_WORKSPACE || ''
-  const filePaths = fileContent.split('\n').map((file) => {
+  const filePaths = JSON.parse(fileContent).map((file: string) => {
     const resolvedPath = path.resolve(file)
     return resolvedPath.startsWith(githubWorkspace)
       ? resolvedPath.substring(githubWorkspace.length + 1)
