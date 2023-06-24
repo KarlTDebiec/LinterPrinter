@@ -3,6 +3,6 @@ export interface Annotation {
   level: string;
   filePath: string;
   line: number | null;
-  kind: string;
+  kind: string | null;
   message: string;
 }

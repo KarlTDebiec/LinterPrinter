@@ -166,17 +166,15 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseMypy = void 0;
 const fs = __importStar(__nccwpck_require__(147));
-const annotationRegex = /^\s*(?<filePath>[^:]+)\s*:\s*(?<line>\d+)\s*:\s*(?<kind>[^:]+)\s*:\s*(?<message>.*)\s*$/gm;
+const annotationRegex = /^\s*(?<filePath>[^:]+):(?<line>\d+):\s(?<lineType>[^:]+):\s(?<message>(?:(?!\s\s\[).)*)(\s\s\[(?<kind>[^\]]*)\])?$/gm;
 function parseMypy(infile) {
     const annotations = [];
     const fileContent = fs.readFileSync(infile, 'utf8');
-    console.log(`infile: ${infile}`);
-    console.log(`fileContent: ${fileContent}`);
     let lastErrorIndex = null;
     for (const match of fileContent.matchAll(annotationRegex)) {
         console.log(`match: ${JSON.stringify(match)}`);
-        const { filePath, line, kind, message } = match.groups;
-        if (kind === 'error') {
+        const { filePath, line, lineType, message, kind } = match.groups;
+        if (lineType === 'error') {
             annotations.push({
                 source: 'mypy',
                 level: 'warning',

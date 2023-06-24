@@ -2,25 +2,24 @@ import * as fs from 'fs'
 import { Annotation } from '../annotation'
 
 const annotationRegex =
-  /^\s*(?<filePath>[^:]+)\s*:\s*(?<line>\d+)\s*:\s*(?<kind>[^:]+)\s*:\s*(?<message>.*)\s*$/gm
+  /^\s*(?<filePath>[^:]+):(?<line>\d+):\s(?<lineType>[^:]+):\s(?<message>(?:(?!\s\s\[).)*)(\s\s\[(?<kind>[^\]]*)\])?$/gm
 
 export function parseMypy (infile: string): Annotation[] {
   const annotations: Annotation[] = []
   const fileContent = fs.readFileSync(infile, 'utf8')
-  console.log(`infile: ${infile}`)
-  console.log(`fileContent: ${fileContent}`)
 
   let lastErrorIndex: number | null = null
   for (const match of fileContent.matchAll(annotationRegex)) {
     console.log(`match: ${JSON.stringify(match)}`)
-    const { filePath, line, kind, message } = match.groups as {
+    const { filePath, line, lineType, message, kind } = match.groups as {
       filePath: string;
       line: string;
-      kind: string;
+      lineType: string;
       message: string;
+      kind: string | null;
     }
 
-    if (kind === 'error') {
+    if (lineType === 'error') {
       annotations.push({
         source: 'mypy',
         level: 'warning',
