@@ -99,6 +99,7 @@ function run() {
             const filesToAnnotate = (0, functions_1.parseFileList)(filesToAnnotateInfile);
             // Print annotations
             for (const annotation of annotations) {
+                console.log(annotation);
                 if (filesToAnnotate.includes(annotation.filePath)) {
                     console.log(annotation);
                 }

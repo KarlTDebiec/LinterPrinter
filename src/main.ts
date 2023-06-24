@@ -40,6 +40,7 @@ async function run (): Promise<void> {
 
     // Print annotations
     for (const annotation of annotations) {
+      console.log(annotation)
       if (filesToAnnotate.includes(annotation.filePath)) {
         console.log(annotation)
       }
