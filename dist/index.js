@@ -172,7 +172,6 @@ function parseMypy(infile) {
     const fileContent = fs.readFileSync(infile, 'utf8');
     let lastErrorIndex = null;
     for (const match of fileContent.matchAll(annotationRegex)) {
-        console.log(`match: ${JSON.stringify(match)}`);
         const { filePath, line, lineType, message, kind } = match.groups;
         if (lineType === 'error') {
             annotations.push({

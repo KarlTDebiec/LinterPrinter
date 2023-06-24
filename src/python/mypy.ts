@@ -10,7 +10,6 @@ export function parseMypy (infile: string): Annotation[] {
 
   let lastErrorIndex: number | null = null
   for (const match of fileContent.matchAll(annotationRegex)) {
-    console.log(`match: ${JSON.stringify(match)}`)
     const { filePath, line, lineType, message, kind } = match.groups as {
       filePath: string;
       line: string;
