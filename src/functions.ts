@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import { Annotation } from './annotation'
+
 export function formatAnnotation (annotation: Annotation): string {
   return (
     `::${annotation.level} ` +
