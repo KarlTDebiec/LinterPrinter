@@ -1,11 +1,17 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Karl T Debiec'
+description: 'Annotates GitHub pull requests with output from linters and other tools'
+author: 'Karl T Debiec'
 inputs:
-  milliseconds: # change this
+  tool:
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: 'Tool whose output to parse'
+  tool_infile:
+    required: true
+    description: 'File containing output to parse'
+  files_to_annotate_infile:
+    required: true
+    description: 'File containing list of files to annotate'
+    default: null
 runs:
   using: 'node16'
   main: 'dist/index.js'

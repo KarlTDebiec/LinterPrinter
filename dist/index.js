@@ -1,6 +1,43 @@
 require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ 358:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.parseFileList = exports.formatAnnotation = void 0;
+const fs_1 = __importDefault(__nccwpck_require__(147));
+const path_1 = __importDefault(__nccwpck_require__(17));
+function formatAnnotation(annotation) {
+    return (`::${annotation.level} ` +
+        `file=${annotation.filePath},` +
+        `line=${annotation.line}::` +
+        `${annotation.source}[` +
+        `${annotation.kind}] : ` +
+        `${annotation.message}`);
+}
+exports.formatAnnotation = formatAnnotation;
+function parseFileList(infile) {
+    infile = path_1.default.resolve(infile);
+    const fileContent = fs_1.default.readFileSync(infile, 'utf8');
+    const githubWorkspace = process.env.GITHUB_WORKSPACE || '';
+    return JSON.parse(fileContent).map((file) => {
+        const resolvedPath = path_1.default.resolve(file);
+        return resolvedPath.startsWith(githubWorkspace)
+            ? resolvedPath.substring(githubWorkspace.length + 1)
+            : resolvedPath;
+    });
+}
+exports.parseFileList = parseFileList;
+
+
+/***/ }),
+
 /***/ 109:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
@@ -40,20 +77,52 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(186));
-const wait_1 = __nccwpck_require__(817);
+const prospector_1 = __nccwpck_require__(118);
+const pydocstyle_1 = __nccwpck_require__(635);
+const mypy_1 = __nccwpck_require__(465);
+const pytest_1 = __nccwpck_require__(611);
+const functions_1 = __nccwpck_require__(358);
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const ms = core.getInput('milliseconds');
-            core.debug(`Waiting ${ms} milliseconds ...`); // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
-            core.debug(new Date().toTimeString());
-            yield (0, wait_1.wait)(parseInt(ms, 10));
-            core.debug(new Date().toTimeString());
-            core.setOutput('time', new Date().toTimeString());
+            const tool = core.getInput('tool');
+            const toolInfile = core.getInput('tool_infile');
+            const filesToAnnotateInfile = core.getInput('files_to_annotate_infile');
+            // Identify tool
+            const supportedTools = ['prospector', 'pydocstyle', 'mypy', 'pytest'];
+            if (!supportedTools.includes(tool)) {
+                throw new Error(`Unsupported tool: '${tool}', options are ${supportedTools}`);
+            }
+            // Parse tool output
+            let annotations = [];
+            if (tool === 'prospector') {
+                annotations = (0, prospector_1.parseProspectorJSON)(toolInfile);
+            }
+            else if (tool === 'pydocstyle') {
+                annotations = (0, pydocstyle_1.parsePydocstyle)(toolInfile);
+            }
+            else if (tool === 'mypy') {
+                annotations = (0, mypy_1.parseMypy)(toolInfile);
+            }
+            else if (tool === 'pytest') {
+                annotations = (0, pytest_1.parsePytest)(toolInfile);
+            }
+            // Parse files to annotate
+            let filesToAnnotate = null;
+            if (filesToAnnotateInfile && filesToAnnotateInfile !== '') {
+                filesToAnnotate = (0, functions_1.parseFileList)(filesToAnnotateInfile);
+            }
+            // Print annotations
+            for (const annotation of annotations) {
+                if (filesToAnnotate === null || filesToAnnotate.includes(annotation.filePath)) {
+                    console.log((0, functions_1.formatAnnotation)(annotation));
+                }
+            }
         }
         catch (error) {
-            if (error instanceof Error)
+            if (error instanceof Error) {
                 core.setFailed(error.message);
+            }
         }
     });
 }
@@ -62,33 +131,317 @@ run();
 
 /***/ }),
 
-/***/ 817:
-/***/ (function(__unused_webpack_module, exports) {
+/***/ 465:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
 
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.wait = void 0;
-function wait(milliseconds) {
-    return __awaiter(this, void 0, void 0, function* () {
-        return new Promise(resolve => {
-            if (isNaN(milliseconds)) {
-                throw new Error('milliseconds not a number');
+exports.parseMypy = void 0;
+const fs = __importStar(__nccwpck_require__(147));
+const annotationRegex = /^\s*(?<filePath>[^:]+):(?<line>\d+):\s(?<lineType>[^:]+):\s(?<message>(?:(?!\s\s\[).)*)(\s\s\[(?<kind>[^\]]*)\])?$/gm;
+function parseMypy(infile) {
+    const annotations = [];
+    const fileContent = fs.readFileSync(infile, 'utf8');
+    let lastErrorIndex = null;
+    for (const match of fileContent.matchAll(annotationRegex)) {
+        const { filePath, line, lineType, message, kind } = match.groups;
+        if (lineType === 'error') {
+            annotations.push({
+                source: 'mypy',
+                level: 'warning',
+                filePath,
+                line: parseInt(line),
+                kind,
+                message
+            });
+            lastErrorIndex = annotations.length - 1;
+        }
+        else if (kind === 'note') {
+            if (lastErrorIndex !== null) {
+                const lastError = annotations[lastErrorIndex];
+                if (lastError.filePath === filePath &&
+                    lastError.line === parseInt(line)) {
+                    lastError.message += `\n${message}`;
+                }
             }
-            setTimeout(() => resolve('done!'), milliseconds);
-        });
-    });
+        }
+    }
+    return annotations;
 }
-exports.wait = wait;
+exports.parseMypy = parseMypy;
+
+
+/***/ }),
+
+/***/ 118:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.parseProspectorJSON = void 0;
+const fs = __importStar(__nccwpck_require__(147));
+function parseProspectorJSON(infile) {
+    const annotations = [];
+    const report = JSON.parse(fs.readFileSync(infile, 'utf8'));
+    for (const match of report.messages) {
+        annotations.push({
+            source: 'prospector',
+            level: 'warning',
+            filePath: match.location.path,
+            line: parseInt(match.location.line),
+            kind: `${match.source}:${match.code}`,
+            message: match.message
+        });
+    }
+    return annotations;
+}
+exports.parseProspectorJSON = parseProspectorJSON;
+
+
+/***/ }),
+
+/***/ 635:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.parsePydocstyle = void 0;
+const fs = __importStar(__nccwpck_require__(147));
+function parsePydocstyle(infile) {
+    const annotations = [];
+    const fileContent = fs.readFileSync(infile, 'utf8');
+    const lines = fileContent.split('\n');
+    for (let i = 0; i < lines.length - 1; i += 2) {
+        const line = lines[i];
+        const issue = lines[i + 1];
+        const filePath = line.split(' ')[0].split(':')[0];
+        const lineNumber = parseInt(line.split(' ')[0].split(':')[1]);
+        const [kind, message] = issue.trim().split(': ');
+        annotations.push({
+            source: 'pydocstyle',
+            level: 'warning',
+            filePath,
+            line: lineNumber,
+            kind,
+            message
+        });
+    }
+    return annotations;
+}
+exports.parsePydocstyle = parsePydocstyle;
+
+
+/***/ }),
+
+/***/ 611:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.parsePytest = void 0;
+const fs = __importStar(__nccwpck_require__(147));
+const headerRegexes = {
+    start: /^=+ test session starts =+$/gm,
+    errors: /^=+ ERRORS =+$/gm,
+    failures: /^=+ FAILURES =+$/gm,
+    warnings: /^=+ warnings summary =+$/gm,
+    coverage: /^-+ coverage.* -+$/gm,
+    summary: /^=+ short test summary info =+$/gm
+};
+const errorRegex = /^_+ ERROR collecting (?<filePath>.*) _+$\n(^[^E_]+.*$\n)+^E\s+(?<kind>[^:\n]+):\s+(?<message>[^\n]+)$/gm;
+const failureRegex = /^E\s+(?<kind>[^:\n]+):\s+(?<message>[^\n]+)$\n^\s*$\n^(?<filePath>([A-Z]:)?[^:]+):(?<line>\d+):\s+(?<kind2>[^:\n]+$)/gm;
+const warningRegex = /^\s*(?<file_path>([A-Z]:)?[^:]+):(?<line>\d+):(?<kind>[^:]+):(?<message>[^\n]+)\n(?<code>[^\n]+)/gm;
+function parseErrorsSection(body) {
+    const annotations = [];
+    for (const match of body.matchAll(errorRegex)) {
+        const { filePath, kind, message } = match.groups;
+        annotations.push({
+            source: 'pytest',
+            level: 'error',
+            filePath,
+            line: null,
+            kind: kind.trim(),
+            message: message.trim()
+        });
+    }
+    return annotations;
+}
+function parseFailuresSection(body) {
+    const annotations = [];
+    for (const match of body.matchAll(failureRegex)) {
+        const { filePath, line, kind, message } = match.groups;
+        annotations.push({
+            source: 'pytest',
+            level: 'error',
+            filePath,
+            line: parseInt(line),
+            kind: kind.trim(),
+            message: message.trim()
+        });
+    }
+    return annotations;
+}
+function parseWarningsSection(body) {
+    const annotations = [];
+    for (const match of body.matchAll(warningRegex)) {
+        const { filePath, line, kind, message } = match.groups;
+        if (!filePath.startsWith('.venv/')) {
+            annotations.push({
+                source: 'pytest',
+                level: 'warning',
+                filePath,
+                line: parseInt(line),
+                kind: kind.trim(),
+                message: message.trim()
+            });
+        }
+    }
+    return annotations;
+}
+function parsePytest(infile) {
+    var _a, _b;
+    const annotations = [];
+    const fileContent = fs.readFileSync(infile, 'utf8');
+    // Determine which section headers are present
+    const headers = [];
+    for (const [section, regex] of Object.entries(headerRegexes)) {
+        const match = fileContent.match(regex);
+        if (match) {
+            const start = (_b = (_a = match.index) === null || _a === void 0 ? void 0 : _a.valueOf()) !== null && _b !== void 0 ? _b : 0;
+            const end = start ? start + match[0].length : 0;
+            headers.push({
+                name: section,
+                start,
+                end
+            });
+        }
+    }
+    // Determine section body locations
+    const bodies = {};
+    for (let i = 1; i < headers.length; i++) {
+        bodies[headers[i - 1].name] = {
+            name: headers[i - 1].name,
+            start: headers[i - 1].end,
+            end: headers[i].start
+        };
+    }
+    bodies[headers[headers.length - 1].name] = {
+        name: headers[headers.length - 1].name,
+        start: headers[headers.length - 1].end,
+        end: fileContent.length
+    };
+    // Parse sections
+    if ('errors' in bodies) {
+        const location = bodies.errors;
+        annotations.push(...parseErrorsSection(fileContent.slice(location.start, location.end)));
+    }
+    if ('failures' in bodies) {
+        const location = bodies.failures;
+        annotations.push(...parseFailuresSection(fileContent.slice(location.start, location.end)));
+    }
+    if ('warnings' in bodies) {
+        const location = bodies.warnings;
+        annotations.push(...parseWarningsSection(fileContent.slice(location.start, location.end)));
+    }
+    return annotations;
+}
+exports.parsePytest = parsePytest;
 
 
 /***/ }),
