@@ -80,6 +80,7 @@ const core = __importStar(__nccwpck_require__(186));
 const prospector_1 = __nccwpck_require__(118);
 const pydocstyle_1 = __nccwpck_require__(635);
 const mypy_1 = __nccwpck_require__(465);
+const pyright_1 = __nccwpck_require__(312);
 const pytest_1 = __nccwpck_require__(611);
 const functions_1 = __nccwpck_require__(358);
 function run() {
@@ -89,20 +90,23 @@ function run() {
             const toolInfile = core.getInput('tool_infile');
             const filesToAnnotateInfile = core.getInput('files_to_annotate_infile');
             // Identify tool
-            const supportedTools = ['prospector', 'pydocstyle', 'mypy', 'pytest'];
+            const supportedTools = ['mypy', 'prospector', 'pydocstyle', 'pyright', 'pytest'];
             if (!supportedTools.includes(tool)) {
                 throw new Error(`Unsupported tool: '${tool}', options are ${supportedTools}`);
             }
             // Parse tool output
             let annotations = [];
-            if (tool === 'prospector') {
+            if (tool === 'mypy') {
+                annotations = (0, mypy_1.parseMypy)(toolInfile);
+            }
+            else if (tool === 'prospector') {
                 annotations = (0, prospector_1.parseProspectorJSON)(toolInfile);
             }
             else if (tool === 'pydocstyle') {
                 annotations = (0, pydocstyle_1.parsePydocstyle)(toolInfile);
             }
-            else if (tool === 'mypy') {
-                annotations = (0, mypy_1.parseMypy)(toolInfile);
+            else if (tool === 'pyright') {
+                annotations = (0, pyright_1.parsePyright)(toolInfile);
             }
             else if (tool === 'pytest') {
                 annotations = (0, pytest_1.parsePytest)(toolInfile);
@@ -301,6 +305,68 @@ function parsePydocstyle(infile) {
     return annotations;
 }
 exports.parsePydocstyle = parsePydocstyle;
+
+
+/***/ }),
+
+/***/ 312:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.parsePyright = void 0;
+const fs = __importStar(__nccwpck_require__(147));
+const annotationRegex = /^\s+(?<filePath>\/[^:]+)?:?(?<line>\d+)?:?(?<character>\d+)?( - error: )?(?<message>.+)$/gm;
+function parsePyright(infile) {
+    const annotations = [];
+    const fileContent = fs.readFileSync(infile, 'utf8');
+    let lastErrorIndex = null;
+    for (const match of fileContent.matchAll(annotationRegex)) {
+        const { filePath, line, character, message } = match.groups;
+        if (filePath !== null && line !== null && message !== null) {
+            annotations.push({
+                source: 'pyright',
+                level: 'warning',
+                filePath,
+                line: parseInt(line),
+                kind: '',
+                message
+            });
+            lastErrorIndex = annotations.length - 1;
+        }
+        else if (message !== null) {
+            if (lastErrorIndex !== null) {
+                annotations[lastErrorIndex].message += `\n${message}`;
+            }
+        }
+    }
+    return annotations;
+}
+exports.parsePyright = parsePyright;
 
 
 /***/ }),

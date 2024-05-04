@@ -2,6 +2,7 @@ import * as core from '@actions/core'
 import { parseProspectorJSON } from './python/prospector'
 import { parsePydocstyle } from './python/pydocstyle'
 import { parseMypy } from './python/mypy'
+import { parsePyright } from './python/pyright'
 import { parsePytest } from './python/pytest'
 import { formatAnnotation, parseFileList } from './functions'
 import { Annotation } from './annotation'
@@ -15,7 +16,7 @@ async function run (): Promise<void> {
     )
 
     // Identify tool
-    const supportedTools = ['prospector', 'pydocstyle', 'mypy', 'pytest']
+    const supportedTools = ['mypy', 'prospector', 'pydocstyle', 'pyright', 'pytest']
     if (!supportedTools.includes(tool)) {
       throw new Error(
         `Unsupported tool: '${tool}', options are ${supportedTools}`
@@ -24,12 +25,14 @@ async function run (): Promise<void> {
 
     // Parse tool output
     let annotations: Annotation[] = []
-    if (tool === 'prospector') {
+    if (tool === 'mypy') {
+      annotations = parseMypy(toolInfile)
+    } else if (tool === 'prospector') {
       annotations = parseProspectorJSON(toolInfile)
     } else if (tool === 'pydocstyle') {
       annotations = parsePydocstyle(toolInfile)
-    } else if (tool === 'mypy') {
-      annotations = parseMypy(toolInfile)
+    } else if (tool === 'pyright') {
+      annotations = parsePyright(toolInfile)
     } else if (tool === 'pytest') {
       annotations = parsePytest(toolInfile)
     }
