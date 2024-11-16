@@ -1,6 +1,11 @@
-name: 'Karl T Debiec'
+name: 'Linter Printer'
 description: 'Annotates GitHub pull requests with output from linters and other tools'
 author: 'Karl T Debiec'
+
+branding:
+  icon: 'heart'
+  color: 'red'
+
 inputs:
   tool:
     required: true
@@ -12,6 +17,7 @@ inputs:
     required: true
     description: 'File containing list of files to annotate'
     default: null
+
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.js'
