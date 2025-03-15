@@ -25853,7 +25853,12 @@ function parseRuff (infile) {
     return []
   }
 
-  const lines = fileContent.split('\n').filter(line => line.trim() !== '')
+  const lines = fileContent.split('\n').filter(line => {
+    const trimmed = line.trim()
+    return trimmed !== '' && !trimmed.startsWith('|') &&
+      !/^\d+\s+\|/.test(trimmed)
+  })
+
   const annotations = []
 
   for (const line of lines) {
@@ -25878,12 +25883,11 @@ function parseRuff (infile) {
 
     annotations.push({
       source: 'ruff',
-      level: 'warning', // Ruff messages are usually warnings
+      level: code.startsWith('E') ? 'error' : 'warning', // Simple severity mapping
       filePath: relativeFilePath,
       line: parseInt(lineNumber, 10),
       kind: code,
       message: message.trim(),
-      // Optional: column: parseInt(column, 10)
     })
   }
 
