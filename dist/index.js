@@ -25650,13 +25650,15 @@ const fs = __nccwpck_require__(9896)
 const path = __nccwpck_require__(6928)
 
 function formatAnnotation (annotation) {
+  const sanitizedMessage = annotation.message.replace(/`/g, '"')
+
   return (
     `::${annotation.level} ` +
     `file=${annotation.filePath},` +
     `line=${annotation.line}::` +
     `${annotation.source}[` +
     `${annotation.kind}] : ` +
-    `${annotation.message}`
+    `${sanitizedMessage}`
   )
 }
 
@@ -25734,7 +25736,7 @@ function parsePyright (infile) {
 
     annotations.push({
       source: 'pyright',
-      level: level.toLowerCase(), // GitHub expects: notice | warning | error
+      level: 'warning',
       filePath: relativeFilePath,
       line: parseInt(lineNumber, 10),
       kind: kind.trim(),

@@ -51,7 +51,7 @@ function parsePyright (infile) {
 
     annotations.push({
       source: 'pyright',
-      level: level.toLowerCase(), // GitHub expects: notice | warning | error
+      level: 'warning',
       filePath: relativeFilePath,
       line: parseInt(lineNumber, 10),
       kind: kind.trim(),
