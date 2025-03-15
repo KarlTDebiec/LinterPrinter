@@ -10,14 +10,12 @@ async function run () {
   try {
     const tool = core.getInput('tool')
     const toolInfile = core.getInput('tool_infile')
-    const filesToAnnotateInfile = core.getInput('files_to_annotate_infile')
 
     const supportedTools = [
-      'mypy',
-      'prospector',
-      'pydocstyle',
       'pyright',
-      'pytest']
+      'pytest',
+      'ruff',
+    ]
 
     if (!supportedTools.includes(tool)) {
       throw new Error(
@@ -39,15 +37,9 @@ async function run () {
     }
 
     let filesToAnnotate = null
-    if (filesToAnnotateInfile && filesToAnnotateInfile !== '') {
-      filesToAnnotate = parseFileList(filesToAnnotateInfile)
-    }
 
     for (const annotation of annotations) {
-      if (filesToAnnotate === null ||
-        filesToAnnotate.includes(annotation.filePath)) {
-        console.log(formatAnnotation(annotation))
-      }
+      console.log(formatAnnotation(annotation))
     }
   } catch (error) {
     core.setFailed(error.message || error.toString())

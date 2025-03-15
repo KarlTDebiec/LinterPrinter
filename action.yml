@@ -10,7 +10,7 @@ branding:
 # Define your inputs here.
 inputs:
   tool:
-    description: Name of the tool providing output (e.g., pytest, mypy)
+    description: Name of the tool providing output (pyright, pytest, ruff)
     required: true
   tool_infile:
     description: Path to the tool output file
