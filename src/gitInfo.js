@@ -1,6 +1,6 @@
 const { execSync } = require('child_process')
 
-function getGitDiffFiles (baseRef = 'origin/main', headRef = 'HEAD') {
+function getGitDiffFiles (baseRef = 'origin/master', headRef = 'HEAD') {
   try {
     // Get added files
     const added = execSync(

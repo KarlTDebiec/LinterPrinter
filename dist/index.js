@@ -25686,7 +25686,7 @@ module.exports = { formatAnnotation, parseFileList }
 
 const { execSync } = __nccwpck_require__(5317)
 
-function getGitDiffFiles (baseRef = 'origin/main', headRef = 'HEAD') {
+function getGitDiffFiles (baseRef = 'origin/master', headRef = 'HEAD') {
   try {
     // Get added files
     const added = execSync(
