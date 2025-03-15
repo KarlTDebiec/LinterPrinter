@@ -25855,8 +25855,13 @@ function parseRuff (infile) {
 
   const lines = fileContent.split('\n').filter(line => {
     const trimmed = line.trim()
-    return trimmed !== '' && !trimmed.startsWith('|') &&
-      !/^\d+\s+\|/.test(trimmed)
+
+    return (
+      trimmed !== '' &&
+      !trimmed.startsWith('|') &&
+      !/^\d+\s+\|/.test(trimmed) &&
+      !trimmed.startsWith('= help:') // Skip ruff help lines
+    )
   })
 
   const annotations = []
