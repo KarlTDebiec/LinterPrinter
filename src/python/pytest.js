@@ -12,21 +12,6 @@ const headerRegexes = {
 const errorRegex = /^_+ ERROR collecting (?<filePath>.*) _+$\n(^[^E_]+.*$\n)+^E\s+(?<kind>[^:\n]+):\s+(?<message>[^\n]+)$/gm
 const failureRegex = /^E\s+(?<kind>[^:\n]+):\s+(?<message>[^\n]+)$\n^\s*$\n^(?<filePath>([A-Z]:)?[^:]+):(?<line>\d+):\s+(?<kind2>[^:\n]+$)/gm
 const warningRegex = /^\s*(?<filePath>([A-Z]:)?[^:]+):(?<line>\d+):(?<kind>[^:]+):(?<message>[^\n]+)\n(?<code>[^\n]+)/gm
-const tracebackLineRegex = /^(?<filePath>.*):(?<line>\d+):\s+in\s+/gm
-
-const path = require('path')
-
-function normalizeFilePath (filePath) {
-  const githubWorkspace = process.env.GITHUB_WORKSPACE || ''
-  const absoluteFilePath = path.isAbsolute(filePath)
-    ? filePath
-    : path.join(githubWorkspace, filePath)
-
-  let relativeFilePath = path.relative(githubWorkspace, absoluteFilePath)
-  relativeFilePath = relativeFilePath.split(path.sep).join('/')
-
-  return relativeFilePath
-}
 
 function parseErrorsSection (body) {
   const annotations = []
@@ -34,32 +19,11 @@ function parseErrorsSection (body) {
   for (const match of body.matchAll(errorRegex)) {
     const { filePath, kind, message } = match.groups
 
-    let annotationFilePath = normalizeFilePath(filePath)
-    let annotationLine = 1
-
-    // Look for the deepest file/line in the traceback
-    const tracebackMatches = [...body.matchAll(tracebackLineRegex)]
-
-    for (const traceMatch of tracebackMatches.reverse()) {
-      const traceFilePath = traceMatch.groups.filePath
-      const traceLine = parseInt(traceMatch.groups.line, 10)
-
-      // Skip site-packages and virtualenv files
-      if (
-        !traceFilePath.includes('site-packages') &&
-        !traceFilePath.includes('.venv')
-      ) {
-        annotationFilePath = normalizeFilePath(traceFilePath)
-        annotationLine = traceLine
-        break // Take the first valid one found (deepest)
-      }
-    }
-
     annotations.push({
       source: 'pytest',
       level: 'error',
-      filePath: annotationFilePath,
-      line: annotationLine,
+      filePath,
+      line: null,
       kind: kind.trim(),
       message: message.trim(),
     })
