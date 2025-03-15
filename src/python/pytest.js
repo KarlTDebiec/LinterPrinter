@@ -12,6 +12,7 @@ const headerRegexes = {
 const errorRegex = /^_+ ERROR collecting (?<filePath>.*) _+$\n(^[^E_]+.*$\n)+^E\s+(?<kind>[^:\n]+):\s+(?<message>[^\n]+)$/gm
 const failureRegex = /^E\s+(?<kind>[^:\n]+):\s+(?<message>[^\n]+)$\n^\s*$\n^(?<filePath>([A-Z]:)?[^:]+):(?<line>\d+):\s+(?<kind2>[^:\n]+$)/gm
 const warningRegex = /^\s*(?<filePath>([A-Z]:)?[^:]+):(?<line>\d+):(?<kind>[^:]+):(?<message>[^\n]+)\n(?<code>[^\n]+)/gm
+const tracebackLineRegex = /^(?<filePath>.*):(?<line>\d+):\s+in\s+/gm
 
 const path = require('path')
 
