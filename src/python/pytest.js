@@ -20,37 +20,35 @@ function parseErrorsSection (body) {
   for (const match of body.matchAll(errorRegex)) {
     const { filePath, kind, message } = match.groups
 
-    // Fallback line number
     let annotationLine = 1
 
-    // Now search for the line number in the traceback
     const tracebackMatches = [...body.matchAll(tracebackLineRegex)]
 
     for (const traceMatch of tracebackMatches) {
       const traceFilePath = traceMatch.groups.filePath.trim()
       const traceLine = parseInt(traceMatch.groups.line, 10)
 
-      // Debug: print everything it finds
-      console.log(`TRACE: ${traceFilePath}:${traceLine}`)
-
-      // Is this the file we're annotating?
-      // We just need to match enough of the path
       if (traceFilePath.endsWith(filePath) ||
         filePath.endsWith(traceFilePath)) {
         annotationLine = traceLine
-        console.log(
-          `MATCHED FILE: ${traceFilePath}, using line ${annotationLine}`)
-        break // Use the first matching trace line
+        break
       }
     }
+
+    const fullErrorText = match[0] // Full block from regex match
+
+    const shortMessage = `${kind.trim()}: ${message.trim()}`
+    const formattedErrorBlock = fullErrorText.split('\n').
+      map(line => `    ${line}`).
+      join('\n')
 
     annotations.push({
       source: 'pytest',
       level: 'error',
-      filePath, // You can normalize here if needed
+      filePath,
       line: annotationLine,
       kind: kind.trim(),
-      message: message.trim(),
+      message: `${shortMessage}\n\n${formattedErrorBlock}`,
     })
   }
 
