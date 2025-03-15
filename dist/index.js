@@ -25702,10 +25702,9 @@ function parsePyright (infile) {
     return []
   }
 
-  const lines = fileContent.split('\n').map(line => line.trim()).filter(line =>
-    line !== '' &&
-    !line.startsWith('/'), // skip section headers
-  )
+  const lines = fileContent.split('\n').
+    map(line => line.trim()).
+    filter(line => pyrightRegex.test(line)) // only main lines
 
   const annotations = []
 
