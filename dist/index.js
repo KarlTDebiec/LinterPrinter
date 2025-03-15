@@ -25832,6 +25832,38 @@ module.exports = { parsePytest }
 
 /***/ }),
 
+/***/ 7238:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const fs = __nccwpck_require__(9896)
+
+function parseRuff (infile) {
+  console.log(`parseRuff() called with infile: ${infile}`)
+
+  if (!fs.existsSync(infile)) {
+    console.log(`File not found: ${infile}`)
+    return []
+  }
+
+  const fileContent = fs.readFileSync(infile, 'utf8')
+
+  if (!fileContent) {
+    console.log(`Empty file: ${infile}`)
+    return []
+  }
+
+  console.log(
+    `File exists and is not empty. Contents:\n${fileContent.slice(0, 500)}`) // First 500 chars
+
+  // Stub - no annotations yet
+  return []
+}
+
+module.exports = { parseRuff }
+
+
+/***/ }),
+
 /***/ 2613:
 /***/ ((module) => {
 
@@ -27745,8 +27777,9 @@ module.exports = parseParams
 /************************************************************************/
 var __webpack_exports__ = {};
 const core = __nccwpck_require__(6201)
-const { parsePytest } = __nccwpck_require__(9576)
 const { formatAnnotation, parseFileList } = __nccwpck_require__(413)
+const { parsePytest } = __nccwpck_require__(9576)
+const { parseRuff } = __nccwpck_require__(7238)
 
 async function run () {
   try {
@@ -27755,6 +27788,7 @@ async function run () {
 
     const supportedTools = [
       'pytest',
+      'ruff',
     ]
 
     if (!supportedTools.includes(tool)) {
@@ -27766,6 +27800,8 @@ async function run () {
 
     if (tool === 'pytest') {
       annotations = parsePytest(toolInfile)
+    } else if (tool === 'ruff') {
+      annotations = parseRuff(toolInfile)
     }
 
     for (const annotation of annotations) {

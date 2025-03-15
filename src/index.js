@@ -1,6 +1,7 @@
 const core = require('@actions/core')
-const { parsePytest } = require('./python/pytest')
 const { formatAnnotation, parseFileList } = require('./functions')
+const { parsePytest } = require('./python/pytest')
+const { parseRuff } = require('./python/ruff')
 
 async function run () {
   try {
@@ -9,6 +10,7 @@ async function run () {
 
     const supportedTools = [
       'pytest',
+      'ruff',
     ]
 
     if (!supportedTools.includes(tool)) {
@@ -20,6 +22,8 @@ async function run () {
 
     if (tool === 'pytest') {
       annotations = parsePytest(toolInfile)
+    } else if (tool === 'ruff') {
+      annotations = parseRuff(toolInfile)
     }
 
     for (const annotation of annotations) {
