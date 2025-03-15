@@ -25806,38 +25806,6 @@ module.exports = { parsePytest }
 
 /***/ }),
 
-/***/ 4437:
-/***/ ((module) => {
-
-module.exports = eval("require")("./python/mypy");
-
-
-/***/ }),
-
-/***/ 8405:
-/***/ ((module) => {
-
-module.exports = eval("require")("./python/prospector");
-
-
-/***/ }),
-
-/***/ 2794:
-/***/ ((module) => {
-
-module.exports = eval("require")("./python/pydocstyle");
-
-
-/***/ }),
-
-/***/ 6231:
-/***/ ((module) => {
-
-module.exports = eval("require")("./python/pyright");
-
-
-/***/ }),
-
 /***/ 2613:
 /***/ ((module) => {
 
@@ -27751,10 +27719,6 @@ module.exports = parseParams
 /************************************************************************/
 var __webpack_exports__ = {};
 const core = __nccwpck_require__(6201)
-const { parseProspectorJSON } = __nccwpck_require__(8405)
-const { parsePydocstyle } = __nccwpck_require__(2794)
-const { parseMypy } = __nccwpck_require__(4437)
-const { parsePyright } = __nccwpck_require__(6231)
 const { parsePytest } = __nccwpck_require__(9576)
 const { formatAnnotation, parseFileList } = __nccwpck_require__(413)
 
@@ -27764,9 +27728,7 @@ async function run () {
     const toolInfile = core.getInput('tool_infile')
 
     const supportedTools = [
-      'pyright',
       'pytest',
-      'ruff',
     ]
 
     if (!supportedTools.includes(tool)) {
@@ -27776,15 +27738,7 @@ async function run () {
 
     let annotations = []
 
-    if (tool === 'mypy') {
-      annotations = parseMypy(toolInfile)
-    } else if (tool === 'prospector') {
-      annotations = parseProspectorJSON(toolInfile)
-    } else if (tool === 'pydocstyle') {
-      annotations = parsePydocstyle(toolInfile)
-    } else if (tool === 'pyright') {
-      annotations = parsePyright(toolInfile)
-    } else if (tool === 'pytest') {
+    if (tool === 'pytest') {
       annotations = parsePytest(toolInfile)
     }
 

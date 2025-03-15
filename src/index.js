@@ -1,8 +1,4 @@
 const core = require('@actions/core')
-const { parseProspectorJSON } = require('./python/prospector')
-const { parsePydocstyle } = require('./python/pydocstyle')
-const { parseMypy } = require('./python/mypy')
-const { parsePyright } = require('./python/pyright')
 const { parsePytest } = require('./python/pytest')
 const { formatAnnotation, parseFileList } = require('./functions')
 
@@ -12,9 +8,7 @@ async function run () {
     const toolInfile = core.getInput('tool_infile')
 
     const supportedTools = [
-      'pyright',
       'pytest',
-      'ruff',
     ]
 
     if (!supportedTools.includes(tool)) {
@@ -24,15 +18,7 @@ async function run () {
 
     let annotations = []
 
-    if (tool === 'mypy') {
-      annotations = parseMypy(toolInfile)
-    } else if (tool === 'prospector') {
-      annotations = parseProspectorJSON(toolInfile)
-    } else if (tool === 'pydocstyle') {
-      annotations = parsePydocstyle(toolInfile)
-    } else if (tool === 'pyright') {
-      annotations = parsePyright(toolInfile)
-    } else if (tool === 'pytest') {
+    if (tool === 'pytest') {
       annotations = parsePytest(toolInfile)
     }
 
