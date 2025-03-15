@@ -25888,7 +25888,7 @@ function parseRuff (infile) {
 
     annotations.push({
       source: 'ruff',
-      level: code.startsWith('E') ? 'error' : 'warning', // Simple severity mapping
+      level: 'warning',
       filePath: relativeFilePath,
       line: parseInt(lineNumber, 10),
       kind: code,
