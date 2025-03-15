@@ -2,6 +2,7 @@ const fs = require('fs')
 const path = require('path')
 
 function formatAnnotation (annotation) {
+  console.log(annotation)
   return (
     `::${annotation.level} ` +
     `file=${annotation.filePath},` +

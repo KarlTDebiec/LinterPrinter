@@ -22,8 +22,6 @@ async function run () {
       annotations = parsePytest(toolInfile)
     }
 
-    let filesToAnnotate = null
-
     for (const annotation of annotations) {
       console.log(formatAnnotation(annotation))
     }
