@@ -12,6 +12,7 @@ const headerRegexes = {
 const errorRegex = /^_+ ERROR collecting (?<filePath>.*) _+$\n(^[^E_]+.*$\n)+^E\s+(?<kind>[^:\n]+):\s+(?<message>[^\n]+)$/gm
 const failureRegex = /^E\s+(?<kind>[^:\n]+):\s+(?<message>[^\n]+)$\n^\s*$\n^(?<filePath>([A-Z]:)?[^:]+):(?<line>\d+):\s+(?<kind2>[^:\n]+$)/gm
 const warningRegex = /^\s*(?<filePath>([A-Z]:)?[^:]+):(?<line>\d+):(?<kind>[^:]+):(?<message>[^\n]+)\n(?<code>[^\n]+)/gm
+const tracebackLineRegex = /^(?<filePath>.*):(?<line>\d+):\s+in\s+/gm
 
 function parseErrorsSection (body) {
   const annotations = []
@@ -19,11 +20,27 @@ function parseErrorsSection (body) {
   for (const match of body.matchAll(errorRegex)) {
     const { filePath, kind, message } = match.groups
 
+    // Default line fallback
+    let annotationLine = 1
+
+    // Look for the traceback line matching the filePath we're annotating
+    const tracebackMatches = [...body.matchAll(tracebackLineRegex)]
+
+    for (const traceMatch of tracebackMatches) {
+      const traceFilePath = traceMatch.groups.filePath.trim()
+      const traceLine = parseInt(traceMatch.groups.line, 10)
+
+      if (traceFilePath.endsWith(filePath)) {
+        annotationLine = traceLine
+        break // Stop at the first matching line (or go deeper if you want)
+      }
+    }
+
     annotations.push({
       source: 'pytest',
       level: 'error',
-      filePath,
-      line: null,
+      filePath, // already normalized? if not, wrap in normalizeFilePath()
+      line: annotationLine,
       kind: kind.trim(),
       message: message.trim(),
     })
