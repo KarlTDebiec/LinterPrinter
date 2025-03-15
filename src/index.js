@@ -1,5 +1,6 @@
 const core = require('@actions/core')
 const { formatAnnotation, parseFileList } = require('./functions')
+const { parsePyright } = require('./python/pyright')
 const { parsePytest } = require('./python/pytest')
 const { parseRuff } = require('./python/ruff')
 
@@ -9,6 +10,7 @@ async function run () {
     const toolInfile = core.getInput('tool_infile')
 
     const supportedTools = [
+      'pyright',
       'pytest',
       'ruff',
     ]
@@ -20,7 +22,9 @@ async function run () {
 
     let annotations = []
 
-    if (tool === 'pytest') {
+    if (tool === 'pyright') {
+      annotations = parsePyright(toolInfile)
+    } else if (tool === 'pytest') {
       annotations = parsePytest(toolInfile)
     } else if (tool === 'ruff') {
       annotations = parseRuff(toolInfile)
