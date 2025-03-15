@@ -2,7 +2,8 @@ const fs = require('fs')
 const path = require('path')
 
 function formatAnnotation (annotation) {
-  const sanitizedMessage = annotation.message.replace(/`/g, '"')
+  const sanitizedMessage = annotation.message.replace(/`/g, '"').
+    replace(/\*\*/g, '')
 
   return (
     `::${annotation.level} ` +
