@@ -25696,7 +25696,7 @@ const headerRegexes = {
 const errorRegex = /^_+ ERROR collecting (?<filePath>.*) _+$\n(^[^E_]+.*$\n)+^E\s+(?<kind>[^:\n]+):\s+(?<message>[^\n]+)$/gm
 const failureRegex = /^E\s+(?<kind>[^:\n]+):\s+(?<message>[^\n]+)$\n^\s*$\n^(?<filePath>([A-Z]:)?[^:]+):(?<line>\d+):\s+(?<kind2>[^:\n]+$)/gm
 const warningRegex = /^\s*(?<filePath>([A-Z]:)?[^:]+):(?<line>\d+):(?<kind>[^:]+):(?<message>[^\n]+)\n(?<code>[^\n]+)/gm
-const tracebackLineRegex = /^(?<filePath>.*):(?<line>\d+):\s+in\s+/gm
+const tracebackLineRegex = /^\s*(?<filePath>[^\s:]+):(?<line>\d+):\s+in\s+/gm
 
 function parseErrorsSection (body) {
   const annotations = []
@@ -25704,26 +25704,34 @@ function parseErrorsSection (body) {
   for (const match of body.matchAll(errorRegex)) {
     const { filePath, kind, message } = match.groups
 
-    // Default line fallback
+    // Fallback line number
     let annotationLine = 1
 
-    // Look for the traceback line matching the filePath we're annotating
+    // Now search for the line number in the traceback
     const tracebackMatches = [...body.matchAll(tracebackLineRegex)]
 
     for (const traceMatch of tracebackMatches) {
       const traceFilePath = traceMatch.groups.filePath.trim()
       const traceLine = parseInt(traceMatch.groups.line, 10)
 
-      if (traceFilePath.endsWith(filePath)) {
+      // Debug: print everything it finds
+      console.log(`TRACE: ${traceFilePath}:${traceLine}`)
+
+      // Is this the file we're annotating?
+      // We just need to match enough of the path
+      if (traceFilePath.endsWith(filePath) ||
+        filePath.endsWith(traceFilePath)) {
         annotationLine = traceLine
-        break // Stop at the first matching line (or go deeper if you want)
+        console.log(
+          `MATCHED FILE: ${traceFilePath}, using line ${annotationLine}`)
+        break // Use the first matching trace line
       }
     }
 
     annotations.push({
       source: 'pytest',
       level: 'error',
-      filePath, // already normalized? if not, wrap in normalizeFilePath()
+      filePath, // You can normalize here if needed
       line: annotationLine,
       kind: kind.trim(),
       message: message.trim(),
