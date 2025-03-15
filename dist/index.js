@@ -25650,7 +25650,6 @@ const fs = __nccwpck_require__(9896)
 const path = __nccwpck_require__(6928)
 
 function formatAnnotation (annotation) {
-  console.log(annotation)
   return (
     `::${annotation.level} ` +
     `file=${annotation.filePath},` +
