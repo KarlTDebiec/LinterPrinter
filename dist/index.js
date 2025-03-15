@@ -25681,6 +25681,40 @@ module.exports = { formatAnnotation, parseFileList }
 
 /***/ }),
 
+/***/ 7664:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const { execSync } = __nccwpck_require__(5317)
+
+function getGitDiffFiles (baseRef = 'origin/main', headRef = 'HEAD') {
+  try {
+    // Get added files
+    const added = execSync(
+      `git diff --diff-filter=A --name-only ${baseRef} ${headRef}`, {
+        encoding: 'utf-8',
+      }).trim().split('\n').filter(line => line)
+
+    // Get modified files
+    const modified = execSync(
+      `git diff --diff-filter=M --name-only ${baseRef} ${headRef}`, {
+        encoding: 'utf-8',
+      }).trim().split('\n').filter(line => line)
+
+    console.log(`Added files: ${JSON.stringify(added)}`)
+    console.log(`Modified files: ${JSON.stringify(modified)}`)
+
+    return { added, modified }
+  } catch (error) {
+    console.error(`Failed to get git diff files: ${error.message}`)
+    return { added: [], modified: [] }
+  }
+}
+
+module.exports = { getGitDiffFiles }
+
+
+/***/ }),
+
 /***/ 4712:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
@@ -25976,14 +26010,6 @@ function parseRuff (infile) {
 }
 
 module.exports = { parseRuff }
-
-
-/***/ }),
-
-/***/ 255:
-/***/ ((module) => {
-
-module.exports = eval("require")("./gitInfo");
 
 
 /***/ }),
@@ -27905,7 +27931,7 @@ const { formatAnnotation } = __nccwpck_require__(413)
 const { parsePyright } = __nccwpck_require__(4712)
 const { parsePytest } = __nccwpck_require__(9576)
 const { parseRuff } = __nccwpck_require__(7238)
-const { getGitDiffFiles } = __nccwpck_require__(255)
+const { getGitDiffFiles } = __nccwpck_require__(7664)
 
 async function run () {
   try {
