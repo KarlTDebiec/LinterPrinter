@@ -25980,6 +25980,14 @@ module.exports = { parseRuff }
 
 /***/ }),
 
+/***/ 255:
+/***/ ((module) => {
+
+module.exports = eval("require")("./gitInfo");
+
+
+/***/ }),
+
 /***/ 2613:
 /***/ ((module) => {
 
@@ -27893,25 +27901,23 @@ module.exports = parseParams
 /************************************************************************/
 var __webpack_exports__ = {};
 const core = __nccwpck_require__(6201)
-const { formatAnnotation, parseFileList } = __nccwpck_require__(413)
+const { formatAnnotation } = __nccwpck_require__(413)
 const { parsePyright } = __nccwpck_require__(4712)
 const { parsePytest } = __nccwpck_require__(9576)
 const { parseRuff } = __nccwpck_require__(7238)
+const { getGitDiffFiles } = __nccwpck_require__(255)
 
 async function run () {
   try {
     const tool = core.getInput('tool')
     const toolInfile = core.getInput('tool_infile')
 
-    const supportedTools = [
-      'pyright',
-      'pytest',
-      'ruff',
-    ]
+    const supportedTools = ['pyright', 'pytest', 'ruff']
 
     if (!supportedTools.includes(tool)) {
       throw new Error(
-        `Unsupported tool: '${tool}', options are ${supportedTools}`)
+        `Unsupported tool: '${tool}', options are ${supportedTools}`,
+      )
     }
 
     let annotations = []
@@ -27924,9 +27930,22 @@ async function run () {
       annotations = parseRuff(toolInfile)
     }
 
-    for (const annotation of annotations) {
+    // Prioritize annotations
+    const { added, modified } = getGitDiffFiles()
+
+    const prioritizedAnnotations = [
+      ...annotations.filter(ann => added.includes(ann.filePath)),
+      ...annotations.filter(ann => modified.includes(ann.filePath) &&
+        !added.includes(ann.filePath)),
+      ...annotations.filter(ann => !added.includes(ann.filePath) &&
+        !modified.includes(ann.filePath)),
+    ]
+
+    // Output
+    for (const annotation of prioritizedAnnotations) {
       console.log(formatAnnotation(annotation))
     }
+
   } catch (error) {
     core.setFailed(error.message || error.toString())
   }
