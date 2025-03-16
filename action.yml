@@ -1,0 +1,26 @@
+name: LinterPrinter
+description: Annotates PRs with output from linters or other tools
+author: KarlTDebiec
+
+# Add your action's branding here. This will appear on the GitHub Marketplace.
+branding:
+  icon: alert-triangle
+  color: orange
+
+# Define your inputs here.
+inputs:
+  tool:
+    description: Name of the tool providing output (pyright, pytest, ruff)
+    required: true
+  tool_infile:
+    description: Path to the tool output file
+    required: true
+
+# Define your outputs here.
+outputs:
+  time:
+    description: Your output description here
+
+runs:
+  using: node20
+  main: dist/index.js

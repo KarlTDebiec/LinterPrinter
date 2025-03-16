@@ -1,0 +1,13 @@
+{
+  "name": "linter-printer",
+  "version": "0.1.0",
+  "description": "Parses linter output and posts comments on PRs",
+  "scripts": {
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.11.1"
+  },
+  "devDependencies": {
+  }
+}
