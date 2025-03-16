@@ -25650,7 +25650,7 @@ const fs = __nccwpck_require__(9896)
 const path = __nccwpck_require__(6928)
 
 function formatAnnotation (annotation) {
-  const sanitizedMessage = annotation.message.replace(/:/g, '')
+  const sanitizedMessage = annotation.message.replace(/:/g, '：')
 
   return (
     `::${annotation.level} ` +
