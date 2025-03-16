@@ -32,6 +32,7 @@ async function run () {
     const defaultBranch = process.env.DEFAULT_BRANCH || 'master'
     const { added, modified } = getGitDiffFiles(`origin/${defaultBranch}`,
       'HEAD')
+
     const prioritizedAnnotations = [
       ...annotations.filter(ann => added.includes(ann.filePath)),
       ...annotations.filter(ann => modified.includes(ann.filePath) &&
@@ -40,9 +41,21 @@ async function run () {
         !modified.includes(ann.filePath)),
     ]
 
-    // Output
+    // Output annotations
     for (const annotation of prioritizedAnnotations) {
       console.log(formatAnnotation(annotation))
+    }
+
+    // Check for any "error" level annotations
+    const errorAnnotations = prioritizedAnnotations.filter(
+      ann => ann.level === 'error',
+    )
+
+    if (errorAnnotations.length > 0) {
+      core.setFailed(
+        `Found ${errorAnnotations.length} error annotation${errorAnnotations.length >
+        1 ? 's' : ''}.`,
+      )
     }
 
   } catch (error) {
