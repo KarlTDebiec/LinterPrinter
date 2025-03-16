@@ -25651,7 +25651,7 @@ const path = __nccwpck_require__(6928)
 
 function formatAnnotation (annotation) {
   const sanitizedMessage = annotation.message.replace(/`/g, '"').
-    replace(/\*\*/g, '')
+    replace(/\*\*/g, '').replace(/:/g, '')
 
   return (
     `::${annotation.level} ` +
