@@ -2,17 +2,15 @@ const { execSync } = require('child_process')
 
 function getGitDiffFiles (baseRef = 'origin/master', headRef = 'HEAD') {
   try {
-    // Get added files
     const added = execSync(
       `git diff --diff-filter=A --name-only ${baseRef} ${headRef}`, {
         encoding: 'utf-8',
-      }).trim().split('\n').filter(line => line)
+      }).trim().split('\n').filter(Boolean)
 
-    // Get modified files
     const modified = execSync(
       `git diff --diff-filter=M --name-only ${baseRef} ${headRef}`, {
         encoding: 'utf-8',
-      }).trim().split('\n').filter(line => line)
+      }).trim().split('\n').filter(Boolean)
 
     console.log(`Added files: ${JSON.stringify(added)}`)
     console.log(`Modified files: ${JSON.stringify(modified)}`)

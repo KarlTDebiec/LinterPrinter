@@ -29,8 +29,9 @@ async function run () {
     }
 
     // Prioritize annotations
-    const { added, modified } = getGitDiffFiles()
-
+    const defaultBranch = process.env.DEFAULT_BRANCH || 'master'
+    const { added, modified } = getGitDiffFiles(`origin/${defaultBranch}`,
+      'HEAD')
     const prioritizedAnnotations = [
       ...annotations.filter(ann => added.includes(ann.filePath)),
       ...annotations.filter(ann => modified.includes(ann.filePath) &&

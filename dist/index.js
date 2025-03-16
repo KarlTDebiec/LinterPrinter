@@ -25687,17 +25687,15 @@ const { execSync } = __nccwpck_require__(5317)
 
 function getGitDiffFiles (baseRef = 'origin/master', headRef = 'HEAD') {
   try {
-    // Get added files
     const added = execSync(
       `git diff --diff-filter=A --name-only ${baseRef} ${headRef}`, {
         encoding: 'utf-8',
-      }).trim().split('\n').filter(line => line)
+      }).trim().split('\n').filter(Boolean)
 
-    // Get modified files
     const modified = execSync(
       `git diff --diff-filter=M --name-only ${baseRef} ${headRef}`, {
         encoding: 'utf-8',
-      }).trim().split('\n').filter(line => line)
+      }).trim().split('\n').filter(Boolean)
 
     console.log(`Added files: ${JSON.stringify(added)}`)
     console.log(`Modified files: ${JSON.stringify(modified)}`)
@@ -27956,8 +27954,9 @@ async function run () {
     }
 
     // Prioritize annotations
-    const { added, modified } = getGitDiffFiles()
-
+    const defaultBranch = process.env.DEFAULT_BRANCH || 'master'
+    const { added, modified } = getGitDiffFiles(`origin/${defaultBranch}`,
+      'HEAD')
     const prioritizedAnnotations = [
       ...annotations.filter(ann => added.includes(ann.filePath)),
       ...annotations.filter(ann => modified.includes(ann.filePath) &&
