@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "description": "Parses linter output and posts comments on PRs",
   "scripts": {
+    "test": "node --test"
   },
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.11.1"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
