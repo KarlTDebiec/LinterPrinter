@@ -3,6 +3,7 @@ const { formatAnnotation } = require('./functions')
 const { parsePyright } = require('./python/pyright')
 const { parsePytest } = require('./python/pytest')
 const { parseRuff } = require('./python/ruff')
+const { parseTy } = require('./python/ty')
 const { getGitDiffFiles } = require('./gitInfo')
 
 async function run () {
@@ -10,7 +11,7 @@ async function run () {
     const tool = core.getInput('tool')
     const toolInfile = core.getInput('tool_infile')
 
-    const supportedTools = ['pyright', 'pytest', 'ruff']
+    const supportedTools = ['pyright', 'pytest', 'ruff', 'ty']
 
     if (!supportedTools.includes(tool)) {
       throw new Error(
@@ -26,6 +27,8 @@ async function run () {
       annotations = parsePytest(toolInfile)
     } else if (tool === 'ruff') {
       annotations = parseRuff(toolInfile)
+    } else if (tool === 'ty') {
+      annotations = parseTy(toolInfile)
     }
 
     // Prioritize annotations

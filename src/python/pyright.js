@@ -1,5 +1,5 @@
 const fs = require('fs')
-const path = require('path')
+const { normalizeFilePath } = require('../functions')
 
 const pyrightRegex = /^(?<filePath>.+):(?<line>\d+):(?<column>\d+) - (?<level>\w+): (?<message>.+?) \((?<kind>.+?)\)$/
 
@@ -18,45 +18,67 @@ function parsePyright (infile) {
     return []
   }
 
-  const lines = fileContent.split('\n').
-    map(line => line.trim()).
-    filter(line => pyrightRegex.test(line)) // only main lines
-
   const annotations = []
-
-  for (const line of lines) {
-    const match = line.match(pyrightRegex)
-
-    if (!match || !match.groups) {
-      console.log(`Could not parse line: ${line}`)
-      continue
+  const trimmed = fileContent.trimStart()
+  let jsonPayload = null
+  if (trimmed.startsWith('{') || trimmed.startsWith('[')) {
+    try {
+      jsonPayload = JSON.parse(fileContent)
+    } catch (error) {
+      console.log(`Failed to parse JSON pyright output: ${error}`)
     }
+  }
 
-    const {
-      filePath,
-      line: lineNumber,
-      column,
-      level,
-      message,
-      kind,
-    } = match.groups
+  if (jsonPayload && Array.isArray(jsonPayload.generalDiagnostics)) {
+    for (const diagnostic of jsonPayload.generalDiagnostics) {
+      if (!diagnostic || !diagnostic.file || !diagnostic.range) {
+        continue
+      }
 
-    const githubWorkspace = process.env.GITHUB_WORKSPACE || ''
-    const absoluteFilePath = path.isAbsolute(filePath)
-      ? filePath
-      : path.join(githubWorkspace, filePath)
+      const level = diagnostic.severity === 'error'
+        ? 'error'
+        : diagnostic.severity === 'information'
+          ? 'notice'
+          : 'warning'
 
-    let relativeFilePath = path.relative(githubWorkspace, absoluteFilePath)
-    relativeFilePath = relativeFilePath.split(path.sep).join('/')
+      annotations.push({
+        source: 'pyright',
+        level,
+        filePath: normalizeFilePath(diagnostic.file),
+        line: (diagnostic.range.start?.line ?? 0) + 1,
+        kind: diagnostic.rule || 'pyright',
+        message: (diagnostic.message || '').trim(),
+      })
+    }
+  } else {
+    const lines = fileContent.split('\n').
+      map(line => line.trim()).
+      filter(line => pyrightRegex.test(line)) // only main lines
 
-    annotations.push({
-      source: 'pyright',
-      level: 'warning',
-      filePath: relativeFilePath,
-      line: parseInt(lineNumber, 10),
-      kind: kind.trim(),
-      message: message.trim(),
-    })
+    for (const line of lines) {
+      const match = line.match(pyrightRegex)
+
+      if (!match || !match.groups) {
+        console.log(`Could not parse line: ${line}`)
+        continue
+      }
+
+      const {
+        filePath,
+        line: lineNumber,
+        message,
+        kind,
+      } = match.groups
+
+      annotations.push({
+        source: 'pyright',
+        level: 'warning',
+        filePath: normalizeFilePath(filePath),
+        line: parseInt(lineNumber, 10),
+        kind: kind.trim(),
+        message: message.trim(),
+      })
+    }
   }
 
   console.log(`Parsed ${annotations.length} pyright annotations`)

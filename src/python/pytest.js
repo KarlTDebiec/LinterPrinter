@@ -1,5 +1,7 @@
 const fs = require('fs')
 
+const { normalizeFilePath } = require('../functions')
+
 const headerRegexes = {
   start: /^=+ test session starts =+$/gm,
   errors: /^=+ ERRORS =+$/gm,
@@ -9,48 +11,51 @@ const headerRegexes = {
   summary: /^=+ short test summary info =+$/gm,
 }
 
-const errorRegex = /^_+ ERROR collecting (?<filePath>.*) _+$\n(^[^E_]+.*$\n)+^E\s+(?<kind>[^:\n]+):\s+(?<message>[^\n]+)$/gm
+const errorHeaderRegex = /^_+ ERROR collecting (?<filePath>.+?) _+$/gm
+const errorLineRegex = /^E\s+(?<kind>[^:\n]+):\s+(?<message>[^\n]+)$/gm
 const failureRegex = /^E\s+(?<kind>[^:\n]+):\s+(?<message>[^\n]+)$\n^\s*$\n^(?<filePath>([A-Z]:)?[^:]+):(?<line>\d+):\s+(?<kind2>[^:\n]+$)/gm
 const warningRegex = /^\s*(?<filePath>([A-Z]:)?[^:]+):(?<line>\d+):(?<kind>[^:]+):(?<message>[^\n]+)\n(?<code>[^\n]+)/gm
 const tracebackLineRegex = /^\s*(?<filePath>[^\s:]+):(?<line>\d+):\s+in\s+/gm
 
 function parseErrorsSection (body) {
   const annotations = []
+  const headers = [...body.matchAll(errorHeaderRegex)]
 
-  for (const match of body.matchAll(errorRegex)) {
-    const { filePath, kind, message } = match.groups
+  for (let i = 0; i < headers.length; i++) {
+    const header = headers[i]
+    const nextHeader = headers[i + 1]
+    const rawFilePath = header.groups.filePath.trim()
+    const blockStart = header.index + header[0].length
+    const blockEnd = nextHeader ? nextHeader.index : body.length
+    const block = body.slice(blockStart, blockEnd)
+    const normalizedHeaderPath = normalizeFilePath(rawFilePath)
 
-    // Fallback line number
+    let kind = 'CollectionError'
+    let message = 'Pytest collection error'
+    for (const errorMatch of block.matchAll(errorLineRegex)) {
+      kind = errorMatch.groups.kind.trim()
+      message = errorMatch.groups.message.trim()
+    }
+
     let annotationLine = 1
-
-    // Now search for the line number in the traceback
-    const tracebackMatches = [...body.matchAll(tracebackLineRegex)]
-
-    for (const traceMatch of tracebackMatches) {
-      const traceFilePath = traceMatch.groups.filePath.trim()
+    for (const traceMatch of block.matchAll(tracebackLineRegex)) {
+      const traceFilePath = normalizeFilePath(traceMatch.groups.filePath.trim())
       const traceLine = parseInt(traceMatch.groups.line, 10)
 
-      // Debug: print everything it finds
-      console.log(`TRACE: ${traceFilePath}:${traceLine}`)
-
-      // Is this the file we're annotating?
-      // We just need to match enough of the path
-      if (traceFilePath.endsWith(filePath) ||
-        filePath.endsWith(traceFilePath)) {
+      if (traceFilePath.endsWith(normalizedHeaderPath) ||
+        normalizedHeaderPath.endsWith(traceFilePath)) {
         annotationLine = traceLine
-        console.log(
-          `MATCHED FILE: ${traceFilePath}, using line ${annotationLine}`)
-        break // Use the first matching trace line
+        break
       }
     }
 
     annotations.push({
       source: 'pytest',
       level: 'error',
-      filePath, // You can normalize here if needed
+      filePath: normalizedHeaderPath,
       line: annotationLine,
-      kind: kind.trim(),
-      message: message.trim(),
+      kind,
+      message,
     })
   }
 
@@ -66,7 +71,7 @@ function parseFailuresSection (body) {
     annotations.push({
       source: 'pytest',
       level: 'error',
-      filePath,
+      filePath: normalizeFilePath(filePath),
       line: parseInt(line),
       kind: kind.trim(),
       message: message.trim(),
@@ -86,7 +91,7 @@ function parseWarningsSection (body) {
       annotations.push({
         source: 'pytest',
         level: 'warning',
-        filePath,
+        filePath: normalizeFilePath(filePath),
         line: parseInt(line),
         kind: kind.trim(),
         message: message.trim(),
@@ -103,6 +108,7 @@ function parsePytest (infile) {
 
   const headers = []
   for (const [section, regex] of Object.entries(headerRegexes)) {
+    regex.lastIndex = 0
     const match = regex.exec(fileContent)
     if (match) {
       const start = match.index

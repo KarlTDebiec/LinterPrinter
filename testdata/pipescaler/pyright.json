@@ -1,0 +1,2270 @@
+{
+    "version": "1.1.401",
+    "time": "1768965117461",
+    "generalDiagnostics": [
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\cli\\pipescaler_cli.py",
+            "severity": "error",
+            "message": "\"CommandLineInterface\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 30
+                },
+                "end": {
+                    "line": 10,
+                    "character": 50
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\core\\cli\\utility_cli.py",
+            "severity": "error",
+            "message": "\"CommandLineInterface\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 30
+                },
+                "end": {
+                    "line": 10,
+                    "character": 50
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\core\\cli\\utility_cli.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"run\" for class \"type[Utility]\"\n  Attribute \"run\" is unknown",
+            "range": {
+                "start": {
+                    "line": 38,
+                    "character": 20
+                },
+                "end": {
+                    "line": 38,
+                    "character": 23
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\core\\pipelines\\checkpoint_manager_base.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 5
+                },
+                "end": {
+                    "line": 10,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\core\\pipelines\\directory_source.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 12,
+                    "character": 5
+                },
+                "end": {
+                    "line": 12,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\core\\pipelines\\directory_terminus.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 5
+                },
+                "end": {
+                    "line": 11,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\core\\pipelines\\directory_terminus.py",
+            "severity": "error",
+            "message": "\"iterdir\" is not a known attribute of \"None\"",
+            "range": {
+                "start": {
+                    "line": 35,
+                    "character": 30
+                },
+                "end": {
+                    "line": 35,
+                    "character": 37
+                }
+            },
+            "rule": "reportOptionalMemberAccess"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\core\\pipelines\\directory_terminus.py",
+            "severity": "error",
+            "message": "\"iterdir\" is not a known attribute of \"None\"",
+            "range": {
+                "start": {
+                    "line": 45,
+                    "character": 29
+                },
+                "end": {
+                    "line": 45,
+                    "character": 36
+                }
+            },
+            "rule": "reportOptionalMemberAccess"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\core\\pipelines\\directory_terminus.py",
+            "severity": "error",
+            "message": "Argument of type \"Unknown | Path | None\" cannot be assigned to parameter \"path\" of type \"StrOrBytesPath\" in function \"rmdir\"\n  Type \"Unknown | Path | None\" is not assignable to type \"StrOrBytesPath\"\n    Type \"None\" is not assignable to type \"StrOrBytesPath\"\n      \"None\" is not assignable to \"str\"\n      \"None\" is not assignable to \"bytes\"\n      \"None\" is incompatible with protocol \"PathLike[str]\"\n        \"__fspath__\" is not present\n      \"None\" is incompatible with protocol \"PathLike[bytes]\"\n        \"__fspath__\" is not present",
+            "range": {
+                "start": {
+                    "line": 46,
+                    "character": 18
+                },
+                "end": {
+                    "line": 46,
+                    "character": 27
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\core\\pipelines\\directory_terminus.py",
+            "severity": "error",
+            "message": "\"relative_to\" is not a known attribute of \"None\"",
+            "range": {
+                "start": {
+                    "line": 47,
+                    "character": 49
+                },
+                "end": {
+                    "line": 47,
+                    "character": 60
+                }
+            },
+            "rule": "reportOptionalMemberAccess"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\core\\pipelines\\pipe_object.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 5
+                },
+                "end": {
+                    "line": 11,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\core\\runner.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.general\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 5
+                },
+                "end": {
+                    "line": 11,
+                    "character": 30
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\core\\runner.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 12,
+                    "character": 5
+                },
+                "end": {
+                    "line": 12,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\file_scanner.py",
+            "severity": "error",
+            "message": "\"DirectoryNotFoundError\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 16,
+                    "character": 30
+                },
+                "end": {
+                    "line": 16,
+                    "character": 52
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\file_scanner.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 17,
+                    "character": 5
+                },
+                "end": {
+                    "line": 17,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\file_scanner.py",
+            "severity": "error",
+            "message": "Operator \"/\" not supported for types \"Unknown | Path | str\" and \"Literal['ignore']\"\n  Operator \"/\" not supported for types \"str\" and \"Literal['ignore']\"",
+            "range": {
+                "start": {
+                    "line": 70,
+                    "character": 31
+                },
+                "end": {
+                    "line": 70,
+                    "character": 54
+                }
+            },
+            "rule": "reportOperatorIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\file_scanner.py",
+            "severity": "error",
+            "message": "Operator \"/\" not supported for types \"Unknown | Path | str\" and \"Literal['new']\"\n  Operator \"/\" not supported for types \"str\" and \"Literal['new']\"",
+            "range": {
+                "start": {
+                    "line": 72,
+                    "character": 29
+                },
+                "end": {
+                    "line": 72,
+                    "character": 49
+                }
+            },
+            "rule": "reportOperatorIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\file_scanner.py",
+            "severity": "error",
+            "message": "Operator \"/\" not supported for types \"Unknown | Path | str\" and \"Literal['review']\"\n  Operator \"/\" not supported for types \"str\" and \"Literal['review']\"",
+            "range": {
+                "start": {
+                    "line": 74,
+                    "character": 29
+                },
+                "end": {
+                    "line": 74,
+                    "character": 52
+                }
+            },
+            "rule": "reportOperatorIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\file_scanner.py",
+            "severity": "error",
+            "message": "Operator \"/\" not supported for types \"Unknown | Path | str\" and \"Literal['remove']\"\n  Operator \"/\" not supported for types \"str\" and \"Literal['remove']\"",
+            "range": {
+                "start": {
+                    "line": 76,
+                    "character": 31
+                },
+                "end": {
+                    "line": 76,
+                    "character": 54
+                }
+            },
+            "rule": "reportOperatorIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\analytics\\image_hash_collection.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 14,
+                    "character": 5
+                },
+                "end": {
+                    "line": 14,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\analytics\\image_hash_collection.py",
+            "severity": "error",
+            "message": "Method \"__getitem__\" overrides class \"Sequence\" in an incompatible manner\n  Parameter 2 type mismatch: base parameter is type \"int\", override parameter is type \"str | tuple[str, float] | Iterable[str | tuple[str, float]]\"\n    Type \"int\" is not assignable to type \"str | tuple[str, float] | Iterable[str | tuple[str, float]]\"\n      \"int\" is not assignable to \"str\"\n      \"int\" is not assignable to \"tuple[str, float]\"\n      \"int\" is incompatible with protocol \"Iterable[str | tuple[str, float]]\"\n        \"__iter__\" is not present",
+            "range": {
+                "start": {
+                    "line": 58,
+                    "character": 8
+                },
+                "end": {
+                    "line": 58,
+                    "character": 19
+                }
+            },
+            "rule": "reportIncompatibleMethodOverride"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\analytics\\image_pair_collection.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 12,
+                    "character": 5
+                },
+                "end": {
+                    "line": 12,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\analytics\\image_pair_collection.py",
+            "severity": "error",
+            "message": "Method \"__getitem__\" overrides class \"Sequence\" in an incompatible manner\n  Parameter 2 type mismatch: base parameter is type \"int\", override parameter is type \"str | Iterable[str]\"\n    Type \"int\" is not assignable to type \"str | Iterable[str]\"\n      \"int\" is not assignable to \"str\"\n      \"int\" is incompatible with protocol \"Iterable[str]\"\n        \"__iter__\" is not present",
+            "range": {
+                "start": {
+                    "line": 32,
+                    "character": 8
+                },
+                "end": {
+                    "line": 32,
+                    "character": 19
+                }
+            },
+            "rule": "reportIncompatibleMethodOverride"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\analytics\\image_pair_scorer.py",
+            "severity": "error",
+            "message": "Type \"Series[Unknown] | ScoreStatsDataFrame\" is not assignable to declared type \"ScoreStatsSeries\"\n  Type \"Series[Unknown] | ScoreStatsDataFrame\" is not assignable to type \"ScoreStatsSeries\"\n    \"DataFrame\" is not assignable to \"Series[Unknown]\"",
+            "range": {
+                "start": {
+                    "line": 108,
+                    "character": 48
+                },
+                "end": {
+                    "line": 108,
+                    "character": 80
+                }
+            },
+            "rule": "reportAssignmentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\analytics\\image_pair_scorer.py",
+            "severity": "error",
+            "message": "Type \"Series[Unknown] | ScoreStatsDataFrame\" is not assignable to declared type \"HashSeries\"\n  Type \"Series[Unknown] | ScoreStatsDataFrame\" is not assignable to type \"HashSeries\"\n    \"DataFrame\" is not assignable to \"Series[Unknown]\"",
+            "range": {
+                "start": {
+                    "line": 127,
+                    "character": 49
+                },
+                "end": {
+                    "line": 127,
+                    "character": 80
+                }
+            },
+            "rule": "reportAssignmentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\analytics\\image_pair_scorer.py",
+            "severity": "error",
+            "message": "Parameter declaration \"parent\" is obscured by a declaration of the same name",
+            "range": {
+                "start": {
+                    "line": 146,
+                    "character": 14
+                },
+                "end": {
+                    "line": 146,
+                    "character": 20
+                }
+            },
+            "rule": "reportRedeclaration"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\analytics\\image_pair_scorer.py",
+            "severity": "error",
+            "message": "Parameter declaration \"child\" is obscured by a declaration of the same name",
+            "range": {
+                "start": {
+                    "line": 191,
+                    "character": 14
+                },
+                "end": {
+                    "line": 191,
+                    "character": 19
+                }
+            },
+            "rule": "reportRedeclaration"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\analytics\\image_pair_scorer.py",
+            "severity": "error",
+            "message": "Type \"ScoreStatsDataFrame | None\" is not assignable to declared type \"ScoreStatsDataFrame\"\n  Type \"ScoreStatsDataFrame | None\" is not assignable to type \"ScoreStatsDataFrame\"\n    \"None\" is not assignable to \"DataFrame\"",
+            "range": {
+                "start": {
+                    "line": 243,
+                    "character": 50
+                },
+                "end": {
+                    "line": 245,
+                    "character": 9
+                }
+            },
+            "rule": "reportAssignmentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\cli\\image_cli.py",
+            "severity": "error",
+            "message": "\"CommandLineInterface\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 30
+                },
+                "end": {
+                    "line": 9,
+                    "character": 50
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\cli\\image_mergers_cli.py",
+            "severity": "error",
+            "message": "\"CommandLineInterface\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 30
+                },
+                "end": {
+                    "line": 10,
+                    "character": 50
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\cli\\image_processors_cli.py",
+            "severity": "error",
+            "message": "\"CommandLineInterface\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 30
+                },
+                "end": {
+                    "line": 10,
+                    "character": 50
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\cli\\image_splitters_cli.py",
+            "severity": "error",
+            "message": "\"CommandLineInterface\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 30
+                },
+                "end": {
+                    "line": 10,
+                    "character": 50
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\cli\\image_utilities_cli.py",
+            "severity": "error",
+            "message": "\"CommandLineInterface\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 30
+                },
+                "end": {
+                    "line": 10,
+                    "character": 50
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\cli\\mergers\\alpha_merger_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.argument_parsing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 13,
+                    "character": 5
+                },
+                "end": {
+                    "line": 13,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\cli\\mergers\\palette_match_merger_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.argument_parsing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 13,
+                    "character": 5
+                },
+                "end": {
+                    "line": 13,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\cli\\processors\\crop_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.argument_parsing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\cli\\processors\\esrgan_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.argument_parsing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\cli\\processors\\expand_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.argument_parsing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\cli\\processors\\height_to_normal_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.argument_parsing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\cli\\processors\\mode_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.argument_parsing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\cli\\processors\\resize_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.argument_parsing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\cli\\processors\\solid_color_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.argument_parsing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\cli\\processors\\threshold_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.argument_parsing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\cli\\processors\\waifu_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.argument_parsing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\cli\\processors\\xbrz_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.argument_parsing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\cli\\splitters\\alpha_splitter_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.argument_parsing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 13,
+                    "character": 5
+                },
+                "end": {
+                    "line": 13,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\cli\\utilities\\esrgan_serializer_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.argument_parsing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\cli\\utilities\\waifu_serializer_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.argument_parsing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\core\\cli\\image_merger_cli.py",
+            "severity": "error",
+            "message": "\"CommandLineInterface\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 30
+                },
+                "end": {
+                    "line": 10,
+                    "character": 50
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\core\\cli\\image_processor_cli.py",
+            "severity": "error",
+            "message": "\"CommandLineInterface\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 15,
+                    "character": 30
+                },
+                "end": {
+                    "line": 15,
+                    "character": 50
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\core\\cli\\image_processor_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.argument_parsing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 16,
+                    "character": 5
+                },
+                "end": {
+                    "line": 16,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\core\\cli\\image_splitter_cli.py",
+            "severity": "error",
+            "message": "\"CommandLineInterface\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 30
+                },
+                "end": {
+                    "line": 11,
+                    "character": 50
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\core\\cli\\image_splitter_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.argument_parsing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 12,
+                    "character": 5
+                },
+                "end": {
+                    "line": 12,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\core\\functions.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 5
+                },
+                "end": {
+                    "line": 10,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\core\\functions.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"textsize\" for class \"ImageDraw\"\n  Attribute \"textsize\" is unknown",
+            "range": {
+                "start": {
+                    "line": 234,
+                    "character": 16
+                },
+                "end": {
+                    "line": 234,
+                    "character": 24
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\core\\operators\\processors\\pytorch_image_processor.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 14,
+                    "character": 5
+                },
+                "end": {
+                    "line": 14,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\core\\pipelines\\pipe_image.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 13,
+                    "character": 5
+                },
+                "end": {
+                    "line": 13,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\models\\esrgan\\esrgan_4x.py",
+            "severity": "error",
+            "message": "Method \"load_state_dict\" overrides class \"Module\" in an incompatible manner\n  Positional parameter count mismatch; base method has 4, but override has 3\n  Parameter 4 mismatch: base parameter \"assign\" is keyword parameter, override parameter is position-only",
+            "range": {
+                "start": {
+                    "line": 42,
+                    "character": 8
+                },
+                "end": {
+                    "line": 42,
+                    "character": 23
+                }
+            },
+            "rule": "reportIncompatibleMethodOverride"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\operators\\mergers\\palette_match_merger.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 5
+                },
+                "end": {
+                    "line": 10,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\operators\\processors\\crop_processor.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 8,
+                    "character": 5
+                },
+                "end": {
+                    "line": 8,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\operators\\processors\\expand_processor.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 8,
+                    "character": 5
+                },
+                "end": {
+                    "line": 8,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\operators\\processors\\height_to_normal_processor.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 8,
+                    "character": 5
+                },
+                "end": {
+                    "line": 8,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\operators\\processors\\mode_processor.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 8,
+                    "character": 5
+                },
+                "end": {
+                    "line": 8,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\operators\\processors\\potrace_processor.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.file\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 5
+                },
+                "end": {
+                    "line": 10,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\operators\\processors\\potrace_processor.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 5
+                },
+                "end": {
+                    "line": 11,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\operators\\processors\\resize_processor.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\operators\\processors\\solid_color_processor.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\operators\\processors\\spandrel_processor.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 15,
+                    "character": 5
+                },
+                "end": {
+                    "line": 15,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\operators\\processors\\spandrel_processor.py",
+            "severity": "error",
+            "message": "Argument missing for parameter \"mask\"",
+            "range": {
+                "start": {
+                    "line": 74,
+                    "character": 24
+                },
+                "end": {
+                    "line": 74,
+                    "character": 48
+                }
+            },
+            "rule": "reportCallIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\operators\\processors\\spandrel_processor.py",
+            "severity": "error",
+            "message": "Argument missing for parameter \"mask\"",
+            "range": {
+                "start": {
+                    "line": 97,
+                    "character": 24
+                },
+                "end": {
+                    "line": 97,
+                    "character": 48
+                }
+            },
+            "rule": "reportCallIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\operators\\processors\\threshold_processor.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 12,
+                    "character": 5
+                },
+                "end": {
+                    "line": 12,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\operators\\processors\\xbrz_processor.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 5
+                },
+                "end": {
+                    "line": 10,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\operators\\splitters\\alpha_splitter.py",
+            "severity": "error",
+            "message": "\"ArgumentConflictError\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 30
+                },
+                "end": {
+                    "line": 9,
+                    "character": 51
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\pipelines\\image_substituter.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 5
+                },
+                "end": {
+                    "line": 11,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\pipelines\\segments\\image_runner_segment.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.file\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 8,
+                    "character": 5
+                },
+                "end": {
+                    "line": 8,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\pipelines\\segments\\post_checkpointed_image_runner_segment.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.file\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\pipelines\\segments\\post_checkpointed_image_runner_segment.py",
+            "severity": "error",
+            "message": "\"segment\" overrides symbol of same name in class \"CheckpointedSegment\"\n  Variable is mutable so its type is invariant\n    Override type \"ImageRunnerSegment\" is not the same as base type \"SegmentLike\"",
+            "range": {
+                "start": {
+                    "line": 18,
+                    "character": 4
+                },
+                "end": {
+                    "line": 18,
+                    "character": 11
+                }
+            },
+            "rule": "reportIncompatibleVariableOverride"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\pipelines\\sorters\\alpha_sorter.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 5
+                },
+                "end": {
+                    "line": 10,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\pipelines\\sorters\\grayscale_sorter.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 5
+                },
+                "end": {
+                    "line": 11,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\pipelines\\sorters\\monochrome_sorter.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 8,
+                    "character": 5
+                },
+                "end": {
+                    "line": 8,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\pipelines\\sorters\\size_sorter.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 8,
+                    "character": 5
+                },
+                "end": {
+                    "line": 8,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\pipelines\\sorters\\solid_color_sorter.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 5
+                },
+                "end": {
+                    "line": 10,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\pipelines\\sources\\image_video_frame_source.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 12,
+                    "character": 5
+                },
+                "end": {
+                    "line": 12,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\runners\\pngquant_runner.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.general\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 5
+                },
+                "end": {
+                    "line": 11,
+                    "character": 30
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\runners\\texconv_runner.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.general\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 5
+                },
+                "end": {
+                    "line": 10,
+                    "character": 30
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\scaled_pair_identifier.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 17,
+                    "character": 5
+                },
+                "end": {
+                    "line": 17,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\scaled_pair_identifier.py",
+            "severity": "error",
+            "message": "Operator \"/\" not supported for types \"Unknown | Path | str\" and \"Literal['scaled']\"\n  Operator \"/\" not supported for types \"str\" and \"Literal['scaled']\"",
+            "range": {
+                "start": {
+                    "line": 63,
+                    "character": 32
+                },
+                "end": {
+                    "line": 63,
+                    "character": 55
+                }
+            },
+            "rule": "reportOperatorIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\scaled_pair_identifier.py",
+            "severity": "error",
+            "message": "Operator \"/\" not supported for types \"Unknown | Path | str\" and \"Literal['scaled_images']\"\n  Operator \"/\" not supported for types \"str\" and \"Literal['scaled_images']\"",
+            "range": {
+                "start": {
+                    "line": 65,
+                    "character": 36
+                },
+                "end": {
+                    "line": 65,
+                    "character": 66
+                }
+            },
+            "rule": "reportOperatorIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\scaled_pair_identifier.py",
+            "severity": "error",
+            "message": "Invalid conditional operand of type \"DataFrame | None\"\n  Method __bool__ for type \"DataFrame\" returns type \"NoReturn\" rather than \"bool\"",
+            "range": {
+                "start": {
+                    "line": 221,
+                    "character": 19
+                },
+                "end": {
+                    "line": 221,
+                    "character": 27
+                }
+            },
+            "rule": "reportGeneralTypeIssues"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\subdivided_image.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 5
+                },
+                "end": {
+                    "line": 10,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\utilities\\esrgan_serializer.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 13,
+                    "character": 5
+                },
+                "end": {
+                    "line": 13,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\utilities\\waifu_serializer.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 12,
+                    "character": 5
+                },
+                "end": {
+                    "line": 12,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\pipelines\\checkpoint_manager.py",
+            "severity": "error",
+            "message": "\"iterdir\" is not a known attribute of \"None\"",
+            "range": {
+                "start": {
+                    "line": 134,
+                    "character": 30
+                },
+                "end": {
+                    "line": 134,
+                    "character": 37
+                }
+            },
+            "rule": "reportOptionalMemberAccess"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\pipelines\\checkpoint_manager.py",
+            "severity": "error",
+            "message": "\"iterdir\" is not a known attribute of \"None\"",
+            "range": {
+                "start": {
+                    "line": 145,
+                    "character": 29
+                },
+                "end": {
+                    "line": 145,
+                    "character": 36
+                }
+            },
+            "rule": "reportOptionalMemberAccess"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\pipelines\\checkpoint_manager.py",
+            "severity": "error",
+            "message": "Argument of type \"Unknown | Path | None\" cannot be assigned to parameter \"path\" of type \"StrOrBytesPath\" in function \"rmdir\"\n  Type \"Unknown | Path | None\" is not assignable to type \"StrOrBytesPath\"\n    Type \"None\" is not assignable to type \"StrOrBytesPath\"\n      \"None\" is not assignable to \"str\"\n      \"None\" is not assignable to \"bytes\"\n      \"None\" is incompatible with protocol \"PathLike[str]\"\n        \"__fspath__\" is not present\n      \"None\" is incompatible with protocol \"PathLike[bytes]\"\n        \"__fspath__\" is not present",
+            "range": {
+                "start": {
+                    "line": 146,
+                    "character": 18
+                },
+                "end": {
+                    "line": 146,
+                    "character": 27
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\pipelines\\checkpoint_manager.py",
+            "severity": "error",
+            "message": "\"relative_to\" is not a known attribute of \"None\"",
+            "range": {
+                "start": {
+                    "line": 147,
+                    "character": 49
+                },
+                "end": {
+                    "line": 147,
+                    "character": 60
+                }
+            },
+            "rule": "reportOptionalMemberAccess"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\testing\\file.py",
+            "severity": "error",
+            "message": "\"package_root\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 12,
+                    "character": 34
+                },
+                "end": {
+                    "line": 12,
+                    "character": 46
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\testing\\mark.py",
+            "severity": "error",
+            "message": "\"UnsupportedPlatformError\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 13,
+                    "character": 30
+                },
+                "end": {
+                    "line": 13,
+                    "character": 54
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\video\\core\\pipelines\\pipe_video.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 13,
+                    "character": 5
+                },
+                "end": {
+                    "line": 13,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\video\\runners\\topaz_video_ai_runner.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.general\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 30
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\video\\runners\\topaz_video_ai_runner.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 5
+                },
+                "end": {
+                    "line": 10,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\scripts\\readme_updater.py",
+            "severity": "error",
+            "message": "\"package_root\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 21,
+                    "character": 30
+                },
+                "end": {
+                    "line": 21,
+                    "character": 42
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\scripts\\readme_updater.py",
+            "severity": "error",
+            "message": "Argument of type \"type[ImageOperator] | type[Source[Unknown]] | type[Sorter[Unknown]] | type[Terminus[Unknown]]\" cannot be assigned to parameter \"stage\" of type \"type[ImageOperator]\" in function \"get_stage_description\"\n  Type \"type[ImageOperator] | type[Source[Unknown]] | type[Sorter[Unknown]] | type[Terminus[Unknown]]\" is not assignable to type \"type[ImageOperator]\"\n    \"type[Sorter[Unknown]]\" is not assignable to \"type[ImageOperator]\"\n    Type \"type[Sorter[Unknown]]\" is not assignable to type \"type[ImageOperator]\"",
+            "range": {
+                "start": {
+                    "line": 88,
+                    "character": 45
+                },
+                "end": {
+                    "line": 88,
+                    "character": 50
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\cli\\test_pipescaler_cli.py",
+            "severity": "error",
+            "message": "\"CommandLineInterface\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 14,
+                    "character": 30
+                },
+                "end": {
+                    "line": 14,
+                    "character": 50
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\cli\\test_pipescaler_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.testing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 15,
+                    "character": 5
+                },
+                "end": {
+                    "line": 15,
+                    "character": 30
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_cli.py",
+            "severity": "error",
+            "message": "\"CommandLineInterface\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 13,
+                    "character": 30
+                },
+                "end": {
+                    "line": 13,
+                    "character": 50
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.testing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 14,
+                    "character": 5
+                },
+                "end": {
+                    "line": 14,
+                    "character": 30
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_mergers_cli.py",
+            "severity": "error",
+            "message": "\"CommandLineInterface\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 13,
+                    "character": 30
+                },
+                "end": {
+                    "line": 13,
+                    "character": 50
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_mergers_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.file\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 14,
+                    "character": 5
+                },
+                "end": {
+                    "line": 14,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_mergers_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.testing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 15,
+                    "character": 5
+                },
+                "end": {
+                    "line": 15,
+                    "character": 30
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_processors_cli.py",
+            "severity": "error",
+            "message": "\"CommandLineInterface\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 14,
+                    "character": 30
+                },
+                "end": {
+                    "line": 14,
+                    "character": 50
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_processors_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.file\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 15,
+                    "character": 5
+                },
+                "end": {
+                    "line": 15,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_processors_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.testing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 16,
+                    "character": 5
+                },
+                "end": {
+                    "line": 16,
+                    "character": 30
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_splitters_cli.py",
+            "severity": "error",
+            "message": "\"CommandLineInterface\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 13,
+                    "character": 30
+                },
+                "end": {
+                    "line": 13,
+                    "character": 50
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_splitters_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.file\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 14,
+                    "character": 5
+                },
+                "end": {
+                    "line": 14,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_splitters_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.testing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 15,
+                    "character": 5
+                },
+                "end": {
+                    "line": 15,
+                    "character": 30
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_utilities_cli.py",
+            "severity": "error",
+            "message": "\"CommandLineInterface\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 13,
+                    "character": 30
+                },
+                "end": {
+                    "line": 13,
+                    "character": 50
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_utilities_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.file\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 14,
+                    "character": 5
+                },
+                "end": {
+                    "line": 14,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_utilities_cli.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.testing\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 15,
+                    "character": 5
+                },
+                "end": {
+                    "line": 15,
+                    "character": 30
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\image\\runners\\test_pngquant_runner.py",
+            "severity": "error",
+            "message": "\"ExecutableNotFoundError\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 30
+                },
+                "end": {
+                    "line": 11,
+                    "character": 53
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\image\\runners\\test_pngquant_runner.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.file\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 12,
+                    "character": 5
+                },
+                "end": {
+                    "line": 12,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\image\\runners\\test_potrace_runner.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.file\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\image\\runners\\test_texconv_runner.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.file\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\image\\test_scaled_pair_identifier.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.file\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 5
+                },
+                "end": {
+                    "line": 11,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\image\\utilities\\test_esrgan_serializer.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.file\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 8,
+                    "character": 5
+                },
+                "end": {
+                    "line": 8,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\image\\utilities\\test_waifu_serializer.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.file\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 8,
+                    "character": 5
+                },
+                "end": {
+                    "line": 8,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\segments\\test_post_checkpointed_segment.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.file\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\segments\\test_post_checkpointed_segment.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 5
+                },
+                "end": {
+                    "line": 10,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\segments\\test_post_checkpointed_segment.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"touch\" for class \"str\"\n  Attribute \"touch\" is unknown",
+            "range": {
+                "start": {
+                    "line": 23,
+                    "character": 9
+                },
+                "end": {
+                    "line": 23,
+                    "character": 14
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\segments\\test_post_checkpointed_segment.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"touch\" for class \"str\"\n  Attribute \"touch\" is unknown",
+            "range": {
+                "start": {
+                    "line": 33,
+                    "character": 9
+                },
+                "end": {
+                    "line": 33,
+                    "character": 14
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\segments\\test_pre_checkpointed_segment.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.file\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\segments\\test_pre_checkpointed_segment.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 5
+                },
+                "end": {
+                    "line": 10,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\segments\\test_pre_checkpointed_segment.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"touch\" for class \"str\"\n  Attribute \"touch\" is unknown",
+            "range": {
+                "start": {
+                    "line": 23,
+                    "character": 9
+                },
+                "end": {
+                    "line": 23,
+                    "character": 14
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\sorters\\test_list_sorter.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.file\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 8,
+                    "character": 5
+                },
+                "end": {
+                    "line": 8,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\test_checkpoint_manager.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.file\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\test_checkpoint_manager.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.validation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 5
+                },
+                "end": {
+                    "line": 10,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\test_checkpoint_manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"touch\" for class \"str\"\n  Attribute \"touch\" is unknown",
+            "range": {
+                "start": {
+                    "line": 30,
+                    "character": 9
+                },
+                "end": {
+                    "line": 30,
+                    "character": 14
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\test_checkpoint_manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"touch\" for class \"str\"\n  Attribute \"touch\" is unknown",
+            "range": {
+                "start": {
+                    "line": 40,
+                    "character": 9
+                },
+                "end": {
+                    "line": 40,
+                    "character": 14
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\utilities\\test_file_scanner.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.file\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\video\\runners\\test_apngasm_runner.py",
+            "severity": "error",
+            "message": "\"ExecutableNotFoundError\" is unknown import symbol",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 30
+                },
+                "end": {
+                    "line": 9,
+                    "character": 53
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\PipeScaler\\test\\video\\runners\\test_apngasm_runner.py",
+            "severity": "error",
+            "message": "Import \"pipescaler.common.file\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 5
+                },
+                "end": {
+                    "line": 10,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        }
+    ],
+    "summary": {
+        "filesAnalyzed": 230,
+        "errorCount": 141,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 6.984
+    }
+}
+

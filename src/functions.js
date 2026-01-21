@@ -27,4 +27,16 @@ function parseFileList (infile) {
   })
 }
 
-module.exports = { formatAnnotation, parseFileList }
+function normalizeFilePath (filePath) {
+  const githubWorkspace = process.env.GITHUB_WORKSPACE || ''
+  const absoluteFilePath = path.isAbsolute(filePath)
+    ? filePath
+    : path.join(githubWorkspace, filePath)
+
+  let relativeFilePath = githubWorkspace
+    ? path.relative(githubWorkspace, absoluteFilePath)
+    : absoluteFilePath
+  return relativeFilePath.split(path.sep).join('/')
+}
+
+module.exports = { formatAnnotation, normalizeFilePath, parseFileList }
