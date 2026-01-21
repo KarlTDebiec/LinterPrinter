@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Parses linter output and posts comments on PRs",
   "scripts": {
+    "test": "node test/run.js"
   },
   "license": "MIT",
   "dependencies": {

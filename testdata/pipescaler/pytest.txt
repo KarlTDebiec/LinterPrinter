@@ -1,0 +1,822 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-8.4.0, pluggy-1.6.0 -- C:\Users\karls\Code\PipeScaler\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\karls\Code\PipeScaler
+configfile: pyproject.toml
+plugins: cov-6.1.1, xdist-3.7.0
+collecting ... collected 0 items / 47 errors
+
+=================================== ERRORS ====================================
+______________ ERROR collecting test/cli/test_pipescaler_cli.py _______________
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\cli\test_pipescaler_cli.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cli\test_pipescaler_cli.py:14: in <module>
+    from pipescaler.cli import PipeScalerCli
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+______________ ERROR collecting test/image/cli/test_image_cli.py ______________
+image\cli\test_image_cli.py:14: in <module>
+    from pipescaler.common import CommandLineInterface
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1322: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:1262: in _find_spec
+    ???
+<frozen importlib._bootstrap_external>:1559: in find_spec
+    ???
+<frozen importlib._bootstrap_external>:1528: in _get_spec
+    ???
+<frozen importlib._bootstrap_external>:1399: in __iter__
+    ???
+<frozen importlib._bootstrap_external>:1386: in _recalculate
+    ???
+<frozen importlib._bootstrap_external>:1382: in _get_parent_path
+    ???
+E   KeyError: 'pipescaler'
+__________ ERROR collecting test/image/cli/test_image_mergers_cli.py __________
+image\cli\test_image_mergers_cli.py:14: in <module>
+    from pipescaler.common import CommandLineInterface
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1322: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:1262: in _find_spec
+    ???
+<frozen importlib._bootstrap_external>:1559: in find_spec
+    ???
+<frozen importlib._bootstrap_external>:1528: in _get_spec
+    ???
+<frozen importlib._bootstrap_external>:1399: in __iter__
+    ???
+<frozen importlib._bootstrap_external>:1386: in _recalculate
+    ???
+<frozen importlib._bootstrap_external>:1382: in _get_parent_path
+    ???
+E   KeyError: 'pipescaler'
+________ ERROR collecting test/image/cli/test_image_processors_cli.py _________
+image\cli\test_image_processors_cli.py:15: in <module>
+    from pipescaler.common import CommandLineInterface
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1322: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:1262: in _find_spec
+    ???
+<frozen importlib._bootstrap_external>:1559: in find_spec
+    ???
+<frozen importlib._bootstrap_external>:1528: in _get_spec
+    ???
+<frozen importlib._bootstrap_external>:1399: in __iter__
+    ???
+<frozen importlib._bootstrap_external>:1386: in _recalculate
+    ???
+<frozen importlib._bootstrap_external>:1382: in _get_parent_path
+    ???
+E   KeyError: 'pipescaler'
+_________ ERROR collecting test/image/cli/test_image_splitters_cli.py _________
+image\cli\test_image_splitters_cli.py:14: in <module>
+    from pipescaler.common import CommandLineInterface
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1322: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:1262: in _find_spec
+    ???
+<frozen importlib._bootstrap_external>:1559: in find_spec
+    ???
+<frozen importlib._bootstrap_external>:1528: in _get_spec
+    ???
+<frozen importlib._bootstrap_external>:1399: in __iter__
+    ???
+<frozen importlib._bootstrap_external>:1386: in _recalculate
+    ???
+<frozen importlib._bootstrap_external>:1382: in _get_parent_path
+    ???
+E   KeyError: 'pipescaler'
+_________ ERROR collecting test/image/cli/test_image_utilities_cli.py _________
+image\cli\test_image_utilities_cli.py:14: in <module>
+    from pipescaler.common import CommandLineInterface
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1322: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:1262: in _find_spec
+    ???
+<frozen importlib._bootstrap_external>:1559: in find_spec
+    ???
+<frozen importlib._bootstrap_external>:1528: in _get_spec
+    ???
+<frozen importlib._bootstrap_external>:1399: in __iter__
+    ???
+<frozen importlib._bootstrap_external>:1386: in _recalculate
+    ???
+<frozen importlib._bootstrap_external>:1382: in _get_parent_path
+    ???
+E   KeyError: 'pipescaler'
+_____ ERROR collecting test/image/operators/mergers/test_alpha_merger.py ______
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\operators\mergers\test_alpha_merger.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\operators\mergers\test_alpha_merger.py:8: in <module>
+    from pipescaler.image.operators.mergers import AlphaMerger
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+_ ERROR collecting test/image/operators/mergers/test_histogram_match_merger.py _
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\operators\mergers\test_histogram_match_merger.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\operators\mergers\test_histogram_match_merger.py:8: in <module>
+    from pipescaler.image.operators.mergers import HistogramMatchMerger
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+_____ ERROR collecting test/image/operators/mergers/test_normal_merger.py _____
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\operators\mergers\test_normal_merger.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\operators\mergers\test_normal_merger.py:8: in <module>
+    from pipescaler.image.operators.mergers import NormalMerger
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+_ ERROR collecting test/image/operators/mergers/test_palette_match_merger.py __
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\operators\mergers\test_palette_match_merger.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\operators\mergers\test_palette_match_merger.py:8: in <module>
+    from pipescaler.image.core import PaletteMatchMode
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+___ ERROR collecting test/image/operators/processors/test_crop_processor.py ___
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\operators\processors\test_crop_processor.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\operators\processors\test_crop_processor.py:8: in <module>
+    from pipescaler.image.operators.processors import CropProcessor
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+__ ERROR collecting test/image/operators/processors/test_esrgan_processor.py __
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\operators\processors\test_esrgan_processor.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\operators\processors\test_esrgan_processor.py:8: in <module>
+    from pipescaler.image.operators.processors import EsrganProcessor
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+__ ERROR collecting test/image/operators/processors/test_expand_processor.py __
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\operators\processors\test_expand_processor.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\operators\processors\test_expand_processor.py:8: in <module>
+    from pipescaler.image.operators.processors import ExpandProcessor
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+_ ERROR collecting test/image/operators/processors/test_height_to_normal_processor.py _
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\operators\processors\test_height_to_normal_processor.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\operators\processors\test_height_to_normal_processor.py:9: in <module>
+    from pipescaler.image.operators.processors import HeightToNormalProcessor
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+___ ERROR collecting test/image/operators/processors/test_mode_processor.py ___
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\operators\processors\test_mode_processor.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\operators\processors\test_mode_processor.py:8: in <module>
+    from pipescaler.image.operators.processors import ModeProcessor
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+_ ERROR collecting test/image/operators/processors/test_potrace_processor.py __
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\operators\processors\test_potrace_processor.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\operators\processors\test_potrace_processor.py:8: in <module>
+    from pipescaler.image.operators.processors import PotraceProcessor
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+__ ERROR collecting test/image/operators/processors/test_resize_processor.py __
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\operators\processors\test_resize_processor.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\operators\processors\test_resize_processor.py:8: in <module>
+    from pipescaler.image.operators.processors import ResizeProcessor
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+_ ERROR collecting test/image/operators/processors/test_sharpen_processor.py __
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\operators\processors\test_sharpen_processor.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\operators\processors\test_sharpen_processor.py:8: in <module>
+    from pipescaler.image.operators.processors import SharpenProcessor
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+_ ERROR collecting test/image/operators/processors/test_solid_color_processor.py _
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\operators\processors\test_solid_color_processor.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\operators\processors\test_solid_color_processor.py:8: in <module>
+    from pipescaler.image.operators.processors import SolidColorProcessor
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+_ ERROR collecting test/image/operators/processors/test_spandrel_processor.py _
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\operators\processors\test_spandrel_processor.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\operators\processors\test_spandrel_processor.py:8: in <module>
+    from pipescaler.image.operators.processors import SpandrelProcessor
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+_ ERROR collecting test/image/operators/processors/test_threshold_processor.py _
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\operators\processors\test_threshold_processor.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\operators\processors\test_threshold_processor.py:9: in <module>
+    from pipescaler.image.operators.processors import ThresholdProcessor
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+__ ERROR collecting test/image/operators/processors/test_waifu_processor.py ___
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\operators\processors\test_waifu_processor.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\operators\processors\test_waifu_processor.py:8: in <module>
+    from pipescaler.image.operators.processors import WaifuProcessor
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+___ ERROR collecting test/image/operators/processors/test_xbrz_processor.py ___
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\operators\processors\test_xbrz_processor.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\operators\processors\test_xbrz_processor.py:8: in <module>
+    from pipescaler.image.operators.processors import XbrzProcessor
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+___ ERROR collecting test/image/operators/splitters/test_alpha_splitter.py ____
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\operators\splitters\test_alpha_splitter.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\operators\splitters\test_alpha_splitter.py:8: in <module>
+    from pipescaler.image.core import AlphaMode, MaskFillMode
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+___ ERROR collecting test/image/operators/splitters/test_normal_splitter.py ___
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\operators\splitters\test_normal_splitter.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\operators\splitters\test_normal_splitter.py:8: in <module>
+    from pipescaler.image.operators.splitters import NormalSplitter
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+_____ ERROR collecting test/image/pipelines/sorters/test_alpha_sorter.py ______
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\pipelines\sorters\test_alpha_sorter.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\pipelines\sorters\test_alpha_sorter.py:7: in <module>
+    from pipescaler.image.core.pipelines import PipeImage
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+___ ERROR collecting test/image/pipelines/sorters/test_grayscale_sorter.py ____
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\pipelines\sorters\test_grayscale_sorter.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\pipelines\sorters\test_grayscale_sorter.py:7: in <module>
+    from pipescaler.image.core.pipelines import PipeImage
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+______ ERROR collecting test/image/pipelines/sorters/test_mode_sorter.py ______
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\pipelines\sorters\test_mode_sorter.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\pipelines\sorters\test_mode_sorter.py:7: in <module>
+    from pipescaler.image.core.pipelines import PipeImage
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+___ ERROR collecting test/image/pipelines/sorters/test_monochrome_sorter.py ___
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\pipelines\sorters\test_monochrome_sorter.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\pipelines\sorters\test_monochrome_sorter.py:7: in <module>
+    from pipescaler.image.core.pipelines import PipeImage
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+______ ERROR collecting test/image/pipelines/sorters/test_size_sorter.py ______
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\pipelines\sorters\test_size_sorter.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\pipelines\sorters\test_size_sorter.py:7: in <module>
+    from pipescaler.image.core.pipelines import PipeImage
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+__ ERROR collecting test/image/pipelines/sorters/test_solid_color_sorter.py ___
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\pipelines\sorters\test_solid_color_sorter.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\pipelines\sorters\test_solid_color_sorter.py:7: in <module>
+    from pipescaler.image.core.pipelines import PipeImage
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+_ ERROR collecting test/image/pipelines/sources/test_image_directory_source.py _
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\pipelines\sources\test_image_directory_source.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\pipelines\sources\test_image_directory_source.py:7: in <module>
+    from pipescaler.core.pipelines import Source
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+__ ERROR collecting test/image/pipelines/termini/test_copy_file_processor.py __
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\pipelines\termini\test_copy_file_processor.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\pipelines\termini\test_copy_file_processor.py:7: in <module>
+    from pipescaler.image.core.pipelines import PipeImage
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+_________ ERROR collecting test/image/runners/test_pngquant_runner.py _________
+image\runners\test_pngquant_runner.py:12: in <module>
+    from pipescaler.common import ExecutableNotFoundError
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1322: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:1262: in _find_spec
+    ???
+<frozen importlib._bootstrap_external>:1559: in find_spec
+    ???
+<frozen importlib._bootstrap_external>:1528: in _get_spec
+    ???
+<frozen importlib._bootstrap_external>:1399: in __iter__
+    ???
+<frozen importlib._bootstrap_external>:1386: in _recalculate
+    ???
+<frozen importlib._bootstrap_external>:1382: in _get_parent_path
+    ???
+E   KeyError: 'pipescaler'
+_________ ERROR collecting test/image/runners/test_potrace_runner.py __________
+image\runners\test_potrace_runner.py:10: in <module>
+    from pipescaler.common.file import get_temp_file_path
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1322: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:1262: in _find_spec
+    ???
+<frozen importlib._bootstrap_external>:1559: in find_spec
+    ???
+<frozen importlib._bootstrap_external>:1528: in _get_spec
+    ???
+<frozen importlib._bootstrap_external>:1399: in __iter__
+    ???
+<frozen importlib._bootstrap_external>:1386: in _recalculate
+    ???
+<frozen importlib._bootstrap_external>:1382: in _get_parent_path
+    ???
+E   KeyError: 'pipescaler'
+_________ ERROR collecting test/image/runners/test_texconv_runner.py __________
+image\runners\test_texconv_runner.py:10: in <module>
+    from pipescaler.common.file import get_temp_file_path
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1322: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:1262: in _find_spec
+    ???
+<frozen importlib._bootstrap_external>:1559: in find_spec
+    ???
+<frozen importlib._bootstrap_external>:1528: in _get_spec
+    ???
+<frozen importlib._bootstrap_external>:1399: in __iter__
+    ???
+<frozen importlib._bootstrap_external>:1386: in _recalculate
+    ???
+<frozen importlib._bootstrap_external>:1382: in _get_parent_path
+    ???
+E   KeyError: 'pipescaler'
+_________ ERROR collecting test/image/test_scaled_pair_identifier.py __________
+image\test_scaled_pair_identifier.py:12: in <module>
+    from pipescaler.common.file import get_temp_directory_path, get_temp_file_path
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1322: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:1262: in _find_spec
+    ???
+<frozen importlib._bootstrap_external>:1559: in find_spec
+    ???
+<frozen importlib._bootstrap_external>:1528: in _get_spec
+    ???
+<frozen importlib._bootstrap_external>:1399: in __iter__
+    ???
+<frozen importlib._bootstrap_external>:1386: in _recalculate
+    ???
+<frozen importlib._bootstrap_external>:1382: in _get_parent_path
+    ???
+E   KeyError: 'pipescaler'
+____________ ERROR collecting test/image/test_subdivided_image.py _____________
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\image\test_subdivided_image.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+image\test_subdivided_image.py:8: in <module>
+    from pipescaler.image import SubdividedImage
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+_______ ERROR collecting test/image/utilities/test_esrgan_serializer.py _______
+image\utilities\test_esrgan_serializer.py:9: in <module>
+    from pipescaler.common.file import get_temp_file_path
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1322: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:1262: in _find_spec
+    ???
+<frozen importlib._bootstrap_external>:1559: in find_spec
+    ???
+<frozen importlib._bootstrap_external>:1528: in _get_spec
+    ???
+<frozen importlib._bootstrap_external>:1399: in __iter__
+    ???
+<frozen importlib._bootstrap_external>:1386: in _recalculate
+    ???
+<frozen importlib._bootstrap_external>:1382: in _get_parent_path
+    ???
+E   KeyError: 'pipescaler'
+_______ ERROR collecting test/image/utilities/test_waifu_serializer.py ________
+image\utilities\test_waifu_serializer.py:9: in <module>
+    from pipescaler.common.file import get_temp_file_path
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1322: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:1262: in _find_spec
+    ???
+<frozen importlib._bootstrap_external>:1559: in find_spec
+    ???
+<frozen importlib._bootstrap_external>:1528: in _get_spec
+    ???
+<frozen importlib._bootstrap_external>:1399: in __iter__
+    ???
+<frozen importlib._bootstrap_external>:1386: in _recalculate
+    ???
+<frozen importlib._bootstrap_external>:1382: in _get_parent_path
+    ???
+E   KeyError: 'pipescaler'
+_ ERROR collecting test/pipelines/segments/test_post_checkpointed_segment.py __
+pipelines\segments\test_post_checkpointed_segment.py:10: in <module>
+    from pipescaler.common.file import get_temp_directory_path
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1322: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:1262: in _find_spec
+    ???
+<frozen importlib._bootstrap_external>:1559: in find_spec
+    ???
+<frozen importlib._bootstrap_external>:1528: in _get_spec
+    ???
+<frozen importlib._bootstrap_external>:1399: in __iter__
+    ???
+<frozen importlib._bootstrap_external>:1386: in _recalculate
+    ???
+<frozen importlib._bootstrap_external>:1382: in _get_parent_path
+    ???
+E   KeyError: 'pipescaler'
+__ ERROR collecting test/pipelines/segments/test_pre_checkpointed_segment.py __
+pipelines\segments\test_pre_checkpointed_segment.py:10: in <module>
+    from pipescaler.common.file import get_temp_directory_path
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1322: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:1262: in _find_spec
+    ???
+<frozen importlib._bootstrap_external>:1559: in find_spec
+    ???
+<frozen importlib._bootstrap_external>:1528: in _get_spec
+    ???
+<frozen importlib._bootstrap_external>:1399: in __iter__
+    ???
+<frozen importlib._bootstrap_external>:1386: in _recalculate
+    ???
+<frozen importlib._bootstrap_external>:1382: in _get_parent_path
+    ???
+E   KeyError: 'pipescaler'
+_________ ERROR collecting test/pipelines/sorters/test_list_sorter.py _________
+pipelines\sorters\test_list_sorter.py:9: in <module>
+    from pipescaler.common.file import get_temp_directory_path, get_temp_file_path
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1322: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:1262: in _find_spec
+    ???
+<frozen importlib._bootstrap_external>:1559: in find_spec
+    ???
+<frozen importlib._bootstrap_external>:1528: in _get_spec
+    ???
+<frozen importlib._bootstrap_external>:1399: in __iter__
+    ???
+<frozen importlib._bootstrap_external>:1386: in _recalculate
+    ???
+<frozen importlib._bootstrap_external>:1382: in _get_parent_path
+    ???
+E   KeyError: 'pipescaler'
+________ ERROR collecting test/pipelines/sorters/test_regex_sorter.py _________
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\pipelines\sorters\test_regex_sorter.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pipelines\sorters\test_regex_sorter.py:9: in <module>
+    from pipescaler.image.core.pipelines import PipeImage
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+_________ ERROR collecting test/pipelines/test_checkpoint_manager.py __________
+pipelines\test_checkpoint_manager.py:10: in <module>
+    from pipescaler.common.file import get_temp_directory_path
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1322: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:1262: in _find_spec
+    ???
+<frozen importlib._bootstrap_external>:1559: in find_spec
+    ???
+<frozen importlib._bootstrap_external>:1528: in _get_spec
+    ???
+<frozen importlib._bootstrap_external>:1399: in __iter__
+    ???
+<frozen importlib._bootstrap_external>:1386: in _recalculate
+    ???
+<frozen importlib._bootstrap_external>:1382: in _get_parent_path
+    ???
+E   KeyError: 'pipescaler'
+____________ ERROR collecting test/utilities/test_file_scanner.py _____________
+ImportError while importing test module 'C:\Users\karls\Code\PipeScaler\test\utilities\test_file_scanner.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+utilities\test_file_scanner.py:9: in <module>
+    from pipescaler import FileScanner
+..\pipescaler\__init__.py:7: in <module>
+    from pipescaler.file_scanner import FileScanner
+..\pipescaler\file_scanner.py:17: in <module>
+    from pipescaler.common import DirectoryNotFoundError
+E   ImportError: cannot import name 'DirectoryNotFoundError' from 'pipescaler.common' (unknown location)
+_________ ERROR collecting test/video/runners/test_apngasm_runner.py __________
+video\runners\test_apngasm_runner.py:10: in <module>
+    from pipescaler.common import ExecutableNotFoundError
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1322: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:1262: in _find_spec
+    ???
+<frozen importlib._bootstrap_external>:1559: in find_spec
+    ???
+<frozen importlib._bootstrap_external>:1528: in _get_spec
+    ???
+<frozen importlib._bootstrap_external>:1399: in __iter__
+    ???
+<frozen importlib._bootstrap_external>:1386: in _recalculate
+    ???
+<frozen importlib._bootstrap_external>:1382: in _get_parent_path
+    ???
+E   KeyError: 'pipescaler'
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.13.7-final-0 _______________
+
+Name                                                        Stmts   Miss  Cover
+-------------------------------------------------------------------------------
+C:\Users\karls\Code\PipeScaler\pipescaler\__init__.py           3      1    67%
+C:\Users\karls\Code\PipeScaler\pipescaler\file_scanner.py     144    134     7%
+-------------------------------------------------------------------------------
+TOTAL                                                         147    135     8%
+=========================== short test summary info ===========================
+ERROR cli\test_pipescaler_cli.py
+ERROR image\cli\test_image_cli.py - KeyError: 'pipescaler'
+ERROR image\cli\test_image_mergers_cli.py - KeyError: 'pipescaler'
+ERROR image\cli\test_image_processors_cli.py - KeyError: 'pipescaler'
+ERROR image\cli\test_image_splitters_cli.py - KeyError: 'pipescaler'
+ERROR image\cli\test_image_utilities_cli.py - KeyError: 'pipescaler'
+ERROR image\operators\mergers\test_alpha_merger.py
+ERROR image\operators\mergers\test_histogram_match_merger.py
+ERROR image\operators\mergers\test_normal_merger.py
+ERROR image\operators\mergers\test_palette_match_merger.py
+ERROR image\operators\processors\test_crop_processor.py
+ERROR image\operators\processors\test_esrgan_processor.py
+ERROR image\operators\processors\test_expand_processor.py
+ERROR image\operators\processors\test_height_to_normal_processor.py
+ERROR image\operators\processors\test_mode_processor.py
+ERROR image\operators\processors\test_potrace_processor.py
+ERROR image\operators\processors\test_resize_processor.py
+ERROR image\operators\processors\test_sharpen_processor.py
+ERROR image\operators\processors\test_solid_color_processor.py
+ERROR image\operators\processors\test_spandrel_processor.py
+ERROR image\operators\processors\test_threshold_processor.py
+ERROR image\operators\processors\test_waifu_processor.py
+ERROR image\operators\processors\test_xbrz_processor.py
+ERROR image\operators\splitters\test_alpha_splitter.py
+ERROR image\operators\splitters\test_normal_splitter.py
+ERROR image\pipelines\sorters\test_alpha_sorter.py
+ERROR image\pipelines\sorters\test_grayscale_sorter.py
+ERROR image\pipelines\sorters\test_mode_sorter.py
+ERROR image\pipelines\sorters\test_monochrome_sorter.py
+ERROR image\pipelines\sorters\test_size_sorter.py
+ERROR image\pipelines\sorters\test_solid_color_sorter.py
+ERROR image\pipelines\sources\test_image_directory_source.py
+ERROR image\pipelines\termini\test_copy_file_processor.py
+ERROR image\runners\test_pngquant_runner.py - KeyError: 'pipescaler'
+ERROR image\runners\test_potrace_runner.py - KeyError: 'pipescaler'
+ERROR image\runners\test_texconv_runner.py - KeyError: 'pipescaler'
+ERROR image\test_scaled_pair_identifier.py - KeyError: 'pipescaler'
+ERROR image\test_subdivided_image.py
+ERROR image\utilities\test_esrgan_serializer.py - KeyError: 'pipescaler'
+ERROR image\utilities\test_waifu_serializer.py - KeyError: 'pipescaler'
+ERROR pipelines\segments\test_post_checkpointed_segment.py - KeyError: 'pipes...
+ERROR pipelines\segments\test_pre_checkpointed_segment.py - KeyError: 'pipesc...
+ERROR pipelines\sorters\test_list_sorter.py - KeyError: 'pipescaler'
+ERROR pipelines\sorters\test_regex_sorter.py
+ERROR pipelines\test_checkpoint_manager.py - KeyError: 'pipescaler'
+ERROR utilities\test_file_scanner.py
+ERROR video\runners\test_apngasm_runner.py - KeyError: 'pipescaler'
+!!!!!!!!!!!!!!!!!! Interrupted: 47 errors during collection !!!!!!!!!!!!!!!!!!!
+============================= 47 errors in 1.73s ==============================

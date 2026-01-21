@@ -1,0 +1,3358 @@
+{
+    "version": "1.1.407",
+    "time": "1768964513737",
+    "generalDiagnostics": [
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\audio\\subtitles\\series.py",
+            "severity": "error",
+            "message": "\"events\" overrides symbol of same name in class \"Series\"\n  Variable is mutable so its type is invariant\n    Override type \"list[AudioSubtitle]\" is not the same as base type \"list[Subtitle]\"",
+            "range": {
+                "start": {
+                    "line": 40,
+                    "character": 4
+                },
+                "end": {
+                    "line": 40,
+                    "character": 10
+                }
+            },
+            "rule": "reportIncompatibleVariableOverride"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\audio\\subtitles\\series.py",
+            "severity": "error",
+            "message": "\"blocks\" incorrectly overrides property of same name in class \"Series\"\n  Property method \"fget\" is incompatible\n    Return type mismatch: base method returns type \"list[Block]\", override returns type \"list[AudioBlock]\"\n      \"list[AudioBlock]\" is not assignable to \"list[Block]\"\n        Type parameter \"_T@list\" is invariant, but \"AudioBlock\" is not the same as \"Block\"\n        Consider switching from \"list\" to \"Sequence\" which is covariant",
+            "range": {
+                "start": {
+                    "line": 79,
+                    "character": 8
+                },
+                "end": {
+                    "line": 79,
+                    "character": 14
+                }
+            },
+            "rule": "reportIncompatibleMethodOverride"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\audio\\subtitles\\series.py",
+            "severity": "error",
+            "message": "\"blocks\" incorrectly overrides property of same name in class \"Series\"\n  Property method \"fset\" is incompatible\n    Parameter 2 type mismatch: base parameter is type \"list[Block]\", override parameter is type \"list[AudioBlock]\"\n      \"list[Block]\" is not assignable to \"list[AudioBlock]\"\n        Type parameter \"_T@list\" is invariant, but \"Block\" is not the same as \"AudioBlock\"\n        Consider switching from \"list\" to \"Sequence\" which is covariant",
+            "range": {
+                "start": {
+                    "line": 88,
+                    "character": 8
+                },
+                "end": {
+                    "line": 88,
+                    "character": 14
+                }
+            },
+            "rule": "reportIncompatibleMethodOverride"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\audio\\subtitles\\series.py",
+            "severity": "error",
+            "message": "Object of type \"None\" is not subscriptable",
+            "range": {
+                "start": {
+                    "line": 148,
+                    "character": 23
+                },
+                "end": {
+                    "line": 148,
+                    "character": 33
+                }
+            },
+            "rule": "reportOptionalSubscript"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\audio\\subtitles\\series.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"audio\" for class \"AudioSeries*\"\n  Type \"Generator[Generator[Unknown, None, None] | AudioSegment, None, None] | AudioSegment | Unknown\" is not assignable to type \"AudioSegment\"\n    \"Generator[Generator[Unknown, None, None] | AudioSegment, None, None]\" is not assignable to \"AudioSegment\"",
+            "range": {
+                "start": {
+                    "line": 148,
+                    "character": 23
+                },
+                "end": {
+                    "line": 148,
+                    "character": 72
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\audio\\subtitles\\series.py",
+            "severity": "error",
+            "message": "Argument of type \"AudioSegment | None\" cannot be assigned to parameter \"obj\" of type \"Sized\" in function \"len\"\n  Type \"AudioSegment | None\" is not assignable to type \"Sized\"\n    \"None\" is incompatible with protocol \"Sized\"\n      \"__len__\" is not present",
+            "range": {
+                "start": {
+                    "line": 172,
+                    "character": 39
+                },
+                "end": {
+                    "line": 172,
+                    "character": 49
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\audio\\subtitles\\series.py",
+            "severity": "error",
+            "message": "Object of type \"None\" is not subscriptable",
+            "range": {
+                "start": {
+                    "line": 179,
+                    "character": 20
+                },
+                "end": {
+                    "line": 179,
+                    "character": 30
+                }
+            },
+            "rule": "reportOptionalSubscript"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\audio\\subtitles\\series.py",
+            "severity": "error",
+            "message": "Argument of type \"Generator[Generator[Unknown, None, None] | AudioSegment, None, None] | AudioSegment | Unknown\" cannot be assigned to parameter \"audio\" of type \"AudioSegment\" in function \"__init__\"\n  Type \"Generator[Generator[Unknown, None, None] | AudioSegment, None, None] | AudioSegment | Unknown\" is not assignable to type \"AudioSegment\"\n    \"Generator[Generator[Unknown, None, None] | AudioSegment, None, None]\" is not assignable to \"AudioSegment\"",
+            "range": {
+                "start": {
+                    "line": 188,
+                    "character": 22
+                },
+                "end": {
+                    "line": 188,
+                    "character": 27
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\audio\\subtitles\\series.py",
+            "severity": "error",
+            "message": "\"_blocks\" overrides symbol of same name in class \"Series\"\n  Variable is mutable so its type is invariant\n    Override type \"list[AudioBlock] | None\" is not the same as base type \"list[Block] | None\"",
+            "range": {
+                "start": {
+                    "line": 191,
+                    "character": 13
+                },
+                "end": {
+                    "line": 191,
+                    "character": 20
+                }
+            },
+            "rule": "reportIncompatibleVariableOverride"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\audio\\subtitles\\series.py",
+            "severity": "error",
+            "message": "\"export\" is not a known attribute of \"None\"",
+            "range": {
+                "start": {
+                    "line": 212,
+                    "character": 19
+                },
+                "end": {
+                    "line": 212,
+                    "character": 25
+                }
+            },
+            "rule": "reportOptionalMemberAccess"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\audio\\subtitles\\series.py",
+            "severity": "error",
+            "message": "Argument of type \"Generator[Generator[Unknown, None, None] | AudioSegment, None, None] | AudioSegment\" cannot be assigned to parameter \"audio\" of type \"AudioSegment | None\" in function \"__init__\"\n  Type \"Generator[Generator[Unknown, None, None] | AudioSegment, None, None] | AudioSegment\" is not assignable to type \"AudioSegment | None\"\n    Type \"Generator[Generator[Unknown, None, None] | AudioSegment, None, None]\" is not assignable to type \"AudioSegment | None\"\n      \"Generator[Generator[Unknown, None, None] | AudioSegment, None, None]\" is not assignable to \"AudioSegment\"\n      \"Generator[Generator[Unknown, None, None] | AudioSegment, None, None]\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 331,
+                    "character": 26
+                },
+                "end": {
+                    "line": 331,
+                    "character": 30
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\audio\\transcription\\__init__.py",
+            "severity": "error",
+            "message": "Arguments missing for parameters \"tokens\", \"temperature\", \"avg_logprob\", \"compression_ratio\", \"no_speech_prob\"",
+            "range": {
+                "start": {
+                    "line": 64,
+                    "character": 11
+                },
+                "end": {
+                    "line": 71,
+                    "character": 5
+                }
+            },
+            "rule": "reportCallIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\audio\\transcription\\__init__.py",
+            "severity": "error",
+            "message": "Object of type \"None\" cannot be used as iterable value",
+            "range": {
+                "start": {
+                    "line": 70,
+                    "character": 56
+                },
+                "end": {
+                    "line": 70,
+                    "character": 69
+                }
+            },
+            "rule": "reportOptionalIterable"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\audio\\transcription\\__init__.py",
+            "severity": "error",
+            "message": "Arguments missing for parameters \"tokens\", \"temperature\", \"avg_logprob\", \"compression_ratio\", \"no_speech_prob\"",
+            "range": {
+                "start": {
+                    "line": 146,
+                    "character": 20
+                },
+                "end": {
+                    "line": 153,
+                    "character": 5
+                }
+            },
+            "rule": "reportCallIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\audio\\transcription\\__init__.py",
+            "severity": "error",
+            "message": "Arguments missing for parameters \"tokens\", \"temperature\", \"avg_logprob\", \"compression_ratio\", \"no_speech_prob\"",
+            "range": {
+                "start": {
+                    "line": 155,
+                    "character": 21
+                },
+                "end": {
+                    "line": 162,
+                    "character": 5
+                }
+            },
+            "rule": "reportCallIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\audio\\transcription\\__init__.py",
+            "severity": "error",
+            "message": "Arguments missing for parameters \"tokens\", \"temperature\", \"avg_logprob\", \"compression_ratio\", \"no_speech_prob\"",
+            "range": {
+                "start": {
+                    "line": 187,
+                    "character": 34
+                },
+                "end": {
+                    "line": 194,
+                    "character": 17
+                }
+            },
+            "rule": "reportCallIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\audio\\transcription\\__init__.py",
+            "severity": "error",
+            "message": "Arguments missing for parameters \"tokens\", \"temperature\", \"avg_logprob\", \"compression_ratio\", \"no_speech_prob\"",
+            "range": {
+                "start": {
+                    "line": 204,
+                    "character": 26
+                },
+                "end": {
+                    "line": 211,
+                    "character": 9
+                }
+            },
+            "rule": "reportCallIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\audio\\transcription\\whisper_transcriber.py",
+            "severity": "error",
+            "message": "Argument of type \"bytes | Unknown | None\" cannot be assigned to parameter \"audio_data\" of type \"bytes\" in function \"_get_cache_path\"\n  Type \"bytes | Unknown | None\" is not assignable to type \"bytes\"\n    \"None\" is not assignable to \"bytes\"",
+            "range": {
+                "start": {
+                    "line": 67,
+                    "character": 42
+                },
+                "end": {
+                    "line": 67,
+                    "character": 56
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\cli\\scinoephile_cli.py",
+            "severity": "error",
+            "message": "Argument of type \"Series | None\" cannot be assigned to parameter \"series\" of type \"Series\" in function \"get_zho_cleaned\"\n  Type \"Series | None\" is not assignable to type \"Series\"\n    \"None\" is not assignable to \"Series\"",
+            "range": {
+                "start": {
+                    "line": 142,
+                    "character": 38
+                },
+                "end": {
+                    "line": 142,
+                    "character": 45
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\cli\\scinoephile_cli.py",
+            "severity": "error",
+            "message": "Argument of type \"Series | None\" cannot be assigned to parameter \"series\" of type \"Series\" in function \"get_eng_cleaned\"\n  Type \"Series | None\" is not assignable to type \"Series\"\n    \"None\" is not assignable to \"Series\"",
+            "range": {
+                "start": {
+                    "line": 144,
+                    "character": 38
+                },
+                "end": {
+                    "line": 144,
+                    "character": 45
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\cli\\scinoephile_cli.py",
+            "severity": "error",
+            "message": "Argument of type \"Series | None\" cannot be assigned to parameter \"series\" of type \"Series\" in function \"get_eng_flattened\"\n  Type \"Series | None\" is not assignable to type \"Series\"\n    \"None\" is not assignable to \"Series\"",
+            "range": {
+                "start": {
+                    "line": 146,
+                    "character": 40
+                },
+                "end": {
+                    "line": 146,
+                    "character": 47
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\cli\\scinoephile_cli.py",
+            "severity": "error",
+            "message": "Argument of type \"Series | None\" cannot be assigned to parameter \"series\" of type \"Series\" in function \"get_zho_flattened\"\n  Type \"Series | None\" is not assignable to type \"Series\"\n    \"None\" is not assignable to \"Series\"",
+            "range": {
+                "start": {
+                    "line": 148,
+                    "character": 40
+                },
+                "end": {
+                    "line": 148,
+                    "character": 47
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\cli\\scinoephile_cli.py",
+            "severity": "error",
+            "message": "Argument of type \"Series | None\" cannot be assigned to parameter \"series\" of type \"Series\" in function \"get_zho_converted\"\n  Type \"Series | None\" is not assignable to type \"Series\"\n    \"None\" is not assignable to \"Series\"",
+            "range": {
+                "start": {
+                    "line": 150,
+                    "character": 40
+                },
+                "end": {
+                    "line": 150,
+                    "character": 47
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\cli\\scinoephile_cli.py",
+            "severity": "error",
+            "message": "Argument of type \"Series | None\" cannot be assigned to parameter \"one\" of type \"Series\" in function \"get_synced_series\"\n  Type \"Series | None\" is not assignable to type \"Series\"\n    \"None\" is not assignable to \"Series\"",
+            "range": {
+                "start": {
+                    "line": 152,
+                    "character": 42
+                },
+                "end": {
+                    "line": 152,
+                    "character": 49
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\cli\\scinoephile_cli.py",
+            "severity": "error",
+            "message": "Argument of type \"Series | None\" cannot be assigned to parameter \"two\" of type \"Series\" in function \"get_synced_series\"\n  Type \"Series | None\" is not assignable to type \"Series\"\n    \"None\" is not assignable to \"Series\"",
+            "range": {
+                "start": {
+                    "line": 152,
+                    "character": 51
+                },
+                "end": {
+                    "line": 152,
+                    "character": 58
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\core\\subtitles\\series.py",
+            "severity": "error",
+            "message": "\"events\" overrides symbol of same name in class \"SSAFile\"\n  Variable is mutable so its type is invariant\n    Override type \"list[Subtitle]\" is not the same as base type \"List[SSAEvent]\"",
+            "range": {
+                "start": {
+                    "line": 26,
+                    "character": 4
+                },
+                "end": {
+                    "line": 26,
+                    "character": 10
+                }
+            },
+            "rule": "reportIncompatibleVariableOverride"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\core\\subtitles\\series.py",
+            "severity": "error",
+            "message": "Type \"None\" is not assignable to declared type \"(self: Self@object) -> int\"\n  Type \"None\" is not assignable to type \"(self: Self@object) -> int\"",
+            "range": {
+                "start": {
+                    "line": 72,
+                    "character": 15
+                },
+                "end": {
+                    "line": 72,
+                    "character": 19
+                }
+            },
+            "rule": "reportAssignmentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\core\\synchronization.py",
+            "severity": "error",
+            "message": "Argument of type \"float\" cannot be assigned to parameter \"max_line_width\" of type \"int | None\" in function \"array2string\"\n  Type \"float\" is not assignable to type \"int | None\"\n    \"float\" is not assignable to \"int\"\n    \"float\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 67,
+                    "character": 23
+                },
+                "end": {
+                    "line": 67,
+                    "character": 29
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\core\\synchronization.py",
+            "severity": "error",
+            "message": "Argument of type \"float\" cannot be assigned to parameter \"threshold\" of type \"int | None\" in function \"array2string\"\n  Type \"float\" is not assignable to type \"int | None\"\n    \"float\" is not assignable to \"int\"\n    \"float\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 68,
+                    "character": 18
+                },
+                "end": {
+                    "line": 68,
+                    "character": 24
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\core\\synchronization.py",
+            "severity": "error",
+            "message": "Argument of type \"float\" cannot be assigned to parameter \"edgeitems\" of type \"int | None\" in function \"array2string\"\n  Type \"float\" is not assignable to type \"int | None\"\n    \"float\" is not assignable to \"int\"\n    \"float\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 69,
+                    "character": 18
+                },
+                "end": {
+                    "line": 69,
+                    "character": 24
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\core\\synchronization.py",
+            "severity": "error",
+            "message": "Argument of type \"SSAEvent\" cannot be assigned to parameter \"object\" of type \"Subtitle\" in function \"append\"\n  \"SSAEvent\" is not assignable to \"Subtitle\"",
+            "range": {
+                "start": {
+                    "line": 220,
+                    "character": 33
+                },
+                "end": {
+                    "line": 220,
+                    "character": 44
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\core\\synchronization.py",
+            "severity": "error",
+            "message": "Argument of type \"SSAEvent\" cannot be assigned to parameter \"object\" of type \"Subtitle\" in function \"append\"\n  \"SSAEvent\" is not assignable to \"Subtitle\"",
+            "range": {
+                "start": {
+                    "line": 225,
+                    "character": 33
+                },
+                "end": {
+                    "line": 225,
+                    "character": 44
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\drawing.py",
+            "severity": "error",
+            "message": "\"NEAREST\" is not a known attribute of module \"PIL.Image\"",
+            "range": {
+                "start": {
+                    "line": 52,
+                    "character": 51
+                },
+                "end": {
+                    "line": 52,
+                    "character": 58
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\ocr\\char_cursor.py",
+            "severity": "error",
+            "message": "Object of type \"None\" is not subscriptable",
+            "range": {
+                "start": {
+                    "line": 59,
+                    "character": 15
+                },
+                "end": {
+                    "line": 59,
+                    "character": 30
+                }
+            },
+            "rule": "reportOptionalSubscript"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\ocr\\gap_cursor.py",
+            "severity": "error",
+            "message": "Argument of type \"list[Bbox] | None\" cannot be assigned to parameter \"obj\" of type \"Sized\" in function \"len\"\n  Type \"list[Bbox] | None\" is not assignable to type \"Sized\"\n    \"None\" is incompatible with protocol \"Sized\"\n      \"__len__\" is not present",
+            "range": {
+                "start": {
+                    "line": 57,
+                    "character": 34
+                },
+                "end": {
+                    "line": 57,
+                    "character": 49
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\ocr\\gap_cursor.py",
+            "severity": "error",
+            "message": "Object of type \"None\" is not subscriptable",
+            "range": {
+                "start": {
+                    "line": 59,
+                    "character": 15
+                },
+                "end": {
+                    "line": 59,
+                    "character": 30
+                }
+            },
+            "rule": "reportOptionalSubscript"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\ocr\\gap_cursor.py",
+            "severity": "error",
+            "message": "Argument of type \"list[Bbox] | None\" cannot be assigned to parameter \"obj\" of type \"Sized\" in function \"len\"\n  Type \"list[Bbox] | None\" is not assignable to type \"Sized\"\n    \"None\" is incompatible with protocol \"Sized\"\n      \"__len__\" is not present",
+            "range": {
+                "start": {
+                    "line": 69,
+                    "character": 34
+                },
+                "end": {
+                    "line": 69,
+                    "character": 49
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\ocr\\gap_cursor.py",
+            "severity": "error",
+            "message": "Object of type \"None\" is not subscriptable",
+            "range": {
+                "start": {
+                    "line": 71,
+                    "character": 15
+                },
+                "end": {
+                    "line": 71,
+                    "character": 30
+                }
+            },
+            "rule": "reportOptionalSubscript"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\ocr\\gap_cursor.py",
+            "severity": "error",
+            "message": "Object of type \"None\" is not subscriptable",
+            "range": {
+                "start": {
+                    "line": 132,
+                    "character": 15
+                },
+                "end": {
+                    "line": 132,
+                    "character": 30
+                }
+            },
+            "rule": "reportOptionalSubscript"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\ocr\\validation_manager.py",
+            "severity": "error",
+            "message": "Argument of type \"list[Bbox] | None\" cannot be assigned to parameter \"bboxes\" of type \"list[Bbox]\" in function \"get_img_with_bboxes\"\n  Type \"list[Bbox] | None\" is not assignable to type \"list[Bbox]\"\n    \"None\" is not assignable to \"list[Bbox]\"",
+            "range": {
+                "start": {
+                    "line": 100,
+                    "character": 57
+                },
+                "end": {
+                    "line": 100,
+                    "character": 67
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\ocr\\validation_manager.py",
+            "severity": "error",
+            "message": "Argument of type \"list[Bbox] | None\" cannot be assigned to parameter \"obj\" of type \"Sized\" in function \"len\"\n  Type \"list[Bbox] | None\" is not assignable to type \"Sized\"\n    \"None\" is incompatible with protocol \"Sized\"\n      \"__len__\" is not present",
+            "range": {
+                "start": {
+                    "line": 161,
+                    "character": 38
+                },
+                "end": {
+                    "line": 161,
+                    "character": 48
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\ocr\\validation_manager.py",
+            "severity": "error",
+            "message": "Argument of type \"list[Bbox] | None\" cannot be assigned to parameter \"obj\" of type \"Sized\" in function \"len\"\n  Type \"list[Bbox] | None\" is not assignable to type \"Sized\"\n    \"None\" is incompatible with protocol \"Sized\"\n      \"__len__\" is not present",
+            "range": {
+                "start": {
+                    "line": 195,
+                    "character": 34
+                },
+                "end": {
+                    "line": 195,
+                    "character": 44
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\ocr\\validation_manager.py",
+            "severity": "error",
+            "message": "Argument of type \"list[Bbox] | None\" cannot be assigned to parameter \"obj\" of type \"Sized\" in function \"len\"\n  Type \"list[Bbox] | None\" is not assignable to type \"Sized\"\n    \"None\" is incompatible with protocol \"Sized\"\n      \"__len__\" is not present",
+            "range": {
+                "start": {
+                    "line": 198,
+                    "character": 23
+                },
+                "end": {
+                    "line": 198,
+                    "character": 33
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\ocr\\validation_manager.py",
+            "severity": "error",
+            "message": "Object of type \"None\" is not subscriptable",
+            "range": {
+                "start": {
+                    "line": 217,
+                    "character": 34
+                },
+                "end": {
+                    "line": 217,
+                    "character": 51
+                }
+            },
+            "rule": "reportOptionalSubscript"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\ocr\\validation_manager.py",
+            "severity": "error",
+            "message": "Argument of type \"list[Bbox] | None\" cannot be assigned to parameter \"obj\" of type \"Sized\" in function \"len\"\n  Type \"list[Bbox] | None\" is not assignable to type \"Sized\"\n    \"None\" is incompatible with protocol \"Sized\"\n      \"__len__\" is not present",
+            "range": {
+                "start": {
+                    "line": 244,
+                    "character": 48
+                },
+                "end": {
+                    "line": 244,
+                    "character": 65
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\ocr\\validation_manager.py",
+            "severity": "error",
+            "message": "Object of type \"None\" is not subscriptable",
+            "range": {
+                "start": {
+                    "line": 253,
+                    "character": 16
+                },
+                "end": {
+                    "line": 253,
+                    "character": 33
+                }
+            },
+            "rule": "reportOptionalSubscript"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\ocr\\validation_manager.py",
+            "severity": "error",
+            "message": "Object of type \"None\" is not subscriptable",
+            "range": {
+                "start": {
+                    "line": 266,
+                    "character": 20
+                },
+                "end": {
+                    "line": 266,
+                    "character": 37
+                }
+            },
+            "rule": "reportOptionalSubscript"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\ocr\\validation_manager.py",
+            "severity": "error",
+            "message": "Argument of type \"list[Bbox] | None\" cannot be assigned to parameter \"obj\" of type \"Sized\" in function \"len\"\n  Type \"list[Bbox] | None\" is not assignable to type \"Sized\"\n    \"None\" is incompatible with protocol \"Sized\"\n      \"__len__\" is not present",
+            "range": {
+                "start": {
+                    "line": 285,
+                    "character": 48
+                },
+                "end": {
+                    "line": 285,
+                    "character": 65
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\ocr\\validation_manager.py",
+            "severity": "error",
+            "message": "Object of type \"None\" is not subscriptable",
+            "range": {
+                "start": {
+                    "line": 311,
+                    "character": 16
+                },
+                "end": {
+                    "line": 311,
+                    "character": 33
+                }
+            },
+            "rule": "reportOptionalSubscript"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\ocr\\validation_manager.py",
+            "severity": "error",
+            "message": "Argument of type \"list[Bbox] | None\" cannot be assigned to parameter \"obj\" of type \"Sized\" in function \"len\"\n  Type \"list[Bbox] | None\" is not assignable to type \"Sized\"\n    \"None\" is incompatible with protocol \"Sized\"\n      \"__len__\" is not present",
+            "range": {
+                "start": {
+                    "line": 359,
+                    "character": 44
+                },
+                "end": {
+                    "line": 359,
+                    "character": 54
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\ocr\\validation_manager.py",
+            "severity": "error",
+            "message": "Argument of type \"list[Bbox] | None\" cannot be assigned to parameter \"obj\" of type \"Sized\" in function \"len\"\n  Type \"list[Bbox] | None\" is not assignable to type \"Sized\"\n    \"None\" is incompatible with protocol \"Sized\"\n      \"__len__\" is not present",
+            "range": {
+                "start": {
+                    "line": 363,
+                    "character": 46
+                },
+                "end": {
+                    "line": 363,
+                    "character": 56
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\ocr\\validation_manager.py",
+            "severity": "error",
+            "message": "Argument of type \"Bbox | None\" cannot be assigned to parameter \"bboxes\" of type \"Bbox | list[Bbox]\" in function \"get_dims_tuple\"\n  Type \"Bbox | None\" is not assignable to type \"Bbox | list[Bbox]\"\n    Type \"None\" is not assignable to type \"Bbox | list[Bbox]\"\n      \"None\" is not assignable to \"Bbox\"\n      \"None\" is not assignable to \"list[Bbox]\"",
+            "range": {
+                "start": {
+                    "line": 374,
+                    "character": 38
+                },
+                "end": {
+                    "line": 374,
+                    "character": 51
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\ocr\\validation_manager.py",
+            "severity": "error",
+            "message": "\"x1\" is not a known attribute of \"None\"",
+            "range": {
+                "start": {
+                    "line": 386,
+                    "character": 39
+                },
+                "end": {
+                    "line": 386,
+                    "character": 41
+                }
+            },
+            "rule": "reportOptionalMemberAccess"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\ocr\\validation_manager.py",
+            "severity": "error",
+            "message": "\"x2\" is not a known attribute of \"None\"",
+            "range": {
+                "start": {
+                    "line": 386,
+                    "character": 58
+                },
+                "end": {
+                    "line": 386,
+                    "character": 60
+                }
+            },
+            "rule": "reportOptionalMemberAccess"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\subtitles\\series.py",
+            "severity": "error",
+            "message": "\"events\" overrides symbol of same name in class \"Series\"\n  Variable is mutable so its type is invariant\n    Override type \"list[ImageSubtitle]\" is not the same as base type \"list[Subtitle]\"",
+            "range": {
+                "start": {
+                    "line": 38,
+                    "character": 4
+                },
+                "end": {
+                    "line": 38,
+                    "character": 10
+                }
+            },
+            "rule": "reportIncompatibleVariableOverride"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\image\\subtitles\\series.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"img\" for class \"SSAEvent\"\n  Attribute \"img\" is unknown",
+            "range": {
+                "start": {
+                    "line": 135,
+                    "character": 18
+                },
+                "end": {
+                    "line": 135,
+                    "character": 21
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\lang\\eng\\flattening.py",
+            "severity": "error",
+            "message": "Expression of type \"None\" cannot be assigned to parameter of type \"list[int]\"\n  \"None\" is not assignable to \"list[int]\"",
+            "range": {
+                "start": {
+                    "line": 18,
+                    "character": 62
+                },
+                "end": {
+                    "line": 18,
+                    "character": 66
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\base\\manager.py",
+            "severity": "warning",
+            "message": "TypeVar \"TTestCase\" appears only once in generic function signature\n  Use \"TestCase\" instead",
+            "range": {
+                "start": {
+                    "line": 61,
+                    "character": 14
+                },
+                "end": {
+                    "line": 61,
+                    "character": 23
+                }
+            },
+            "rule": "reportInvalidTypeVarUse"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\base\\manager.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"get_auto_verified\" for class \"type[TestCase]\"\n  Type \"(model: TestCase) -> bool\" is not assignable to type \"(self: TestCase) -> bool\"\n    Parameter name mismatch: \"self\" versus \"model\"",
+            "range": {
+                "start": {
+                    "line": 84,
+                    "character": 34
+                },
+                "end": {
+                    "line": 84,
+                    "character": 55
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\base\\manager.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"get_min_difficulty\" for class \"type[TestCase]\"\n  Type \"(model: TestCase) -> int\" is not assignable to type \"(self: TestCase) -> int\"\n    Parameter name mismatch: \"self\" versus \"model\"",
+            "range": {
+                "start": {
+                    "line": 85,
+                    "character": 35
+                },
+                "end": {
+                    "line": 85,
+                    "character": 57
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\base\\manager.py",
+            "severity": "error",
+            "message": "Type \"type[TestCase]\" is not assignable to return type \"type[TTestCase@get_test_case_cls]\"\n  Type \"type[TestCase]\" is not assignable to type \"type[TTestCase@get_test_case_cls]\"",
+            "range": {
+                "start": {
+                    "line": 86,
+                    "character": 15
+                },
+                "end": {
+                    "line": 86,
+                    "character": 20
+                }
+            },
+            "rule": "reportReturnType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\base\\manager.py",
+            "severity": "warning",
+            "message": "TypeVar \"TTestCase\" appears only once in generic function signature\n  Use \"TestCase\" instead",
+            "range": {
+                "start": {
+                    "line": 93,
+                    "character": 14
+                },
+                "end": {
+                    "line": 93,
+                    "character": 23
+                }
+            },
+            "rule": "reportInvalidTypeVarUse"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\base\\queryer.py",
+            "severity": "error",
+            "message": "Argument of type \"Query\" cannot be assigned to parameter \"query\" of type \"TQuery@Queryer\" in function \"_get_verified_test_case\"\n  Type \"Query\" is not assignable to type \"TQuery@Queryer\"",
+            "range": {
+                "start": {
+                    "line": 114,
+                    "character": 62
+                },
+                "end": {
+                    "line": 114,
+                    "character": 77
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\base\\utils.py",
+            "severity": "warning",
+            "message": "TypeVar \"TTestCase\" appears only once in generic function signature\n  Use \"TestCase\" instead",
+            "range": {
+                "start": {
+                    "line": 20,
+                    "character": 10
+                },
+                "end": {
+                    "line": 20,
+                    "character": 19
+                }
+            },
+            "rule": "reportInvalidTypeVarUse"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"size\" for class \"type[Query]\"\n  Attribute \"size\" is unknown",
+            "range": {
+                "start": {
+                    "line": 58,
+                    "character": 14
+                },
+                "end": {
+                    "line": 58,
+                    "character": 18
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"size\" for class \"type[Answer]\"\n  Attribute \"size\" is unknown",
+            "range": {
+                "start": {
+                    "line": 93,
+                    "character": 14
+                },
+                "end": {
+                    "line": 93,
+                    "character": 18
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"size\" for class \"type[TestCase]\"\n  Attribute \"size\" is unknown",
+            "range": {
+                "start": {
+                    "line": 127,
+                    "character": 14
+                },
+                "end": {
+                    "line": 127,
+                    "character": 18
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"get_auto_verified\" for class \"type[TestCase]\"\n  Type \"(model: TestCase) -> bool\" is not assignable to type \"(self: TestCase) -> bool\"\n    Parameter name mismatch: \"self\" versus \"model\"",
+            "range": {
+                "start": {
+                    "line": 128,
+                    "character": 34
+                },
+                "end": {
+                    "line": 128,
+                    "character": 55
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"get_min_difficulty\" for class \"type[TestCase]\"\n  Type \"(model: TestCase) -> int\" is not assignable to type \"(self: TestCase) -> int\"\n    Parameter name mismatch: \"self\" versus \"model\"",
+            "range": {
+                "start": {
+                    "line": 129,
+                    "character": 35
+                },
+                "end": {
+                    "line": 129,
+                    "character": 57
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"size\" for class \"TestCase\"\n  Attribute \"size\" is unknown",
+            "range": {
+                "start": {
+                    "line": 163,
+                    "character": 31
+                },
+                "end": {
+                    "line": 163,
+                    "character": 35
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_1\" for class \"type[Prompt]\"\n  Attribute \"src_1\" is unknown",
+            "range": {
+                "start": {
+                    "line": 164,
+                    "character": 63
+                },
+                "end": {
+                    "line": 164,
+                    "character": 68
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"output\" for class \"type[Prompt]\"\n  Attribute \"output\" is unknown",
+            "range": {
+                "start": {
+                    "line": 165,
+                    "character": 60
+                },
+                "end": {
+                    "line": 165,
+                    "character": 66
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"note\" for class \"type[Prompt]\"\n  Attribute \"note\" is unknown",
+            "range": {
+                "start": {
+                    "line": 166,
+                    "character": 58
+                },
+                "end": {
+                    "line": 166,
+                    "character": 62
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"output_present_but_unmodified_err\" for class \"type[Prompt]\"\n  Attribute \"output_present_but_unmodified_err\" is unknown",
+            "range": {
+                "start": {
+                    "line": 170,
+                    "character": 41
+                },
+                "end": {
+                    "line": 170,
+                    "character": 74
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"output_present_note_missing_err\" for class \"type[Prompt]\"\n  Attribute \"output_present_note_missing_err\" is unknown",
+            "range": {
+                "start": {
+                    "line": 174,
+                    "character": 41
+                },
+                "end": {
+                    "line": 174,
+                    "character": 72
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"output_missing_note_present_err\" for class \"type[Prompt]\"\n  Attribute \"output_missing_note_present_err\" is unknown",
+            "range": {
+                "start": {
+                    "line": 178,
+                    "character": 37
+                },
+                "end": {
+                    "line": 178,
+                    "character": 68
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_block\\processor.py",
+            "severity": "error",
+            "message": "\"prompt_cls\" overrides symbol of same name in class \"Processor\"\n  Variable is mutable so its type is invariant\n    Override type \"type[DualBlockPrompt]\" is not the same as base type \"type[Prompt]\"",
+            "range": {
+                "start": {
+                    "line": 23,
+                    "character": 4
+                },
+                "end": {
+                    "line": 23,
+                    "character": 14
+                }
+            },
+            "rule": "reportIncompatibleVariableOverride"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_block_gapped\\manager.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"size\" for class \"type[Query]\"\n  Attribute \"size\" is unknown",
+            "range": {
+                "start": {
+                    "line": 71,
+                    "character": 14
+                },
+                "end": {
+                    "line": 71,
+                    "character": 18
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_block_gapped\\manager.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"gaps\" for class \"type[Query]\"\n  Attribute \"gaps\" is unknown",
+            "range": {
+                "start": {
+                    "line": 72,
+                    "character": 14
+                },
+                "end": {
+                    "line": 72,
+                    "character": 18
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_block_gapped\\manager.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"size\" for class \"type[Answer]\"\n  Attribute \"size\" is unknown",
+            "range": {
+                "start": {
+                    "line": 116,
+                    "character": 14
+                },
+                "end": {
+                    "line": 116,
+                    "character": 18
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_block_gapped\\manager.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"gaps\" for class \"type[Answer]\"\n  Attribute \"gaps\" is unknown",
+            "range": {
+                "start": {
+                    "line": 117,
+                    "character": 14
+                },
+                "end": {
+                    "line": 117,
+                    "character": 18
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_block_gapped\\manager.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"size\" for class \"type[TestCase]\"\n  Attribute \"size\" is unknown",
+            "range": {
+                "start": {
+                    "line": 163,
+                    "character": 14
+                },
+                "end": {
+                    "line": 163,
+                    "character": 18
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_block_gapped\\manager.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"gaps\" for class \"type[TestCase]\"\n  Attribute \"gaps\" is unknown",
+            "range": {
+                "start": {
+                    "line": 164,
+                    "character": 14
+                },
+                "end": {
+                    "line": 164,
+                    "character": 18
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_block_gapped\\manager.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"get_auto_verified\" for class \"type[TestCase]\"\n  Type \"(model: TestCase) -> bool\" is not assignable to type \"(self: TestCase) -> bool\"\n    Parameter name mismatch: \"self\" versus \"model\"",
+            "range": {
+                "start": {
+                    "line": 165,
+                    "character": 34
+                },
+                "end": {
+                    "line": 165,
+                    "character": 55
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_block_gapped\\manager.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"get_min_difficulty\" for class \"type[TestCase]\"\n  Type \"(model: TestCase) -> int\" is not assignable to type \"(self: TestCase) -> int\"\n    Parameter name mismatch: \"self\" versus \"model\"",
+            "range": {
+                "start": {
+                    "line": 166,
+                    "character": 35
+                },
+                "end": {
+                    "line": 166,
+                    "character": 57
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_block_gapped\\processor.py",
+            "severity": "error",
+            "message": "\"prompt_cls\" overrides symbol of same name in class \"Processor\"\n  Variable is mutable so its type is invariant\n    Override type \"type[DualBlockGappedPrompt]\" is not the same as base type \"type[Prompt]\"",
+            "range": {
+                "start": {
+                    "line": 25,
+                    "character": 4
+                },
+                "end": {
+                    "line": 25,
+                    "character": 14
+                }
+            },
+            "rule": "reportIncompatibleVariableOverride"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_multi_single\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_1\" for class \"type[Prompt]\"\n  Attribute \"src_1\" is unknown",
+            "range": {
+                "start": {
+                    "line": 125,
+                    "character": 53
+                },
+                "end": {
+                    "line": 125,
+                    "character": 58
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_multi_single\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2\" for class \"type[Prompt]\"\n  Attribute \"src_2\" is unknown",
+            "range": {
+                "start": {
+                    "line": 126,
+                    "character": 53
+                },
+                "end": {
+                    "line": 126,
+                    "character": 58
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_multi_single\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_1_missing_err\" for class \"type[Prompt]\"\n  Attribute \"src_1_missing_err\" is unknown",
+            "range": {
+                "start": {
+                    "line": 128,
+                    "character": 46
+                },
+                "end": {
+                    "line": 128,
+                    "character": 63
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_multi_single\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2_missing_err\" for class \"type[Prompt]\"\n  Attribute \"src_2_missing_err\" is unknown",
+            "range": {
+                "start": {
+                    "line": 130,
+                    "character": 46
+                },
+                "end": {
+                    "line": 130,
+                    "character": 63
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_multi_single\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"output\" for class \"type[Prompt]\"\n  Attribute \"output\" is unknown",
+            "range": {
+                "start": {
+                    "line": 142,
+                    "character": 49
+                },
+                "end": {
+                    "line": 142,
+                    "character": 55
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_multi_single\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"output_missing_err\" for class \"type[Prompt]\"\n  Attribute \"output_missing_err\" is unknown",
+            "range": {
+                "start": {
+                    "line": 144,
+                    "character": 46
+                },
+                "end": {
+                    "line": 144,
+                    "character": 64
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_pair\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2_sub_1_shifted\" for class \"type[Prompt]\"\n  Attribute \"src_2_sub_1_shifted\" is unknown",
+            "range": {
+                "start": {
+                    "line": 139,
+                    "character": 43
+                },
+                "end": {
+                    "line": 139,
+                    "character": 62
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_pair\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2_sub_2_shifted\" for class \"type[Prompt]\"\n  Attribute \"src_2_sub_2_shifted\" is unknown",
+            "range": {
+                "start": {
+                    "line": 142,
+                    "character": 43
+                },
+                "end": {
+                    "line": 142,
+                    "character": 62
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_pair\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2_sub_1\" for class \"type[Prompt]\"\n  Attribute \"src_2_sub_1\" is unknown",
+            "range": {
+                "start": {
+                    "line": 157,
+                    "character": 54
+                },
+                "end": {
+                    "line": 157,
+                    "character": 65
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_pair\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2_sub_2\" for class \"type[Prompt]\"\n  Attribute \"src_2_sub_2\" is unknown",
+            "range": {
+                "start": {
+                    "line": 158,
+                    "character": 54
+                },
+                "end": {
+                    "line": 158,
+                    "character": 65
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_pair\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2_sub_1_sub_2_missing_err\" for class \"type[Prompt]\"\n  Attribute \"src_2_sub_1_sub_2_missing_err\" is unknown",
+            "range": {
+                "start": {
+                    "line": 160,
+                    "character": 46
+                },
+                "end": {
+                    "line": 160,
+                    "character": 75
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_pair\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2_sub_1\" for class \"type[Prompt]\"\n  Attribute \"src_2_sub_1\" is unknown",
+            "range": {
+                "start": {
+                    "line": 175,
+                    "character": 57
+                },
+                "end": {
+                    "line": 175,
+                    "character": 68
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_pair\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2_sub_2\" for class \"type[Prompt]\"\n  Attribute \"src_2_sub_2\" is unknown",
+            "range": {
+                "start": {
+                    "line": 176,
+                    "character": 57
+                },
+                "end": {
+                    "line": 176,
+                    "character": 68
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_pair\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2_sub_1_shifted\" for class \"type[Prompt]\"\n  Attribute \"src_2_sub_1_shifted\" is unknown",
+            "range": {
+                "start": {
+                    "line": 178,
+                    "character": 43
+                },
+                "end": {
+                    "line": 178,
+                    "character": 62
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_pair\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2_sub_2_shifted\" for class \"type[Prompt]\"\n  Attribute \"src_2_sub_2_shifted\" is unknown",
+            "range": {
+                "start": {
+                    "line": 181,
+                    "character": 43
+                },
+                "end": {
+                    "line": 181,
+                    "character": 62
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_pair\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2_sub_1_sub_2_unchanged_err\" for class \"type[Prompt]\"\n  Attribute \"src_2_sub_1_sub_2_unchanged_err\" is unknown",
+            "range": {
+                "start": {
+                    "line": 184,
+                    "character": 46
+                },
+                "end": {
+                    "line": 184,
+                    "character": 77
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_pair\\manager.py",
+            "severity": "error",
+            "message": "Operator \"+\" not supported for \"None\"",
+            "range": {
+                "start": {
+                    "line": 186,
+                    "character": 23
+                },
+                "end": {
+                    "line": 186,
+                    "character": 31
+                }
+            },
+            "rule": "reportOptionalOperand"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_pair\\manager.py",
+            "severity": "error",
+            "message": "Operator \"+\" not supported for types \"Any | Literal[''] | None\" and \"Any | None\"\n  Operator \"+\" not supported for types \"None\" and \"None\"\n  Operator \"+\" not supported for types \"Literal['']\" and \"None\"",
+            "range": {
+                "start": {
+                    "line": 187,
+                    "character": 23
+                },
+                "end": {
+                    "line": 187,
+                    "character": 58
+                }
+            },
+            "rule": "reportOperatorIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_pair\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2_chars_changed_err\" for class \"type[Prompt]\"\n  Attribute \"src_2_chars_changed_err\" is unknown",
+            "range": {
+                "start": {
+                    "line": 190,
+                    "character": 37
+                },
+                "end": {
+                    "line": 190,
+                    "character": 60
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_single\\manager.py",
+            "severity": "error",
+            "message": "\"get_query_cls\" overrides symbol of same name in class \"Manager\"\n  \"_lru_cache_wrapper[type[TQuery@get_query_cls]]\" is not assignable to \"_lru_cache_wrapper[type[Query]]\"\n    Type parameter \"_T@_lru_cache_wrapper\" is invariant, but \"type[TQuery@get_query_cls]\" is not the same as \"type[Query]\"",
+            "range": {
+                "start": {
+                    "line": 24,
+                    "character": 8
+                },
+                "end": {
+                    "line": 24,
+                    "character": 21
+                }
+            },
+            "rule": "reportIncompatibleVariableOverride"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_single\\manager.py",
+            "severity": "warning",
+            "message": "TypeVar \"TQuery\" appears only once in generic function signature\n  Use \"Query\" instead",
+            "range": {
+                "start": {
+                    "line": 27,
+                    "character": 14
+                },
+                "end": {
+                    "line": 27,
+                    "character": 20
+                }
+            },
+            "rule": "reportInvalidTypeVarUse"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_single\\manager.py",
+            "severity": "error",
+            "message": "Type \"type[Query]\" is not assignable to return type \"type[TQuery@get_query_cls]\"\n  Type \"type[Query]\" is not assignable to type \"type[TQuery@get_query_cls]\"",
+            "range": {
+                "start": {
+                    "line": 53,
+                    "character": 15
+                },
+                "end": {
+                    "line": 53,
+                    "character": 20
+                }
+            },
+            "rule": "reportReturnType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_single\\manager.py",
+            "severity": "error",
+            "message": "\"get_answer_cls\" overrides symbol of same name in class \"Manager\"\n  \"_lru_cache_wrapper[type[TAnswer@get_answer_cls]]\" is not assignable to \"_lru_cache_wrapper[type[Answer]]\"\n    Type parameter \"_T@_lru_cache_wrapper\" is invariant, but \"type[TAnswer@get_answer_cls]\" is not the same as \"type[Answer]\"",
+            "range": {
+                "start": {
+                    "line": 57,
+                    "character": 8
+                },
+                "end": {
+                    "line": 57,
+                    "character": 22
+                }
+            },
+            "rule": "reportIncompatibleVariableOverride"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_single\\manager.py",
+            "severity": "warning",
+            "message": "TypeVar \"TAnswer\" appears only once in generic function signature\n  Use \"Answer\" instead",
+            "range": {
+                "start": {
+                    "line": 60,
+                    "character": 14
+                },
+                "end": {
+                    "line": 60,
+                    "character": 21
+                }
+            },
+            "rule": "reportInvalidTypeVarUse"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_single\\manager.py",
+            "severity": "error",
+            "message": "Type \"type[Answer]\" is not assignable to return type \"type[TAnswer@get_answer_cls]\"\n  Type \"type[Answer]\" is not assignable to type \"type[TAnswer@get_answer_cls]\"",
+            "range": {
+                "start": {
+                    "line": 86,
+                    "character": 15
+                },
+                "end": {
+                    "line": 86,
+                    "character": 20
+                }
+            },
+            "rule": "reportReturnType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_single\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_1\" for class \"type[Prompt]\"\n  Attribute \"src_1\" is unknown",
+            "range": {
+                "start": {
+                    "line": 97,
+                    "character": 53
+                },
+                "end": {
+                    "line": 97,
+                    "character": 58
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_single\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2\" for class \"type[Prompt]\"\n  Attribute \"src_2\" is unknown",
+            "range": {
+                "start": {
+                    "line": 98,
+                    "character": 53
+                },
+                "end": {
+                    "line": 98,
+                    "character": 58
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_single\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_1_missing_err\" for class \"type[Prompt]\"\n  Attribute \"src_1_missing_err\" is unknown",
+            "range": {
+                "start": {
+                    "line": 100,
+                    "character": 46
+                },
+                "end": {
+                    "line": 100,
+                    "character": 63
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_single\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2_missing_err\" for class \"type[Prompt]\"\n  Attribute \"src_2_missing_err\" is unknown",
+            "range": {
+                "start": {
+                    "line": 102,
+                    "character": 46
+                },
+                "end": {
+                    "line": 102,
+                    "character": 63
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_single\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_1_src_2_equal_err\" for class \"type[Prompt]\"\n  Attribute \"src_1_src_2_equal_err\" is unknown",
+            "range": {
+                "start": {
+                    "line": 104,
+                    "character": 46
+                },
+                "end": {
+                    "line": 104,
+                    "character": 67
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_single\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"output\" for class \"type[Prompt]\"\n  Attribute \"output\" is unknown",
+            "range": {
+                "start": {
+                    "line": 116,
+                    "character": 49
+                },
+                "end": {
+                    "line": 116,
+                    "character": 55
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_single\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"note\" for class \"type[Prompt]\"\n  Attribute \"note\" is unknown",
+            "range": {
+                "start": {
+                    "line": 117,
+                    "character": 47
+                },
+                "end": {
+                    "line": 117,
+                    "character": 51
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_single\\ocr_fusion\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_1\" for class \"type[Prompt]\"\n  Attribute \"src_1\" is unknown",
+            "range": {
+                "start": {
+                    "line": 37,
+                    "character": 59
+                },
+                "end": {
+                    "line": 37,
+                    "character": 64
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_single\\ocr_fusion\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2\" for class \"type[Prompt]\"\n  Attribute \"src_2\" is unknown",
+            "range": {
+                "start": {
+                    "line": 38,
+                    "character": 59
+                },
+                "end": {
+                    "line": 38,
+                    "character": 64
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_single\\ocr_fusion\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"output\" for class \"type[Prompt]\"\n  Attribute \"output\" is unknown",
+            "range": {
+                "start": {
+                    "line": 39,
+                    "character": 61
+                },
+                "end": {
+                    "line": 39,
+                    "character": 67
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_single\\ocr_fusion\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"output\" for class \"type[Prompt]\"\n  Attribute \"output\" is unknown",
+            "range": {
+                "start": {
+                    "line": 65,
+                    "character": 65
+                },
+                "end": {
+                    "line": 65,
+                    "character": 71
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_single\\ocr_fusion\\processor.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_1\" for class \"type[Prompt]\"\n  Attribute \"src_1\" is unknown",
+            "range": {
+                "start": {
+                    "line": 69,
+                    "character": 67
+                },
+                "end": {
+                    "line": 69,
+                    "character": 72
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_single\\ocr_fusion\\processor.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2\" for class \"type[Prompt]\"\n  Attribute \"src_2\" is unknown",
+            "range": {
+                "start": {
+                    "line": 76,
+                    "character": 67
+                },
+                "end": {
+                    "line": 76,
+                    "character": 72
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_single\\ocr_fusion\\processor.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_1\" for class \"type[Prompt]\"\n  Attribute \"src_1\" is unknown",
+            "range": {
+                "start": {
+                    "line": 85,
+                    "character": 32
+                },
+                "end": {
+                    "line": 85,
+                    "character": 37
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_single\\ocr_fusion\\processor.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2\" for class \"type[Prompt]\"\n  Attribute \"src_2\" is unknown",
+            "range": {
+                "start": {
+                    "line": 86,
+                    "character": 32
+                },
+                "end": {
+                    "line": 86,
+                    "character": 37
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\dual_single\\ocr_fusion\\processor.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"output\" for class \"type[Prompt]\"\n  Attribute \"output\" is unknown",
+            "range": {
+                "start": {
+                    "line": 92,
+                    "character": 68
+                },
+                "end": {
+                    "line": 92,
+                    "character": 74
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\mono_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"size\" for class \"type[Query]\"\n  Attribute \"size\" is unknown",
+            "range": {
+                "start": {
+                    "line": 56,
+                    "character": 14
+                },
+                "end": {
+                    "line": 56,
+                    "character": 18
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\mono_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"size\" for class \"type[Answer]\"\n  Attribute \"size\" is unknown",
+            "range": {
+                "start": {
+                    "line": 91,
+                    "character": 14
+                },
+                "end": {
+                    "line": 91,
+                    "character": 18
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\mono_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"size\" for class \"type[TestCase]\"\n  Attribute \"size\" is unknown",
+            "range": {
+                "start": {
+                    "line": 125,
+                    "character": 14
+                },
+                "end": {
+                    "line": 125,
+                    "character": 18
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\mono_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"get_auto_verified\" for class \"type[TestCase]\"\n  Type \"(model: TestCase) -> bool\" is not assignable to type \"(self: TestCase) -> bool\"\n    Parameter name mismatch: \"self\" versus \"model\"",
+            "range": {
+                "start": {
+                    "line": 126,
+                    "character": 34
+                },
+                "end": {
+                    "line": 126,
+                    "character": 55
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\mono_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"get_min_difficulty\" for class \"type[TestCase]\"\n  Type \"(model: TestCase) -> int\" is not assignable to type \"(self: TestCase) -> int\"\n    Parameter name mismatch: \"self\" versus \"model\"",
+            "range": {
+                "start": {
+                    "line": 127,
+                    "character": 35
+                },
+                "end": {
+                    "line": 127,
+                    "character": 57
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\mono_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"output\" for class \"type[Prompt]\"\n  Attribute \"output\" is unknown",
+            "range": {
+                "start": {
+                    "line": 164,
+                    "character": 51
+                },
+                "end": {
+                    "line": 164,
+                    "character": 57
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\mono_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"size\" for class \"TestCase\"\n  Attribute \"size\" is unknown",
+            "range": {
+                "start": {
+                    "line": 165,
+                    "character": 38
+                },
+                "end": {
+                    "line": 165,
+                    "character": 42
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\mono_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"size\" for class \"TestCase\"\n  Attribute \"size\" is unknown",
+            "range": {
+                "start": {
+                    "line": 182,
+                    "character": 31
+                },
+                "end": {
+                    "line": 182,
+                    "character": 35
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\mono_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"input\" for class \"type[Prompt]\"\n  Attribute \"input\" is unknown",
+            "range": {
+                "start": {
+                    "line": 183,
+                    "character": 63
+                },
+                "end": {
+                    "line": 183,
+                    "character": 68
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\mono_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"output\" for class \"type[Prompt]\"\n  Attribute \"output\" is unknown",
+            "range": {
+                "start": {
+                    "line": 184,
+                    "character": 65
+                },
+                "end": {
+                    "line": 184,
+                    "character": 71
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\mono_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"note\" for class \"type[Prompt]\"\n  Attribute \"note\" is unknown",
+            "range": {
+                "start": {
+                    "line": 185,
+                    "character": 58
+                },
+                "end": {
+                    "line": 185,
+                    "character": 62
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\mono_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"output_unmodified_err\" for class \"type[Prompt]\"\n  Attribute \"output_unmodified_err\" is unknown",
+            "range": {
+                "start": {
+                    "line": 188,
+                    "character": 54
+                },
+                "end": {
+                    "line": 188,
+                    "character": 75
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\mono_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"note_missing_err\" for class \"type[Prompt]\"\n  Attribute \"note_missing_err\" is unknown",
+            "range": {
+                "start": {
+                    "line": 190,
+                    "character": 54
+                },
+                "end": {
+                    "line": 190,
+                    "character": 70
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\mono_block\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"output_missing_err\" for class \"type[Prompt]\"\n  Attribute \"output_missing_err\" is unknown",
+            "range": {
+                "start": {
+                    "line": 192,
+                    "character": 50
+                },
+                "end": {
+                    "line": 192,
+                    "character": 68
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\llms\\mono_block\\processor.py",
+            "severity": "error",
+            "message": "\"prompt_cls\" overrides symbol of same name in class \"Processor\"\n  Variable is mutable so its type is invariant\n    Override type \"type[MonoBlockPrompt]\" is not the same as base type \"type[Prompt]\"",
+            "range": {
+                "start": {
+                    "line": 21,
+                    "character": 4
+                },
+                "end": {
+                    "line": 21,
+                    "character": 14
+                }
+            },
+            "rule": "reportIncompatibleVariableOverride"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\proofreading\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"output\" for class \"type[Prompt]\"\n  Attribute \"output\" is unknown",
+            "range": {
+                "start": {
+                    "line": 33,
+                    "character": 49
+                },
+                "end": {
+                    "line": 33,
+                    "character": 55
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\proofreading\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"note\" for class \"type[Prompt]\"\n  Attribute \"note\" is unknown",
+            "range": {
+                "start": {
+                    "line": 34,
+                    "character": 47
+                },
+                "end": {
+                    "line": 34,
+                    "character": 51
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\proofreading\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"output_missing_note_missing_err\" for class \"type[Prompt]\"\n  Attribute \"output_missing_note_missing_err\" is unknown",
+            "range": {
+                "start": {
+                    "line": 36,
+                    "character": 46
+                },
+                "end": {
+                    "line": 36,
+                    "character": 77
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\proofreading\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_1\" for class \"type[Prompt]\"\n  Attribute \"src_1\" is unknown",
+            "range": {
+                "start": {
+                    "line": 51,
+                    "character": 55
+                },
+                "end": {
+                    "line": 51,
+                    "character": 60
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\proofreading\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"output\" for class \"type[Prompt]\"\n  Attribute \"output\" is unknown",
+            "range": {
+                "start": {
+                    "line": 52,
+                    "character": 66
+                },
+                "end": {
+                    "line": 52,
+                    "character": 72
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\proofreading\\processor.py",
+            "severity": "error",
+            "message": "\"prompt_cls\" overrides symbol of same name in class \"Processor\"\n  Variable is mutable so its type is invariant\n    Override type \"type[YueZhoHansProofreadingPrompt]\" is not the same as base type \"type[Prompt]\"",
+            "range": {
+                "start": {
+                    "line": 25,
+                    "character": 4
+                },
+                "end": {
+                    "line": 25,
+                    "character": 14
+                }
+            },
+            "rule": "reportIncompatibleVariableOverride"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2_sub_1_shifted\" for class \"type[Prompt]\"\n  Attribute \"src_2_sub_1_shifted\" is unknown",
+            "range": {
+                "start": {
+                    "line": 106,
+                    "character": 45
+                },
+                "end": {
+                    "line": 106,
+                    "character": 64
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2_sub_2_shifted\" for class \"type[Prompt]\"\n  Attribute \"src_2_sub_2_shifted\" is unknown",
+            "range": {
+                "start": {
+                    "line": 109,
+                    "character": 45
+                },
+                "end": {
+                    "line": 109,
+                    "character": 64
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+            "severity": "error",
+            "message": "Argument of type \"Unknown | Answer | None\" cannot be assigned to parameter \"answer\" of type \"Answer\" in function \"_shift_one\"\n  Type \"Unknown | Answer | None\" is not assignable to type \"Answer\"\n    \"None\" is not assignable to \"Answer\"",
+            "range": {
+                "start": {
+                    "line": 113,
+                    "character": 59
+                },
+                "end": {
+                    "line": 113,
+                    "character": 65
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2_sub_1\" for class \"type[Prompt]\"\n  Attribute \"src_2_sub_1\" is unknown",
+            "range": {
+                "start": {
+                    "line": 144,
+                    "character": 47
+                },
+                "end": {
+                    "line": 144,
+                    "character": 58
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2_sub_2\" for class \"type[Prompt]\"\n  Attribute \"src_2_sub_2\" is unknown",
+            "range": {
+                "start": {
+                    "line": 145,
+                    "character": 47
+                },
+                "end": {
+                    "line": 145,
+                    "character": 58
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2_sub_1_shifted\" for class \"type[Prompt]\"\n  Attribute \"src_2_sub_1_shifted\" is unknown",
+            "range": {
+                "start": {
+                    "line": 146,
+                    "character": 56
+                },
+                "end": {
+                    "line": 146,
+                    "character": 75
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2_sub_2_shifted\" for class \"type[Prompt]\"\n  Attribute \"src_2_sub_2_shifted\" is unknown",
+            "range": {
+                "start": {
+                    "line": 147,
+                    "character": 56
+                },
+                "end": {
+                    "line": 147,
+                    "character": 75
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+            "severity": "error",
+            "message": "Argument of type \"Any | None\" cannot be assigned to parameter \"obj\" of type \"Sized\" in function \"len\"\n  Type \"Any | None\" is not assignable to type \"Sized\"\n    \"None\" is incompatible with protocol \"Sized\"\n      \"__len__\" is not present",
+            "range": {
+                "start": {
+                    "line": 153,
+                    "character": 15
+                },
+                "end": {
+                    "line": 153,
+                    "character": 19
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+            "severity": "error",
+            "message": "Argument of type \"Any | None\" cannot be assigned to parameter \"obj\" of type \"Sized\" in function \"len\"\n  Type \"Any | None\" is not assignable to type \"Sized\"\n    \"None\" is incompatible with protocol \"Sized\"\n      \"__len__\" is not present",
+            "range": {
+                "start": {
+                    "line": 153,
+                    "character": 27
+                },
+                "end": {
+                    "line": 153,
+                    "character": 39
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+            "severity": "error",
+            "message": "Object of type \"None\" is not subscriptable",
+            "range": {
+                "start": {
+                    "line": 155,
+                    "character": 40
+                },
+                "end": {
+                    "line": 155,
+                    "character": 52
+                }
+            },
+            "rule": "reportOptionalSubscript"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+            "severity": "error",
+            "message": "Argument of type \"Any | None\" cannot be assigned to parameter \"obj\" of type \"Sized\" in function \"len\"\n  Type \"Any | None\" is not assignable to type \"Sized\"\n    \"None\" is incompatible with protocol \"Sized\"\n      \"__len__\" is not present",
+            "range": {
+                "start": {
+                    "line": 155,
+                    "character": 57
+                },
+                "end": {
+                    "line": 155,
+                    "character": 61
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"_sync_groups_override\" for class \"Alignment\"\n  Expression of type \"list[SyncGroup]\" cannot be assigned to attribute \"_sync_groups_override\" of class \"Alignment\"\n    \"list[SyncGroup]\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 182,
+                    "character": 30
+                },
+                "end": {
+                    "line": 182,
+                    "character": 51
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+            "severity": "error",
+            "message": "Argument of type \"Any | None\" cannot be assigned to parameter \"obj\" of type \"Sized\" in function \"len\"\n  Type \"Any | None\" is not assignable to type \"Sized\"\n    \"None\" is incompatible with protocol \"Sized\"\n      \"__len__\" is not present",
+            "range": {
+                "start": {
+                    "line": 187,
+                    "character": 15
+                },
+                "end": {
+                    "line": 187,
+                    "character": 19
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+            "severity": "error",
+            "message": "Argument of type \"Any | None\" cannot be assigned to parameter \"obj\" of type \"Sized\" in function \"len\"\n  Type \"Any | None\" is not assignable to type \"Sized\"\n    \"None\" is incompatible with protocol \"Sized\"\n      \"__len__\" is not present",
+            "range": {
+                "start": {
+                    "line": 187,
+                    "character": 27
+                },
+                "end": {
+                    "line": 187,
+                    "character": 39
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+            "severity": "error",
+            "message": "Object of type \"None\" is not subscriptable",
+            "range": {
+                "start": {
+                    "line": 189,
+                    "character": 40
+                },
+                "end": {
+                    "line": 189,
+                    "character": 52
+                }
+            },
+            "rule": "reportOptionalSubscript"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+            "severity": "error",
+            "message": "Argument of type \"Any | None\" cannot be assigned to parameter \"obj\" of type \"Sized\" in function \"len\"\n  Type \"Any | None\" is not assignable to type \"Sized\"\n    \"None\" is incompatible with protocol \"Sized\"\n      \"__len__\" is not present",
+            "range": {
+                "start": {
+                    "line": 189,
+                    "character": 59
+                },
+                "end": {
+                    "line": 189,
+                    "character": 71
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+            "severity": "error",
+            "message": "Argument of type \"Any | None\" cannot be assigned to parameter \"obj\" of type \"Sized\" in function \"len\"\n  Type \"Any | None\" is not assignable to type \"Sized\"\n    \"None\" is incompatible with protocol \"Sized\"\n      \"__len__\" is not present",
+            "range": {
+                "start": {
+                    "line": 189,
+                    "character": 79
+                },
+                "end": {
+                    "line": 189,
+                    "character": 83
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"_sync_groups_override\" for class \"Alignment\"\n  Expression of type \"list[SyncGroup]\" cannot be assigned to attribute \"_sync_groups_override\" of class \"Alignment\"\n    \"list[SyncGroup]\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 218,
+                    "character": 30
+                },
+                "end": {
+                    "line": 218,
+                    "character": 51
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"output\" for class \"type[Prompt]\"\n  Attribute \"output\" is unknown",
+            "range": {
+                "start": {
+                    "line": 284,
+                    "character": 75
+                },
+                "end": {
+                    "line": 284,
+                    "character": 81
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+            "severity": "error",
+            "message": "Argument of type \"list[SSAEvent]\" cannot be assigned to parameter \"subs\" of type \"list[AudioSubtitle]\" in function \"get_sub_merged\"\n  \"list[SSAEvent]\" is not assignable to \"list[AudioSubtitle]\"\n    Type parameter \"_T@list\" is invariant, but \"SSAEvent\" is not the same as \"AudioSubtitle\"\n    Consider switching from \"list\" to \"Sequence\" which is covariant",
+            "range": {
+                "start": {
+                    "line": 285,
+                    "character": 32
+                },
+                "end": {
+                    "line": 285,
+                    "character": 35
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"_sync_groups_override\" for class \"Alignment\"\n  Expression of type \"list[Unknown]\" cannot be assigned to attribute \"_sync_groups_override\" of class \"Alignment\"\n    \"list[Unknown]\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 295,
+                    "character": 18
+                },
+                "end": {
+                    "line": 295,
+                    "character": 39
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\alignment.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_1_sub_1\" for class \"type[Prompt]\"\n  Attribute \"src_1_sub_1\" is unknown",
+            "range": {
+                "start": {
+                    "line": 203,
+                    "character": 37
+                },
+                "end": {
+                    "line": 203,
+                    "character": 48
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\alignment.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2_sub_1\" for class \"type[Prompt]\"\n  Attribute \"src_2_sub_1\" is unknown",
+            "range": {
+                "start": {
+                    "line": 204,
+                    "character": 37
+                },
+                "end": {
+                    "line": 204,
+                    "character": 48
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\alignment.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_1_sub_2\" for class \"type[Prompt]\"\n  Attribute \"src_1_sub_2\" is unknown",
+            "range": {
+                "start": {
+                    "line": 205,
+                    "character": 37
+                },
+                "end": {
+                    "line": 205,
+                    "character": 48
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\alignment.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2_sub_2\" for class \"type[Prompt]\"\n  Attribute \"src_2_sub_2\" is unknown",
+            "range": {
+                "start": {
+                    "line": 206,
+                    "character": 37
+                },
+                "end": {
+                    "line": 206,
+                    "character": 48
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\alignment.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2\" for class \"type[Prompt]\"\n  Attribute \"src_2\" is unknown",
+            "range": {
+                "start": {
+                    "line": 248,
+                    "character": 37
+                },
+                "end": {
+                    "line": 248,
+                    "character": 42
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\alignment.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_1\" for class \"type[Prompt]\"\n  Attribute \"src_1\" is unknown",
+            "range": {
+                "start": {
+                    "line": 249,
+                    "character": 37
+                },
+                "end": {
+                    "line": 249,
+                    "character": 42
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\merging\\manager.py",
+            "severity": "error",
+            "message": "\"prompt_cls\" overrides symbol of same name in class \"DualMultiSingleManager\"\n  Variable is mutable so its type is invariant\n    Override type \"type[YueZhoHansMergingPrompt]\" is not the same as base type \"type[DualMultiSinglePrompt]\"",
+            "range": {
+                "start": {
+                    "line": 23,
+                    "character": 4
+                },
+                "end": {
+                    "line": 23,
+                    "character": 14
+                }
+            },
+            "rule": "reportIncompatibleVariableOverride"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\merging\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_2\" for class \"type[Prompt]\"\n  Attribute \"src_2\" is unknown",
+            "range": {
+                "start": {
+                    "line": 39,
+                    "character": 57
+                },
+                "end": {
+                    "line": 39,
+                    "character": 62
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\merging\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"output\" for class \"type[Prompt]\"\n  Attribute \"output\" is unknown",
+            "range": {
+                "start": {
+                    "line": 40,
+                    "character": 63
+                },
+                "end": {
+                    "line": 40,
+                    "character": 69
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\merging\\manager.py",
+            "severity": "error",
+            "message": "Argument of type \"Any | None\" cannot be assigned to parameter \"text\" of type \"str\" in function \"remove_non_punc_and_whitespace\"\n  Type \"Any | None\" is not assignable to type \"str\"\n    \"None\" is not assignable to \"str\"",
+            "range": {
+                "start": {
+                    "line": 41,
+                    "character": 42
+                },
+                "end": {
+                    "line": 41,
+                    "character": 55
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\merging\\manager.py",
+            "severity": "error",
+            "message": "Argument of type \"Any | None\" cannot be assigned to parameter \"text\" of type \"str\" in function \"remove_non_punc_and_whitespace\"\n  Type \"Any | None\" is not assignable to type \"str\"\n    \"None\" is not assignable to \"str\"",
+            "range": {
+                "start": {
+                    "line": 43,
+                    "character": 42
+                },
+                "end": {
+                    "line": 43,
+                    "character": 50
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\merging\\manager.py",
+            "severity": "error",
+            "message": "Argument of type \"Any | None\" cannot be assigned to parameter \"text\" of type \"str\" in function \"remove_non_punc_and_whitespace\"\n  Type \"Any | None\" is not assignable to type \"str\"\n    \"None\" is not assignable to \"str\"",
+            "range": {
+                "start": {
+                    "line": 44,
+                    "character": 12
+                },
+                "end": {
+                    "line": 44,
+                    "character": 25
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\merging\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"src_1\" for class \"type[Prompt]\"\n  Attribute \"src_1\" is unknown",
+            "range": {
+                "start": {
+                    "line": 61,
+                    "character": 64
+                },
+                "end": {
+                    "line": 61,
+                    "character": 69
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\merging\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"output\" for class \"type[Prompt]\"\n  Attribute \"output\" is unknown",
+            "range": {
+                "start": {
+                    "line": 62,
+                    "character": 63
+                },
+                "end": {
+                    "line": 62,
+                    "character": 69
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\merging\\manager.py",
+            "severity": "error",
+            "message": "Object of type \"None\" cannot be used as iterable value",
+            "range": {
+                "start": {
+                    "line": 64,
+                    "character": 66
+                },
+                "end": {
+                    "line": 64,
+                    "character": 81
+                }
+            },
+            "rule": "reportOptionalIterable"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\merging\\manager.py",
+            "severity": "error",
+            "message": "Argument of type \"Any | None\" cannot be assigned to parameter \"text\" of type \"str\" in function \"remove_punc_and_whitespace\"\n  Type \"Any | None\" is not assignable to type \"str\"\n    \"None\" is not assignable to \"str\"",
+            "range": {
+                "start": {
+                    "line": 65,
+                    "character": 46
+                },
+                "end": {
+                    "line": 65,
+                    "character": 59
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\merging\\manager.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"yuewen_chars_changed_err\" for class \"type[Prompt]\"\n  Attribute \"yuewen_chars_changed_err\" is unknown",
+            "range": {
+                "start": {
+                    "line": 68,
+                    "character": 33
+                },
+                "end": {
+                    "line": 68,
+                    "character": 57
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\multilang\\yue_zho\\transcription\\transcriber.py",
+            "severity": "error",
+            "message": "Argument of type \"Series\" cannot be assigned to parameter \"zhongwen_subs\" of type \"AudioSeries\" in function \"align\"\n  \"Series\" is not assignable to \"AudioSeries\"",
+            "range": {
+                "start": {
+                    "line": 156,
+                    "character": 12
+                },
+                "end": {
+                    "line": 156,
+                    "character": 38
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\open_ai\\openai_provider.py",
+            "severity": "error",
+            "message": "Argument of type \"list[dict[str, Any]]\" cannot be assigned to parameter \"messages\" of type \"Iterable[ChatCompletionMessageParam]\" in function \"parse\"\n  \"list[dict[str, Any]]\" is not assignable to \"Iterable[ChatCompletionMessageParam]\"\n    Type parameter \"_T_co@Iterable\" is covariant, but \"dict[str, Any]\" is not a subtype of \"ChatCompletionMessageParam\"\n      Type \"dict[str, Any]\" is not assignable to type \"ChatCompletionMessageParam\"\n        \"dict[str, Any]\" is not assignable to \"ChatCompletionDeveloperMessageParam\"\n        \"dict[str, Any]\" is not assignable to \"ChatCompletionSystemMessageParam\"\n        \"dict[str, Any]\" is not assignable to \"ChatCompletionUserMessageParam\"\n        \"dict[str, Any]\" is not assignable to \"ChatCompletionAssistantMessageParam\"\n        \"dict[str, Any]\" is not assignable to \"ChatCompletionToolMessageParam\"\n  ...",
+            "range": {
+                "start": {
+                    "line": 56,
+                    "character": 29
+                },
+                "end": {
+                    "line": 56,
+                    "character": 37
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\open_ai\\openai_provider.py",
+            "severity": "error",
+            "message": "No overloads for \"create\" match the provided arguments",
+            "range": {
+                "start": {
+                    "line": 62,
+                    "character": 29
+                },
+                "end": {
+                    "line": 66,
+                    "character": 17
+                }
+            },
+            "rule": "reportCallIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\open_ai\\openai_provider.py",
+            "severity": "error",
+            "message": "Argument of type \"list[dict[str, Any]]\" cannot be assigned to parameter \"messages\" of type \"Iterable[ChatCompletionMessageParam]\" in function \"create\"\n  \"list[dict[str, Any]]\" is not assignable to \"Iterable[ChatCompletionMessageParam]\"\n    Type parameter \"_T_co@Iterable\" is covariant, but \"dict[str, Any]\" is not a subtype of \"ChatCompletionMessageParam\"\n      Type \"dict[str, Any]\" is not assignable to type \"ChatCompletionMessageParam\"\n        \"dict[str, Any]\" is not assignable to \"ChatCompletionDeveloperMessageParam\"\n        \"dict[str, Any]\" is not assignable to \"ChatCompletionSystemMessageParam\"\n        \"dict[str, Any]\" is not assignable to \"ChatCompletionUserMessageParam\"\n        \"dict[str, Any]\" is not assignable to \"ChatCompletionAssistantMessageParam\"\n        \"dict[str, Any]\" is not assignable to \"ChatCompletionToolMessageParam\"\n  ...",
+            "range": {
+                "start": {
+                    "line": 63,
+                    "character": 29
+                },
+                "end": {
+                    "line": 63,
+                    "character": 37
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\open_ai\\openai_provider.py",
+            "severity": "error",
+            "message": "Type \"str | Unknown | None\" is not assignable to return type \"str\"\n  Type \"str | Unknown | None\" is not assignable to type \"str\"\n    \"None\" is not assignable to \"str\"",
+            "range": {
+                "start": {
+                    "line": 67,
+                    "character": 19
+                },
+                "end": {
+                    "line": 67,
+                    "character": 56
+                }
+            },
+            "rule": "reportReturnType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\open_ai\\openai_provider.py",
+            "severity": "error",
+            "message": "Argument of type \"list[dict[str, Any]]\" cannot be assigned to parameter \"messages\" of type \"Iterable[ChatCompletionMessageParam]\" in function \"parse\"\n  \"list[dict[str, Any]]\" is not assignable to \"Iterable[ChatCompletionMessageParam]\"\n    Type parameter \"_T_co@Iterable\" is covariant, but \"dict[str, Any]\" is not a subtype of \"ChatCompletionMessageParam\"\n      Type \"dict[str, Any]\" is not assignable to type \"ChatCompletionMessageParam\"\n        \"dict[str, Any]\" is not assignable to \"ChatCompletionDeveloperMessageParam\"\n        \"dict[str, Any]\" is not assignable to \"ChatCompletionSystemMessageParam\"\n        \"dict[str, Any]\" is not assignable to \"ChatCompletionUserMessageParam\"\n        \"dict[str, Any]\" is not assignable to \"ChatCompletionAssistantMessageParam\"\n        \"dict[str, Any]\" is not assignable to \"ChatCompletionToolMessageParam\"\n  ...",
+            "range": {
+                "start": {
+                    "line": 103,
+                    "character": 29
+                },
+                "end": {
+                    "line": 103,
+                    "character": 37
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\open_ai\\openai_provider.py",
+            "severity": "error",
+            "message": "No overloads for \"create\" match the provided arguments",
+            "range": {
+                "start": {
+                    "line": 109,
+                    "character": 35
+                },
+                "end": {
+                    "line": 113,
+                    "character": 17
+                }
+            },
+            "rule": "reportCallIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\open_ai\\openai_provider.py",
+            "severity": "error",
+            "message": "Argument of type \"list[dict[str, Any]]\" cannot be assigned to parameter \"messages\" of type \"Iterable[ChatCompletionMessageParam]\" in function \"create\"\n  \"list[dict[str, Any]]\" is not assignable to \"Iterable[ChatCompletionMessageParam]\"\n    Type parameter \"_T_co@Iterable\" is covariant, but \"dict[str, Any]\" is not a subtype of \"ChatCompletionMessageParam\"\n      Type \"dict[str, Any]\" is not assignable to type \"ChatCompletionMessageParam\"\n        \"dict[str, Any]\" is not assignable to \"ChatCompletionDeveloperMessageParam\"\n        \"dict[str, Any]\" is not assignable to \"ChatCompletionSystemMessageParam\"\n        \"dict[str, Any]\" is not assignable to \"ChatCompletionUserMessageParam\"\n        \"dict[str, Any]\" is not assignable to \"ChatCompletionAssistantMessageParam\"\n        \"dict[str, Any]\" is not assignable to \"ChatCompletionToolMessageParam\"\n  ...",
+            "range": {
+                "start": {
+                    "line": 110,
+                    "character": 29
+                },
+                "end": {
+                    "line": 110,
+                    "character": 37
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\scinoephile\\open_ai\\openai_provider.py",
+            "severity": "error",
+            "message": "Type \"str | Unknown | None\" is not assignable to return type \"str\"\n  Type \"str | Unknown | None\" is not assignable to type \"str\"\n    \"None\" is not assignable to \"str\"",
+            "range": {
+                "start": {
+                    "line": 114,
+                    "character": 19
+                },
+                "end": {
+                    "line": 114,
+                    "character": 56
+                }
+            },
+            "rule": "reportReturnType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\test\\cli\\test_process_cli.py",
+            "severity": "error",
+            "message": "Type \"Path\" is not assignable to declared type \"str\"\n  \"Path\" is not assignable to \"str\"",
+            "range": {
+                "start": {
+                    "line": 50,
+                    "character": 17
+                },
+                "end": {
+                    "line": 50,
+                    "character": 44
+                }
+            },
+            "rule": "reportAssignmentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\test\\cli\\test_process_cli.py",
+            "severity": "error",
+            "message": "Type \"Path\" is not assignable to declared type \"str\"\n  \"Path\" is not assignable to \"str\"",
+            "range": {
+                "start": {
+                    "line": 99,
+                    "character": 17
+                },
+                "end": {
+                    "line": 99,
+                    "character": 44
+                }
+            },
+            "rule": "reportAssignmentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\test\\cli\\test_process_cli.py",
+            "severity": "error",
+            "message": "Type \"Path\" is not assignable to declared type \"str\"\n  \"Path\" is not assignable to \"str\"",
+            "range": {
+                "start": {
+                    "line": 145,
+                    "character": 25
+                },
+                "end": {
+                    "line": 145,
+                    "character": 60
+                }
+            },
+            "rule": "reportAssignmentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\test\\cli\\test_process_cli.py",
+            "severity": "error",
+            "message": "Type \"Path\" is not assignable to declared type \"str\"\n  \"Path\" is not assignable to \"str\"",
+            "range": {
+                "start": {
+                    "line": 146,
+                    "character": 25
+                },
+                "end": {
+                    "line": 146,
+                    "character": 60
+                }
+            },
+            "rule": "reportAssignmentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\test\\data\\kob\\__init__.py",
+            "severity": "error",
+            "message": "Expression of type \"type[YueZhoHansMergingPrompt]\" cannot be assigned to parameter of type \"type[DualBlockGappedPrompt]\"\n  \"type[YueZhoHansMergingPrompt]\" is not assignable to \"type[DualBlockGappedPrompt]\"\n  Type \"type[YueZhoHansMergingPrompt]\" is not assignable to type \"type[DualBlockGappedPrompt]\"",
+            "range": {
+                "start": {
+                    "line": 193,
+                    "character": 46
+                },
+                "end": {
+                    "line": 193,
+                    "character": 69
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\test\\data\\ocr.py",
+            "severity": "error",
+            "message": "\"setdefault\" is not a known attribute of \"None\"",
+            "range": {
+                "start": {
+                    "line": 346,
+                    "character": 17
+                },
+                "end": {
+                    "line": 346,
+                    "character": 27
+                }
+            },
+            "rule": "reportOptionalMemberAccess"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\test\\data\\ocr.py",
+            "severity": "error",
+            "message": "Argument expression after ** must be a mapping with a \"str\" key type",
+            "range": {
+                "start": {
+                    "line": 353,
+                    "character": 14
+                },
+                "end": {
+                    "line": 353,
+                    "character": 22
+                }
+            },
+            "rule": "reportCallIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\test\\image\\subtitles\\test_image_series.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"img\" for class \"SSAEvent\"\n  Attribute \"img\" is unknown",
+            "range": {
+                "start": {
+                    "line": 38,
+                    "character": 21
+                },
+                "end": {
+                    "line": 38,
+                    "character": 24
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\test\\image\\subtitles\\test_image_series.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"img\" for class \"SSAEvent\"\n  Attribute \"img\" is unknown",
+            "range": {
+                "start": {
+                    "line": 42,
+                    "character": 21
+                },
+                "end": {
+                    "line": 42,
+                    "character": 24
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\test\\image\\subtitles\\test_image_series.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"img\" for class \"SSAEvent\"\n  Attribute \"img\" is unknown",
+            "range": {
+                "start": {
+                    "line": 43,
+                    "character": 21
+                },
+                "end": {
+                    "line": 43,
+                    "character": 24
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\test\\image\\subtitles\\test_image_series.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"img\" for class \"SSAEvent\"\n  Attribute \"img\" is unknown",
+            "range": {
+                "start": {
+                    "line": 44,
+                    "character": 21
+                },
+                "end": {
+                    "line": 44,
+                    "character": 24
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\test\\image\\subtitles\\test_image_series.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"img\" for class \"SSAEvent\"\n  Attribute \"img\" is unknown",
+            "range": {
+                "start": {
+                    "line": 72,
+                    "character": 21
+                },
+                "end": {
+                    "line": 72,
+                    "character": 24
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\test\\image\\subtitles\\test_image_series.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"img\" for class \"SSAEvent\"\n  Attribute \"img\" is unknown",
+            "range": {
+                "start": {
+                    "line": 76,
+                    "character": 21
+                },
+                "end": {
+                    "line": 76,
+                    "character": 24
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\karls\\Code\\Scinoephile\\test\\image\\subtitles\\test_image_series.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"img\" for class \"SSAEvent\"\n  Attribute \"img\" is unknown",
+            "range": {
+                "start": {
+                    "line": 77,
+                    "character": 21
+                },
+                "end": {
+                    "line": 77,
+                    "character": 24
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        }
+    ],
+    "summary": {
+        "filesAnalyzed": 172,
+        "errorCount": 204,
+        "warningCount": 5,
+        "informationCount": 0,
+        "timeInSec": 14.316
+    }
+}
+

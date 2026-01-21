@@ -1,0 +1,2928 @@
+[
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `CommandLineInterface`",
+    "severity": "major",
+    "fingerprint": "b8e7fdf9b0b45f82",
+    "location": {
+      "path": "pipescaler\\cli\\pipescaler_cli.py",
+      "positions": {
+        "begin": {
+          "line": 11,
+          "column": 31
+        },
+        "end": {
+          "line": 11,
+          "column": 51
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `CommandLineInterface`",
+    "severity": "major",
+    "fingerprint": "3e6b58cc8077013",
+    "location": {
+      "path": "pipescaler\\core\\cli\\utility_cli.py",
+      "positions": {
+        "begin": {
+          "line": 11,
+          "column": 31
+        },
+        "end": {
+          "line": 11,
+          "column": 51
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-attribute",
+    "description": "unresolved-attribute: Object of type `type[Utility]` has no attribute `run`",
+    "severity": "major",
+    "fingerprint": "9e61d416b69ffe1c",
+    "location": {
+      "path": "pipescaler\\core\\cli\\utility_cli.py",
+      "positions": {
+        "begin": {
+          "line": 39,
+          "column": 9
+        },
+        "end": {
+          "line": 39,
+          "column": 24
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "4c96a64f361e5bf9",
+    "location": {
+      "path": "pipescaler\\core\\pipelines\\checkpoint_manager_base.py",
+      "positions": {
+        "begin": {
+          "line": 11,
+          "column": 6
+        },
+        "end": {
+          "line": 11,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "989455a3517b6669",
+    "location": {
+      "path": "pipescaler\\core\\pipelines\\directory_source.py",
+      "positions": {
+        "begin": {
+          "line": 13,
+          "column": 6
+        },
+        "end": {
+          "line": 13,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "914ec581acf634da",
+    "location": {
+      "path": "pipescaler\\core\\pipelines\\directory_terminus.py",
+      "positions": {
+        "begin": {
+          "line": 12,
+          "column": 6
+        },
+        "end": {
+          "line": 12,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "770309aae7425b8a",
+    "location": {
+      "path": "pipescaler\\core\\pipelines\\pipe_object.py",
+      "positions": {
+        "begin": {
+          "line": 12,
+          "column": 6
+        },
+        "end": {
+          "line": 12,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-return-type",
+    "description": "invalid-return-type: Return type does not match returned value: expected `list[Self@parents] | None`, found `Unknown | None | list[Unknown | (Self@__init__ & ~AlwaysFalsy)] | list[Unknown]`",
+    "severity": "major",
+    "fingerprint": "817e9e13f711678f",
+    "location": {
+      "path": "pipescaler\\core\\pipelines\\pipe_object.py",
+      "positions": {
+        "begin": {
+          "line": 107,
+          "column": 16
+        },
+        "end": {
+          "line": 107,
+          "column": 29
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.general`",
+    "severity": "major",
+    "fingerprint": "78786fc544137511",
+    "location": {
+      "path": "pipescaler\\core\\runner.py",
+      "positions": {
+        "begin": {
+          "line": 12,
+          "column": 6
+        },
+        "end": {
+          "line": 12,
+          "column": 31
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "28f3652a6b3cc0ca",
+    "location": {
+      "path": "pipescaler\\core\\runner.py",
+      "positions": {
+        "begin": {
+          "line": 13,
+          "column": 6
+        },
+        "end": {
+          "line": 13,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `DirectoryNotFoundError`",
+    "severity": "major",
+    "fingerprint": "968f51aee47c55c2",
+    "location": {
+      "path": "pipescaler\\file_scanner.py",
+      "positions": {
+        "begin": {
+          "line": 17,
+          "column": 31
+        },
+        "end": {
+          "line": 17,
+          "column": 53
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "ca7e52e2e654b13f",
+    "location": {
+      "path": "pipescaler\\file_scanner.py",
+      "positions": {
+        "begin": {
+          "line": 18,
+          "column": 6
+        },
+        "end": {
+          "line": 18,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "211162def4e03e7e",
+    "location": {
+      "path": "pipescaler\\image\\analytics\\image_hash_collection.py",
+      "positions": {
+        "begin": {
+          "line": 15,
+          "column": 6
+        },
+        "end": {
+          "line": 15,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-method-override",
+    "description": "invalid-method-override: Invalid override of method `__getitem__`: Definition is incompatible with `Sequence.__getitem__`",
+    "severity": "major",
+    "fingerprint": "f5a774034d727613",
+    "location": {
+      "path": "pipescaler\\image\\analytics\\image_hash_collection.py",
+      "positions": {
+        "begin": {
+          "line": 59,
+          "column": 9
+        },
+        "end": {
+          "line": 62,
+          "column": 23
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-argument-type",
+    "description": "invalid-argument-type: Argument to function `round` is incorrect: Expected `_SupportsRound1[Unknown]`, found `ndarray[tuple[int, ...], Unknown]`",
+    "severity": "major",
+    "fingerprint": "afc8e594b821613f",
+    "location": {
+      "path": "pipescaler\\image\\analytics\\image_hash_collection.py",
+      "positions": {
+        "begin": {
+          "line": 196,
+          "column": 38
+        },
+        "end": {
+          "line": 196,
+          "column": 51
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-argument-type",
+    "description": "invalid-argument-type: Argument to function `round` is incorrect: Expected `_SupportsRound1[Unknown]`, found `ndarray[tuple[int, ...], Unknown]`",
+    "severity": "major",
+    "fingerprint": "6f6ff4c6cf7ba5d2",
+    "location": {
+      "path": "pipescaler\\image\\analytics\\image_hash_collection.py",
+      "positions": {
+        "begin": {
+          "line": 197,
+          "column": 39
+        },
+        "end": {
+          "line": 197,
+          "column": 53
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unused-ignore-comment",
+    "description": "unused-ignore-comment: Unused blanket `type: ignore` directive",
+    "severity": "minor",
+    "fingerprint": "78759793ec3e8fe",
+    "location": {
+      "path": "pipescaler\\image\\analytics\\image_hash_collection.py",
+      "positions": {
+        "begin": {
+          "line": 202,
+          "column": 48
+        },
+        "end": {
+          "line": 202,
+          "column": 62
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "afb887d686085404",
+    "location": {
+      "path": "pipescaler\\image\\analytics\\image_pair_collection.py",
+      "positions": {
+        "begin": {
+          "line": 13,
+          "column": 6
+        },
+        "end": {
+          "line": 13,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-method-override",
+    "description": "invalid-method-override: Invalid override of method `__getitem__`: Definition is incompatible with `Sequence.__getitem__`",
+    "severity": "major",
+    "fingerprint": "716f48705d8dfbce",
+    "location": {
+      "path": "pipescaler\\image\\analytics\\image_pair_collection.py",
+      "positions": {
+        "begin": {
+          "line": 33,
+          "column": 9
+        },
+        "end": {
+          "line": 33,
+          "column": 71
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-assignment",
+    "description": "invalid-assignment: Object of type `Series[Unknown] | DataFrame` is not assignable to `ScoreStatsSeries`",
+    "severity": "major",
+    "fingerprint": "b9f75e1c6e0dad4b",
+    "location": {
+      "path": "pipescaler\\image\\analytics\\image_pair_scorer.py",
+      "positions": {
+        "begin": {
+          "line": 109,
+          "column": 49
+        },
+        "end": {
+          "line": 109,
+          "column": 81
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-assignment",
+    "description": "invalid-assignment: Object of type `Series[Unknown] | DataFrame` is not assignable to `ScoreStatsSeries`",
+    "severity": "major",
+    "fingerprint": "e05228df1873765b",
+    "location": {
+      "path": "pipescaler\\image\\analytics\\image_pair_scorer.py",
+      "positions": {
+        "begin": {
+          "line": 128,
+          "column": 50
+        },
+        "end": {
+          "line": 128,
+          "column": 81
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-assignment",
+    "description": "invalid-assignment: Object of type `ScoreStatsDataFrame | None` is not assignable to `ScoreStatsDataFrame`",
+    "severity": "major",
+    "fingerprint": "ac1f959994ff890",
+    "location": {
+      "path": "pipescaler\\image\\analytics\\image_pair_scorer.py",
+      "positions": {
+        "begin": {
+          "line": 244,
+          "column": 51
+        },
+        "end": {
+          "line": 246,
+          "column": 10
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `CommandLineInterface`",
+    "severity": "major",
+    "fingerprint": "364e991f6a6c2c5a",
+    "location": {
+      "path": "pipescaler\\image\\cli\\image_cli.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 31
+        },
+        "end": {
+          "line": 10,
+          "column": 51
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `CommandLineInterface`",
+    "severity": "major",
+    "fingerprint": "a9ec6d1eb6959fef",
+    "location": {
+      "path": "pipescaler\\image\\cli\\image_mergers_cli.py",
+      "positions": {
+        "begin": {
+          "line": 11,
+          "column": 31
+        },
+        "end": {
+          "line": 11,
+          "column": 51
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `CommandLineInterface`",
+    "severity": "major",
+    "fingerprint": "4c2189edbfca74e8",
+    "location": {
+      "path": "pipescaler\\image\\cli\\image_processors_cli.py",
+      "positions": {
+        "begin": {
+          "line": 11,
+          "column": 31
+        },
+        "end": {
+          "line": 11,
+          "column": 51
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `CommandLineInterface`",
+    "severity": "major",
+    "fingerprint": "ed4ea8750bad4a35",
+    "location": {
+      "path": "pipescaler\\image\\cli\\image_splitters_cli.py",
+      "positions": {
+        "begin": {
+          "line": 11,
+          "column": 31
+        },
+        "end": {
+          "line": 11,
+          "column": 51
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `CommandLineInterface`",
+    "severity": "major",
+    "fingerprint": "53ddf712b34c234e",
+    "location": {
+      "path": "pipescaler\\image\\cli\\image_utilities_cli.py",
+      "positions": {
+        "begin": {
+          "line": 11,
+          "column": 31
+        },
+        "end": {
+          "line": 11,
+          "column": 51
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.argument_parsing`",
+    "severity": "major",
+    "fingerprint": "d2878548cb1c2514",
+    "location": {
+      "path": "pipescaler\\image\\cli\\mergers\\alpha_merger_cli.py",
+      "positions": {
+        "begin": {
+          "line": 14,
+          "column": 6
+        },
+        "end": {
+          "line": 14,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.argument_parsing`",
+    "severity": "major",
+    "fingerprint": "b8f5cb18d6dcdfec",
+    "location": {
+      "path": "pipescaler\\image\\cli\\mergers\\palette_match_merger_cli.py",
+      "positions": {
+        "begin": {
+          "line": 14,
+          "column": 6
+        },
+        "end": {
+          "line": 14,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.argument_parsing`",
+    "severity": "major",
+    "fingerprint": "b8fa14a3b7a0b279",
+    "location": {
+      "path": "pipescaler\\image\\cli\\processors\\crop_cli.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.argument_parsing`",
+    "severity": "major",
+    "fingerprint": "ef3cc5a5a84edd64",
+    "location": {
+      "path": "pipescaler\\image\\cli\\processors\\esrgan_cli.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.argument_parsing`",
+    "severity": "major",
+    "fingerprint": "ac20369c11b7959d",
+    "location": {
+      "path": "pipescaler\\image\\cli\\processors\\expand_cli.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.argument_parsing`",
+    "severity": "major",
+    "fingerprint": "265f427cc163886c",
+    "location": {
+      "path": "pipescaler\\image\\cli\\processors\\height_to_normal_cli.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.argument_parsing`",
+    "severity": "major",
+    "fingerprint": "befdda997d7a72d5",
+    "location": {
+      "path": "pipescaler\\image\\cli\\processors\\mode_cli.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.argument_parsing`",
+    "severity": "major",
+    "fingerprint": "335eb6e909a27999",
+    "location": {
+      "path": "pipescaler\\image\\cli\\processors\\resize_cli.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.argument_parsing`",
+    "severity": "major",
+    "fingerprint": "cbb290d42736cd36",
+    "location": {
+      "path": "pipescaler\\image\\cli\\processors\\solid_color_cli.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.argument_parsing`",
+    "severity": "major",
+    "fingerprint": "29b449b3bfdbc756",
+    "location": {
+      "path": "pipescaler\\image\\cli\\processors\\threshold_cli.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.argument_parsing`",
+    "severity": "major",
+    "fingerprint": "def2aab977fa2c39",
+    "location": {
+      "path": "pipescaler\\image\\cli\\processors\\waifu_cli.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.argument_parsing`",
+    "severity": "major",
+    "fingerprint": "6a1a26ad47336586",
+    "location": {
+      "path": "pipescaler\\image\\cli\\processors\\xbrz_cli.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.argument_parsing`",
+    "severity": "major",
+    "fingerprint": "1ae1a08d23d71e08",
+    "location": {
+      "path": "pipescaler\\image\\cli\\splitters\\alpha_splitter_cli.py",
+      "positions": {
+        "begin": {
+          "line": 14,
+          "column": 6
+        },
+        "end": {
+          "line": 14,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.argument_parsing`",
+    "severity": "major",
+    "fingerprint": "30b42333ab179901",
+    "location": {
+      "path": "pipescaler\\image\\cli\\utilities\\esrgan_serializer_cli.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.argument_parsing`",
+    "severity": "major",
+    "fingerprint": "dfc46882f2d18529",
+    "location": {
+      "path": "pipescaler\\image\\cli\\utilities\\waifu_serializer_cli.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `CommandLineInterface`",
+    "severity": "major",
+    "fingerprint": "84e9183c5df0f307",
+    "location": {
+      "path": "pipescaler\\image\\core\\cli\\image_merger_cli.py",
+      "positions": {
+        "begin": {
+          "line": 11,
+          "column": 31
+        },
+        "end": {
+          "line": 11,
+          "column": 51
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `CommandLineInterface`",
+    "severity": "major",
+    "fingerprint": "6fd9bf5c454633f5",
+    "location": {
+      "path": "pipescaler\\image\\core\\cli\\image_processor_cli.py",
+      "positions": {
+        "begin": {
+          "line": 16,
+          "column": 31
+        },
+        "end": {
+          "line": 16,
+          "column": 51
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.argument_parsing`",
+    "severity": "major",
+    "fingerprint": "8e1a9e552c3ea081",
+    "location": {
+      "path": "pipescaler\\image\\core\\cli\\image_processor_cli.py",
+      "positions": {
+        "begin": {
+          "line": 17,
+          "column": 6
+        },
+        "end": {
+          "line": 17,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `CommandLineInterface`",
+    "severity": "major",
+    "fingerprint": "54e7e71e848ca935",
+    "location": {
+      "path": "pipescaler\\image\\core\\cli\\image_splitter_cli.py",
+      "positions": {
+        "begin": {
+          "line": 12,
+          "column": 31
+        },
+        "end": {
+          "line": 12,
+          "column": 51
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.argument_parsing`",
+    "severity": "major",
+    "fingerprint": "823506dc15bc8563",
+    "location": {
+      "path": "pipescaler\\image\\core\\cli\\image_splitter_cli.py",
+      "positions": {
+        "begin": {
+          "line": 13,
+          "column": 6
+        },
+        "end": {
+          "line": 13,
+          "column": 40
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "4be230382fc0368a",
+    "location": {
+      "path": "pipescaler\\image\\core\\functions.py",
+      "positions": {
+        "begin": {
+          "line": 11,
+          "column": 6
+        },
+        "end": {
+          "line": 11,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unused-ignore-comment",
+    "description": "unused-ignore-comment: Unused blanket `type: ignore` directive",
+    "severity": "minor",
+    "fingerprint": "de925fa07fbf0edf",
+    "location": {
+      "path": "pipescaler\\image\\core\\functions.py",
+      "positions": {
+        "begin": {
+          "line": 74,
+          "column": 42
+        },
+        "end": {
+          "line": 74,
+          "column": 56
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unused-ignore-comment",
+    "description": "unused-ignore-comment: Unused blanket `type: ignore` directive",
+    "severity": "minor",
+    "fingerprint": "7d5d9e37962d7691",
+    "location": {
+      "path": "pipescaler\\image\\core\\functions.py",
+      "positions": {
+        "begin": {
+          "line": 77,
+          "column": 42
+        },
+        "end": {
+          "line": 77,
+          "column": 56
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unused-ignore-comment",
+    "description": "unused-ignore-comment: Unused blanket `type: ignore` directive",
+    "severity": "minor",
+    "fingerprint": "126af6aa2f78f95",
+    "location": {
+      "path": "pipescaler\\image\\core\\functions.py",
+      "positions": {
+        "begin": {
+          "line": 80,
+          "column": 42
+        },
+        "end": {
+          "line": 80,
+          "column": 56
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-attribute",
+    "description": "unresolved-attribute: Object of type `ImageDraw` has no attribute `textsize`",
+    "severity": "major",
+    "fingerprint": "e2c3a3a22f5d4fb7",
+    "location": {
+      "path": "pipescaler\\image\\core\\functions.py",
+      "positions": {
+        "begin": {
+          "line": 235,
+          "column": 12
+        },
+        "end": {
+          "line": 235,
+          "column": 25
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "f06f133e79b14c1",
+    "location": {
+      "path": "pipescaler\\image\\core\\operators\\processors\\pytorch_image_processor.py",
+      "positions": {
+        "begin": {
+          "line": 15,
+          "column": 6
+        },
+        "end": {
+          "line": 15,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-method-override",
+    "description": "invalid-method-override: Invalid override of method `__call__`: Definition is incompatible with `ImageProcessor.__call__`",
+    "severity": "major",
+    "fingerprint": "b6960e7c519ea0b8",
+    "location": {
+      "path": "pipescaler\\image\\core\\operators\\processors\\pytorch_image_processor.py",
+      "positions": {
+        "begin": {
+          "line": 42,
+          "column": 9
+        },
+        "end": {
+          "line": 42,
+          "column": 62
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "ba25204238427782",
+    "location": {
+      "path": "pipescaler\\image\\core\\pipelines\\pipe_image.py",
+      "positions": {
+        "begin": {
+          "line": 14,
+          "column": 6
+        },
+        "end": {
+          "line": 14,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unused-ignore-comment",
+    "description": "unused-ignore-comment: Unused blanket `type: ignore` directive",
+    "severity": "minor",
+    "fingerprint": "94a8dd09d6fc29f9",
+    "location": {
+      "path": "pipescaler\\image\\models\\esrgan\\esrgan_1x.py",
+      "positions": {
+        "begin": {
+          "line": 29,
+          "column": 21
+        },
+        "end": {
+          "line": 29,
+          "column": 35
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unused-ignore-comment",
+    "description": "unused-ignore-comment: Unused blanket `type: ignore` directive",
+    "severity": "minor",
+    "fingerprint": "65457a719667b8d4",
+    "location": {
+      "path": "pipescaler\\image\\models\\esrgan\\esrgan_4x.py",
+      "positions": {
+        "begin": {
+          "line": 41,
+          "column": 21
+        },
+        "end": {
+          "line": 41,
+          "column": 35
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-method-override",
+    "description": "invalid-method-override: Invalid override of method `load_state_dict`: Definition is incompatible with `Module.load_state_dict`",
+    "severity": "major",
+    "fingerprint": "b2f59ddc70339607",
+    "location": {
+      "path": "pipescaler\\image\\models\\esrgan\\esrgan_4x.py",
+      "positions": {
+        "begin": {
+          "line": 43,
+          "column": 9
+        },
+        "end": {
+          "line": 45,
+          "column": 13
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unused-ignore-comment",
+    "description": "unused-ignore-comment: Unused blanket `type: ignore` directive",
+    "severity": "minor",
+    "fingerprint": "493059e9f48a0d59",
+    "location": {
+      "path": "pipescaler\\image\\models\\esrgan\\residual_dense_block.py",
+      "positions": {
+        "begin": {
+          "line": 43,
+          "column": 35
+        },
+        "end": {
+          "line": 43,
+          "column": 49
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unused-ignore-comment",
+    "description": "unused-ignore-comment: Unused blanket `type: ignore` directive",
+    "severity": "minor",
+    "fingerprint": "23eb7b19543a57b9",
+    "location": {
+      "path": "pipescaler\\image\\models\\esrgan\\residual_in_residual_dense_block.py",
+      "positions": {
+        "begin": {
+          "line": 41,
+          "column": 36
+        },
+        "end": {
+          "line": 41,
+          "column": 50
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unused-ignore-comment",
+    "description": "unused-ignore-comment: Unused blanket `type: ignore` directive",
+    "severity": "minor",
+    "fingerprint": "225c9fa7efd07fed",
+    "location": {
+      "path": "pipescaler\\image\\models\\waifu_upconv7.py",
+      "positions": {
+        "begin": {
+          "line": 44,
+          "column": 59
+        },
+        "end": {
+          "line": 44,
+          "column": 73
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unused-ignore-comment",
+    "description": "unused-ignore-comment: Unused blanket `type: ignore` directive",
+    "severity": "minor",
+    "fingerprint": "f40fe577aff2b96a",
+    "location": {
+      "path": "pipescaler\\image\\models\\waifu_vgg7.py",
+      "positions": {
+        "begin": {
+          "line": 44,
+          "column": 59
+        },
+        "end": {
+          "line": 44,
+          "column": 73
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "4c9a2c996ba159e0",
+    "location": {
+      "path": "pipescaler\\image\\operators\\mergers\\palette_match_merger.py",
+      "positions": {
+        "begin": {
+          "line": 11,
+          "column": 6
+        },
+        "end": {
+          "line": 11,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "64cb315eaf28db6d",
+    "location": {
+      "path": "pipescaler\\image\\operators\\processors\\crop_processor.py",
+      "positions": {
+        "begin": {
+          "line": 9,
+          "column": 6
+        },
+        "end": {
+          "line": 9,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-argument-type",
+    "description": "invalid-argument-type: Argument to bound method `get_model` is incorrect: Expected `OrderedDict[str, Tensor]`, found `(Unknown & Top[OrderedDict[Unknown, Unknown]]) | (Esrgan & Top[OrderedDict[Unknown, Unknown]])`",
+    "severity": "major",
+    "fingerprint": "82453a3537b270de",
+    "location": {
+      "path": "pipescaler\\image\\operators\\processors\\esrgan_processor.py",
+      "positions": {
+        "begin": {
+          "line": 37,
+          "column": 55
+        },
+        "end": {
+          "line": 37,
+          "column": 65
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "337ba7237ecaff71",
+    "location": {
+      "path": "pipescaler\\image\\operators\\processors\\expand_processor.py",
+      "positions": {
+        "begin": {
+          "line": 9,
+          "column": 6
+        },
+        "end": {
+          "line": 9,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "9052e9cc6aae9c43",
+    "location": {
+      "path": "pipescaler\\image\\operators\\processors\\height_to_normal_processor.py",
+      "positions": {
+        "begin": {
+          "line": 9,
+          "column": 6
+        },
+        "end": {
+          "line": 9,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "270659b3bf6b1349",
+    "location": {
+      "path": "pipescaler\\image\\operators\\processors\\mode_processor.py",
+      "positions": {
+        "begin": {
+          "line": 9,
+          "column": 6
+        },
+        "end": {
+          "line": 9,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.file`",
+    "severity": "major",
+    "fingerprint": "deb65ef83b82f2f1",
+    "location": {
+      "path": "pipescaler\\image\\operators\\processors\\potrace_processor.py",
+      "positions": {
+        "begin": {
+          "line": 11,
+          "column": 6
+        },
+        "end": {
+          "line": 11,
+          "column": 28
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "cd3b291a184dd61",
+    "location": {
+      "path": "pipescaler\\image\\operators\\processors\\potrace_processor.py",
+      "positions": {
+        "begin": {
+          "line": 12,
+          "column": 6
+        },
+        "end": {
+          "line": 12,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "59500f6a5ceea40b",
+    "location": {
+      "path": "pipescaler\\image\\operators\\processors\\resize_processor.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unused-ignore-comment",
+    "description": "unused-ignore-comment: Unused blanket `type: ignore` directive",
+    "severity": "minor",
+    "fingerprint": "f40283f15b443acc",
+    "location": {
+      "path": "pipescaler\\image\\operators\\processors\\resize_processor.py",
+      "positions": {
+        "begin": {
+          "line": 18,
+          "column": 47
+        },
+        "end": {
+          "line": 18,
+          "column": 61
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unused-ignore-comment",
+    "description": "unused-ignore-comment: Unused blanket `type: ignore` directive",
+    "severity": "minor",
+    "fingerprint": "b8da13b4f4a66cff",
+    "location": {
+      "path": "pipescaler\\image\\operators\\processors\\resize_processor.py",
+      "positions": {
+        "begin": {
+          "line": 19,
+          "column": 49
+        },
+        "end": {
+          "line": 19,
+          "column": 63
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unused-ignore-comment",
+    "description": "unused-ignore-comment: Unused blanket `type: ignore` directive",
+    "severity": "minor",
+    "fingerprint": "657bab8566f516b4",
+    "location": {
+      "path": "pipescaler\\image\\operators\\processors\\resize_processor.py",
+      "positions": {
+        "begin": {
+          "line": 20,
+          "column": 47
+        },
+        "end": {
+          "line": 20,
+          "column": 61
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unused-ignore-comment",
+    "description": "unused-ignore-comment: Unused blanket `type: ignore` directive",
+    "severity": "minor",
+    "fingerprint": "349eb0201adf0503",
+    "location": {
+      "path": "pipescaler\\image\\operators\\processors\\resize_processor.py",
+      "positions": {
+        "begin": {
+          "line": 21,
+          "column": 47
+        },
+        "end": {
+          "line": 21,
+          "column": 61
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-method-override",
+    "description": "invalid-method-override: Invalid override of method `__call__`: Definition is incompatible with `ImageProcessor.__call__`",
+    "severity": "major",
+    "fingerprint": "11810e896aea630e",
+    "location": {
+      "path": "pipescaler\\image\\operators\\processors\\resize_processor.py",
+      "positions": {
+        "begin": {
+          "line": 38,
+          "column": 9
+        },
+        "end": {
+          "line": 38,
+          "column": 62
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-method-override",
+    "description": "invalid-method-override: Invalid override of method `__call__`: Definition is incompatible with `ImageProcessor.__call__`",
+    "severity": "major",
+    "fingerprint": "c4bc8a2736664bed",
+    "location": {
+      "path": "pipescaler\\image\\operators\\processors\\sharpen_processor.py",
+      "positions": {
+        "begin": {
+          "line": 20,
+          "column": 9
+        },
+        "end": {
+          "line": 20,
+          "column": 62
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "a1cac2358252dc04",
+    "location": {
+      "path": "pipescaler\\image\\operators\\processors\\solid_color_processor.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unused-ignore-comment",
+    "description": "unused-ignore-comment: Unused blanket `type: ignore` directive",
+    "severity": "minor",
+    "fingerprint": "d10b480716426458",
+    "location": {
+      "path": "pipescaler\\image\\operators\\processors\\solid_color_processor.py",
+      "positions": {
+        "begin": {
+          "line": 47,
+          "column": 68
+        },
+        "end": {
+          "line": 47,
+          "column": 82
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "75759b400a9763a2",
+    "location": {
+      "path": "pipescaler\\image\\operators\\processors\\spandrel_processor.py",
+      "positions": {
+        "begin": {
+          "line": 16,
+          "column": 6
+        },
+        "end": {
+          "line": 16,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "missing-argument",
+    "description": "missing-argument: No argument provided for required parameter `mask` of bound method `__call__`",
+    "severity": "major",
+    "fingerprint": "9beb3df6415311bc",
+    "location": {
+      "path": "pipescaler\\image\\operators\\processors\\spandrel_processor.py",
+      "positions": {
+        "begin": {
+          "line": 75,
+          "column": 25
+        },
+        "end": {
+          "line": 75,
+          "column": 49
+        }
+      }
+    }
+  },
+  {
+    "check_name": "missing-argument",
+    "description": "missing-argument: No argument provided for required parameter `mask` of bound method `__call__`",
+    "severity": "major",
+    "fingerprint": "54e03403ad3a5885",
+    "location": {
+      "path": "pipescaler\\image\\operators\\processors\\spandrel_processor.py",
+      "positions": {
+        "begin": {
+          "line": 98,
+          "column": 25
+        },
+        "end": {
+          "line": 98,
+          "column": 49
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "1a7394ebd8179141",
+    "location": {
+      "path": "pipescaler\\image\\operators\\processors\\threshold_processor.py",
+      "positions": {
+        "begin": {
+          "line": 13,
+          "column": 6
+        },
+        "end": {
+          "line": 13,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-method-override",
+    "description": "invalid-method-override: Invalid override of method `__call__`: Definition is incompatible with `ImageProcessor.__call__`",
+    "severity": "major",
+    "fingerprint": "722a3fcd0ebd22e",
+    "location": {
+      "path": "pipescaler\\image\\operators\\processors\\threshold_processor.py",
+      "positions": {
+        "begin": {
+          "line": 34,
+          "column": 9
+        },
+        "end": {
+          "line": 34,
+          "column": 62
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "8db3f940b802032c",
+    "location": {
+      "path": "pipescaler\\image\\operators\\processors\\xbrz_processor.py",
+      "positions": {
+        "begin": {
+          "line": 11,
+          "column": 6
+        },
+        "end": {
+          "line": 11,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `ArgumentConflictError`",
+    "severity": "major",
+    "fingerprint": "4e8d4d50a9ea5bb5",
+    "location": {
+      "path": "pipescaler\\image\\operators\\splitters\\alpha_splitter.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 31
+        },
+        "end": {
+          "line": 10,
+          "column": 52
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-method-override",
+    "description": "invalid-method-override: Invalid override of method `__call__`: Definition is incompatible with `ImageSplitter.__call__`",
+    "severity": "major",
+    "fingerprint": "483db5381329b42e",
+    "location": {
+      "path": "pipescaler\\image\\operators\\splitters\\alpha_splitter.py",
+      "positions": {
+        "begin": {
+          "line": 44,
+          "column": 9
+        },
+        "end": {
+          "line": 44,
+          "column": 74
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-method-override",
+    "description": "invalid-method-override: Invalid override of method `__call__`: Definition is incompatible with `ImageSplitter.__call__`",
+    "severity": "major",
+    "fingerprint": "b4fa46f7cb9b7fd",
+    "location": {
+      "path": "pipescaler\\image\\operators\\splitters\\normal_splitter.py",
+      "positions": {
+        "begin": {
+          "line": 17,
+          "column": 9
+        },
+        "end": {
+          "line": 17,
+          "column": 74
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "83df9bdceaa478e5",
+    "location": {
+      "path": "pipescaler\\image\\pipelines\\image_substituter.py",
+      "positions": {
+        "begin": {
+          "line": 12,
+          "column": 6
+        },
+        "end": {
+          "line": 12,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.file`",
+    "severity": "major",
+    "fingerprint": "ee9ffbd3f7d53fe1",
+    "location": {
+      "path": "pipescaler\\image\\pipelines\\segments\\image_runner_segment.py",
+      "positions": {
+        "begin": {
+          "line": 9,
+          "column": 6
+        },
+        "end": {
+          "line": 9,
+          "column": 28
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.file`",
+    "severity": "major",
+    "fingerprint": "6ac74c29de122109",
+    "location": {
+      "path": "pipescaler\\image\\pipelines\\segments\\post_checkpointed_image_runner_segment.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 28
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "c5ce7cf44f67d547",
+    "location": {
+      "path": "pipescaler\\image\\pipelines\\sorters\\alpha_sorter.py",
+      "positions": {
+        "begin": {
+          "line": 11,
+          "column": 6
+        },
+        "end": {
+          "line": 11,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "a4b891ad958ceb35",
+    "location": {
+      "path": "pipescaler\\image\\pipelines\\sorters\\grayscale_sorter.py",
+      "positions": {
+        "begin": {
+          "line": 12,
+          "column": 6
+        },
+        "end": {
+          "line": 12,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "7429a4938ce60cd5",
+    "location": {
+      "path": "pipescaler\\image\\pipelines\\sorters\\monochrome_sorter.py",
+      "positions": {
+        "begin": {
+          "line": 9,
+          "column": 6
+        },
+        "end": {
+          "line": 9,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "23583aa9d765bcad",
+    "location": {
+      "path": "pipescaler\\image\\pipelines\\sorters\\size_sorter.py",
+      "positions": {
+        "begin": {
+          "line": 9,
+          "column": 6
+        },
+        "end": {
+          "line": 9,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "70c6f616b8ad7f62",
+    "location": {
+      "path": "pipescaler\\image\\pipelines\\sorters\\solid_color_sorter.py",
+      "positions": {
+        "begin": {
+          "line": 11,
+          "column": 6
+        },
+        "end": {
+          "line": 11,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "a8681d6413822d6e",
+    "location": {
+      "path": "pipescaler\\image\\pipelines\\sources\\image_video_frame_source.py",
+      "positions": {
+        "begin": {
+          "line": 13,
+          "column": 6
+        },
+        "end": {
+          "line": 13,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.general`",
+    "severity": "major",
+    "fingerprint": "61c160aa4705a19d",
+    "location": {
+      "path": "pipescaler\\image\\runners\\pngquant_runner.py",
+      "positions": {
+        "begin": {
+          "line": 12,
+          "column": 6
+        },
+        "end": {
+          "line": 12,
+          "column": 31
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.general`",
+    "severity": "major",
+    "fingerprint": "8b1f9e307a0168a6",
+    "location": {
+      "path": "pipescaler\\image\\runners\\texconv_runner.py",
+      "positions": {
+        "begin": {
+          "line": 11,
+          "column": 6
+        },
+        "end": {
+          "line": 11,
+          "column": 31
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "6b4fe91a969cb29d",
+    "location": {
+      "path": "pipescaler\\image\\scaled_pair_identifier.py",
+      "positions": {
+        "begin": {
+          "line": 18,
+          "column": 6
+        },
+        "end": {
+          "line": 18,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-argument-type",
+    "description": "invalid-argument-type: Argument to bound method `get_best_child_score_stats` is incorrect: Expected `int | float`, found `ndarray[tuple[int, ...], dtype[Unknown]]`",
+    "severity": "major",
+    "fingerprint": "35ce1e278059c06e",
+    "location": {
+      "path": "pipescaler\\image\\scaled_pair_identifier.py",
+      "positions": {
+        "begin": {
+          "line": 135,
+          "column": 83
+        },
+        "end": {
+          "line": 135,
+          "column": 88
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "469a6154943246b2",
+    "location": {
+      "path": "pipescaler\\image\\subdivided_image.py",
+      "positions": {
+        "begin": {
+          "line": 11,
+          "column": 6
+        },
+        "end": {
+          "line": 11,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "83eaadd007c007b",
+    "location": {
+      "path": "pipescaler\\image\\utilities\\esrgan_serializer.py",
+      "positions": {
+        "begin": {
+          "line": 14,
+          "column": 6
+        },
+        "end": {
+          "line": 14,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unused-ignore-comment",
+    "description": "unused-ignore-comment: Unused blanket `type: ignore` directive",
+    "severity": "minor",
+    "fingerprint": "d9c3cc7de995b6be",
+    "location": {
+      "path": "pipescaler\\image\\utilities\\palette_matcher.py",
+      "positions": {
+        "begin": {
+          "line": 77,
+          "column": 58
+        },
+        "end": {
+          "line": 77,
+          "column": 72
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "c1c0625c8489f7b2",
+    "location": {
+      "path": "pipescaler\\image\\utilities\\waifu_serializer.py",
+      "positions": {
+        "begin": {
+          "line": 13,
+          "column": 6
+        },
+        "end": {
+          "line": 13,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-method-override",
+    "description": "invalid-method-override: Invalid override of method `__call__`: Definition is incompatible with `Sorter.__call__`",
+    "severity": "major",
+    "fingerprint": "caf05e490b349e5d",
+    "location": {
+      "path": "pipescaler\\pipelines\\sorters\\list_sorter.py",
+      "positions": {
+        "begin": {
+          "line": 57,
+          "column": 9
+        },
+        "end": {
+          "line": 57,
+          "column": 62
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-method-override",
+    "description": "invalid-method-override: Invalid override of method `__call__`: Definition is incompatible with `Sorter.__call__`",
+    "severity": "major",
+    "fingerprint": "55ca2b17b9723649",
+    "location": {
+      "path": "pipescaler\\pipelines\\sorters\\regex_sorter.py",
+      "positions": {
+        "begin": {
+          "line": 25,
+          "column": 9
+        },
+        "end": {
+          "line": 25,
+          "column": 62
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `package_root`",
+    "severity": "major",
+    "fingerprint": "d10d812cbca3a740",
+    "location": {
+      "path": "pipescaler\\testing\\file.py",
+      "positions": {
+        "begin": {
+          "line": 13,
+          "column": 35
+        },
+        "end": {
+          "line": 13,
+          "column": 47
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `UnsupportedPlatformError`",
+    "severity": "major",
+    "fingerprint": "581b80afe3d37838",
+    "location": {
+      "path": "pipescaler\\testing\\mark.py",
+      "positions": {
+        "begin": {
+          "line": 14,
+          "column": 31
+        },
+        "end": {
+          "line": 14,
+          "column": 55
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "7a72348621e416f0",
+    "location": {
+      "path": "pipescaler\\video\\core\\pipelines\\pipe_video.py",
+      "positions": {
+        "begin": {
+          "line": 14,
+          "column": 6
+        },
+        "end": {
+          "line": 14,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-method-override",
+    "description": "invalid-method-override: Invalid override of method `__call__`: Definition is incompatible with `Sorter.__call__`",
+    "severity": "major",
+    "fingerprint": "f911abd984bca1db",
+    "location": {
+      "path": "pipescaler\\video\\pipelines\\sorters\\video_aspect_ratio_sorter.py",
+      "positions": {
+        "begin": {
+          "line": 27,
+          "column": 9
+        },
+        "end": {
+          "line": 27,
+          "column": 61
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-method-override",
+    "description": "invalid-method-override: Invalid override of method `__call__`: Definition is incompatible with `Terminus.__call__`",
+    "severity": "major",
+    "fingerprint": "14edbf82ee26122f",
+    "location": {
+      "path": "pipescaler\\video\\pipelines\\termini\\video_directory_terminus.py",
+      "positions": {
+        "begin": {
+          "line": 17,
+          "column": 9
+        },
+        "end": {
+          "line": 17,
+          "column": 47
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.general`",
+    "severity": "major",
+    "fingerprint": "e4ec40c72057f022",
+    "location": {
+      "path": "pipescaler\\video\\runners\\topaz_video_ai_runner.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 31
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "143605e3445142b8",
+    "location": {
+      "path": "pipescaler\\video\\runners\\topaz_video_ai_runner.py",
+      "positions": {
+        "begin": {
+          "line": 11,
+          "column": 6
+        },
+        "end": {
+          "line": 11,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `package_root`",
+    "severity": "major",
+    "fingerprint": "3889e3f44c1751a4",
+    "location": {
+      "path": "scripts\\readme_updater.py",
+      "positions": {
+        "begin": {
+          "line": 22,
+          "column": 31
+        },
+        "end": {
+          "line": 22,
+          "column": 43
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `CommandLineInterface`",
+    "severity": "major",
+    "fingerprint": "eef3fbbf661a035d",
+    "location": {
+      "path": "test\\cli\\test_pipescaler_cli.py",
+      "positions": {
+        "begin": {
+          "line": 15,
+          "column": 31
+        },
+        "end": {
+          "line": 15,
+          "column": 51
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.testing`",
+    "severity": "major",
+    "fingerprint": "d39858edeb22b573",
+    "location": {
+      "path": "test\\cli\\test_pipescaler_cli.py",
+      "positions": {
+        "begin": {
+          "line": 16,
+          "column": 6
+        },
+        "end": {
+          "line": 16,
+          "column": 31
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `CommandLineInterface`",
+    "severity": "major",
+    "fingerprint": "9c72783f9ae714c1",
+    "location": {
+      "path": "test\\image\\cli\\test_image_cli.py",
+      "positions": {
+        "begin": {
+          "line": 14,
+          "column": 31
+        },
+        "end": {
+          "line": 14,
+          "column": 51
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.testing`",
+    "severity": "major",
+    "fingerprint": "9230ae2dd50963eb",
+    "location": {
+      "path": "test\\image\\cli\\test_image_cli.py",
+      "positions": {
+        "begin": {
+          "line": 15,
+          "column": 6
+        },
+        "end": {
+          "line": 15,
+          "column": 31
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `CommandLineInterface`",
+    "severity": "major",
+    "fingerprint": "1bb54d4cb018537b",
+    "location": {
+      "path": "test\\image\\cli\\test_image_mergers_cli.py",
+      "positions": {
+        "begin": {
+          "line": 14,
+          "column": 31
+        },
+        "end": {
+          "line": 14,
+          "column": 51
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.file`",
+    "severity": "major",
+    "fingerprint": "c4ff778c4f9cefc9",
+    "location": {
+      "path": "test\\image\\cli\\test_image_mergers_cli.py",
+      "positions": {
+        "begin": {
+          "line": 15,
+          "column": 6
+        },
+        "end": {
+          "line": 15,
+          "column": 28
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.testing`",
+    "severity": "major",
+    "fingerprint": "3071cc5238a93b79",
+    "location": {
+      "path": "test\\image\\cli\\test_image_mergers_cli.py",
+      "positions": {
+        "begin": {
+          "line": 16,
+          "column": 6
+        },
+        "end": {
+          "line": 16,
+          "column": 31
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `CommandLineInterface`",
+    "severity": "major",
+    "fingerprint": "2da14a737ad1a715",
+    "location": {
+      "path": "test\\image\\cli\\test_image_processors_cli.py",
+      "positions": {
+        "begin": {
+          "line": 15,
+          "column": 31
+        },
+        "end": {
+          "line": 15,
+          "column": 51
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.file`",
+    "severity": "major",
+    "fingerprint": "b0a7290ec9592089",
+    "location": {
+      "path": "test\\image\\cli\\test_image_processors_cli.py",
+      "positions": {
+        "begin": {
+          "line": 16,
+          "column": 6
+        },
+        "end": {
+          "line": 16,
+          "column": 28
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.testing`",
+    "severity": "major",
+    "fingerprint": "773b0197d40c8f2a",
+    "location": {
+      "path": "test\\image\\cli\\test_image_processors_cli.py",
+      "positions": {
+        "begin": {
+          "line": 17,
+          "column": 6
+        },
+        "end": {
+          "line": 17,
+          "column": 31
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `CommandLineInterface`",
+    "severity": "major",
+    "fingerprint": "cdd01c91cc4c9b6f",
+    "location": {
+      "path": "test\\image\\cli\\test_image_splitters_cli.py",
+      "positions": {
+        "begin": {
+          "line": 14,
+          "column": 31
+        },
+        "end": {
+          "line": 14,
+          "column": 51
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.file`",
+    "severity": "major",
+    "fingerprint": "36752e121c01a8c5",
+    "location": {
+      "path": "test\\image\\cli\\test_image_splitters_cli.py",
+      "positions": {
+        "begin": {
+          "line": 15,
+          "column": 6
+        },
+        "end": {
+          "line": 15,
+          "column": 28
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.testing`",
+    "severity": "major",
+    "fingerprint": "57f275dc0736ce4",
+    "location": {
+      "path": "test\\image\\cli\\test_image_splitters_cli.py",
+      "positions": {
+        "begin": {
+          "line": 16,
+          "column": 6
+        },
+        "end": {
+          "line": 16,
+          "column": 31
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `CommandLineInterface`",
+    "severity": "major",
+    "fingerprint": "8b70833559f6dce3",
+    "location": {
+      "path": "test\\image\\cli\\test_image_utilities_cli.py",
+      "positions": {
+        "begin": {
+          "line": 14,
+          "column": 31
+        },
+        "end": {
+          "line": 14,
+          "column": 51
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.file`",
+    "severity": "major",
+    "fingerprint": "418da030157a3087",
+    "location": {
+      "path": "test\\image\\cli\\test_image_utilities_cli.py",
+      "positions": {
+        "begin": {
+          "line": 15,
+          "column": 6
+        },
+        "end": {
+          "line": 15,
+          "column": 28
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.testing`",
+    "severity": "major",
+    "fingerprint": "cbe79f5e2aa1c58f",
+    "location": {
+      "path": "test\\image\\cli\\test_image_utilities_cli.py",
+      "positions": {
+        "begin": {
+          "line": 16,
+          "column": 6
+        },
+        "end": {
+          "line": 16,
+          "column": 31
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `ExecutableNotFoundError`",
+    "severity": "major",
+    "fingerprint": "215b97a4728b1384",
+    "location": {
+      "path": "test\\image\\runners\\test_pngquant_runner.py",
+      "positions": {
+        "begin": {
+          "line": 12,
+          "column": 31
+        },
+        "end": {
+          "line": 12,
+          "column": 54
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.file`",
+    "severity": "major",
+    "fingerprint": "d7c539457784c5ab",
+    "location": {
+      "path": "test\\image\\runners\\test_pngquant_runner.py",
+      "positions": {
+        "begin": {
+          "line": 13,
+          "column": 6
+        },
+        "end": {
+          "line": 13,
+          "column": 28
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.file`",
+    "severity": "major",
+    "fingerprint": "2ef73af8f1570b64",
+    "location": {
+      "path": "test\\image\\runners\\test_potrace_runner.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 28
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.file`",
+    "severity": "major",
+    "fingerprint": "95750258d3ec25fb",
+    "location": {
+      "path": "test\\image\\runners\\test_texconv_runner.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 28
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.file`",
+    "severity": "major",
+    "fingerprint": "aaf0646b3fa24174",
+    "location": {
+      "path": "test\\image\\test_scaled_pair_identifier.py",
+      "positions": {
+        "begin": {
+          "line": 12,
+          "column": 6
+        },
+        "end": {
+          "line": 12,
+          "column": 28
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-argument-type",
+    "description": "invalid-argument-type: Argument to function `round` is incorrect: Expected `_SupportsRound1[Unknown]`, found `ndarray[tuple[int, ...], Unknown]`",
+    "severity": "major",
+    "fingerprint": "a2808bd465386a8d",
+    "location": {
+      "path": "test\\image\\test_scaled_pair_identifier.py",
+      "positions": {
+        "begin": {
+          "line": 39,
+          "column": 35
+        },
+        "end": {
+          "line": 39,
+          "column": 57
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-argument-type",
+    "description": "invalid-argument-type: Argument to function `round` is incorrect: Expected `_SupportsRound1[Unknown]`, found `ndarray[tuple[int, ...], Unknown]`",
+    "severity": "major",
+    "fingerprint": "9a32e6886abb6bf6",
+    "location": {
+      "path": "test\\image\\test_scaled_pair_identifier.py",
+      "positions": {
+        "begin": {
+          "line": 40,
+          "column": 36
+        },
+        "end": {
+          "line": 40,
+          "column": 58
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unused-ignore-comment",
+    "description": "unused-ignore-comment: Unused blanket `type: ignore` directive",
+    "severity": "minor",
+    "fingerprint": "8194523b7054d077",
+    "location": {
+      "path": "test\\image\\test_scaled_pair_identifier.py",
+      "positions": {
+        "begin": {
+          "line": 45,
+          "column": 52
+        },
+        "end": {
+          "line": 45,
+          "column": 66
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-argument-type",
+    "description": "invalid-argument-type: Argument to function `round` is incorrect: Expected `_SupportsRound1[Unknown]`, found `ndarray[tuple[int, ...], Unknown]`",
+    "severity": "major",
+    "fingerprint": "574b12974fa6f367",
+    "location": {
+      "path": "test\\image\\test_scaled_pair_identifier.py",
+      "positions": {
+        "begin": {
+          "line": 65,
+          "column": 35
+        },
+        "end": {
+          "line": 65,
+          "column": 57
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-argument-type",
+    "description": "invalid-argument-type: Argument to function `round` is incorrect: Expected `_SupportsRound1[Unknown]`, found `ndarray[tuple[int, ...], Unknown]`",
+    "severity": "major",
+    "fingerprint": "bb370cb1c8e23567",
+    "location": {
+      "path": "test\\image\\test_scaled_pair_identifier.py",
+      "positions": {
+        "begin": {
+          "line": 66,
+          "column": 36
+        },
+        "end": {
+          "line": 66,
+          "column": 58
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unused-ignore-comment",
+    "description": "unused-ignore-comment: Unused blanket `type: ignore` directive",
+    "severity": "minor",
+    "fingerprint": "5be08703769df6fc",
+    "location": {
+      "path": "test\\image\\test_scaled_pair_identifier.py",
+      "positions": {
+        "begin": {
+          "line": 71,
+          "column": 52
+        },
+        "end": {
+          "line": 71,
+          "column": 66
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.file`",
+    "severity": "major",
+    "fingerprint": "3547185d4ab476f",
+    "location": {
+      "path": "test\\image\\utilities\\test_esrgan_serializer.py",
+      "positions": {
+        "begin": {
+          "line": 9,
+          "column": 6
+        },
+        "end": {
+          "line": 9,
+          "column": 28
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.file`",
+    "severity": "major",
+    "fingerprint": "cb3299322982d9bb",
+    "location": {
+      "path": "test\\image\\utilities\\test_waifu_serializer.py",
+      "positions": {
+        "begin": {
+          "line": 9,
+          "column": 6
+        },
+        "end": {
+          "line": 9,
+          "column": 28
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.file`",
+    "severity": "major",
+    "fingerprint": "4f80e87546c869f",
+    "location": {
+      "path": "test\\pipelines\\segments\\test_post_checkpointed_segment.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 28
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "4a82a9cf32e08365",
+    "location": {
+      "path": "test\\pipelines\\segments\\test_post_checkpointed_segment.py",
+      "positions": {
+        "begin": {
+          "line": 11,
+          "column": 6
+        },
+        "end": {
+          "line": 11,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.file`",
+    "severity": "major",
+    "fingerprint": "2278bee9a906b324",
+    "location": {
+      "path": "test\\pipelines\\segments\\test_pre_checkpointed_segment.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 28
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "5597dc78fd8a3347",
+    "location": {
+      "path": "test\\pipelines\\segments\\test_pre_checkpointed_segment.py",
+      "positions": {
+        "begin": {
+          "line": 11,
+          "column": 6
+        },
+        "end": {
+          "line": 11,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.file`",
+    "severity": "major",
+    "fingerprint": "b2eb7f9bcd65f94e",
+    "location": {
+      "path": "test\\pipelines\\sorters\\test_list_sorter.py",
+      "positions": {
+        "begin": {
+          "line": 9,
+          "column": 6
+        },
+        "end": {
+          "line": 9,
+          "column": 28
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.file`",
+    "severity": "major",
+    "fingerprint": "ce4ac2fc4aab293d",
+    "location": {
+      "path": "test\\pipelines\\test_checkpoint_manager.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 28
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.validation`",
+    "severity": "major",
+    "fingerprint": "4490674d3848dfe6",
+    "location": {
+      "path": "test\\pipelines\\test_checkpoint_manager.py",
+      "positions": {
+        "begin": {
+          "line": 11,
+          "column": 6
+        },
+        "end": {
+          "line": 11,
+          "column": 34
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.file`",
+    "severity": "major",
+    "fingerprint": "95caa4fc6ef9eb80",
+    "location": {
+      "path": "test\\utilities\\test_file_scanner.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 28
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Module `pipescaler.common` has no member `ExecutableNotFoundError`",
+    "severity": "major",
+    "fingerprint": "16d6497ad92abb27",
+    "location": {
+      "path": "test\\video\\runners\\test_apngasm_runner.py",
+      "positions": {
+        "begin": {
+          "line": 10,
+          "column": 31
+        },
+        "end": {
+          "line": 10,
+          "column": 54
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-import",
+    "description": "unresolved-import: Cannot resolve imported module `pipescaler.common.file`",
+    "severity": "major",
+    "fingerprint": "4323c76d09d888e7",
+    "location": {
+      "path": "test\\video\\runners\\test_apngasm_runner.py",
+      "positions": {
+        "begin": {
+          "line": 11,
+          "column": 6
+        },
+        "end": {
+          "line": 11,
+          "column": 28
+        }
+      }
+    }
+  }
+]
