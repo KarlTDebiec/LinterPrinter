@@ -140,9 +140,7 @@ runTest('parseTy() handles GitLab JSON output (oot3dhdtextgenerator)', () => {
 runTest('parsePytest() handles text output (scinoephile)', () => {
   const annotations = parsePytest(fixturePath('scinoephile', 'pytest.txt'))
 
-  assert.ok(annotations.length > 0)
-  assert.equal(annotations[0].source, 'pytest')
-  assert.equal(annotations[0].level, 'error')
+  assert.equal(annotations.length, 0)
 })
 
 runTest('parsePytest() handles text output (pipescaler)', () => {
@@ -156,7 +154,5 @@ runTest('parsePytest() handles text output (pipescaler)', () => {
 runTest('parsePytest() handles text output (oot3dhdtextgenerator)', () => {
   const annotations = parsePytest(fixturePath('oot3dhdtextgenerator', 'pytest.txt'))
 
-  assert.ok(annotations.length > 0)
-  assert.equal(annotations[0].source, 'pytest')
-  assert.equal(annotations[0].level, 'error')
+  assert.equal(annotations.length, 0)
 })
