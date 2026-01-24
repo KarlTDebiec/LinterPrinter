@@ -1,23 +1,50 @@
-============================= test session starts =============================
-platform win32 -- Python 3.13.5, pytest-8.4.1, pluggy-1.6.0 -- C:\Users\karls\Code\OOT3DHDTextGenerator\.venv\Scripts\python.exe
+============================= test session starts ==============================
+platform darwin -- Python 3.13.11, pytest-8.4.1, pluggy-1.6.0 -- /Users/karldebiec/Code/OOT3DHDTextGenerator/.venv/bin/python3
 cachedir: .pytest_cache
-rootdir: C:\Users\karls\Code\OOT3DHDTextGenerator
+rootdir: /Users/karldebiec/Code/OOT3DHDTextGenerator
 configfile: pyproject.toml
-plugins: cov-6.2.1, xdist-3.8.0
-collecting ... collected 0 items / 1 error
+plugins: xdist-3.8.0, cov-7.0.0
+collecting ... collected 3 items
 
-=================================== ERRORS ====================================
-______________________ ERROR collecting test/test_cli.py ______________________
-ImportError while importing test module 'C:\Users\karls\Code\OOT3DHDTextGenerator\test\test_cli.py'.
-Hint: make sure your test modules/packages have valid Python names.
-Traceback:
-..\..\..\AppData\Roaming\uv\python\cpython-3.13.5-windows-x86_64-none\Lib\importlib\__init__.py:88: in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-test_cli.py:14: in <module>
-    from oot3dhdtextgenerator.cli import (
-E   ModuleNotFoundError: No module named 'oot3dhdtextgenerator'
-=========================== short test summary info ===========================
-ERROR test_cli.py
-!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
-============================== 1 error in 0.29s ===============================
+test_cli.py::test_help[CharAssignerCli] PASSED                           [ 33%]
+test_cli.py::test_help[LearningDatasetGeneratorCli] PASSED               [ 66%]
+test_cli.py::test_help[ModelTrainerCli] PASSED                           [100%]
+
+================================ tests coverage ================================
+______________ coverage: platform darwin, python 3.13.11-final-0 _______________
+
+Name                                                                                                       Stmts   Miss  Cover
+------------------------------------------------------------------------------------------------------------------------------
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/__init__.py                                   1      0   100%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/apps/__init__.py                              3      0   100%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/apps/char_assigner/__init__.py                1      0   100%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/apps/char_assigner/char_assigner.py          51     35    31%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/apps/char_assigner/character.py              26      6    77%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/apps/char_assigner/routes.py                 17     14    18%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/cli/__init__.py                               5      0   100%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/cli/char_assigner_cli.py                     26      4    85%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/cli/learning_dataset_generator_cli.py        30      5    83%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/cli/model_trainer_cli.py                     42      7    83%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/common/__init__.py                            7      0   100%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/common/argument_parsing.py                   60     18    70%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/common/command_line_interface.py             64     19    70%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/common/exception.py                          10      0   100%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/common/file.py                               42     42     0%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/common/general.py                            49     49     0%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/common/logs.py                               14     10    29%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/common/testing.py                             8      0   100%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/common/validation.py                        135    117    13%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/core/__init__.py                              4      0   100%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/core/assignment_dataset.py                  122     89    27%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/core/learning_dataset.py                     54     29    46%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/core/model.py                                31     24    23%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/data/__init__.py                              8      1    88%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/image/__init__.py                             4      4     0%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/image/oot3d_shadow_processor.py              25     25     0%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/image/oot3d_text_processor.py                53     53     0%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/__init__.py                         4      0   100%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/learning_dataset_generator.py      70     50    29%
+/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py                   70     52    26%
+------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                       1036    653    37%
+============================== 3 passed in 7.86s ===============================

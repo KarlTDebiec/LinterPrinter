@@ -27,16 +27,25 @@ function parseFileList (infile) {
   })
 }
 
+function isWindowsPath (filePath) {
+  return /^[A-Za-z]:[\\/]/.test(filePath) || filePath.includes('\\')
+}
+
 function normalizeFilePath (filePath) {
   const githubWorkspace = process.env.GITHUB_WORKSPACE || ''
-  const absoluteFilePath = path.isAbsolute(filePath)
+  const useWindows = isWindowsPath(filePath) || isWindowsPath(githubWorkspace)
+  const pathImpl = useWindows ? path.win32 : path.posix
+  const absoluteFilePath = pathImpl.isAbsolute(filePath)
     ? filePath
-    : path.join(githubWorkspace, filePath)
+    : pathImpl.join(githubWorkspace, filePath)
 
-  let relativeFilePath = githubWorkspace
-    ? path.relative(githubWorkspace, absoluteFilePath)
+  const relativeFilePath = githubWorkspace
+    ? pathImpl.relative(githubWorkspace, absoluteFilePath)
     : absoluteFilePath
-  return relativeFilePath.split(path.sep).join('/')
+
+  return useWindows
+    ? relativeFilePath.replace(/\\/g, '/')
+    : relativeFilePath
 }
 
 module.exports = { formatAnnotation, normalizeFilePath, parseFileList }
