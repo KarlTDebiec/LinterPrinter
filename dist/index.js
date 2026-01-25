@@ -25647,7 +25647,7 @@ module.exports = {
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 const fs = __nccwpck_require__(9896)
-const path = __nccwpck_require__(6928)
+const { normalizeFilePath } = __nccwpck_require__(413)
 
 function formatAnnotation (annotation) {
   const sanitizedMessage = annotation.message.replace(/:/g, '：')
@@ -25675,7 +25675,28 @@ function parseFileList (infile) {
   })
 }
 
-module.exports = { formatAnnotation, parseFileList }
+function isWindowsPath (filePath) {
+  return /^[A-Za-z]:[\\/]/.test(filePath) || filePath.includes('\\')
+}
+
+function normalizeFilePath (filePath) {
+  const githubWorkspace = process.env.GITHUB_WORKSPACE || ''
+  const useWindows = isWindowsPath(filePath) || isWindowsPath(githubWorkspace)
+  const pathImpl = useWindows ? path.win32 : path.posix
+  const absoluteFilePath = pathImpl.isAbsolute(filePath)
+    ? filePath
+    : pathImpl.join(githubWorkspace, filePath)
+
+  const relativeFilePath = githubWorkspace
+    ? pathImpl.relative(githubWorkspace, absoluteFilePath)
+    : absoluteFilePath
+
+  return useWindows
+    ? relativeFilePath.replace(/\\/g, '/')
+    : relativeFilePath
+}
+
+module.exports = { formatAnnotation, normalizeFilePath, parseFileList }
 
 
 /***/ }),
@@ -25716,7 +25737,7 @@ module.exports = { getGitDiffFiles }
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 const fs = __nccwpck_require__(9896)
-const path = __nccwpck_require__(6928)
+const { normalizeFilePath } = __nccwpck_require__(413)
 
 const pyrightRegex = /^(?<filePath>.+):(?<line>\d+):(?<column>\d+) - (?<level>\w+): (?<message>.+?) \((?<kind>.+?)\)$/
 
@@ -25729,51 +25750,74 @@ function parsePyright (infile) {
   }
 
   const fileContent = fs.readFileSync(infile, 'utf8')
+  const normalizedContent = fileContent.replace(/^\uFEFF/, '')
 
-  if (!fileContent) {
+  if (!normalizedContent) {
     console.log(`Empty file: ${infile}`)
     return []
   }
 
-  const lines = fileContent.split('\n').
-    map(line => line.trim()).
-    filter(line => pyrightRegex.test(line)) // only main lines
-
   const annotations = []
-
-  for (const line of lines) {
-    const match = line.match(pyrightRegex)
-
-    if (!match || !match.groups) {
-      console.log(`Could not parse line: ${line}`)
-      continue
+  const trimmed = normalizedContent.trimStart()
+  let jsonPayload = null
+  if (trimmed.startsWith('{') || trimmed.startsWith('[')) {
+    try {
+      jsonPayload = JSON.parse(normalizedContent)
+    } catch (error) {
+      console.log(`Failed to parse JSON pyright output: ${error}`)
     }
+  }
 
-    const {
-      filePath,
-      line: lineNumber,
-      column,
-      level,
-      message,
-      kind,
-    } = match.groups
+  if (jsonPayload && Array.isArray(jsonPayload.generalDiagnostics)) {
+    for (const diagnostic of jsonPayload.generalDiagnostics) {
+      if (!diagnostic || !diagnostic.file || !diagnostic.range) {
+        continue
+      }
 
-    const githubWorkspace = process.env.GITHUB_WORKSPACE || ''
-    const absoluteFilePath = path.isAbsolute(filePath)
-      ? filePath
-      : path.join(githubWorkspace, filePath)
+      const level = diagnostic.severity === 'error'
+        ? 'error'
+        : diagnostic.severity === 'information'
+          ? 'notice'
+          : 'warning'
 
-    let relativeFilePath = path.relative(githubWorkspace, absoluteFilePath)
-    relativeFilePath = relativeFilePath.split(path.sep).join('/')
+      annotations.push({
+        source: 'pyright',
+        level,
+        filePath: normalizeFilePath(diagnostic.file),
+        line: (diagnostic.range.start?.line ?? 0) + 1,
+        kind: diagnostic.rule || 'pyright',
+        message: (diagnostic.message || '').trim(),
+      })
+    }
+  } else {
+    const lines = normalizedContent.split('\n').
+      map(line => line.trim()).
+      filter(line => pyrightRegex.test(line)) // only main lines
 
-    annotations.push({
-      source: 'pyright',
-      level: 'warning',
-      filePath: relativeFilePath,
-      line: parseInt(lineNumber, 10),
-      kind: kind.trim(),
-      message: message.trim(),
-    })
+    for (const line of lines) {
+      const match = line.match(pyrightRegex)
+
+      if (!match || !match.groups) {
+        console.log(`Could not parse line: ${line}`)
+        continue
+      }
+
+      const {
+        filePath,
+        line: lineNumber,
+        message,
+        kind,
+      } = match.groups
+
+      annotations.push({
+        source: 'pyright',
+        level: 'warning',
+        filePath: normalizeFilePath(filePath),
+        line: parseInt(lineNumber, 10),
+        kind: kind.trim(),
+        message: message.trim(),
+      })
+    }
   }
 
   console.log(`Parsed ${annotations.length} pyright annotations`)
@@ -25953,53 +25997,71 @@ function parseRuff (infile) {
   }
 
   const fileContent = fs.readFileSync(infile, 'utf8')
+  const normalizedContent = fileContent.replace(/^\uFEFF/, '')
 
-  if (!fileContent) {
+  if (!normalizedContent) {
     console.log(`Empty file: ${infile}`)
     return []
   }
 
-  const lines = fileContent.split('\n').filter(line => {
-    const trimmed = line.trim()
-
-    return (
-      trimmed !== '' &&
-      !trimmed.startsWith('|') &&
-      !/^\d+\s+\|/.test(trimmed) &&
-      !trimmed.startsWith('= help:') // Skip ruff help lines
-    )
-  })
-
   const annotations = []
-
-  for (const line of lines) {
-    const match = line.match(
-      /^(?<filePath>[^:]+):(?<line>\d+):(?<column>\d+): (?<code>\S+) (?<message>.+)$/)
-
-    if (!match || !match.groups) {
-      console.log(`Could not parse line: ${line}`)
-      continue
+  const trimmed = normalizedContent.trimStart()
+  let jsonPayload = null
+  if (trimmed.startsWith('[') || trimmed.startsWith('{')) {
+    try {
+      jsonPayload = JSON.parse(normalizedContent)
+    } catch (error) {
+      console.log(`Failed to parse JSON ruff output: ${error}`)
     }
+  }
 
-    const { filePath, line: lineNumber, column, code, message } = match.groups
+  if (Array.isArray(jsonPayload)) {
+    for (const entry of jsonPayload) {
+      if (!entry || !entry.filename || !entry.location) {
+        continue
+      }
 
-    // Normalize path to relative
-    const githubWorkspace = process.env.GITHUB_WORKSPACE || ''
-    const absoluteFilePath = path.isAbsolute(filePath)
-      ? filePath
-      : path.join(githubWorkspace, filePath)
+      annotations.push({
+        source: 'ruff',
+        level: 'warning',
+        filePath: normalizeFilePath(entry.filename),
+        line: entry.location.row,
+        kind: entry.code || 'ruff',
+        message: (entry.message || '').trim(),
+      })
+    }
+  } else {
+    const lines = normalizedContent.split('\n').filter(line => {
+      const lineTrimmed = line.trim()
 
-    let relativeFilePath = path.relative(githubWorkspace, absoluteFilePath)
-    relativeFilePath = relativeFilePath.split(path.sep).join('/')
-
-    annotations.push({
-      source: 'ruff',
-      level: 'warning',
-      filePath: relativeFilePath,
-      line: parseInt(lineNumber, 10),
-      kind: code,
-      message: message.trim(),
+      return (
+        lineTrimmed !== '' &&
+        !lineTrimmed.startsWith('|') &&
+        !/^\d+\s+\|/.test(lineTrimmed) &&
+        !lineTrimmed.startsWith('= help:') // Skip ruff help lines
+      )
     })
+
+    for (const line of lines) {
+      const match = line.match(
+        /^(?<filePath>[^:]+):(?<line>\d+):(?<column>\d+): (?<code>\S+) (?<message>.+)$/)
+
+      if (!match || !match.groups) {
+        console.log(`Could not parse line: ${line}`)
+        continue
+      }
+
+      const { filePath, line: lineNumber, code, message } = match.groups
+
+      annotations.push({
+        source: 'ruff',
+        level: 'warning',
+        filePath: normalizeFilePath(filePath),
+        line: parseInt(lineNumber, 10),
+        kind: code,
+        message: message.trim(),
+      })
+    }
   }
 
   console.log(`Parsed ${annotations.length} ruff annotations`)
