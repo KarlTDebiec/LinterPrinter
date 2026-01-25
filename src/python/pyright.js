@@ -12,18 +12,19 @@ function parsePyright (infile) {
   }
 
   const fileContent = fs.readFileSync(infile, 'utf8')
+  const normalizedContent = fileContent.replace(/^\uFEFF/, '')
 
-  if (!fileContent) {
+  if (!normalizedContent) {
     console.log(`Empty file: ${infile}`)
     return []
   }
 
   const annotations = []
-  const trimmed = fileContent.trimStart()
+  const trimmed = normalizedContent.trimStart()
   let jsonPayload = null
   if (trimmed.startsWith('{') || trimmed.startsWith('[')) {
     try {
-      jsonPayload = JSON.parse(fileContent)
+      jsonPayload = JSON.parse(normalizedContent)
     } catch (error) {
       console.log(`Failed to parse JSON pyright output: ${error}`)
     }
@@ -51,7 +52,7 @@ function parsePyright (infile) {
       })
     }
   } else {
-    const lines = fileContent.split('\n').
+    const lines = normalizedContent.split('\n').
       map(line => line.trim()).
       filter(line => pyrightRegex.test(line)) // only main lines
 
