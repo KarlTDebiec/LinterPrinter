@@ -27,15 +27,16 @@ function parseTy (infile) {
   }
 
   const fileContent = fs.readFileSync(infile, 'utf8')
+  const normalizedContent = fileContent.replace(/^\uFEFF/, '')
 
-  if (!fileContent) {
+  if (!normalizedContent) {
     console.log(`Empty file: ${infile}`)
     return []
   }
 
   let jsonPayload = null
   try {
-    jsonPayload = JSON.parse(fileContent)
+    jsonPayload = JSON.parse(normalizedContent)
   } catch (error) {
     console.log(`Failed to parse JSON ty output: ${error}`)
     return []

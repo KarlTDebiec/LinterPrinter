@@ -1,30 +1,11 @@
 [
   {
-    "check_name": "unresolved-import",
-    "description": "unresolved-import: Module `oot3dhdtextgenerator.common.validation` has no member `val_input_path`",
-    "severity": "major",
-    "fingerprint": "ab476920e4420dad",
-    "location": {
-      "path": "oot3dhdtextgenerator\\apps\\char_assigner\\char_assigner.py",
-      "positions": {
-        "begin": {
-          "line": 17,
-          "column": 52
-        },
-        "end": {
-          "line": 17,
-          "column": 66
-        }
-      }
-    }
-  },
-  {
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `bool | None`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "2179e091c9ddf768",
+    "fingerprint": "1fd2d9a1a613547",
     "location": {
-      "path": "oot3dhdtextgenerator\\apps\\char_assigner\\char_assigner.py",
+      "path": "oot3dhdtextgenerator/apps/char_assigner/char_assigner.py",
       "positions": {
         "begin": {
           "line": 57,
@@ -41,9 +22,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `Iterable[Unknown] | None`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "b17e035e485e3ee7",
+    "fingerprint": "7e8437225ed00505",
     "location": {
-      "path": "oot3dhdtextgenerator\\apps\\char_assigner\\char_assigner.py",
+      "path": "oot3dhdtextgenerator/apps/char_assigner/char_assigner.py",
       "positions": {
         "begin": {
           "line": 57,
@@ -60,9 +41,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `Iterable[list[Unknown]] | None`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "d5826eb29eaad653",
+    "fingerprint": "9187bbb9d0c4b33f",
     "location": {
-      "path": "oot3dhdtextgenerator\\apps\\char_assigner\\char_assigner.py",
+      "path": "oot3dhdtextgenerator/apps/char_assigner/char_assigner.py",
       "positions": {
         "begin": {
           "line": 57,
@@ -79,9 +60,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `((list[Unknown], /) -> Any) | None`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "d30f39e7f8d224c3",
+    "fingerprint": "e09b66f5f46c9912",
     "location": {
-      "path": "oot3dhdtextgenerator\\apps\\char_assigner\\char_assigner.py",
+      "path": "oot3dhdtextgenerator/apps/char_assigner/char_assigner.py",
       "positions": {
         "begin": {
           "line": 57,
@@ -98,9 +79,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `bool`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "9b122af3530c58c3",
+    "fingerprint": "f0c5eaa59b935fe4",
     "location": {
-      "path": "oot3dhdtextgenerator\\apps\\char_assigner\\char_assigner.py",
+      "path": "oot3dhdtextgenerator/apps/char_assigner/char_assigner.py",
       "positions": {
         "begin": {
           "line": 57,
@@ -117,9 +98,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `bool`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "5ba6caa46b5d7615",
+    "fingerprint": "916da1cb6e40cb66",
     "location": {
-      "path": "oot3dhdtextgenerator\\apps\\char_assigner\\char_assigner.py",
+      "path": "oot3dhdtextgenerator/apps/char_assigner/char_assigner.py",
       "positions": {
         "begin": {
           "line": 57,
@@ -136,9 +117,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `((int, /) -> None) | None`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "fbec6ad027379dba",
+    "fingerprint": "b8a737c3140f815b",
     "location": {
-      "path": "oot3dhdtextgenerator\\apps\\char_assigner\\char_assigner.py",
+      "path": "oot3dhdtextgenerator/apps/char_assigner/char_assigner.py",
       "positions": {
         "begin": {
           "line": 57,
@@ -155,9 +136,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `bool`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "7b848471fb83141a",
+    "fingerprint": "5d8472f7c28abc94",
     "location": {
-      "path": "oot3dhdtextgenerator\\apps\\char_assigner\\char_assigner.py",
+      "path": "oot3dhdtextgenerator/apps/char_assigner/char_assigner.py",
       "positions": {
         "begin": {
           "line": 57,
@@ -174,9 +155,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `str`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "d863166db4b662c0",
+    "fingerprint": "baab525389125066",
     "location": {
-      "path": "oot3dhdtextgenerator\\apps\\char_assigner\\char_assigner.py",
+      "path": "oot3dhdtextgenerator/apps/char_assigner/char_assigner.py",
       "positions": {
         "begin": {
           "line": 57,
@@ -193,9 +174,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `bool`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "a1c6e1310d63932a",
+    "fingerprint": "21904c229c3e94c0",
     "location": {
-      "path": "oot3dhdtextgenerator\\apps\\char_assigner\\char_assigner.py",
+      "path": "oot3dhdtextgenerator/apps/char_assigner/char_assigner.py",
       "positions": {
         "begin": {
           "line": 57,
@@ -209,133 +190,152 @@
     }
   },
   {
-    "check_name": "unresolved-import",
-    "description": "unresolved-import: Module `oot3dhdtextgenerator.common.validation` has no member `val_input_path`",
-    "severity": "major",
-    "fingerprint": "361c26236a0e8bf8",
-    "location": {
-      "path": "oot3dhdtextgenerator\\cli\\char_assigner_cli.py",
-      "positions": {
-        "begin": {
-          "line": 18,
-          "column": 52
-        },
-        "end": {
-          "line": 18,
-          "column": 66
-        }
-      }
-    }
-  },
-  {
-    "check_name": "invalid-explicit-override",
-    "description": "invalid-explicit-override: Method `_main` is decorated with `@override` but does not override anything",
-    "severity": "major",
-    "fingerprint": "56763ca192349f55",
-    "location": {
-      "path": "oot3dhdtextgenerator\\cli\\char_assigner_cli.py",
-      "positions": {
-        "begin": {
-          "line": 82,
-          "column": 9
-        },
-        "end": {
-          "line": 82,
-          "column": 14
-        }
-      }
-    }
-  },
-  {
-    "check_name": "unresolved-import",
-    "description": "unresolved-import: Module `oot3dhdtextgenerator.common.validation` has no member `val_output_path`",
-    "severity": "major",
-    "fingerprint": "d1b44eb962093464",
-    "location": {
-      "path": "oot3dhdtextgenerator\\cli\\learning_dataset_generator_cli.py",
-      "positions": {
-        "begin": {
-          "line": 19,
-          "column": 52
-        },
-        "end": {
-          "line": 19,
-          "column": 67
-        }
-      }
-    }
-  },
-  {
-    "check_name": "unresolved-import",
-    "description": "unresolved-import: Module `oot3dhdtextgenerator.common.validation` has no member `val_input_path`",
-    "severity": "major",
-    "fingerprint": "d1d3d36c7b6eb70d",
-    "location": {
-      "path": "oot3dhdtextgenerator\\cli\\model_trainer_cli.py",
-      "positions": {
-        "begin": {
-          "line": 20,
-          "column": 5
-        },
-        "end": {
-          "line": 20,
-          "column": 19
-        }
-      }
-    }
-  },
-  {
-    "check_name": "unresolved-import",
-    "description": "unresolved-import: Module `oot3dhdtextgenerator.common.validation` has no member `val_output_path`",
-    "severity": "major",
-    "fingerprint": "91849937c13bfd25",
-    "location": {
-      "path": "oot3dhdtextgenerator\\cli\\model_trainer_cli.py",
-      "positions": {
-        "begin": {
-          "line": 21,
-          "column": 5
-        },
-        "end": {
-          "line": 21,
-          "column": 20
-        }
-      }
-    }
-  },
-  {
     "check_name": "unresolved-reference",
     "description": "unresolved-reference: Name `required` used when not defined",
     "severity": "major",
-    "fingerprint": "3657dc8ac27f387f",
+    "fingerprint": "9624785157807ee2",
     "location": {
-      "path": "oot3dhdtextgenerator\\common\\argument_parsing.py",
+      "path": "oot3dhdtextgenerator/common/argument_parsing.py",
       "positions": {
         "begin": {
-          "line": 46,
+          "line": 49,
           "column": 16
         },
         "end": {
-          "line": 46,
+          "line": 49,
           "column": 24
         }
       }
     }
   },
   {
-    "check_name": "unresolved-import",
-    "description": "unresolved-import: Module `oot3dhdtextgenerator.common.validation` has no member `val_input_path`",
+    "check_name": "invalid-return-type",
+    "description": "invalid-return-type: Return type does not match returned value: expected `(Any, /) -> int | float`, found `(Any, /) -> int | float | list[int | float]`",
     "severity": "major",
-    "fingerprint": "70f1c221172a5be2",
+    "fingerprint": "9eeae5b3b0c40011",
     "location": {
-      "path": "oot3dhdtextgenerator\\core\\assignment_dataset.py",
+      "path": "oot3dhdtextgenerator/common/argument_parsing.py",
       "positions": {
         "begin": {
-          "line": 18,
-          "column": 52
+          "line": 146,
+          "column": 12
         },
         "end": {
-          "line": 18,
+          "line": 146,
+          "column": 46
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-return-type",
+    "description": "invalid-return-type: Return type does not match returned value: expected `(Any, /) -> Path`, found `(Any, /) -> Path | list[Path]`",
+    "severity": "major",
+    "fingerprint": "a38192cc165c4e32",
+    "location": {
+      "path": "oot3dhdtextgenerator/common/argument_parsing.py",
+      "positions": {
+        "begin": {
+          "line": 157,
+          "column": 12
+        },
+        "end": {
+          "line": 157,
+          "column": 55
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-return-type",
+    "description": "invalid-return-type: Return type does not match returned value: expected `(Any, /) -> Path`, found `(Any, /) -> Path | list[Path]`",
+    "severity": "major",
+    "fingerprint": "b5cb22f31bfc61da",
+    "location": {
+      "path": "oot3dhdtextgenerator/common/argument_parsing.py",
+      "positions": {
+        "begin": {
+          "line": 168,
+          "column": 12
+        },
+        "end": {
+          "line": 168,
+          "column": 51
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-return-type",
+    "description": "invalid-return-type: Return type does not match returned value: expected `(Any, /) -> int`, found `(Any, /) -> int | list[int]`",
+    "severity": "major",
+    "fingerprint": "3873a6019694b01c",
+    "location": {
+      "path": "oot3dhdtextgenerator/common/argument_parsing.py",
+      "positions": {
+        "begin": {
+          "line": 179,
+          "column": 12
+        },
+        "end": {
+          "line": 179,
+          "column": 44
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-return-type",
+    "description": "invalid-return-type: Return type does not match returned value: expected `(Any, /) -> Path`, found `(Any, /) -> Path | list[Path]`",
+    "severity": "major",
+    "fingerprint": "c8db0be3803090fe",
+    "location": {
+      "path": "oot3dhdtextgenerator/common/argument_parsing.py",
+      "positions": {
+        "begin": {
+          "line": 190,
+          "column": 12
+        },
+        "end": {
+          "line": 190,
+          "column": 56
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-return-type",
+    "description": "invalid-return-type: Return type does not match returned value: expected `(Any, /) -> Path`, found `(Any, /) -> Path | list[Path]`",
+    "severity": "major",
+    "fingerprint": "e1d27af94f1c804",
+    "location": {
+      "path": "oot3dhdtextgenerator/common/argument_parsing.py",
+      "positions": {
+        "begin": {
+          "line": 201,
+          "column": 12
+        },
+        "end": {
+          "line": 201,
+          "column": 52
+        }
+      }
+    }
+  },
+  {
+    "check_name": "no-matching-overload",
+    "description": "no-matching-overload: No overload of function `val_input_path` matches arguments",
+    "severity": "major",
+    "fingerprint": "9d8d137bbb671344",
+    "location": {
+      "path": "oot3dhdtextgenerator/core/assignment_dataset.py",
+      "positions": {
+        "begin": {
+          "line": 29,
+          "column": 22
+        },
+        "end": {
+          "line": 29,
           "column": 66
         }
       }
@@ -345,9 +345,9 @@
     "check_name": "call-non-callable",
     "description": "call-non-callable: Object of type `None` is not callable",
     "severity": "major",
-    "fingerprint": "8e760adeae101020",
+    "fingerprint": "fdf057895c97ee09",
     "location": {
-      "path": "oot3dhdtextgenerator\\core\\assignment_dataset.py",
+      "path": "oot3dhdtextgenerator/core/assignment_dataset.py",
       "positions": {
         "begin": {
           "line": 49,
@@ -361,31 +361,12 @@
     }
   },
   {
-    "check_name": "unresolved-import",
-    "description": "unresolved-import: Module `oot3dhdtextgenerator.common.validation` has no member `val_input_path`",
-    "severity": "major",
-    "fingerprint": "d42c752864e53b91",
-    "location": {
-      "path": "oot3dhdtextgenerator\\core\\learning_dataset.py",
-      "positions": {
-        "begin": {
-          "line": 15,
-          "column": 52
-        },
-        "end": {
-          "line": 15,
-          "column": 66
-        }
-      }
-    }
-  },
-  {
     "check_name": "invalid-return-type",
     "description": "invalid-return-type: Return type does not match returned value: expected `tuple[ndarray[Unknown, Unknown], int]`, found `tuple[Image | @Todo, int | @Todo]`",
     "severity": "major",
-    "fingerprint": "596e066e62de061",
+    "fingerprint": "dbfba9adcc9c9fe1",
     "location": {
-      "path": "oot3dhdtextgenerator\\core\\learning_dataset.py",
+      "path": "oot3dhdtextgenerator/core/learning_dataset.py",
       "positions": {
         "begin": {
           "line": 74,
@@ -399,39 +380,58 @@
     }
   },
   {
-    "check_name": "unresolved-import",
-    "description": "unresolved-import: Module `oot3dhdtextgenerator.common.validation` has no member `val_int`",
+    "check_name": "no-matching-overload",
+    "description": "no-matching-overload: No overload of function `val_output_path` matches arguments",
     "severity": "major",
-    "fingerprint": "e6e9b4c66b9a1306",
+    "fingerprint": "ed29157a8161037f",
     "location": {
-      "path": "oot3dhdtextgenerator\\image\\oot3d_text_processor.py",
+      "path": "oot3dhdtextgenerator/image/oot3d_text_processor.py",
       "positions": {
         "begin": {
-          "line": 15,
-          "column": 52
+          "line": 32,
+          "column": 32
         },
         "end": {
-          "line": 15,
-          "column": 59
+          "line": 32,
+          "column": 80
         }
       }
     }
   },
   {
-    "check_name": "unresolved-import",
-    "description": "unresolved-import: Module `oot3dhdtextgenerator.common.validation` has no member `val_output_path`",
+    "check_name": "no-matching-overload",
+    "description": "no-matching-overload: No overload of function `val_int` matches arguments",
     "severity": "major",
-    "fingerprint": "67455daf316e3de5",
+    "fingerprint": "37e9244d1103235a",
     "location": {
-      "path": "oot3dhdtextgenerator\\image\\oot3d_text_processor.py",
+      "path": "oot3dhdtextgenerator/image/oot3d_text_processor.py",
       "positions": {
         "begin": {
-          "line": 15,
-          "column": 61
+          "line": 35,
+          "column": 46
         },
         "end": {
-          "line": 15,
-          "column": 76
+          "line": 35,
+          "column": 62
+        }
+      }
+    }
+  },
+  {
+    "check_name": "no-matching-overload",
+    "description": "no-matching-overload: No overload of function `val_int` matches arguments",
+    "severity": "major",
+    "fingerprint": "76b2386c9ceb372a",
+    "location": {
+      "path": "oot3dhdtextgenerator/image/oot3d_text_processor.py",
+      "positions": {
+        "begin": {
+          "line": 36,
+          "column": 21
+        },
+        "end": {
+          "line": 36,
+          "column": 37
         }
       }
     }
@@ -440,9 +440,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `create_image` is incorrect: Expected `list[str]`, found `(Unknown & ~None) | str`",
     "severity": "major",
-    "fingerprint": "bf96d00f2be2dc62",
+    "fingerprint": "b180209d72a3be13",
     "location": {
-      "path": "oot3dhdtextgenerator\\image\\oot3d_text_processor.py",
+      "path": "oot3dhdtextgenerator/image/oot3d_text_processor.py",
       "positions": {
         "begin": {
           "line": 44,
@@ -459,9 +459,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `bool | None`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "4bd09c24955bf31a",
+    "fingerprint": "c8d5d8f95fa13bf9",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 80,
@@ -478,9 +478,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `Iterable[Unknown] | None`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "9741276dd03e62e6",
+    "fingerprint": "b01127f62bd1c034",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 80,
@@ -497,9 +497,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `Iterable[list[Unknown]] | None`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "36d506dbd9b07c35",
+    "fingerprint": "ebc0f8355d4693d5",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 80,
@@ -516,9 +516,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `((list[Unknown], /) -> Any) | None`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "29cf422e66fe5abc",
+    "fingerprint": "ed08a7481be4b436",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 80,
@@ -535,9 +535,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `bool`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "4c050e02c16493ef",
+    "fingerprint": "685d3701b0f9b941",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 80,
@@ -554,9 +554,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `bool`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "270c34bec987a2ae",
+    "fingerprint": "5d20665ae436d5b1",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 80,
@@ -573,9 +573,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `((int, /) -> None) | None`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "d93c1ccb374a1dea",
+    "fingerprint": "69523585cedc7611",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 80,
@@ -592,9 +592,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `bool`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "ae4661cc1e387bc0",
+    "fingerprint": "b28ca5080d6319ce",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 80,
@@ -611,9 +611,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `str`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "ae9f07a2ceacd680",
+    "fingerprint": "cf89e1e452fedcc9",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 80,
@@ -630,9 +630,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `bool`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "450b4e860abfae86",
+    "fingerprint": "3082fcd894e6168c",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 80,
@@ -649,9 +649,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `bool | None`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "59dea4f3638a3204",
+    "fingerprint": "800e4e11ad57be33",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 82,
@@ -668,9 +668,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `Iterable[Unknown] | None`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "4d8115f5b1740dc0",
+    "fingerprint": "cf87371bc647ffd9",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 82,
@@ -687,9 +687,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `Iterable[list[Unknown]] | None`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "122aad9fe63d0148",
+    "fingerprint": "664a50f97b313650",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 82,
@@ -706,9 +706,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `((list[Unknown], /) -> Any) | None`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "a97165b26504b8bc",
+    "fingerprint": "fea47c20eb0e7ffe",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 82,
@@ -725,9 +725,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `bool`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "dcd8a35c03f33e56",
+    "fingerprint": "e48bbdf010ce1876",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 82,
@@ -744,9 +744,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `bool`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "99b9cdd425b10b5a",
+    "fingerprint": "f751204e39c42263",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 82,
@@ -763,9 +763,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `((int, /) -> None) | None`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "727bc1e016867cfd",
+    "fingerprint": "78341e93b2b0b09a",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 82,
@@ -782,9 +782,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `bool`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "80fdc4a24708851a",
+    "fingerprint": "18cc82bdd1f69a9b",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 82,
@@ -801,9 +801,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `str`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "80e9208a5d3b3139",
+    "fingerprint": "7a038de3c6749f30",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 82,
@@ -820,9 +820,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect: Expected `bool`, found `Unknown | int`",
     "severity": "major",
-    "fingerprint": "b1418696e84dce75",
+    "fingerprint": "77262a932c8424c7",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 82,
@@ -839,9 +839,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `len` is incorrect: Expected `Sized`, found `Dataset[Unknown]`",
     "severity": "major",
-    "fingerprint": "4c032db7084c8774",
+    "fingerprint": "20d94cf7e2c75e87",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 127,
@@ -858,9 +858,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `len` is incorrect: Expected `Sized`, found `Dataset[Unknown]`",
     "severity": "major",
-    "fingerprint": "4f91acdc6f92054c",
+    "fingerprint": "6d8236d9b1acaaed",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 130,
@@ -877,9 +877,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `len` is incorrect: Expected `Sized`, found `Dataset[Unknown]`",
     "severity": "major",
-    "fingerprint": "956b916ef906a07f",
+    "fingerprint": "37e1a4a99eb00d3f",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 131,
@@ -896,9 +896,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `len` is incorrect: Expected `Sized`, found `Dataset[Unknown]`",
     "severity": "major",
-    "fingerprint": "6f4f293c6561e68",
+    "fingerprint": "5a0eb49ee97993ce",
     "location": {
-      "path": "oot3dhdtextgenerator\\utilities\\model_trainer.py",
+      "path": "oot3dhdtextgenerator/utilities/model_trainer.py",
       "positions": {
         "begin": {
           "line": 167,

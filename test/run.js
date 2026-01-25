@@ -24,7 +24,7 @@ function runTest (name, fn) {
 }
 
 runTest('parseRuff() handles JSON output (scinoephile)', () => {
-  process.env.GITHUB_WORKSPACE = 'C:\\Users\\karls\\Code\\Scinoephile'
+  process.env.GITHUB_WORKSPACE = '/Users/karldebiec/Code/Scinoephile'
   const annotations = parseRuff(fixturePath('scinoephile', 'ruff.json'))
 
   assert.ok(annotations.length > 0)
@@ -36,7 +36,7 @@ runTest('parseRuff() handles JSON output (scinoephile)', () => {
 })
 
 runTest('parseRuff() handles JSON output (pipescaler)', () => {
-  process.env.GITHUB_WORKSPACE = 'C:\\Users\\karls\\Code\\PipeScaler'
+  process.env.GITHUB_WORKSPACE = '/Users/karldebiec/Code/PipeScaler'
   const annotations = parseRuff(fixturePath('pipescaler', 'ruff.json'))
 
   assert.ok(annotations.length > 0)
@@ -48,7 +48,7 @@ runTest('parseRuff() handles JSON output (pipescaler)', () => {
 })
 
 runTest('parseRuff() handles JSON output (oot3dhdtextgenerator)', () => {
-  process.env.GITHUB_WORKSPACE = 'C:\\Users\\karls\\Code\\OOT3DHDTextGenerator'
+  process.env.GITHUB_WORKSPACE = '/Users/karldebiec/Code/OOT3DHDTextGenerator'
   const annotations = parseRuff(fixturePath('oot3dhdtextgenerator', 'ruff.json'))
 
   assert.ok(annotations.length > 0)
@@ -60,31 +60,31 @@ runTest('parseRuff() handles JSON output (oot3dhdtextgenerator)', () => {
 })
 
 runTest('parsePyright() handles JSON output (scinoephile)', () => {
-  process.env.GITHUB_WORKSPACE = 'C:\\Users\\karls\\Code\\Scinoephile'
+  process.env.GITHUB_WORKSPACE = '/Users/karldebiec/Code/Scinoephile'
   const annotations = parsePyright(fixturePath('scinoephile', 'pyright.json'))
 
   assert.ok(annotations.length > 0)
   assert.equal(annotations[0].source, 'pyright')
   assert.equal(annotations[0].level, 'error')
-  assert.equal(annotations[0].filePath, 'scinoephile/audio/subtitles/series.py')
-  assert.equal(annotations[0].line, 41)
-  assert.equal(annotations[0].kind, 'reportIncompatibleVariableOverride')
+  assert.equal(annotations[0].filePath, 'scinoephile/analysis/series_diff.py')
+  assert.equal(annotations[0].line, 927)
+  assert.equal(annotations[0].kind, 'reportAttributeAccessIssue')
 })
 
 runTest('parsePyright() handles JSON output (pipescaler)', () => {
-  process.env.GITHUB_WORKSPACE = 'C:\\Users\\karls\\Code\\PipeScaler'
+  process.env.GITHUB_WORKSPACE = '/Users/karldebiec/Code/PipeScaler'
   const annotations = parsePyright(fixturePath('pipescaler', 'pyright.json'))
 
   assert.ok(annotations.length > 0)
   assert.equal(annotations[0].source, 'pyright')
   assert.equal(annotations[0].level, 'error')
-  assert.equal(annotations[0].filePath, 'pipescaler/cli/pipescaler_cli.py')
-  assert.equal(annotations[0].line, 11)
+  assert.equal(annotations[0].filePath, 'pipescaler/core/cli/utility_cli.py')
+  assert.equal(annotations[0].line, 39)
   assert.equal(annotations[0].kind, 'reportAttributeAccessIssue')
 })
 
 runTest('parsePyright() handles JSON output (oot3dhdtextgenerator)', () => {
-  process.env.GITHUB_WORKSPACE = 'C:\\Users\\karls\\Code\\OOT3DHDTextGenerator'
+  process.env.GITHUB_WORKSPACE = '/Users/karldebiec/Code/OOT3DHDTextGenerator'
   const annotations = parsePyright(fixturePath('oot3dhdtextgenerator', 'pyright.json'))
 
   assert.ok(annotations.length > 0)
@@ -94,36 +94,36 @@ runTest('parsePyright() handles JSON output (oot3dhdtextgenerator)', () => {
     annotations[0].filePath,
     'oot3dhdtextgenerator/apps/char_assigner/char_assigner.py',
   )
-  assert.equal(annotations[0].line, 17)
-  assert.equal(annotations[0].kind, 'reportAttributeAccessIssue')
+  assert.equal(annotations[0].line, 97)
+  assert.equal(annotations[0].kind, 'reportArgumentType')
 })
 
 runTest('parseTy() handles GitLab JSON output (scinoephile)', () => {
-  process.env.GITHUB_WORKSPACE = 'C:\\Users\\karls\\Code\\Scinoephile'
+  process.env.GITHUB_WORKSPACE = '/Users/karldebiec/Code/Scinoephile'
   const annotations = parseTy(fixturePath('scinoephile', 'ty.json'))
 
   assert.ok(annotations.length > 0)
   assert.equal(annotations[0].source, 'ty')
   assert.equal(annotations[0].level, 'error')
-  assert.equal(annotations[0].filePath, 'scinoephile/audio/subtitles/series.py')
-  assert.equal(annotations[0].line, 149)
-  assert.equal(annotations[0].kind, 'non-subscriptable')
+  assert.equal(annotations[0].filePath, 'scinoephile/analysis/series_diff.py')
+  assert.equal(annotations[0].line, 927)
+  assert.equal(annotations[0].kind, 'unresolved-attribute')
 })
 
 runTest('parseTy() handles GitLab JSON output (pipescaler)', () => {
-  process.env.GITHUB_WORKSPACE = 'C:\\Users\\karls\\Code\\PipeScaler'
+  process.env.GITHUB_WORKSPACE = '/Users/karldebiec/Code/PipeScaler'
   const annotations = parseTy(fixturePath('pipescaler', 'ty.json'))
 
   assert.ok(annotations.length > 0)
   assert.equal(annotations[0].source, 'ty')
   assert.equal(annotations[0].level, 'error')
-  assert.equal(annotations[0].filePath, 'pipescaler/cli/pipescaler_cli.py')
-  assert.equal(annotations[0].line, 11)
-  assert.equal(annotations[0].kind, 'unresolved-import')
+  assert.equal(annotations[0].filePath, 'pipescaler/common/argument_parsing.py')
+  assert.equal(annotations[0].line, 49)
+  assert.equal(annotations[0].kind, 'unresolved-reference')
 })
 
 runTest('parseTy() handles GitLab JSON output (oot3dhdtextgenerator)', () => {
-  process.env.GITHUB_WORKSPACE = 'C:\\Users\\karls\\Code\\OOT3DHDTextGenerator'
+  process.env.GITHUB_WORKSPACE = '/Users/karldebiec/Code/OOT3DHDTextGenerator'
   const annotations = parseTy(fixturePath('oot3dhdtextgenerator', 'ty.json'))
 
   assert.ok(annotations.length > 0)
@@ -133,8 +133,8 @@ runTest('parseTy() handles GitLab JSON output (oot3dhdtextgenerator)', () => {
     annotations[0].filePath,
     'oot3dhdtextgenerator/apps/char_assigner/char_assigner.py',
   )
-  assert.equal(annotations[0].line, 17)
-  assert.equal(annotations[0].kind, 'unresolved-import')
+  assert.equal(annotations[0].line, 57)
+  assert.equal(annotations[0].kind, 'invalid-argument-type')
 })
 
 runTest('parsePytest() handles text output (scinoephile)', () => {

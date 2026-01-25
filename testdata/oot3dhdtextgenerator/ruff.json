@@ -6,7 +6,7 @@
       "column": 12,
       "row": 77
     },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\apps\\char_assigner\\char_assigner.py",
+    "filename": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/apps/char_assigner/char_assigner.py",
     "fix": null,
     "location": {
       "column": 9,
@@ -18,411 +18,12 @@
   },
   {
     "cell": null,
-    "code": "UP035",
-    "end_location": {
-      "column": 33,
-      "row": 8
-    },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\common\\argument_parsing.py",
-    "fix": {
-      "applicability": "safe",
-      "edits": [
-        {
-          "content": "from typing import Any\r\nfrom collections.abc import Callable",
-          "end_location": {
-            "column": 33,
-            "row": 8
-          },
-          "location": {
-            "column": 1,
-            "row": 8
-          }
-        }
-      ],
-      "message": "Import from `collections.abc`"
-    },
-    "location": {
-      "column": 1,
-      "row": 8
-    },
-    "message": "Import from `collections.abc` instead: `Callable`",
-    "noqa_row": 8,
-    "url": "https://docs.astral.sh/ruff/rules/deprecated-import"
-  },
-  {
-    "cell": null,
-    "code": "D417",
-    "end_location": {
-      "column": 18,
-      "row": 107
-    },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\common\\argument_parsing.py",
-    "fix": null,
-    "location": {
-      "column": 5,
-      "row": 107
-    },
-    "message": "Missing argument description in the docstring for `get_validator`: `**kwargs`",
-    "noqa_row": 107,
-    "url": "https://docs.astral.sh/ruff/rules/undocumented-param"
-  },
-  {
-    "cell": null,
-    "code": "UP043",
-    "end_location": {
-      "column": 61,
-      "row": 16
-    },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\common\\file.py",
-    "fix": {
-      "applicability": "safe",
-      "edits": [
-        {
-          "content": "Generator[Path]",
-          "end_location": {
-            "column": 61,
-            "row": 16
-          },
-          "location": {
-            "column": 34,
-            "row": 16
-          }
-        }
-      ],
-      "message": "Remove default type arguments"
-    },
-    "location": {
-      "column": 34,
-      "row": 16
-    },
-    "message": "Unnecessary default type arguments",
-    "noqa_row": 16,
-    "url": "https://docs.astral.sh/ruff/rules/unnecessary-default-type-args"
-  },
-  {
-    "cell": null,
-    "code": "UP043",
-    "end_location": {
-      "column": 81,
-      "row": 28
-    },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\common\\file.py",
-    "fix": {
-      "applicability": "safe",
-      "edits": [
-        {
-          "content": "Generator[Path]",
-          "end_location": {
-            "column": 81,
-            "row": 28
-          },
-          "location": {
-            "column": 54,
-            "row": 28
-          }
-        }
-      ],
-      "message": "Remove default type arguments"
-    },
-    "location": {
-      "column": 54,
-      "row": 28
-    },
-    "message": "Unnecessary default type arguments",
-    "noqa_row": 28,
-    "url": "https://docs.astral.sh/ruff/rules/unnecessary-default-type-args"
-  },
-  {
-    "cell": null,
-    "code": "UP035",
-    "end_location": {
-      "column": 28,
-      "row": 7
-    },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\common\\general.py",
-    "fix": {
-      "applicability": "safe",
-      "edits": [
-        {
-          "content": "from collections.abc import Iterable",
-          "end_location": {
-            "column": 28,
-            "row": 7
-          },
-          "location": {
-            "column": 1,
-            "row": 7
-          }
-        }
-      ],
-      "message": "Import from `collections.abc`"
-    },
-    "location": {
-      "column": 1,
-      "row": 7
-    },
-    "message": "Import from `collections.abc` instead: `Iterable`",
-    "noqa_row": 7,
-    "url": "https://docs.astral.sh/ruff/rules/deprecated-import"
-  },
-  {
-    "cell": null,
-    "code": "UP035",
-    "end_location": {
-      "column": 24,
-      "row": 8
-    },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\common\\testing.py",
-    "fix": null,
-    "location": {
-      "column": 1,
-      "row": 8
-    },
-    "message": "`typing.Type` is deprecated, use `type` instead",
-    "noqa_row": 8,
-    "url": "https://docs.astral.sh/ruff/rules/deprecated-import"
-  },
-  {
-    "cell": null,
-    "code": "UP006",
-    "end_location": {
-      "column": 32,
-      "row": 14
-    },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\common\\testing.py",
-    "fix": {
-      "applicability": "safe",
-      "edits": [
-        {
-          "content": "type",
-          "end_location": {
-            "column": 32,
-            "row": 14
-          },
-          "location": {
-            "column": 28,
-            "row": 14
-          }
-        }
-      ],
-      "message": "Replace with `type`"
-    },
-    "location": {
-      "column": 28,
-      "row": 14
-    },
-    "message": "Use `type` instead of `Type` for type annotation",
-    "noqa_row": 14,
-    "url": "https://docs.astral.sh/ruff/rules/non-pep585-annotation"
-  },
-  {
-    "cell": null,
-    "code": "UP040",
-    "end_location": {
-      "column": 33,
-      "row": 9
-    },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\common\\typing.py",
-    "fix": {
-      "applicability": "unsafe",
-      "edits": [
-        {
-          "content": "type PathLike = Path | str",
-          "end_location": {
-            "column": 33,
-            "row": 9
-          },
-          "location": {
-            "column": 1,
-            "row": 9
-          }
-        }
-      ],
-      "message": "Use the `type` keyword"
-    },
-    "location": {
-      "column": 1,
-      "row": 9
-    },
-    "message": "Type alias `PathLike` uses `TypeAlias` annotation instead of the `type` keyword",
-    "noqa_row": 9,
-    "url": "https://docs.astral.sh/ruff/rules/non-pep695-type-alias"
-  },
-  {
-    "cell": null,
-    "code": "UP035",
-    "end_location": {
-      "column": 45,
-      "row": 11
-    },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\common\\validation.py",
-    "fix": {
-      "applicability": "safe",
-      "edits": [
-        {
-          "content": "from typing import Any\r\nfrom collections.abc import Collection, Iterable",
-          "end_location": {
-            "column": 45,
-            "row": 11
-          },
-          "location": {
-            "column": 1,
-            "row": 11
-          }
-        }
-      ],
-      "message": "Import from `collections.abc`"
-    },
-    "location": {
-      "column": 1,
-      "row": 11
-    },
-    "message": "Import from `collections.abc` instead: `Collection`, `Iterable`",
-    "noqa_row": 11,
-    "url": "https://docs.astral.sh/ruff/rules/deprecated-import"
-  },
-  {
-    "cell": null,
-    "code": "UP038",
-    "end_location": {
-      "column": 38,
-      "row": 112
-    },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\common\\validation.py",
-    "fix": {
-      "applicability": "unsafe",
-      "edits": [
-        {
-          "content": "str | Path",
-          "end_location": {
-            "column": 37,
-            "row": 112
-          },
-          "location": {
-            "column": 26,
-            "row": 112
-          }
-        }
-      ],
-      "message": "Convert to `X | Y`"
-    },
-    "location": {
-      "column": 8,
-      "row": 112
-    },
-    "message": "Use `X | Y` in `isinstance` call instead of `(X, Y)`",
-    "noqa_row": 112,
-    "url": "https://docs.astral.sh/ruff/rules/non-pep604-isinstance"
-  },
-  {
-    "cell": null,
-    "code": "PLW2901",
-    "end_location": {
-      "column": 17,
-      "row": 117
-    },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\common\\validation.py",
-    "fix": null,
-    "location": {
-      "column": 13,
-      "row": 117
-    },
-    "message": "`for` loop variable `path` overwritten by assignment target",
-    "noqa_row": 117,
-    "url": "https://docs.astral.sh/ruff/rules/redefined-loop-name"
-  },
-  {
-    "cell": null,
-    "code": "UP038",
-    "end_location": {
-      "column": 38,
-      "row": 155
-    },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\common\\validation.py",
-    "fix": {
-      "applicability": "unsafe",
-      "edits": [
-        {
-          "content": "str | Path",
-          "end_location": {
-            "column": 37,
-            "row": 155
-          },
-          "location": {
-            "column": 26,
-            "row": 155
-          }
-        }
-      ],
-      "message": "Convert to `X | Y`"
-    },
-    "location": {
-      "column": 8,
-      "row": 155
-    },
-    "message": "Use `X | Y` in `isinstance` call instead of `(X, Y)`",
-    "noqa_row": 155,
-    "url": "https://docs.astral.sh/ruff/rules/non-pep604-isinstance"
-  },
-  {
-    "cell": null,
-    "code": "PLW2901",
-    "end_location": {
-      "column": 17,
-      "row": 160
-    },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\common\\validation.py",
-    "fix": null,
-    "location": {
-      "column": 13,
-      "row": 160
-    },
-    "message": "`for` loop variable `path` overwritten by assignment target",
-    "noqa_row": 160,
-    "url": "https://docs.astral.sh/ruff/rules/redefined-loop-name"
-  },
-  {
-    "cell": null,
-    "code": "PERF401",
-    "end_location": {
-      "column": 84,
-      "row": 243
-    },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\common\\validation.py",
-    "fix": null,
-    "location": {
-      "column": 9,
-      "row": 243
-    },
-    "message": "Use a list comprehension to create a transformed list",
-    "noqa_row": 243,
-    "url": "https://docs.astral.sh/ruff/rules/manual-list-comprehension"
-  },
-  {
-    "cell": null,
-    "code": "PLW2901",
-    "end_location": {
-      "column": 19,
-      "row": 313
-    },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\common\\validation.py",
-    "fix": null,
-    "location": {
-      "column": 13,
-      "row": 313
-    },
-    "message": "`for` loop variable `option` overwritten by assignment target",
-    "noqa_row": 313,
-    "url": "https://docs.astral.sh/ruff/rules/redefined-loop-name"
-  },
-  {
-    "cell": null,
     "code": "D103",
     "end_location": {
       "column": 23,
       "row": 20
     },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\data\\__init__.py",
+    "filename": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/data/__init__.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -439,7 +40,7 @@
       "column": 17,
       "row": 30
     },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\image\\oot3d_shadow_processor.py",
+    "filename": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/image/oot3d_shadow_processor.py",
     "fix": null,
     "location": {
       "column": 9,
@@ -456,7 +57,7 @@
       "column": 17,
       "row": 22
     },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\image\\oot3d_text_processor.py",
+    "filename": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/image/oot3d_text_processor.py",
     "fix": null,
     "location": {
       "column": 9,
@@ -473,7 +74,7 @@
       "column": 17,
       "row": 39
     },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\image\\oot3d_text_processor.py",
+    "filename": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/image/oot3d_text_processor.py",
     "fix": null,
     "location": {
       "column": 9,
@@ -490,7 +91,7 @@
       "column": 33,
       "row": 122
     },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\learning_dataset_generator.py",
+    "filename": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/learning_dataset_generator.py",
     "fix": null,
     "location": {
       "column": 9,
@@ -507,7 +108,7 @@
       "column": 12,
       "row": 25
     },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+    "filename": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
     "fix": null,
     "location": {
       "column": 9,
@@ -524,7 +125,7 @@
       "column": 21,
       "row": 122
     },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+    "filename": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
     "fix": null,
     "location": {
       "column": 17,
@@ -541,7 +142,7 @@
       "column": 29,
       "row": 122
     },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+    "filename": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
     "fix": null,
     "location": {
       "column": 23,
@@ -558,7 +159,7 @@
       "column": 14,
       "row": 135
     },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+    "filename": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
     "fix": null,
     "location": {
       "column": 9,
@@ -575,7 +176,7 @@
       "column": 17,
       "row": 158
     },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+    "filename": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
     "fix": null,
     "location": {
       "column": 13,
@@ -592,7 +193,7 @@
       "column": 25,
       "row": 158
     },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+    "filename": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
     "fix": null,
     "location": {
       "column": 19,
@@ -609,7 +210,7 @@
       "column": 14,
       "row": 31
     },
-    "filename": "C:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\test\\test_cli.py",
+    "filename": "/Users/karldebiec/Code/OOT3DHDTextGenerator/test/test_cli.py",
     "fix": null,
     "location": {
       "column": 5,
