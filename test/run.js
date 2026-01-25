@@ -77,7 +77,7 @@ runTest('dist/index.js handles pyright JSON output (scinoephile)', () => {
     '/Users/karldebiec/Code/Scinoephile',
   )
 
-  assert.ok(output.includes('::error'))
+  assert.ok(output.includes('::warning'))
   assert.ok(output.includes('file=scinoephile/analysis/series_diff.py'))
   assert.ok(output.includes('pyright[reportAttributeAccessIssue]'))
 })
@@ -89,7 +89,7 @@ runTest('dist/index.js handles pyright JSON output (pipescaler)', () => {
     '/Users/karldebiec/Code/PipeScaler',
   )
 
-  assert.ok(output.includes('::error'))
+  assert.ok(output.includes('::warning'))
   assert.ok(output.includes('file=pipescaler/core/cli/utility_cli.py'))
   assert.ok(output.includes('pyright[reportAttributeAccessIssue]'))
 })
@@ -101,7 +101,7 @@ runTest('dist/index.js handles pyright JSON output (oot3dhdtextgenerator)', () =
     '/Users/karldebiec/Code/OOT3DHDTextGenerator',
   )
 
-  assert.ok(output.includes('::error'))
+  assert.ok(output.includes('::warning'))
   assert.ok(output.includes('file=oot3dhdtextgenerator/apps/char_assigner/char_assigner.py'))
   assert.ok(output.includes('pyright[reportArgumentType]'))
 })
@@ -113,7 +113,7 @@ runTest('dist/index.js handles ty JSON output (scinoephile)', () => {
     '/Users/karldebiec/Code/Scinoephile',
   )
 
-  assert.ok(output.includes('::error'))
+  assert.ok(output.includes('::warning'))
   assert.ok(output.includes('file=scinoephile/analysis/series_diff.py'))
   assert.ok(output.includes('ty[unresolved-attribute]'))
 })
@@ -125,7 +125,7 @@ runTest('dist/index.js handles ty JSON output (pipescaler)', () => {
     '/Users/karldebiec/Code/PipeScaler',
   )
 
-  assert.ok(output.includes('::error'))
+  assert.ok(output.includes('::warning'))
   assert.ok(output.includes('file=pipescaler/common/argument_parsing.py'))
   assert.ok(output.includes('ty[unresolved-reference]'))
 })
@@ -137,7 +137,7 @@ runTest('dist/index.js handles ty JSON output (oot3dhdtextgenerator)', () => {
     '/Users/karldebiec/Code/OOT3DHDTextGenerator',
   )
 
-  assert.ok(output.includes('::error'))
+  assert.ok(output.includes('::warning'))
   assert.ok(output.includes('file=oot3dhdtextgenerator/apps/char_assigner/char_assigner.py'))
   assert.ok(output.includes('ty[invalid-argument-type]'))
 })
