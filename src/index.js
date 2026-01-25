@@ -10,6 +10,7 @@ async function run () {
   try {
     const tool = core.getInput('tool')
     const toolInfile = core.getInput('tool_infile')
+    const isTestMode = process.env.LINTERPRINTER_TEST_MODE === 'true'
 
     const supportedTools = ['pyright', 'pytest', 'ruff', 'ty']
 
@@ -54,7 +55,7 @@ async function run () {
       ann => ann.level === 'error',
     )
 
-    if (errorAnnotations.length > 0) {
+    if (errorAnnotations.length > 0 && !isTestMode) {
       core.setFailed(
         `Found ${errorAnnotations.length} error annotation${errorAnnotations.length >
         1 ? 's' : ''}.`,
@@ -62,7 +63,11 @@ async function run () {
     }
 
   } catch (error) {
-    core.setFailed(error.message || error.toString())
+    if (process.env.LINTERPRINTER_TEST_MODE === 'true') {
+      console.error(error)
+    } else {
+      core.setFailed(error.message || error.toString())
+    }
   }
 }
 
