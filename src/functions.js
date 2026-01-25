@@ -31,7 +31,7 @@ function isWindowsPath (filePath) {
   return /^[A-Za-z]:[\\/]/.test(filePath) || filePath.includes('\\')
 }
 
-function normalizeFilePath (filePath) {
+function normalizeFilePathInternal (filePath) {
   const githubWorkspace = process.env.GITHUB_WORKSPACE || ''
   const useWindows = isWindowsPath(filePath) || isWindowsPath(githubWorkspace)
   const pathImpl = useWindows ? path.win32 : path.posix
@@ -48,4 +48,8 @@ function normalizeFilePath (filePath) {
     : relativeFilePath
 }
 
-module.exports = { formatAnnotation, normalizeFilePath, parseFileList }
+module.exports = {
+  formatAnnotation,
+  normalizeFilePath: normalizeFilePathInternal,
+  parseFileList
+}
