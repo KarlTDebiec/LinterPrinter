@@ -1,18 +1,56 @@
 [
   {
+    "check_name": "unresolved-attribute",
+    "description": "unresolved-attribute: Object of type `SSAEvent` has no attribute `text_with_newline`",
+    "severity": "major",
+    "fingerprint": "69f01dd0c939903c",
+    "location": {
+      "path": "scinoephile/analysis/series_diff.py",
+      "positions": {
+        "begin": {
+          "line": 927,
+          "column": 20
+        },
+        "end": {
+          "line": 927,
+          "column": 46
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-argument-type",
+    "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect",
+    "severity": "major",
+    "fingerprint": "13e8d2eaf80fafd3",
+    "location": {
+      "path": "scinoephile/audio/subtitles/series.py",
+      "positions": {
+        "begin": {
+          "line": 64,
+          "column": 26
+        },
+        "end": {
+          "line": 64,
+          "column": 39
+        }
+      }
+    }
+  },
+  {
     "check_name": "non-subscriptable",
     "description": "non-subscriptable: Cannot subscript object of type `None` with no `__getitem__` method",
     "severity": "major",
-    "fingerprint": "a2df5dddf58b688f",
+    "fingerprint": "66f6f5456073056a",
     "location": {
-      "path": "scinoephile\\audio\\subtitles\\series.py",
+      "path": "scinoephile/audio/subtitles/series.py",
       "positions": {
         "begin": {
-          "line": 149,
+          "line": 154,
           "column": 24
         },
         "end": {
-          "line": 149,
+          "line": 154,
           "column": 73
         }
       }
@@ -22,16 +60,16 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `len` is incorrect",
     "severity": "major",
-    "fingerprint": "42da073f6a1f6557",
+    "fingerprint": "31f25c4823978f9b",
     "location": {
-      "path": "scinoephile\\audio\\subtitles\\series.py",
+      "path": "scinoephile/audio/subtitles/series.py",
       "positions": {
         "begin": {
-          "line": 173,
+          "line": 178,
           "column": 40
         },
         "end": {
-          "line": 173,
+          "line": 178,
           "column": 50
         }
       }
@@ -41,16 +79,16 @@
     "check_name": "non-subscriptable",
     "description": "non-subscriptable: Cannot subscript object of type `None` with no `__getitem__` method",
     "severity": "major",
-    "fingerprint": "881fd3e05ce9e593",
+    "fingerprint": "93bc2d14a60f29de",
     "location": {
-      "path": "scinoephile\\audio\\subtitles\\series.py",
+      "path": "scinoephile/audio/subtitles/series.py",
       "positions": {
         "begin": {
-          "line": 180,
+          "line": 185,
           "column": 21
         },
         "end": {
-          "line": 180,
+          "line": 185,
           "column": 60
         }
       }
@@ -60,16 +98,16 @@
     "check_name": "possibly-missing-attribute",
     "description": "possibly-missing-attribute: Attribute `export` may be missing on object of type `AudioSegment | None`",
     "severity": "minor",
-    "fingerprint": "54a4f09a4a812d67",
+    "fingerprint": "3e36bb4c4b3f1845",
     "location": {
-      "path": "scinoephile\\audio\\subtitles\\series.py",
+      "path": "scinoephile/audio/subtitles/series.py",
       "positions": {
         "begin": {
-          "line": 213,
+          "line": 218,
           "column": 9
         },
         "end": {
-          "line": 213,
+          "line": 218,
           "column": 26
         }
       }
@@ -79,9 +117,9 @@
     "check_name": "not-iterable",
     "description": "not-iterable: Object of type `list[TranscribedWord] | None` may not be iterable",
     "severity": "major",
-    "fingerprint": "9003e305b73cbcab",
+    "fingerprint": "6bb199a5fd7a28ba",
     "location": {
-      "path": "scinoephile\\audio\\transcription\\__init__.py",
+      "path": "scinoephile/audio/transcription/__init__.py",
       "positions": {
         "begin": {
           "line": 71,
@@ -98,9 +136,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `get_zho_cleaned` is incorrect",
     "severity": "major",
-    "fingerprint": "f8190221d4f165e6",
+    "fingerprint": "d85ff43c43715cc5",
     "location": {
-      "path": "scinoephile\\cli\\scinoephile_cli.py",
+      "path": "scinoephile/cli/scinoephile_cli.py",
       "positions": {
         "begin": {
           "line": 143,
@@ -117,9 +155,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `get_eng_cleaned` is incorrect",
     "severity": "major",
-    "fingerprint": "a44f5980aeaecda4",
+    "fingerprint": "e8772463573ffddd",
     "location": {
-      "path": "scinoephile\\cli\\scinoephile_cli.py",
+      "path": "scinoephile/cli/scinoephile_cli.py",
       "positions": {
         "begin": {
           "line": 145,
@@ -136,9 +174,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `get_eng_flattened` is incorrect",
     "severity": "major",
-    "fingerprint": "98ee9f92cba6052a",
+    "fingerprint": "3f072fb4a243d02b",
     "location": {
-      "path": "scinoephile\\cli\\scinoephile_cli.py",
+      "path": "scinoephile/cli/scinoephile_cli.py",
       "positions": {
         "begin": {
           "line": 147,
@@ -155,9 +193,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `get_zho_flattened` is incorrect",
     "severity": "major",
-    "fingerprint": "9d8d57ee1a9b0fab",
+    "fingerprint": "997a7df2fbfe8840",
     "location": {
-      "path": "scinoephile\\cli\\scinoephile_cli.py",
+      "path": "scinoephile/cli/scinoephile_cli.py",
       "positions": {
         "begin": {
           "line": 149,
@@ -174,9 +212,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `get_zho_converted` is incorrect",
     "severity": "major",
-    "fingerprint": "e08e5f8ed05962f1",
+    "fingerprint": "b4354f73e6262cff",
     "location": {
-      "path": "scinoephile\\cli\\scinoephile_cli.py",
+      "path": "scinoephile/cli/scinoephile_cli.py",
       "positions": {
         "begin": {
           "line": 151,
@@ -193,9 +231,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `get_synced_series` is incorrect",
     "severity": "major",
-    "fingerprint": "9fdfab3ea8f944e3",
+    "fingerprint": "fc34fbd4dad429a5",
     "location": {
-      "path": "scinoephile\\cli\\scinoephile_cli.py",
+      "path": "scinoephile/cli/scinoephile_cli.py",
       "positions": {
         "begin": {
           "line": 153,
@@ -212,9 +250,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `get_synced_series` is incorrect",
     "severity": "major",
-    "fingerprint": "ee0d218bf422aa18",
+    "fingerprint": "7b6da58ce2f61bec",
     "location": {
-      "path": "scinoephile\\cli\\scinoephile_cli.py",
+      "path": "scinoephile/cli/scinoephile_cli.py",
       "positions": {
         "begin": {
           "line": 153,
@@ -231,9 +269,9 @@
     "check_name": "unresolved-reference",
     "description": "unresolved-reference: Name `required` used when not defined",
     "severity": "major",
-    "fingerprint": "f3f3d3bb8e90cfb4",
+    "fingerprint": "fe9e5f7a33f836e3",
     "location": {
-      "path": "scinoephile\\common\\argument_parsing.py",
+      "path": "scinoephile/common/argument_parsing.py",
       "positions": {
         "begin": {
           "line": 49,
@@ -250,9 +288,9 @@
     "check_name": "invalid-return-type",
     "description": "invalid-return-type: Return type does not match returned value",
     "severity": "major",
-    "fingerprint": "3fc13e95e4d912a4",
+    "fingerprint": "dd56f466c04c2304",
     "location": {
-      "path": "scinoephile\\common\\argument_parsing.py",
+      "path": "scinoephile/common/argument_parsing.py",
       "positions": {
         "begin": {
           "line": 146,
@@ -269,9 +307,9 @@
     "check_name": "invalid-return-type",
     "description": "invalid-return-type: Return type does not match returned value",
     "severity": "major",
-    "fingerprint": "63256fd663451224",
+    "fingerprint": "e6bbdef3896fab4d",
     "location": {
-      "path": "scinoephile\\common\\argument_parsing.py",
+      "path": "scinoephile/common/argument_parsing.py",
       "positions": {
         "begin": {
           "line": 157,
@@ -288,9 +326,9 @@
     "check_name": "invalid-return-type",
     "description": "invalid-return-type: Return type does not match returned value",
     "severity": "major",
-    "fingerprint": "bf8e10e16792bd46",
+    "fingerprint": "ed4a0f997c6ad5b3",
     "location": {
-      "path": "scinoephile\\common\\argument_parsing.py",
+      "path": "scinoephile/common/argument_parsing.py",
       "positions": {
         "begin": {
           "line": 168,
@@ -307,9 +345,9 @@
     "check_name": "invalid-return-type",
     "description": "invalid-return-type: Return type does not match returned value",
     "severity": "major",
-    "fingerprint": "643de2c385905d8d",
+    "fingerprint": "d86a35642eae7ee1",
     "location": {
-      "path": "scinoephile\\common\\argument_parsing.py",
+      "path": "scinoephile/common/argument_parsing.py",
       "positions": {
         "begin": {
           "line": 179,
@@ -326,9 +364,9 @@
     "check_name": "invalid-return-type",
     "description": "invalid-return-type: Return type does not match returned value",
     "severity": "major",
-    "fingerprint": "77fcc4f1f97e4d3b",
+    "fingerprint": "3a3b1ad7bccdf893",
     "location": {
-      "path": "scinoephile\\common\\argument_parsing.py",
+      "path": "scinoephile/common/argument_parsing.py",
       "positions": {
         "begin": {
           "line": 190,
@@ -345,9 +383,9 @@
     "check_name": "invalid-return-type",
     "description": "invalid-return-type: Return type does not match returned value",
     "severity": "major",
-    "fingerprint": "5278cf92d14af68d",
+    "fingerprint": "2328d02d6b86f4d4",
     "location": {
-      "path": "scinoephile\\common\\argument_parsing.py",
+      "path": "scinoephile/common/argument_parsing.py",
       "positions": {
         "begin": {
           "line": 201,
@@ -364,9 +402,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `array2string` is incorrect",
     "severity": "major",
-    "fingerprint": "6e340d505b6f5831",
+    "fingerprint": "f5477e5ef21f7cc9",
     "location": {
-      "path": "scinoephile\\core\\synchronization.py",
+      "path": "scinoephile/core/synchronization.py",
       "positions": {
         "begin": {
           "line": 68,
@@ -383,9 +421,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `array2string` is incorrect",
     "severity": "major",
-    "fingerprint": "a81a5528ed088d4f",
+    "fingerprint": "4391d3d555eeccf7",
     "location": {
-      "path": "scinoephile\\core\\synchronization.py",
+      "path": "scinoephile/core/synchronization.py",
       "positions": {
         "begin": {
           "line": 69,
@@ -402,9 +440,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `array2string` is incorrect",
     "severity": "major",
-    "fingerprint": "6360c2526477591a",
+    "fingerprint": "fc0d704a2511ae8b",
     "location": {
-      "path": "scinoephile\\core\\synchronization.py",
+      "path": "scinoephile/core/synchronization.py",
       "positions": {
         "begin": {
           "line": 70,
@@ -421,9 +459,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `append` is incorrect",
     "severity": "major",
-    "fingerprint": "372e5639a143c238",
+    "fingerprint": "9e3200e84ee5f368",
     "location": {
-      "path": "scinoephile\\core\\synchronization.py",
+      "path": "scinoephile/core/synchronization.py",
       "positions": {
         "begin": {
           "line": 221,
@@ -440,9 +478,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `append` is incorrect",
     "severity": "major",
-    "fingerprint": "779e38de69d7b0b0",
+    "fingerprint": "3fc6406f6f47c0d7",
     "location": {
-      "path": "scinoephile\\core\\synchronization.py",
+      "path": "scinoephile/core/synchronization.py",
       "positions": {
         "begin": {
           "line": 226,
@@ -459,9 +497,9 @@
     "check_name": "possibly-missing-attribute",
     "description": "possibly-missing-attribute: Attribute `NEAREST` may be missing on object of type `Any | <module 'PIL.Image'>`",
     "severity": "minor",
-    "fingerprint": "8bffaf2b9b27d8b1",
+    "fingerprint": "1c122d206de99f60",
     "location": {
-      "path": "scinoephile\\image\\drawing.py",
+      "path": "scinoephile/image/drawing.py",
       "positions": {
         "begin": {
           "line": 53,
@@ -478,9 +516,9 @@
     "check_name": "non-subscriptable",
     "description": "non-subscriptable: Cannot subscript object of type `None` with no `__getitem__` method",
     "severity": "major",
-    "fingerprint": "cf1df32e567de91d",
+    "fingerprint": "6242735c4f2f8332",
     "location": {
-      "path": "scinoephile\\image\\ocr\\char_cursor.py",
+      "path": "scinoephile/image/ocr/char_cursor.py",
       "positions": {
         "begin": {
           "line": 60,
@@ -497,9 +535,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `len` is incorrect",
     "severity": "major",
-    "fingerprint": "964ca4c4866c2b59",
+    "fingerprint": "6bcfdb3f059bc3c7",
     "location": {
-      "path": "scinoephile\\image\\ocr\\gap_cursor.py",
+      "path": "scinoephile/image/ocr/gap_cursor.py",
       "positions": {
         "begin": {
           "line": 58,
@@ -516,9 +554,9 @@
     "check_name": "non-subscriptable",
     "description": "non-subscriptable: Cannot subscript object of type `None` with no `__getitem__` method",
     "severity": "major",
-    "fingerprint": "5aecd93b975d57e0",
+    "fingerprint": "ee96aca44825a056",
     "location": {
-      "path": "scinoephile\\image\\ocr\\gap_cursor.py",
+      "path": "scinoephile/image/ocr/gap_cursor.py",
       "positions": {
         "begin": {
           "line": 60,
@@ -535,9 +573,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `len` is incorrect",
     "severity": "major",
-    "fingerprint": "16cbe3f349ba6337",
+    "fingerprint": "bea379b033636368",
     "location": {
-      "path": "scinoephile\\image\\ocr\\gap_cursor.py",
+      "path": "scinoephile/image/ocr/gap_cursor.py",
       "positions": {
         "begin": {
           "line": 70,
@@ -554,9 +592,9 @@
     "check_name": "non-subscriptable",
     "description": "non-subscriptable: Cannot subscript object of type `None` with no `__getitem__` method",
     "severity": "major",
-    "fingerprint": "8a81e12c93aaa439",
+    "fingerprint": "f0f4aef36930815",
     "location": {
-      "path": "scinoephile\\image\\ocr\\gap_cursor.py",
+      "path": "scinoephile/image/ocr/gap_cursor.py",
       "positions": {
         "begin": {
           "line": 72,
@@ -573,9 +611,9 @@
     "check_name": "non-subscriptable",
     "description": "non-subscriptable: Cannot subscript object of type `None` with no `__getitem__` method",
     "severity": "major",
-    "fingerprint": "8f88ad83b9381779",
+    "fingerprint": "68a8c7a0637740b4",
     "location": {
-      "path": "scinoephile\\image\\ocr\\gap_cursor.py",
+      "path": "scinoephile/image/ocr/gap_cursor.py",
       "positions": {
         "begin": {
           "line": 133,
@@ -592,9 +630,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `get_img_with_bboxes` is incorrect",
     "severity": "major",
-    "fingerprint": "3b8d261bcacd7487",
+    "fingerprint": "bf7c30d35d274c06",
     "location": {
-      "path": "scinoephile\\image\\ocr\\validation_manager.py",
+      "path": "scinoephile/image/ocr/validation_manager.py",
       "positions": {
         "begin": {
           "line": 101,
@@ -608,19 +646,38 @@
     }
   },
   {
+    "check_name": "unresolved-attribute",
+    "description": "unresolved-attribute: Unresolved attribute `series` on type `ImageSubtitle`.",
+    "severity": "major",
+    "fingerprint": "9e79081bc0f7026c",
+    "location": {
+      "path": "scinoephile/image/ocr/validation_manager.py",
+      "positions": {
+        "begin": {
+          "line": 114,
+          "column": 13
+        },
+        "end": {
+          "line": 114,
+          "column": 25
+        }
+      }
+    }
+  },
+  {
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `len` is incorrect",
     "severity": "major",
-    "fingerprint": "f5fdc1266f9106ee",
+    "fingerprint": "47a041487b62be9",
     "location": {
-      "path": "scinoephile\\image\\ocr\\validation_manager.py",
+      "path": "scinoephile/image/ocr/validation_manager.py",
       "positions": {
         "begin": {
-          "line": 162,
+          "line": 166,
           "column": 39
         },
         "end": {
-          "line": 162,
+          "line": 166,
           "column": 49
         }
       }
@@ -630,16 +687,16 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `len` is incorrect",
     "severity": "major",
-    "fingerprint": "2f20604d667cb38e",
+    "fingerprint": "f8c1495975edcca",
     "location": {
-      "path": "scinoephile\\image\\ocr\\validation_manager.py",
+      "path": "scinoephile/image/ocr/validation_manager.py",
       "positions": {
         "begin": {
-          "line": 196,
+          "line": 200,
           "column": 35
         },
         "end": {
-          "line": 196,
+          "line": 200,
           "column": 45
         }
       }
@@ -649,16 +706,16 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `len` is incorrect",
     "severity": "major",
-    "fingerprint": "290a1120ba8ed1ac",
+    "fingerprint": "1431efa0af52f40d",
     "location": {
-      "path": "scinoephile\\image\\ocr\\validation_manager.py",
+      "path": "scinoephile/image/ocr/validation_manager.py",
       "positions": {
         "begin": {
-          "line": 199,
+          "line": 203,
           "column": 24
         },
         "end": {
-          "line": 199,
+          "line": 203,
           "column": 34
         }
       }
@@ -668,16 +725,16 @@
     "check_name": "non-subscriptable",
     "description": "non-subscriptable: Cannot subscript object of type `None` with no `__getitem__` method",
     "severity": "major",
-    "fingerprint": "82d87319bbf83f8e",
+    "fingerprint": "26915b866ce2220c",
     "location": {
-      "path": "scinoephile\\image\\ocr\\validation_manager.py",
+      "path": "scinoephile/image/ocr/validation_manager.py",
       "positions": {
         "begin": {
-          "line": 218,
+          "line": 222,
           "column": 35
         },
         "end": {
-          "line": 218,
+          "line": 222,
           "column": 69
         }
       }
@@ -687,16 +744,16 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `len` is incorrect",
     "severity": "major",
-    "fingerprint": "7f493ccc2467b5e4",
+    "fingerprint": "34132fcb5116dad8",
     "location": {
-      "path": "scinoephile\\image\\ocr\\validation_manager.py",
+      "path": "scinoephile/image/ocr/validation_manager.py",
       "positions": {
         "begin": {
-          "line": 245,
+          "line": 249,
           "column": 49
         },
         "end": {
-          "line": 245,
+          "line": 249,
           "column": 66
         }
       }
@@ -706,16 +763,16 @@
     "check_name": "invalid-assignment",
     "description": "invalid-assignment: Cannot assign to a subscript on an object of type `None`",
     "severity": "major",
-    "fingerprint": "7b4f9ac91db3348e",
+    "fingerprint": "98064e9b7a9b953",
     "location": {
-      "path": "scinoephile\\image\\ocr\\validation_manager.py",
+      "path": "scinoephile/image/ocr/validation_manager.py",
       "positions": {
         "begin": {
-          "line": 254,
+          "line": 258,
           "column": 17
         },
         "end": {
-          "line": 254,
+          "line": 258,
           "column": 80
         }
       }
@@ -725,16 +782,16 @@
     "check_name": "invalid-assignment",
     "description": "invalid-assignment: Cannot assign to a subscript on an object of type `None`",
     "severity": "major",
-    "fingerprint": "a557b20303a939de",
+    "fingerprint": "20282319a46c2b71",
     "location": {
-      "path": "scinoephile\\image\\ocr\\validation_manager.py",
+      "path": "scinoephile/image/ocr/validation_manager.py",
       "positions": {
         "begin": {
-          "line": 267,
+          "line": 271,
           "column": 21
         },
         "end": {
-          "line": 267,
+          "line": 271,
           "column": 84
         }
       }
@@ -744,16 +801,16 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `len` is incorrect",
     "severity": "major",
-    "fingerprint": "6f5b5ce33f78b23a",
+    "fingerprint": "152e7f80d76363ed",
     "location": {
-      "path": "scinoephile\\image\\ocr\\validation_manager.py",
+      "path": "scinoephile/image/ocr/validation_manager.py",
       "positions": {
         "begin": {
-          "line": 286,
+          "line": 290,
           "column": 49
         },
         "end": {
-          "line": 286,
+          "line": 290,
           "column": 66
         }
       }
@@ -763,16 +820,16 @@
     "check_name": "invalid-assignment",
     "description": "invalid-assignment: Cannot assign to a subscript on an object of type `None`",
     "severity": "major",
-    "fingerprint": "b2d86a42c1b8a791",
+    "fingerprint": "3e4f4a2c81f63048",
     "location": {
-      "path": "scinoephile\\image\\ocr\\validation_manager.py",
+      "path": "scinoephile/image/ocr/validation_manager.py",
       "positions": {
         "begin": {
-          "line": 312,
+          "line": 316,
           "column": 17
         },
         "end": {
-          "line": 312,
+          "line": 316,
           "column": 80
         }
       }
@@ -782,16 +839,16 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `len` is incorrect",
     "severity": "major",
-    "fingerprint": "413dab4863e267e",
+    "fingerprint": "d897bc9774d5d6e8",
     "location": {
-      "path": "scinoephile\\image\\ocr\\validation_manager.py",
+      "path": "scinoephile/image/ocr/validation_manager.py",
       "positions": {
         "begin": {
-          "line": 360,
+          "line": 364,
           "column": 45
         },
         "end": {
-          "line": 360,
+          "line": 364,
           "column": 55
         }
       }
@@ -801,16 +858,16 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `len` is incorrect",
     "severity": "major",
-    "fingerprint": "2494fb0a4a30f6",
+    "fingerprint": "52b5f95d1cf809d8",
     "location": {
-      "path": "scinoephile\\image\\ocr\\validation_manager.py",
+      "path": "scinoephile/image/ocr/validation_manager.py",
       "positions": {
         "begin": {
-          "line": 364,
+          "line": 368,
           "column": 47
         },
         "end": {
-          "line": 364,
+          "line": 368,
           "column": 57
         }
       }
@@ -820,16 +877,16 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `get_dims_tuple` is incorrect",
     "severity": "major",
-    "fingerprint": "4bdd20ba70e44c1a",
+    "fingerprint": "f2a38ff684efd178",
     "location": {
-      "path": "scinoephile\\image\\ocr\\validation_manager.py",
+      "path": "scinoephile/image/ocr/validation_manager.py",
       "positions": {
         "begin": {
-          "line": 375,
+          "line": 379,
           "column": 39
         },
         "end": {
-          "line": 375,
+          "line": 379,
           "column": 52
         }
       }
@@ -839,16 +896,16 @@
     "check_name": "possibly-missing-attribute",
     "description": "possibly-missing-attribute: Attribute `x1` may be missing on object of type `Bbox | None`",
     "severity": "minor",
-    "fingerprint": "1f22284580f84f5a",
+    "fingerprint": "4a0a98c3941c6c9",
     "location": {
-      "path": "scinoephile\\image\\ocr\\validation_manager.py",
+      "path": "scinoephile/image/ocr/validation_manager.py",
       "positions": {
         "begin": {
-          "line": 387,
+          "line": 391,
           "column": 26
         },
         "end": {
-          "line": 387,
+          "line": 391,
           "column": 42
         }
       }
@@ -858,17 +915,55 @@
     "check_name": "possibly-missing-attribute",
     "description": "possibly-missing-attribute: Attribute `x2` may be missing on object of type `Bbox | None`",
     "severity": "minor",
-    "fingerprint": "9c8fe591b92349a4",
+    "fingerprint": "e54e144b36273cc9",
     "location": {
-      "path": "scinoephile\\image\\ocr\\validation_manager.py",
+      "path": "scinoephile/image/ocr/validation_manager.py",
       "positions": {
         "begin": {
-          "line": 387,
+          "line": 391,
           "column": 45
         },
         "end": {
-          "line": 387,
+          "line": 391,
           "column": 61
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-argument-type",
+    "description": "invalid-argument-type: Argument to bound method `__init__` is incorrect",
+    "severity": "major",
+    "fingerprint": "c50536c89862b9ed",
+    "location": {
+      "path": "scinoephile/image/subtitles/series.py",
+      "positions": {
+        "begin": {
+          "line": 50,
+          "column": 26
+        },
+        "end": {
+          "line": 50,
+          "column": 39
+        }
+      }
+    }
+  },
+  {
+    "check_name": "invalid-return-type",
+    "description": "invalid-return-type: Return type does not match returned value",
+    "severity": "major",
+    "fingerprint": "99dde2980063e234",
+    "location": {
+      "path": "scinoephile/image/subtitles/series.py",
+      "positions": {
+        "begin": {
+          "line": 80,
+          "column": 16
+        },
+        "end": {
+          "line": 80,
+          "column": 28
         }
       }
     }
@@ -877,9 +972,9 @@
     "check_name": "invalid-parameter-default",
     "description": "invalid-parameter-default: Default value of type `None` is not assignable to annotated parameter type `list[int]`",
     "severity": "major",
-    "fingerprint": "f2c31810152e4f18",
+    "fingerprint": "bee267733cbf0b5c",
     "location": {
-      "path": "scinoephile\\lang\\eng\\flattening.py",
+      "path": "scinoephile/lang/eng/flattening.py",
       "positions": {
         "begin": {
           "line": 19,
@@ -896,9 +991,9 @@
     "check_name": "invalid-assignment",
     "description": "invalid-assignment: Implicit shadowing of function `get_auto_verified`",
     "severity": "major",
-    "fingerprint": "a27546add2bb3176",
+    "fingerprint": "ac721fcf919edbf8",
     "location": {
-      "path": "scinoephile\\llms\\base\\manager.py",
+      "path": "scinoephile/llms/base/manager.py",
       "positions": {
         "begin": {
           "line": 85,
@@ -915,9 +1010,9 @@
     "check_name": "invalid-assignment",
     "description": "invalid-assignment: Implicit shadowing of function `get_min_difficulty`",
     "severity": "major",
-    "fingerprint": "604214ba4491e0b3",
+    "fingerprint": "a30448607c22ec02",
     "location": {
-      "path": "scinoephile\\llms\\base\\manager.py",
+      "path": "scinoephile/llms/base/manager.py",
       "positions": {
         "begin": {
           "line": 86,
@@ -934,9 +1029,9 @@
     "check_name": "invalid-return-type",
     "description": "invalid-return-type: Return type does not match returned value",
     "severity": "major",
-    "fingerprint": "36f660397e8f4b57",
+    "fingerprint": "96d12652527f03b6",
     "location": {
-      "path": "scinoephile\\llms\\base\\manager.py",
+      "path": "scinoephile/llms/base/manager.py",
       "positions": {
         "begin": {
           "line": 87,
@@ -953,9 +1048,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Unresolved attribute `size` on type `type[Query]`.",
     "severity": "major",
-    "fingerprint": "e7769fa11358cda5",
+    "fingerprint": "e883232ba4a600dc",
     "location": {
-      "path": "scinoephile\\llms\\dual_block\\manager.py",
+      "path": "scinoephile/llms/dual_block/manager.py",
       "positions": {
         "begin": {
           "line": 59,
@@ -972,9 +1067,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Unresolved attribute `size` on type `type[Answer]`.",
     "severity": "major",
-    "fingerprint": "6ac6565c8867e1ff",
+    "fingerprint": "f555c2aeb6321227",
     "location": {
-      "path": "scinoephile\\llms\\dual_block\\manager.py",
+      "path": "scinoephile/llms/dual_block/manager.py",
       "positions": {
         "begin": {
           "line": 94,
@@ -991,9 +1086,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Unresolved attribute `size` on type `type[TestCase]`.",
     "severity": "major",
-    "fingerprint": "9fddf9f7c41866cf",
+    "fingerprint": "2f6439aea533ceb4",
     "location": {
-      "path": "scinoephile\\llms\\dual_block\\manager.py",
+      "path": "scinoephile/llms/dual_block/manager.py",
       "positions": {
         "begin": {
           "line": 128,
@@ -1010,9 +1105,9 @@
     "check_name": "invalid-assignment",
     "description": "invalid-assignment: Implicit shadowing of function `get_auto_verified`",
     "severity": "major",
-    "fingerprint": "f6e69cd3c869650d",
+    "fingerprint": "c154a998459bad5c",
     "location": {
-      "path": "scinoephile\\llms\\dual_block\\manager.py",
+      "path": "scinoephile/llms/dual_block/manager.py",
       "positions": {
         "begin": {
           "line": 129,
@@ -1029,9 +1124,9 @@
     "check_name": "invalid-assignment",
     "description": "invalid-assignment: Implicit shadowing of function `get_min_difficulty`",
     "severity": "major",
-    "fingerprint": "13b714edbbbd9bea",
+    "fingerprint": "eb8764a82f4d130f",
     "location": {
-      "path": "scinoephile\\llms\\dual_block\\manager.py",
+      "path": "scinoephile/llms/dual_block/manager.py",
       "positions": {
         "begin": {
           "line": 130,
@@ -1048,9 +1143,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `TestCase` has no attribute `size`",
     "severity": "major",
-    "fingerprint": "e44b834d96bb90",
+    "fingerprint": "cff477dbda8d0067",
     "location": {
-      "path": "scinoephile\\llms\\dual_block\\manager.py",
+      "path": "scinoephile/llms/dual_block/manager.py",
       "positions": {
         "begin": {
           "line": 164,
@@ -1067,9 +1162,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_1`",
     "severity": "major",
-    "fingerprint": "291c81dcf7c28595",
+    "fingerprint": "65660ee9cad73d14",
     "location": {
-      "path": "scinoephile\\llms\\dual_block\\manager.py",
+      "path": "scinoephile/llms/dual_block/manager.py",
       "positions": {
         "begin": {
           "line": 165,
@@ -1086,9 +1181,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `output`",
     "severity": "major",
-    "fingerprint": "289b490412c101fb",
+    "fingerprint": "9364208271df1703",
     "location": {
-      "path": "scinoephile\\llms\\dual_block\\manager.py",
+      "path": "scinoephile/llms/dual_block/manager.py",
       "positions": {
         "begin": {
           "line": 166,
@@ -1105,9 +1200,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `note`",
     "severity": "major",
-    "fingerprint": "d1b2515d8a196d76",
+    "fingerprint": "c35373d4ed7b8622",
     "location": {
-      "path": "scinoephile\\llms\\dual_block\\manager.py",
+      "path": "scinoephile/llms/dual_block/manager.py",
       "positions": {
         "begin": {
           "line": 167,
@@ -1124,9 +1219,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `output_present_but_unmodified_err`",
     "severity": "major",
-    "fingerprint": "656dfe839ace049e",
+    "fingerprint": "b23efd1a44d5761a",
     "location": {
-      "path": "scinoephile\\llms\\dual_block\\manager.py",
+      "path": "scinoephile/llms/dual_block/manager.py",
       "positions": {
         "begin": {
           "line": 171,
@@ -1143,9 +1238,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `output_present_note_missing_err`",
     "severity": "major",
-    "fingerprint": "d371dbdfac053b85",
+    "fingerprint": "b965693032a0254",
     "location": {
-      "path": "scinoephile\\llms\\dual_block\\manager.py",
+      "path": "scinoephile/llms/dual_block/manager.py",
       "positions": {
         "begin": {
           "line": 175,
@@ -1162,9 +1257,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `output_missing_note_present_err`",
     "severity": "major",
-    "fingerprint": "f87bb8ab786b6b4d",
+    "fingerprint": "4a2fe31cf021ecf7",
     "location": {
-      "path": "scinoephile\\llms\\dual_block\\manager.py",
+      "path": "scinoephile/llms/dual_block/manager.py",
       "positions": {
         "begin": {
           "line": 179,
@@ -1181,9 +1276,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Unresolved attribute `size` on type `type[Query]`.",
     "severity": "major",
-    "fingerprint": "419230909165cd76",
+    "fingerprint": "62ec219a4da6e25a",
     "location": {
-      "path": "scinoephile\\llms\\dual_block_gapped\\manager.py",
+      "path": "scinoephile/llms/dual_block_gapped/manager.py",
       "positions": {
         "begin": {
           "line": 72,
@@ -1200,9 +1295,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Unresolved attribute `gaps` on type `type[Query]`.",
     "severity": "major",
-    "fingerprint": "f84232f46dc04be8",
+    "fingerprint": "536b5ebac413fa08",
     "location": {
-      "path": "scinoephile\\llms\\dual_block_gapped\\manager.py",
+      "path": "scinoephile/llms/dual_block_gapped/manager.py",
       "positions": {
         "begin": {
           "line": 73,
@@ -1219,9 +1314,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Unresolved attribute `size` on type `type[Answer]`.",
     "severity": "major",
-    "fingerprint": "180f8c4ce506ff69",
+    "fingerprint": "d84491f46e9cfb34",
     "location": {
-      "path": "scinoephile\\llms\\dual_block_gapped\\manager.py",
+      "path": "scinoephile/llms/dual_block_gapped/manager.py",
       "positions": {
         "begin": {
           "line": 117,
@@ -1238,9 +1333,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Unresolved attribute `gaps` on type `type[Answer]`.",
     "severity": "major",
-    "fingerprint": "6c2b26f2a131e623",
+    "fingerprint": "a2583df17c432b44",
     "location": {
-      "path": "scinoephile\\llms\\dual_block_gapped\\manager.py",
+      "path": "scinoephile/llms/dual_block_gapped/manager.py",
       "positions": {
         "begin": {
           "line": 118,
@@ -1257,9 +1352,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Unresolved attribute `size` on type `type[TestCase]`.",
     "severity": "major",
-    "fingerprint": "1d1ebb0ea2070843",
+    "fingerprint": "502799e386336fdb",
     "location": {
-      "path": "scinoephile\\llms\\dual_block_gapped\\manager.py",
+      "path": "scinoephile/llms/dual_block_gapped/manager.py",
       "positions": {
         "begin": {
           "line": 164,
@@ -1276,9 +1371,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Unresolved attribute `gaps` on type `type[TestCase]`.",
     "severity": "major",
-    "fingerprint": "ca5ce16566f6f9",
+    "fingerprint": "ffbcd936367c5bdb",
     "location": {
-      "path": "scinoephile\\llms\\dual_block_gapped\\manager.py",
+      "path": "scinoephile/llms/dual_block_gapped/manager.py",
       "positions": {
         "begin": {
           "line": 165,
@@ -1295,9 +1390,9 @@
     "check_name": "invalid-assignment",
     "description": "invalid-assignment: Implicit shadowing of function `get_auto_verified`",
     "severity": "major",
-    "fingerprint": "358333fb75cb0aea",
+    "fingerprint": "749055feef8d04da",
     "location": {
-      "path": "scinoephile\\llms\\dual_block_gapped\\manager.py",
+      "path": "scinoephile/llms/dual_block_gapped/manager.py",
       "positions": {
         "begin": {
           "line": 166,
@@ -1314,9 +1409,9 @@
     "check_name": "invalid-assignment",
     "description": "invalid-assignment: Implicit shadowing of function `get_min_difficulty`",
     "severity": "major",
-    "fingerprint": "ec407dc462c8318a",
+    "fingerprint": "6f46b54b12f57e9d",
     "location": {
-      "path": "scinoephile\\llms\\dual_block_gapped\\manager.py",
+      "path": "scinoephile/llms/dual_block_gapped/manager.py",
       "positions": {
         "begin": {
           "line": 167,
@@ -1331,11 +1426,49 @@
   },
   {
     "check_name": "unresolved-attribute",
+    "description": "unresolved-attribute: Object of type `SSAEvent` has no attribute `text_with_newline`",
+    "severity": "major",
+    "fingerprint": "6cb264f99311148e",
+    "location": {
+      "path": "scinoephile/llms/dual_block_gapped/processor.py",
+      "positions": {
+        "begin": {
+          "line": 75,
+          "column": 31
+        },
+        "end": {
+          "line": 75,
+          "column": 65
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-attribute",
+    "description": "unresolved-attribute: Object of type `SSAEvent` has no attribute `text_with_newline`",
+    "severity": "major",
+    "fingerprint": "b63b0ae9f76e67d9",
+    "location": {
+      "path": "scinoephile/llms/dual_block_gapped/processor.py",
+      "positions": {
+        "begin": {
+          "line": 79,
+          "column": 27
+        },
+        "end": {
+          "line": 79,
+          "column": 61
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_1`",
     "severity": "major",
-    "fingerprint": "b88ad2d1e0be4e15",
+    "fingerprint": "55d4b752c1dc8448",
     "location": {
-      "path": "scinoephile\\llms\\dual_multi_single\\manager.py",
+      "path": "scinoephile/llms/dual_multi_single/manager.py",
       "positions": {
         "begin": {
           "line": 126,
@@ -1352,9 +1485,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2`",
     "severity": "major",
-    "fingerprint": "53d38955bc9813ba",
+    "fingerprint": "a068a22c74fc83c6",
     "location": {
-      "path": "scinoephile\\llms\\dual_multi_single\\manager.py",
+      "path": "scinoephile/llms/dual_multi_single/manager.py",
       "positions": {
         "begin": {
           "line": 127,
@@ -1371,9 +1504,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_1_missing_err`",
     "severity": "major",
-    "fingerprint": "7190bc555ee3602e",
+    "fingerprint": "1a9493da04f45405",
     "location": {
-      "path": "scinoephile\\llms\\dual_multi_single\\manager.py",
+      "path": "scinoephile/llms/dual_multi_single/manager.py",
       "positions": {
         "begin": {
           "line": 129,
@@ -1390,9 +1523,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2_missing_err`",
     "severity": "major",
-    "fingerprint": "13194ee08918fbe6",
+    "fingerprint": "f6221e04367788e6",
     "location": {
-      "path": "scinoephile\\llms\\dual_multi_single\\manager.py",
+      "path": "scinoephile/llms/dual_multi_single/manager.py",
       "positions": {
         "begin": {
           "line": 131,
@@ -1409,9 +1542,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `output`",
     "severity": "major",
-    "fingerprint": "bb1db0f6c365bbe0",
+    "fingerprint": "945aadd5b83018c5",
     "location": {
-      "path": "scinoephile\\llms\\dual_multi_single\\manager.py",
+      "path": "scinoephile/llms/dual_multi_single/manager.py",
       "positions": {
         "begin": {
           "line": 143,
@@ -1428,9 +1561,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `output_missing_err`",
     "severity": "major",
-    "fingerprint": "a7c35fea9b176079",
+    "fingerprint": "7a5cf5f2714aeaf6",
     "location": {
-      "path": "scinoephile\\llms\\dual_multi_single\\manager.py",
+      "path": "scinoephile/llms/dual_multi_single/manager.py",
       "positions": {
         "begin": {
           "line": 145,
@@ -1447,9 +1580,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2_sub_1_shifted`",
     "severity": "major",
-    "fingerprint": "c75bc78d363063c5",
+    "fingerprint": "e06e8b66f46e9bff",
     "location": {
-      "path": "scinoephile\\llms\\dual_pair\\manager.py",
+      "path": "scinoephile/llms/dual_pair/manager.py",
       "positions": {
         "begin": {
           "line": 140,
@@ -1466,9 +1599,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2_sub_2_shifted`",
     "severity": "major",
-    "fingerprint": "5b378f5369bc8c95",
+    "fingerprint": "76d6d68a8615f0c5",
     "location": {
-      "path": "scinoephile\\llms\\dual_pair\\manager.py",
+      "path": "scinoephile/llms/dual_pair/manager.py",
       "positions": {
         "begin": {
           "line": 143,
@@ -1485,9 +1618,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2_sub_1`",
     "severity": "major",
-    "fingerprint": "e7a0f5a7ba1e4be6",
+    "fingerprint": "41a79098a69f1aae",
     "location": {
-      "path": "scinoephile\\llms\\dual_pair\\manager.py",
+      "path": "scinoephile/llms/dual_pair/manager.py",
       "positions": {
         "begin": {
           "line": 158,
@@ -1504,9 +1637,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2_sub_2`",
     "severity": "major",
-    "fingerprint": "ebc39e2ecbe94d55",
+    "fingerprint": "320dcd155d15bf82",
     "location": {
-      "path": "scinoephile\\llms\\dual_pair\\manager.py",
+      "path": "scinoephile/llms/dual_pair/manager.py",
       "positions": {
         "begin": {
           "line": 159,
@@ -1523,9 +1656,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2_sub_1_sub_2_missing_err`",
     "severity": "major",
-    "fingerprint": "aff57d9704f792af",
+    "fingerprint": "cb4ed859f31538eb",
     "location": {
-      "path": "scinoephile\\llms\\dual_pair\\manager.py",
+      "path": "scinoephile/llms/dual_pair/manager.py",
       "positions": {
         "begin": {
           "line": 161,
@@ -1542,9 +1675,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2_sub_1`",
     "severity": "major",
-    "fingerprint": "ecb0cba22870f42f",
+    "fingerprint": "84b473adfe88647c",
     "location": {
-      "path": "scinoephile\\llms\\dual_pair\\manager.py",
+      "path": "scinoephile/llms/dual_pair/manager.py",
       "positions": {
         "begin": {
           "line": 176,
@@ -1561,9 +1694,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2_sub_2`",
     "severity": "major",
-    "fingerprint": "f3062090126be208",
+    "fingerprint": "72596d9b645224e3",
     "location": {
-      "path": "scinoephile\\llms\\dual_pair\\manager.py",
+      "path": "scinoephile/llms/dual_pair/manager.py",
       "positions": {
         "begin": {
           "line": 177,
@@ -1580,9 +1713,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2_sub_1_shifted`",
     "severity": "major",
-    "fingerprint": "a80709be2b579de0",
+    "fingerprint": "987dd43063aa32a9",
     "location": {
-      "path": "scinoephile\\llms\\dual_pair\\manager.py",
+      "path": "scinoephile/llms/dual_pair/manager.py",
       "positions": {
         "begin": {
           "line": 179,
@@ -1599,9 +1732,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2_sub_2_shifted`",
     "severity": "major",
-    "fingerprint": "26a5678493f074f6",
+    "fingerprint": "8dacbe421e0b9cf8",
     "location": {
-      "path": "scinoephile\\llms\\dual_pair\\manager.py",
+      "path": "scinoephile/llms/dual_pair/manager.py",
       "positions": {
         "begin": {
           "line": 182,
@@ -1618,9 +1751,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2_sub_1_sub_2_unchanged_err`",
     "severity": "major",
-    "fingerprint": "7971f1c29db0610a",
+    "fingerprint": "eca81c1dd6e665d5",
     "location": {
-      "path": "scinoephile\\llms\\dual_pair\\manager.py",
+      "path": "scinoephile/llms/dual_pair/manager.py",
       "positions": {
         "begin": {
           "line": 185,
@@ -1637,9 +1770,9 @@
     "check_name": "unsupported-operator",
     "description": "unsupported-operator: Unsupported `+` operation",
     "severity": "major",
-    "fingerprint": "b084007225f89daa",
+    "fingerprint": "203054bb6f1ada88",
     "location": {
-      "path": "scinoephile\\llms\\dual_pair\\manager.py",
+      "path": "scinoephile/llms/dual_pair/manager.py",
       "positions": {
         "begin": {
           "line": 187,
@@ -1656,9 +1789,9 @@
     "check_name": "unsupported-operator",
     "description": "unsupported-operator: Unsupported `+` operation",
     "severity": "major",
-    "fingerprint": "35bfa4ee937c8cea",
+    "fingerprint": "b4d79b992afdc511",
     "location": {
-      "path": "scinoephile\\llms\\dual_pair\\manager.py",
+      "path": "scinoephile/llms/dual_pair/manager.py",
       "positions": {
         "begin": {
           "line": 188,
@@ -1675,9 +1808,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2_chars_changed_err`",
     "severity": "major",
-    "fingerprint": "419dc73a1cda9aaf",
+    "fingerprint": "8b741954fb18c34",
     "location": {
-      "path": "scinoephile\\llms\\dual_pair\\manager.py",
+      "path": "scinoephile/llms/dual_pair/manager.py",
       "positions": {
         "begin": {
           "line": 191,
@@ -1694,9 +1827,9 @@
     "check_name": "invalid-return-type",
     "description": "invalid-return-type: Return type does not match returned value",
     "severity": "major",
-    "fingerprint": "cde79630ce02af45",
+    "fingerprint": "77ca567ceced58ef",
     "location": {
-      "path": "scinoephile\\llms\\dual_single\\manager.py",
+      "path": "scinoephile/llms/dual_single/manager.py",
       "positions": {
         "begin": {
           "line": 54,
@@ -1713,9 +1846,9 @@
     "check_name": "invalid-return-type",
     "description": "invalid-return-type: Return type does not match returned value",
     "severity": "major",
-    "fingerprint": "a9940aefc74b7273",
+    "fingerprint": "f27ea7d00f0a5e1b",
     "location": {
-      "path": "scinoephile\\llms\\dual_single\\manager.py",
+      "path": "scinoephile/llms/dual_single/manager.py",
       "positions": {
         "begin": {
           "line": 87,
@@ -1732,9 +1865,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_1`",
     "severity": "major",
-    "fingerprint": "cda9a805bb805eb5",
+    "fingerprint": "97193bfa3fecbf73",
     "location": {
-      "path": "scinoephile\\llms\\dual_single\\manager.py",
+      "path": "scinoephile/llms/dual_single/manager.py",
       "positions": {
         "begin": {
           "line": 98,
@@ -1751,9 +1884,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2`",
     "severity": "major",
-    "fingerprint": "8bb3bb1b153dd7a",
+    "fingerprint": "43896317ae48ef2e",
     "location": {
-      "path": "scinoephile\\llms\\dual_single\\manager.py",
+      "path": "scinoephile/llms/dual_single/manager.py",
       "positions": {
         "begin": {
           "line": 99,
@@ -1770,9 +1903,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_1_missing_err`",
     "severity": "major",
-    "fingerprint": "b4a437e8845bacde",
+    "fingerprint": "8cdacd54444a8c64",
     "location": {
-      "path": "scinoephile\\llms\\dual_single\\manager.py",
+      "path": "scinoephile/llms/dual_single/manager.py",
       "positions": {
         "begin": {
           "line": 101,
@@ -1789,9 +1922,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2_missing_err`",
     "severity": "major",
-    "fingerprint": "7fc3381010897f38",
+    "fingerprint": "b1f700767a2be4fa",
     "location": {
-      "path": "scinoephile\\llms\\dual_single\\manager.py",
+      "path": "scinoephile/llms/dual_single/manager.py",
       "positions": {
         "begin": {
           "line": 103,
@@ -1808,9 +1941,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_1_src_2_equal_err`",
     "severity": "major",
-    "fingerprint": "4152c672fe93a27",
+    "fingerprint": "abb9fbd2ae147bba",
     "location": {
-      "path": "scinoephile\\llms\\dual_single\\manager.py",
+      "path": "scinoephile/llms/dual_single/manager.py",
       "positions": {
         "begin": {
           "line": 105,
@@ -1827,9 +1960,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `output`",
     "severity": "major",
-    "fingerprint": "6b1a56cd912d5228",
+    "fingerprint": "a99aad49936c7c1b",
     "location": {
-      "path": "scinoephile\\llms\\dual_single\\manager.py",
+      "path": "scinoephile/llms/dual_single/manager.py",
       "positions": {
         "begin": {
           "line": 117,
@@ -1846,9 +1979,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `note`",
     "severity": "major",
-    "fingerprint": "e3f19477b469e85",
+    "fingerprint": "c54b0d99bc867e09",
     "location": {
-      "path": "scinoephile\\llms\\dual_single\\manager.py",
+      "path": "scinoephile/llms/dual_single/manager.py",
       "positions": {
         "begin": {
           "line": 118,
@@ -1865,9 +1998,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_1`",
     "severity": "major",
-    "fingerprint": "ed3d59436bd20e0e",
+    "fingerprint": "e541a7031d144f4d",
     "location": {
-      "path": "scinoephile\\llms\\dual_single\\ocr_fusion\\manager.py",
+      "path": "scinoephile/llms/dual_single/ocr_fusion/manager.py",
       "positions": {
         "begin": {
           "line": 38,
@@ -1884,9 +2017,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2`",
     "severity": "major",
-    "fingerprint": "6b3851ebe9018ee5",
+    "fingerprint": "91b9b926082a5fa",
     "location": {
-      "path": "scinoephile\\llms\\dual_single\\ocr_fusion\\manager.py",
+      "path": "scinoephile/llms/dual_single/ocr_fusion/manager.py",
       "positions": {
         "begin": {
           "line": 39,
@@ -1903,9 +2036,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `output`",
     "severity": "major",
-    "fingerprint": "19653aac470808e2",
+    "fingerprint": "fc3914c285c43203",
     "location": {
-      "path": "scinoephile\\llms\\dual_single\\ocr_fusion\\manager.py",
+      "path": "scinoephile/llms/dual_single/ocr_fusion/manager.py",
       "positions": {
         "begin": {
           "line": 40,
@@ -1922,9 +2055,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `output`",
     "severity": "major",
-    "fingerprint": "f383747d09f5daa3",
+    "fingerprint": "cb3ae72015dcc171",
     "location": {
-      "path": "scinoephile\\llms\\dual_single\\ocr_fusion\\manager.py",
+      "path": "scinoephile/llms/dual_single/ocr_fusion/manager.py",
       "positions": {
         "begin": {
           "line": 66,
@@ -1941,9 +2074,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_1`",
     "severity": "major",
-    "fingerprint": "6fc72a47ce97f9c8",
+    "fingerprint": "c5102eb83974ac75",
     "location": {
-      "path": "scinoephile\\llms\\dual_single\\ocr_fusion\\processor.py",
+      "path": "scinoephile/llms/dual_single/ocr_fusion/processor.py",
       "positions": {
         "begin": {
           "line": 70,
@@ -1960,9 +2093,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2`",
     "severity": "major",
-    "fingerprint": "96def4f07be4b7aa",
+    "fingerprint": "cd9ab6d4a09d9640",
     "location": {
-      "path": "scinoephile\\llms\\dual_single\\ocr_fusion\\processor.py",
+      "path": "scinoephile/llms/dual_single/ocr_fusion/processor.py",
       "positions": {
         "begin": {
           "line": 77,
@@ -1979,9 +2112,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_1`",
     "severity": "major",
-    "fingerprint": "fcfa98884f454ce3",
+    "fingerprint": "95ddc491e1001f66",
     "location": {
-      "path": "scinoephile\\llms\\dual_single\\ocr_fusion\\processor.py",
+      "path": "scinoephile/llms/dual_single/ocr_fusion/processor.py",
       "positions": {
         "begin": {
           "line": 86,
@@ -1998,9 +2131,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2`",
     "severity": "major",
-    "fingerprint": "7e9d1d0d4a8114f8",
+    "fingerprint": "1807a87a3de445ee",
     "location": {
-      "path": "scinoephile\\llms\\dual_single\\ocr_fusion\\processor.py",
+      "path": "scinoephile/llms/dual_single/ocr_fusion/processor.py",
       "positions": {
         "begin": {
           "line": 87,
@@ -2017,9 +2150,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `output`",
     "severity": "major",
-    "fingerprint": "59df94dadcc87124",
+    "fingerprint": "b151dea4aa89b7e9",
     "location": {
-      "path": "scinoephile\\llms\\dual_single\\ocr_fusion\\processor.py",
+      "path": "scinoephile/llms/dual_single/ocr_fusion/processor.py",
       "positions": {
         "begin": {
           "line": 93,
@@ -2036,9 +2169,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Unresolved attribute `size` on type `type[Query]`.",
     "severity": "major",
-    "fingerprint": "9fc1d81b8583b856",
+    "fingerprint": "1b1752e6c4875815",
     "location": {
-      "path": "scinoephile\\llms\\mono_block\\manager.py",
+      "path": "scinoephile/llms/mono_block/manager.py",
       "positions": {
         "begin": {
           "line": 57,
@@ -2055,9 +2188,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Unresolved attribute `size` on type `type[Answer]`.",
     "severity": "major",
-    "fingerprint": "e16f203ed9c197df",
+    "fingerprint": "c60a545726a6deff",
     "location": {
-      "path": "scinoephile\\llms\\mono_block\\manager.py",
+      "path": "scinoephile/llms/mono_block/manager.py",
       "positions": {
         "begin": {
           "line": 92,
@@ -2074,9 +2207,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Unresolved attribute `size` on type `type[TestCase]`.",
     "severity": "major",
-    "fingerprint": "a0a3bb11119eeafe",
+    "fingerprint": "813bf2eba925032a",
     "location": {
-      "path": "scinoephile\\llms\\mono_block\\manager.py",
+      "path": "scinoephile/llms/mono_block/manager.py",
       "positions": {
         "begin": {
           "line": 126,
@@ -2093,9 +2226,9 @@
     "check_name": "invalid-assignment",
     "description": "invalid-assignment: Implicit shadowing of function `get_auto_verified`",
     "severity": "major",
-    "fingerprint": "d189f1d5b5f1e1d1",
+    "fingerprint": "9b39d87be3e5fb48",
     "location": {
-      "path": "scinoephile\\llms\\mono_block\\manager.py",
+      "path": "scinoephile/llms/mono_block/manager.py",
       "positions": {
         "begin": {
           "line": 127,
@@ -2112,9 +2245,9 @@
     "check_name": "invalid-assignment",
     "description": "invalid-assignment: Implicit shadowing of function `get_min_difficulty`",
     "severity": "major",
-    "fingerprint": "f97a61cdb15c47b3",
+    "fingerprint": "8739675d6d32e4d3",
     "location": {
-      "path": "scinoephile\\llms\\mono_block\\manager.py",
+      "path": "scinoephile/llms/mono_block/manager.py",
       "positions": {
         "begin": {
           "line": 128,
@@ -2131,9 +2264,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `output`",
     "severity": "major",
-    "fingerprint": "4caa37da9073d8cc",
+    "fingerprint": "5d424495da6248b8",
     "location": {
-      "path": "scinoephile\\llms\\mono_block\\manager.py",
+      "path": "scinoephile/llms/mono_block/manager.py",
       "positions": {
         "begin": {
           "line": 165,
@@ -2150,9 +2283,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `TestCase` has no attribute `size`",
     "severity": "major",
-    "fingerprint": "8591b45e727c9023",
+    "fingerprint": "567392a156924d1d",
     "location": {
-      "path": "scinoephile\\llms\\mono_block\\manager.py",
+      "path": "scinoephile/llms/mono_block/manager.py",
       "positions": {
         "begin": {
           "line": 166,
@@ -2169,9 +2302,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `TestCase` has no attribute `size`",
     "severity": "major",
-    "fingerprint": "b7da5fb6e2899c63",
+    "fingerprint": "bc193a78b3702eae",
     "location": {
-      "path": "scinoephile\\llms\\mono_block\\manager.py",
+      "path": "scinoephile/llms/mono_block/manager.py",
       "positions": {
         "begin": {
           "line": 183,
@@ -2188,9 +2321,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `input`",
     "severity": "major",
-    "fingerprint": "99795671862774fa",
+    "fingerprint": "a4d392f1cc79ed65",
     "location": {
-      "path": "scinoephile\\llms\\mono_block\\manager.py",
+      "path": "scinoephile/llms/mono_block/manager.py",
       "positions": {
         "begin": {
           "line": 184,
@@ -2207,9 +2340,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `output`",
     "severity": "major",
-    "fingerprint": "b20366a190b3b401",
+    "fingerprint": "acdc34b14e7a900e",
     "location": {
-      "path": "scinoephile\\llms\\mono_block\\manager.py",
+      "path": "scinoephile/llms/mono_block/manager.py",
       "positions": {
         "begin": {
           "line": 185,
@@ -2226,9 +2359,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `note`",
     "severity": "major",
-    "fingerprint": "a160039e3fb2ccbd",
+    "fingerprint": "875617eec0f6076b",
     "location": {
-      "path": "scinoephile\\llms\\mono_block\\manager.py",
+      "path": "scinoephile/llms/mono_block/manager.py",
       "positions": {
         "begin": {
           "line": 186,
@@ -2245,9 +2378,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `output_unmodified_err`",
     "severity": "major",
-    "fingerprint": "97d61f2c5e69242b",
+    "fingerprint": "e98a801d88b2ca51",
     "location": {
-      "path": "scinoephile\\llms\\mono_block\\manager.py",
+      "path": "scinoephile/llms/mono_block/manager.py",
       "positions": {
         "begin": {
           "line": 189,
@@ -2264,9 +2397,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `note_missing_err`",
     "severity": "major",
-    "fingerprint": "aceac33040aa16da",
+    "fingerprint": "7565c379a73cf441",
     "location": {
-      "path": "scinoephile\\llms\\mono_block\\manager.py",
+      "path": "scinoephile/llms/mono_block/manager.py",
       "positions": {
         "begin": {
           "line": 191,
@@ -2283,9 +2416,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `output_missing_err`",
     "severity": "major",
-    "fingerprint": "97017581b224525e",
+    "fingerprint": "3f018daad0f58a93",
     "location": {
-      "path": "scinoephile\\llms\\mono_block\\manager.py",
+      "path": "scinoephile/llms/mono_block/manager.py",
       "positions": {
         "begin": {
           "line": 193,
@@ -2302,9 +2435,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `output`",
     "severity": "major",
-    "fingerprint": "4be9dc1615c61293",
+    "fingerprint": "2073589832b88216",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\proofreading\\manager.py",
+      "path": "scinoephile/multilang/yue_zho/proofreading/manager.py",
       "positions": {
         "begin": {
           "line": 34,
@@ -2321,9 +2454,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `note`",
     "severity": "major",
-    "fingerprint": "9ec14dddfe07b4f1",
+    "fingerprint": "c0d6166f8f867997",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\proofreading\\manager.py",
+      "path": "scinoephile/multilang/yue_zho/proofreading/manager.py",
       "positions": {
         "begin": {
           "line": 35,
@@ -2340,9 +2473,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `output_missing_note_missing_err`",
     "severity": "major",
-    "fingerprint": "e72449b49ba59b78",
+    "fingerprint": "36a70a018fe67e0f",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\proofreading\\manager.py",
+      "path": "scinoephile/multilang/yue_zho/proofreading/manager.py",
       "positions": {
         "begin": {
           "line": 37,
@@ -2359,9 +2492,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_1`",
     "severity": "major",
-    "fingerprint": "60bc987fd8d8f0d1",
+    "fingerprint": "601cf57cb9a53f05",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\proofreading\\manager.py",
+      "path": "scinoephile/multilang/yue_zho/proofreading/manager.py",
       "positions": {
         "begin": {
           "line": 52,
@@ -2378,9 +2511,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `output`",
     "severity": "major",
-    "fingerprint": "150cd72b440b082e",
+    "fingerprint": "d108a3c6a4c52f13",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\proofreading\\manager.py",
+      "path": "scinoephile/multilang/yue_zho/proofreading/manager.py",
       "positions": {
         "begin": {
           "line": 53,
@@ -2395,11 +2528,30 @@
   },
   {
     "check_name": "unresolved-attribute",
+    "description": "unresolved-attribute: Object of type `SSAEvent` has no attribute `text_with_newline`",
+    "severity": "major",
+    "fingerprint": "f741217c674d712a",
+    "location": {
+      "path": "scinoephile/multilang/yue_zho/proofreading/processor.py",
+      "positions": {
+        "begin": {
+          "line": 74,
+          "column": 27
+        },
+        "end": {
+          "line": 74,
+          "column": 52
+        }
+      }
+    }
+  },
+  {
+    "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2_sub_1`",
     "severity": "major",
-    "fingerprint": "f8cef55cba12df8c",
+    "fingerprint": "bf064640bde4fd7c",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/aligner.py",
       "positions": {
         "begin": {
           "line": 145,
@@ -2416,9 +2568,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2_sub_2`",
     "severity": "major",
-    "fingerprint": "d08980f34b98b2aa",
+    "fingerprint": "b57715641805b668",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/aligner.py",
       "positions": {
         "begin": {
           "line": 146,
@@ -2435,9 +2587,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2_sub_1_shifted`",
     "severity": "major",
-    "fingerprint": "6ec1896e180a7814",
+    "fingerprint": "7afd1be4af927f1a",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/aligner.py",
       "positions": {
         "begin": {
           "line": 147,
@@ -2454,9 +2606,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2_sub_2_shifted`",
     "severity": "major",
-    "fingerprint": "c7e9ac8557c93efc",
+    "fingerprint": "a522981d88c4910f",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/aligner.py",
       "positions": {
         "begin": {
           "line": 148,
@@ -2473,9 +2625,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `len` is incorrect",
     "severity": "major",
-    "fingerprint": "5699fe64bdf2f349",
+    "fingerprint": "1a691f940959cafa",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/aligner.py",
       "positions": {
         "begin": {
           "line": 154,
@@ -2492,9 +2644,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `len` is incorrect",
     "severity": "major",
-    "fingerprint": "27fb7b69b0e22363",
+    "fingerprint": "d112dfc209fdbde8",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/aligner.py",
       "positions": {
         "begin": {
           "line": 154,
@@ -2511,9 +2663,9 @@
     "check_name": "non-subscriptable",
     "description": "non-subscriptable: Cannot subscript object of type `None` with no `__getitem__` method",
     "severity": "major",
-    "fingerprint": "72e5ae9e695e8045",
+    "fingerprint": "92b6b420d243e3c8",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/aligner.py",
       "positions": {
         "begin": {
           "line": 156,
@@ -2530,9 +2682,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `len` is incorrect",
     "severity": "major",
-    "fingerprint": "1094e892242ebcbb",
+    "fingerprint": "ff0245d6159a1bec",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/aligner.py",
       "positions": {
         "begin": {
           "line": 156,
@@ -2549,9 +2701,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `len` is incorrect",
     "severity": "major",
-    "fingerprint": "25e2e5d9cd7903e9",
+    "fingerprint": "81c78e05020e28a5",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/aligner.py",
       "positions": {
         "begin": {
           "line": 188,
@@ -2568,9 +2720,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `len` is incorrect",
     "severity": "major",
-    "fingerprint": "76b2106e2d85e6ed",
+    "fingerprint": "fe69975ad079a850",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/aligner.py",
       "positions": {
         "begin": {
           "line": 188,
@@ -2587,9 +2739,9 @@
     "check_name": "non-subscriptable",
     "description": "non-subscriptable: Cannot subscript object of type `None` with no `__getitem__` method",
     "severity": "major",
-    "fingerprint": "3145ddcf63a15ab9",
+    "fingerprint": "75392474e2cb4d8",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/aligner.py",
       "positions": {
         "begin": {
           "line": 190,
@@ -2606,9 +2758,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `len` is incorrect",
     "severity": "major",
-    "fingerprint": "3a9e5d88aac73495",
+    "fingerprint": "5792b8d8a8c74dec",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/aligner.py",
       "positions": {
         "begin": {
           "line": 190,
@@ -2625,9 +2777,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `len` is incorrect",
     "severity": "major",
-    "fingerprint": "834f8f0493b19090",
+    "fingerprint": "7e7e638e261978bb",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/aligner.py",
       "positions": {
         "begin": {
           "line": 190,
@@ -2644,9 +2796,9 @@
     "check_name": "possibly-missing-attribute",
     "description": "possibly-missing-attribute: Attribute `output` may be missing on object of type `type[Prompt] | Unknown`",
     "severity": "minor",
-    "fingerprint": "cb64ce90347b3073",
+    "fingerprint": "dfc5f3a076e891fc",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/aligner.py",
       "positions": {
         "begin": {
           "line": 285,
@@ -2663,9 +2815,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `get_sub_merged` is incorrect",
     "severity": "major",
-    "fingerprint": "cdf484d47b9396ac",
+    "fingerprint": "77fdb86cd1f7b5c5",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\aligner.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/aligner.py",
       "positions": {
         "begin": {
           "line": 286,
@@ -2682,9 +2834,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_2`",
     "severity": "major",
-    "fingerprint": "35f0941f8d75a807",
+    "fingerprint": "72da74f421dddf4b",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\merging\\manager.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/merging/manager.py",
       "positions": {
         "begin": {
           "line": 40,
@@ -2701,9 +2853,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `output`",
     "severity": "major",
-    "fingerprint": "30c69a95a49b7edd",
+    "fingerprint": "e9fa4a8dfeec6d58",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\merging\\manager.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/merging/manager.py",
       "positions": {
         "begin": {
           "line": 41,
@@ -2720,9 +2872,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `remove_non_punc_and_whitespace` is incorrect",
     "severity": "major",
-    "fingerprint": "e46284a7b18474c",
+    "fingerprint": "91103956bf9691a2",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\merging\\manager.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/merging/manager.py",
       "positions": {
         "begin": {
           "line": 42,
@@ -2739,9 +2891,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `remove_non_punc_and_whitespace` is incorrect",
     "severity": "major",
-    "fingerprint": "dd77dbc48a25c5fd",
+    "fingerprint": "5ccb98c7c464d326",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\merging\\manager.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/merging/manager.py",
       "positions": {
         "begin": {
           "line": 44,
@@ -2758,9 +2910,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `remove_non_punc_and_whitespace` is incorrect",
     "severity": "major",
-    "fingerprint": "9dcea6dfbbf21301",
+    "fingerprint": "d62cbb3de4506c1d",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\merging\\manager.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/merging/manager.py",
       "positions": {
         "begin": {
           "line": 45,
@@ -2777,9 +2929,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `src_1`",
     "severity": "major",
-    "fingerprint": "a5701db30ba87c1e",
+    "fingerprint": "2f2262ef2be4a622",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\merging\\manager.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/merging/manager.py",
       "positions": {
         "begin": {
           "line": 62,
@@ -2796,9 +2948,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `output`",
     "severity": "major",
-    "fingerprint": "48db219f6958e98c",
+    "fingerprint": "b0c621848b958ae5",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\merging\\manager.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/merging/manager.py",
       "positions": {
         "begin": {
           "line": 63,
@@ -2815,9 +2967,9 @@
     "check_name": "not-iterable",
     "description": "not-iterable: Object of type `Any | None` may not be iterable",
     "severity": "major",
-    "fingerprint": "1f6a712ed1e9e759",
+    "fingerprint": "61549e2b296bf9fd",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\merging\\manager.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/merging/manager.py",
       "positions": {
         "begin": {
           "line": 65,
@@ -2834,9 +2986,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to function `remove_punc_and_whitespace` is incorrect",
     "severity": "major",
-    "fingerprint": "27dc0809ce135875",
+    "fingerprint": "75f51463dc982f7d",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\merging\\manager.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/merging/manager.py",
       "positions": {
         "begin": {
           "line": 66,
@@ -2853,9 +3005,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `type[Prompt]` has no attribute `yuewen_chars_changed_err`",
     "severity": "major",
-    "fingerprint": "d1885c6ed34bfe37",
+    "fingerprint": "cd2af196c05f34b8",
     "location": {
-      "path": "scinoephile\\multilang\\yue_zho\\transcription\\merging\\manager.py",
+      "path": "scinoephile/multilang/yue_zho/transcription/merging/manager.py",
       "positions": {
         "begin": {
           "line": 69,
@@ -2872,9 +3024,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `parse` is incorrect",
     "severity": "major",
-    "fingerprint": "969189a463e1a321",
+    "fingerprint": "5bea5acb095cfd54",
     "location": {
-      "path": "scinoephile\\open_ai\\openai_provider.py",
+      "path": "scinoephile/open_ai/openai_provider.py",
       "positions": {
         "begin": {
           "line": 57,
@@ -2891,9 +3043,9 @@
     "check_name": "invalid-return-type",
     "description": "invalid-return-type: Return type does not match returned value",
     "severity": "major",
-    "fingerprint": "6f352622c8e5d2c2",
+    "fingerprint": "27d8d89f52973646",
     "location": {
-      "path": "scinoephile\\open_ai\\openai_provider.py",
+      "path": "scinoephile/open_ai/openai_provider.py",
       "positions": {
         "begin": {
           "line": 68,
@@ -2910,9 +3062,9 @@
     "check_name": "invalid-argument-type",
     "description": "invalid-argument-type: Argument to bound method `parse` is incorrect",
     "severity": "major",
-    "fingerprint": "df5f5e6da70dc2cf",
+    "fingerprint": "86742192238bb5e5",
     "location": {
-      "path": "scinoephile\\open_ai\\openai_provider.py",
+      "path": "scinoephile/open_ai/openai_provider.py",
       "positions": {
         "begin": {
           "line": 104,
@@ -2929,9 +3081,9 @@
     "check_name": "invalid-return-type",
     "description": "invalid-return-type: Return type does not match returned value",
     "severity": "major",
-    "fingerprint": "9a80c5986198341f",
+    "fingerprint": "a0830de3f714f210",
     "location": {
-      "path": "scinoephile\\open_ai\\openai_provider.py",
+      "path": "scinoephile/open_ai/openai_provider.py",
       "positions": {
         "begin": {
           "line": 115,
@@ -2948,9 +3100,9 @@
     "check_name": "invalid-assignment",
     "description": "invalid-assignment: Object of type `Path` is not assignable to `str`",
     "severity": "major",
-    "fingerprint": "d05a0c03ba940e87",
+    "fingerprint": "3082a4b0c48182d",
     "location": {
-      "path": "test\\cli\\test_process_cli.py",
+      "path": "test/cli/test_process_cli.py",
       "positions": {
         "begin": {
           "line": 51,
@@ -2967,9 +3119,9 @@
     "check_name": "invalid-assignment",
     "description": "invalid-assignment: Object of type `Path` is not assignable to `str`",
     "severity": "major",
-    "fingerprint": "1e70747685dcbf1f",
+    "fingerprint": "9907285e98418d0b",
     "location": {
-      "path": "test\\cli\\test_process_cli.py",
+      "path": "test/cli/test_process_cli.py",
       "positions": {
         "begin": {
           "line": 100,
@@ -2986,9 +3138,9 @@
     "check_name": "invalid-assignment",
     "description": "invalid-assignment: Object of type `Path` is not assignable to `str`",
     "severity": "major",
-    "fingerprint": "73b1c7b5d96b15d8",
+    "fingerprint": "77e730927e2c8e9e",
     "location": {
-      "path": "test\\cli\\test_process_cli.py",
+      "path": "test/cli/test_process_cli.py",
       "positions": {
         "begin": {
           "line": 146,
@@ -3005,9 +3157,9 @@
     "check_name": "invalid-assignment",
     "description": "invalid-assignment: Object of type `Path` is not assignable to `str`",
     "severity": "major",
-    "fingerprint": "923bba4c4c4316a1",
+    "fingerprint": "48b092dabdba46f4",
     "location": {
-      "path": "test\\cli\\test_process_cli.py",
+      "path": "test/cli/test_process_cli.py",
       "positions": {
         "begin": {
           "line": 147,
@@ -3024,66 +3176,28 @@
     "check_name": "invalid-parameter-default",
     "description": "invalid-parameter-default: Default value of type `<class 'YueZhoHansMergingPrompt'>` is not assignable to annotated parameter type `type[DualBlockGappedPrompt]`",
     "severity": "major",
-    "fingerprint": "a69dd17ebf0595cc",
+    "fingerprint": "441376706fe590b0",
     "location": {
-      "path": "test\\data\\kob\\__init__.py",
+      "path": "test/data/kob/__init__.py",
       "positions": {
         "begin": {
-          "line": 194,
+          "line": 199,
           "column": 5
         },
         "end": {
-          "line": 194,
+          "line": 199,
           "column": 70
         }
       }
     }
   },
   {
-    "check_name": "possibly-missing-attribute",
-    "description": "possibly-missing-attribute: Attribute `setdefault` may be missing on object of type `Any | None`",
-    "severity": "minor",
-    "fingerprint": "4c0dabece959ad21",
-    "location": {
-      "path": "test\\data\\ocr.py",
-      "positions": {
-        "begin": {
-          "line": 347,
-          "column": 9
-        },
-        "end": {
-          "line": 347,
-          "column": 28
-        }
-      }
-    }
-  },
-  {
-    "check_name": "invalid-argument-type",
-    "description": "invalid-argument-type: Argument expression after ** must be a mapping type",
-    "severity": "major",
-    "fingerprint": "be9211f6cf4fdc39",
-    "location": {
-      "path": "test\\data\\ocr.py",
-      "positions": {
-        "begin": {
-          "line": 354,
-          "column": 13
-        },
-        "end": {
-          "line": 354,
-          "column": 23
-        }
-      }
-    }
-  },
-  {
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `SSAEvent` has no attribute `img`",
     "severity": "major",
-    "fingerprint": "f5ea2b64d3a00615",
+    "fingerprint": "c2b811ff5c9a28cc",
     "location": {
-      "path": "test\\image\\subtitles\\test_image_series.py",
+      "path": "test/image/subtitles/test_image_series.py",
       "positions": {
         "begin": {
           "line": 39,
@@ -3100,9 +3214,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `SSAEvent` has no attribute `img`",
     "severity": "major",
-    "fingerprint": "a912038cf602cd84",
+    "fingerprint": "22070b2102cc47f0",
     "location": {
-      "path": "test\\image\\subtitles\\test_image_series.py",
+      "path": "test/image/subtitles/test_image_series.py",
       "positions": {
         "begin": {
           "line": 43,
@@ -3119,9 +3233,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `SSAEvent` has no attribute `img`",
     "severity": "major",
-    "fingerprint": "f39fd4fefddd9c17",
+    "fingerprint": "645081272edcbcfb",
     "location": {
-      "path": "test\\image\\subtitles\\test_image_series.py",
+      "path": "test/image/subtitles/test_image_series.py",
       "positions": {
         "begin": {
           "line": 44,
@@ -3138,9 +3252,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `SSAEvent` has no attribute `img`",
     "severity": "major",
-    "fingerprint": "f378b5e1cfa7be29",
+    "fingerprint": "44ef283e868a7ed3",
     "location": {
-      "path": "test\\image\\subtitles\\test_image_series.py",
+      "path": "test/image/subtitles/test_image_series.py",
       "positions": {
         "begin": {
           "line": 45,
@@ -3157,9 +3271,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `SSAEvent` has no attribute `img`",
     "severity": "major",
-    "fingerprint": "b0ee1471a42a596",
+    "fingerprint": "c66566c02498c977",
     "location": {
-      "path": "test\\image\\subtitles\\test_image_series.py",
+      "path": "test/image/subtitles/test_image_series.py",
       "positions": {
         "begin": {
           "line": 73,
@@ -3176,9 +3290,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `SSAEvent` has no attribute `img`",
     "severity": "major",
-    "fingerprint": "d184649e4fe41e9e",
+    "fingerprint": "b22bae711bdae72",
     "location": {
-      "path": "test\\image\\subtitles\\test_image_series.py",
+      "path": "test/image/subtitles/test_image_series.py",
       "positions": {
         "begin": {
           "line": 77,
@@ -3195,9 +3309,9 @@
     "check_name": "unresolved-attribute",
     "description": "unresolved-attribute: Object of type `SSAEvent` has no attribute `img`",
     "severity": "major",
-    "fingerprint": "81305ba5cf9c2d6e",
+    "fingerprint": "d47243f2af5276f6",
     "location": {
-      "path": "test\\image\\subtitles\\test_image_series.py",
+      "path": "test/image/subtitles/test_image_series.py",
       "positions": {
         "begin": {
           "line": 78,

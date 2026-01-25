@@ -1,25 +1,9 @@
 {
     "version": "1.1.403",
-    "time": "1768965424657",
+    "time": "1769306823156",
     "generalDiagnostics": [
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\apps\\char_assigner\\char_assigner.py",
-            "severity": "error",
-            "message": "\"val_input_path\" is unknown import symbol",
-            "range": {
-                "start": {
-                    "line": 16,
-                    "character": 51
-                },
-                "end": {
-                    "line": 16,
-                    "character": 65
-                }
-            },
-            "rule": "reportAttributeAccessIssue"
-        },
-        {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\apps\\char_assigner\\char_assigner.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/apps/char_assigner/char_assigner.py",
             "severity": "error",
             "message": "Argument of type \"ndarray[_Shape, dtype[Unknown]]\" cannot be assigned to parameter \"predictions\" of type \"list[str] | None\" in function \"__init__\"\n  Type \"ndarray[_Shape, dtype[Unknown]]\" is not assignable to type \"list[str] | None\"\n    \"ndarray[_Shape, dtype[Unknown]]\" is not assignable to \"list[str]\"\n    \"ndarray[_Shape, dtype[Unknown]]\" is not assignable to \"None\"",
             "range": {
@@ -35,103 +19,23 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\cli\\char_assigner_cli.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/core/assignment_dataset.py",
             "severity": "error",
-            "message": "\"val_input_path\" is unknown import symbol",
+            "message": "No overloads for \"val_input_path\" match the provided arguments\n  Argument types: (Path, Literal[False])",
             "range": {
                 "start": {
-                    "line": 17,
-                    "character": 51
+                    "line": 28,
+                    "character": 21
                 },
                 "end": {
-                    "line": 17,
+                    "line": 28,
                     "character": 65
                 }
             },
-            "rule": "reportAttributeAccessIssue"
+            "rule": "reportCallIssue"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\cli\\char_assigner_cli.py",
-            "severity": "error",
-            "message": "Method \"_main\" is marked as override, but no base method of same name is present",
-            "range": {
-                "start": {
-                    "line": 81,
-                    "character": 8
-                },
-                "end": {
-                    "line": 81,
-                    "character": 13
-                }
-            },
-            "rule": "reportGeneralTypeIssues"
-        },
-        {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\cli\\learning_dataset_generator_cli.py",
-            "severity": "error",
-            "message": "\"val_output_path\" is unknown import symbol",
-            "range": {
-                "start": {
-                    "line": 18,
-                    "character": 51
-                },
-                "end": {
-                    "line": 18,
-                    "character": 66
-                }
-            },
-            "rule": "reportAttributeAccessIssue"
-        },
-        {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\cli\\model_trainer_cli.py",
-            "severity": "error",
-            "message": "\"val_input_path\" is unknown import symbol",
-            "range": {
-                "start": {
-                    "line": 19,
-                    "character": 4
-                },
-                "end": {
-                    "line": 19,
-                    "character": 18
-                }
-            },
-            "rule": "reportAttributeAccessIssue"
-        },
-        {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\cli\\model_trainer_cli.py",
-            "severity": "error",
-            "message": "\"val_output_path\" is unknown import symbol",
-            "range": {
-                "start": {
-                    "line": 20,
-                    "character": 4
-                },
-                "end": {
-                    "line": 20,
-                    "character": 19
-                }
-            },
-            "rule": "reportAttributeAccessIssue"
-        },
-        {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\core\\assignment_dataset.py",
-            "severity": "error",
-            "message": "\"val_input_path\" is unknown import symbol",
-            "range": {
-                "start": {
-                    "line": 17,
-                    "character": 51
-                },
-                "end": {
-                    "line": 17,
-                    "character": 65
-                }
-            },
-            "rule": "reportAttributeAccessIssue"
-        },
-        {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\core\\assignment_dataset.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/core/assignment_dataset.py",
             "severity": "error",
             "message": "Object of type \"None\" cannot be called",
             "range": {
@@ -147,7 +51,7 @@
             "rule": "reportOptionalCall"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\core\\assignment_dataset.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/core/assignment_dataset.py",
             "severity": "error",
             "message": "Argument of type \"Group | Dataset | Datatype\" cannot be assigned to parameter \"encoded_chars\" of type \"Iterable[bytes]\" in function \"decode_chars\"\n  Type \"Group | Dataset | Datatype\" is not assignable to type \"Iterable[bytes]\"\n    \"Datatype\" is incompatible with protocol \"Iterable[bytes]\"\n      \"__iter__\" is not present",
             "range": {
@@ -163,55 +67,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\core\\learning_dataset.py",
-            "severity": "error",
-            "message": "\"val_input_path\" is unknown import symbol",
-            "range": {
-                "start": {
-                    "line": 14,
-                    "character": 51
-                },
-                "end": {
-                    "line": 14,
-                    "character": 65
-                }
-            },
-            "rule": "reportAttributeAccessIssue"
-        },
-        {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\core\\learning_dataset.py",
-            "severity": "error",
-            "message": "Cannot access attribute \"parent\" for class \"str\"\n  Attribute \"parent\" is unknown",
-            "range": {
-                "start": {
-                    "line": 57,
-                    "character": 27
-                },
-                "end": {
-                    "line": 57,
-                    "character": 33
-                }
-            },
-            "rule": "reportAttributeAccessIssue"
-        },
-        {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\core\\learning_dataset.py",
-            "severity": "error",
-            "message": "Argument of type \"Unknown | Path | str\" cannot be assigned to parameter \"input_path\" of type \"Path\" in function \"load_hdf5\"\n  Type \"Unknown | Path | str\" is not assignable to type \"Path\"\n    \"str\" is not assignable to \"Path\"",
-            "range": {
-                "start": {
-                    "line": 61,
-                    "character": 58
-                },
-                "end": {
-                    "line": 61,
-                    "character": 68
-                }
-            },
-            "rule": "reportArgumentType"
-        },
-        {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\core\\learning_dataset.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/core/learning_dataset.py",
             "severity": "error",
             "message": "Type \"tuple[Unknown | Image, Unknown | int]\" is not assignable to return type \"tuple[ndarray[Unknown, Unknown], int]\"\n  Type \"Unknown | Image\" is not assignable to type \"ndarray[Unknown, Unknown]\"\n    \"Image\" is not assignable to \"ndarray[Unknown, Unknown]\"",
             "range": {
@@ -227,39 +83,55 @@
             "rule": "reportReturnType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\image\\oot3d_text_processor.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/image/oot3d_text_processor.py",
             "severity": "error",
-            "message": "\"val_int\" is unknown import symbol",
+            "message": "No overloads for \"val_output_path\" match the provided arguments\n  Argument types: (Path | str, Literal[True])",
             "range": {
                 "start": {
-                    "line": 14,
-                    "character": 51
+                    "line": 31,
+                    "character": 31
                 },
                 "end": {
-                    "line": 14,
-                    "character": 58
+                    "line": 31,
+                    "character": 79
                 }
             },
-            "rule": "reportAttributeAccessIssue"
+            "rule": "reportCallIssue"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\image\\oot3d_text_processor.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/image/oot3d_text_processor.py",
             "severity": "error",
-            "message": "\"val_output_path\" is unknown import symbol",
+            "message": "No overloads for \"val_int\" match the provided arguments\n  Argument types: (int, Literal[1])",
             "range": {
                 "start": {
-                    "line": 14,
-                    "character": 60
+                    "line": 34,
+                    "character": 45
                 },
                 "end": {
-                    "line": 14,
-                    "character": 75
+                    "line": 34,
+                    "character": 61
                 }
             },
-            "rule": "reportAttributeAccessIssue"
+            "rule": "reportCallIssue"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\image\\oot3d_text_processor.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/image/oot3d_text_processor.py",
+            "severity": "error",
+            "message": "No overloads for \"val_int\" match the provided arguments\n  Argument types: (int, Literal[1])",
+            "range": {
+                "start": {
+                    "line": 35,
+                    "character": 20
+                },
+                "end": {
+                    "line": 35,
+                    "character": 36
+                }
+            },
+            "rule": "reportCallIssue"
+        },
+        {
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/image/oot3d_text_processor.py",
             "severity": "error",
             "message": "Argument of type \"str\" cannot be assigned to parameter \"characters\" of type \"list[str]\" in function \"create_image\"\n  \"str\" is not assignable to \"list[str]\"",
             "range": {
@@ -275,7 +147,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"int\" cannot be assigned to parameter \"shuffle\" of type \"bool | None\" in function \"__init__\"\n  Type \"int\" is not assignable to type \"bool | None\"\n    \"int\" is not assignable to \"bool\"\n    \"int\" is not assignable to \"None\"",
             "range": {
@@ -291,7 +163,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"int\" cannot be assigned to parameter \"sampler\" of type \"Sampler[Unknown] | Iterable[Unknown] | None\" in function \"__init__\"\n  Type \"int\" is not assignable to type \"Sampler[Unknown] | Iterable[Unknown] | None\"\n    \"int\" is not assignable to \"Sampler[Unknown]\"\n    \"int\" is incompatible with protocol \"Iterable[Unknown]\"\n      \"__iter__\" is not present\n    \"int\" is not assignable to \"None\"",
             "range": {
@@ -307,7 +179,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"int\" cannot be assigned to parameter \"batch_sampler\" of type \"Sampler[list[Unknown]] | Iterable[list[Unknown]] | None\" in function \"__init__\"\n  Type \"int\" is not assignable to type \"Sampler[list[Unknown]] | Iterable[list[Unknown]] | None\"\n    \"int\" is not assignable to \"Sampler[list[Unknown]]\"\n    \"int\" is incompatible with protocol \"Iterable[list[Unknown]]\"\n      \"__iter__\" is not present\n    \"int\" is not assignable to \"None\"",
             "range": {
@@ -323,7 +195,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"int\" cannot be assigned to parameter \"collate_fn\" of type \"_collate_fn_t[Unknown] | None\" in function \"__init__\"\n  Type \"int\" is not assignable to type \"_collate_fn_t[Unknown] | None\"\n    Type \"int\" is not assignable to type \"_collate_fn_t[Unknown]\"\n    \"int\" is not assignable to \"None\"",
             "range": {
@@ -339,7 +211,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"int\" cannot be assigned to parameter \"pin_memory\" of type \"bool\" in function \"__init__\"\n  \"int\" is not assignable to \"bool\"",
             "range": {
@@ -355,7 +227,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"int\" cannot be assigned to parameter \"drop_last\" of type \"bool\" in function \"__init__\"\n  \"int\" is not assignable to \"bool\"",
             "range": {
@@ -371,7 +243,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"int\" cannot be assigned to parameter \"worker_init_fn\" of type \"_worker_init_fn_t | None\" in function \"__init__\"\n  Type \"int\" is not assignable to type \"_worker_init_fn_t | None\"\n    Type \"int\" is not assignable to type \"_worker_init_fn_t\"\n    \"int\" is not assignable to \"None\"",
             "range": {
@@ -387,7 +259,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"int\" cannot be assigned to parameter \"persistent_workers\" of type \"bool\" in function \"__init__\"\n  \"int\" is not assignable to \"bool\"",
             "range": {
@@ -403,7 +275,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"int\" cannot be assigned to parameter \"pin_memory_device\" of type \"str\" in function \"__init__\"\n  \"int\" is not assignable to \"str\"",
             "range": {
@@ -419,7 +291,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"int\" cannot be assigned to parameter \"in_order\" of type \"bool\" in function \"__init__\"\n  \"int\" is not assignable to \"bool\"",
             "range": {
@@ -435,7 +307,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"int\" cannot be assigned to parameter \"shuffle\" of type \"bool | None\" in function \"__init__\"\n  Type \"int\" is not assignable to type \"bool | None\"\n    \"int\" is not assignable to \"bool\"\n    \"int\" is not assignable to \"None\"",
             "range": {
@@ -451,7 +323,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"int\" cannot be assigned to parameter \"sampler\" of type \"Sampler[Unknown] | Iterable[Unknown] | None\" in function \"__init__\"\n  Type \"int\" is not assignable to type \"Sampler[Unknown] | Iterable[Unknown] | None\"\n    \"int\" is not assignable to \"Sampler[Unknown]\"\n    \"int\" is incompatible with protocol \"Iterable[Unknown]\"\n      \"__iter__\" is not present\n    \"int\" is not assignable to \"None\"",
             "range": {
@@ -467,7 +339,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"int\" cannot be assigned to parameter \"batch_sampler\" of type \"Sampler[list[Unknown]] | Iterable[list[Unknown]] | None\" in function \"__init__\"\n  Type \"int\" is not assignable to type \"Sampler[list[Unknown]] | Iterable[list[Unknown]] | None\"\n    \"int\" is not assignable to \"Sampler[list[Unknown]]\"\n    \"int\" is incompatible with protocol \"Iterable[list[Unknown]]\"\n      \"__iter__\" is not present\n    \"int\" is not assignable to \"None\"",
             "range": {
@@ -483,7 +355,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"int\" cannot be assigned to parameter \"collate_fn\" of type \"_collate_fn_t[Unknown] | None\" in function \"__init__\"\n  Type \"int\" is not assignable to type \"_collate_fn_t[Unknown] | None\"\n    Type \"int\" is not assignable to type \"_collate_fn_t[Unknown]\"\n    \"int\" is not assignable to \"None\"",
             "range": {
@@ -499,7 +371,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"int\" cannot be assigned to parameter \"pin_memory\" of type \"bool\" in function \"__init__\"\n  \"int\" is not assignable to \"bool\"",
             "range": {
@@ -515,7 +387,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"int\" cannot be assigned to parameter \"drop_last\" of type \"bool\" in function \"__init__\"\n  \"int\" is not assignable to \"bool\"",
             "range": {
@@ -531,7 +403,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"int\" cannot be assigned to parameter \"worker_init_fn\" of type \"_worker_init_fn_t | None\" in function \"__init__\"\n  Type \"int\" is not assignable to type \"_worker_init_fn_t | None\"\n    Type \"int\" is not assignable to type \"_worker_init_fn_t\"\n    \"int\" is not assignable to \"None\"",
             "range": {
@@ -547,7 +419,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"int\" cannot be assigned to parameter \"persistent_workers\" of type \"bool\" in function \"__init__\"\n  \"int\" is not assignable to \"bool\"",
             "range": {
@@ -563,7 +435,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"int\" cannot be assigned to parameter \"pin_memory_device\" of type \"str\" in function \"__init__\"\n  \"int\" is not assignable to \"str\"",
             "range": {
@@ -579,7 +451,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"int\" cannot be assigned to parameter \"in_order\" of type \"bool\" in function \"__init__\"\n  \"int\" is not assignable to \"bool\"",
             "range": {
@@ -595,7 +467,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"Dataset[Unknown]\" cannot be assigned to parameter \"obj\" of type \"Sized\" in function \"len\"\n  \"Dataset[Unknown]\" is incompatible with protocol \"Sized\"\n    \"__len__\" is not present",
             "range": {
@@ -611,7 +483,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"Dataset[Unknown]\" cannot be assigned to parameter \"obj\" of type \"Sized\" in function \"len\"\n  \"Dataset[Unknown]\" is incompatible with protocol \"Sized\"\n    \"__len__\" is not present",
             "range": {
@@ -627,7 +499,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"Dataset[Unknown]\" cannot be assigned to parameter \"obj\" of type \"Sized\" in function \"len\"\n  \"Dataset[Unknown]\" is incompatible with protocol \"Sized\"\n    \"__len__\" is not present",
             "range": {
@@ -643,7 +515,7 @@
             "rule": "reportArgumentType"
         },
         {
-            "file": "c:\\Users\\karls\\Code\\OOT3DHDTextGenerator\\oot3dhdtextgenerator\\utilities\\model_trainer.py",
+            "file": "/Users/karldebiec/Code/OOT3DHDTextGenerator/oot3dhdtextgenerator/utilities/model_trainer.py",
             "severity": "error",
             "message": "Argument of type \"Dataset[Unknown]\" cannot be assigned to parameter \"obj\" of type \"Sized\" in function \"len\"\n  \"Dataset[Unknown]\" is incompatible with protocol \"Sized\"\n    \"__len__\" is not present",
             "range": {
@@ -660,11 +532,11 @@
         }
     ],
     "summary": {
-        "filesAnalyzed": 32,
-        "errorCount": 41,
+        "filesAnalyzed": 31,
+        "errorCount": 33,
         "warningCount": 0,
         "informationCount": 0,
-        "timeInSec": 3.243
+        "timeInSec": 2.574
     }
 }
 

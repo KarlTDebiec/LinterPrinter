@@ -18,63 +18,32 @@ function parseRuff (infile) {
   }
 
   const annotations = []
-  const trimmed = normalizedContent.trimStart()
   let jsonPayload = null
-  if (trimmed.startsWith('[') || trimmed.startsWith('{')) {
-    try {
-      jsonPayload = JSON.parse(normalizedContent)
-    } catch (error) {
-      console.log(`Failed to parse JSON ruff output: ${error}`)
-    }
+  try {
+    jsonPayload = JSON.parse(normalizedContent)
+  } catch (error) {
+    console.log(`Failed to parse JSON ruff output: ${error}`)
+    return []
   }
 
-  if (Array.isArray(jsonPayload)) {
-    for (const entry of jsonPayload) {
-      if (!entry || !entry.filename || !entry.location) {
-        continue
-      }
+  if (!Array.isArray(jsonPayload)) {
+    console.log('Unexpected ruff output format; expected JSON array')
+    return []
+  }
 
-      annotations.push({
-        source: 'ruff',
-        level: 'warning',
-        filePath: normalizeFilePath(entry.filename),
-        line: entry.location.row,
-        kind: entry.code || 'ruff',
-        message: (entry.message || '').trim(),
-      })
+  for (const entry of jsonPayload) {
+    if (!entry || !entry.filename || !entry.location) {
+      continue
     }
-  } else {
-    const lines = normalizedContent.split('\n').filter(line => {
-      const lineTrimmed = line.trim()
 
-      return (
-        lineTrimmed !== '' &&
-        !lineTrimmed.startsWith('|') &&
-        !/^\d+\s+\|/.test(lineTrimmed) &&
-        !lineTrimmed.startsWith('= help:') // Skip ruff help lines
-      )
+    annotations.push({
+      source: 'ruff',
+      level: 'warning',
+      filePath: normalizeFilePath(entry.filename),
+      line: entry.location.row,
+      kind: entry.code || 'ruff',
+      message: (entry.message || '').trim(),
     })
-
-    for (const line of lines) {
-      const match = line.match(
-        /^(?<filePath>[^:]+):(?<line>\d+):(?<column>\d+): (?<code>\S+) (?<message>.+)$/)
-
-      if (!match || !match.groups) {
-        console.log(`Could not parse line: ${line}`)
-        continue
-      }
-
-      const { filePath, line: lineNumber, code, message } = match.groups
-
-      annotations.push({
-        source: 'ruff',
-        level: 'warning',
-        filePath: normalizeFilePath(filePath),
-        line: parseInt(lineNumber, 10),
-        kind: code,
-        message: message.trim(),
-      })
-    }
   }
 
   console.log(`Parsed ${annotations.length} ruff annotations`)

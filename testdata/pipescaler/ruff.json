@@ -6,7 +6,7 @@
       "column": 17,
       "row": 26
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\file_scanner.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/pipescaler/file_scanner.py",
     "fix": null,
     "location": {
       "column": 9,
@@ -23,7 +23,7 @@
       "column": 35,
       "row": 75
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\analytics\\image_pair_scorer.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/pipescaler/image/analytics/image_pair_scorer.py",
     "fix": null,
     "location": {
       "column": 9,
@@ -35,45 +35,12 @@
   },
   {
     "cell": null,
-    "code": "I001",
-    "end_location": {
-      "column": 62,
-      "row": 22
-    },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\core\\analytics\\hashing.py",
-    "fix": {
-      "applicability": "safe",
-      "edits": [
-        {
-          "content": "from __future__ import annotations\r\n\r\nfrom collections.abc import Callable\r\nfrom functools import partial\r\n\r\nfrom imagehash import (\r\n    ImageHash,\r\n    average_hash,\r\n    colorhash,\r\n    dhash,\r\n    hex_to_flathash,\r\n    hex_to_hash,\r\n    phash,\r\n    whash,\r\n)\r\nfrom PIL import Image\r\n\r\nfrom pipescaler.image.core.analytics.typing import HashSeries\r\n\r\n\r\n",
-          "end_location": {
-            "column": 1,
-            "row": 25
-          },
-          "location": {
-            "column": 1,
-            "row": 5
-          }
-        }
-      ],
-      "message": "Organize imports"
-    },
-    "location": {
-      "column": 1,
-      "row": 5
-    },
-    "message": "Import block is un-sorted or un-formatted",
-    "noqa_row": 5,
-    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
-  },
-  {
-    "cell": null,
     "code": "PLR0913",
     "end_location": {
       "column": 17,
       "row": 50
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\core\\functions.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/pipescaler/image/core/functions.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -85,96 +52,12 @@
   },
   {
     "cell": null,
-    "code": "I001",
-    "end_location": {
-      "column": 70,
-      "row": 14
-    },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\pipelines\\image_checkpoint_manager.py",
-    "fix": {
-      "applicability": "safe",
-      "edits": [
-        {
-          "content": "from __future__ import annotations\r\n\r\nfrom collections.abc import Callable\r\nfrom pathlib import Path\r\n\r\nfrom pipescaler.core import RunnerLike\r\nfrom pipescaler.image.pipelines.segments import (\r\n    ImageRunnerSegment,\r\n    PostCheckpointedImageRunnerSegment,\r\n)\r\nfrom pipescaler.pipelines.checkpoint_manager import CheckpointManager\r\n\r\n\r\n",
-          "end_location": {
-            "column": 1,
-            "row": 17
-          },
-          "location": {
-            "column": 1,
-            "row": 5
-          }
-        }
-      ],
-      "message": "Organize imports"
-    },
-    "location": {
-      "column": 1,
-      "row": 5
-    },
-    "message": "Import block is un-sorted or un-formatted",
-    "noqa_row": 5,
-    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
-  },
-  {
-    "cell": null,
-    "code": "E501",
-    "end_location": {
-      "column": 90,
-      "row": 41
-    },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\pipelines\\termini\\image_directory_terminus.py",
-    "fix": null,
-    "location": {
-      "column": 89,
-      "row": 41
-    },
-    "message": "Line too long (89 > 88)",
-    "noqa_row": 41,
-    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
-  },
-  {
-    "cell": null,
-    "code": "E501",
-    "end_location": {
-      "column": 98,
-      "row": 44
-    },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\image\\runners\\pngquant_runner.py",
-    "fix": null,
-    "location": {
-      "column": 89,
-      "row": 44
-    },
-    "message": "Line too long (97 > 88)",
-    "noqa_row": 44,
-    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
-  },
-  {
-    "cell": null,
-    "code": "E501",
-    "end_location": {
-      "column": 90,
-      "row": 60
-    },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\pipelines\\checkpoint_manager.py",
-    "fix": null,
-    "location": {
-      "column": 89,
-      "row": 60
-    },
-    "message": "Line too long (89 > 88)",
-    "noqa_row": 60,
-    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
-  },
-  {
-    "cell": null,
     "code": "PLW2901",
     "end_location": {
       "column": 22,
       "row": 36
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\pipelines\\sorters\\list_sorter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/pipescaler/pipelines/sorters/list_sorter.py",
     "fix": null,
     "location": {
       "column": 17,
@@ -191,7 +74,7 @@
       "column": 25,
       "row": 39
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\pipelines\\sorters\\list_sorter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/pipescaler/pipelines/sorters/list_sorter.py",
     "fix": null,
     "location": {
       "column": 21,
@@ -208,7 +91,7 @@
       "column": 21,
       "row": 40
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\pipelines\\sorters\\list_sorter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/pipescaler/pipelines/sorters/list_sorter.py",
     "fix": null,
     "location": {
       "column": 17,
@@ -220,120 +103,80 @@
   },
   {
     "cell": null,
-    "code": "E501",
+    "code": "UP046",
     "end_location": {
-      "column": 90,
-      "row": 32
+      "column": 37,
+      "row": 14
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\video\\pipelines\\termini\\video_directory_terminus.py",
-    "fix": null,
-    "location": {
-      "column": 89,
-      "row": 32
-    },
-    "message": "Line too long (89 > 88)",
-    "noqa_row": 32,
-    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
-  },
-  {
-    "cell": null,
-    "code": "E501",
-    "end_location": {
-      "column": 93,
-      "row": 50
-    },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\video\\pipelines\\termini\\video_directory_terminus.py",
-    "fix": null,
-    "location": {
-      "column": 89,
-      "row": 50
-    },
-    "message": "Line too long (92 > 88)",
-    "noqa_row": 50,
-    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
-  },
-  {
-    "cell": null,
-    "code": "E501",
-    "end_location": {
-      "column": 94,
-      "row": 40
-    },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\pipescaler\\video\\runners\\apngasm_runner.py",
-    "fix": null,
-    "location": {
-      "column": 89,
-      "row": 40
-    },
-    "message": "Line too long (93 > 88)",
-    "noqa_row": 40,
-    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
-  },
-  {
-    "cell": null,
-    "code": "UP038",
-    "end_location": {
-      "column": 82,
-      "row": 88
-    },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\scripts\\readme_updater.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/pipescaler/testing/execution_counter.py",
     "fix": {
       "applicability": "unsafe",
       "edits": [
         {
-          "content": "ImageOperator | Source | Sorter | Terminus",
+          "content": "[**P, R]",
           "end_location": {
-            "column": 81,
-            "row": 88
+            "column": 23,
+            "row": 14
           },
           "location": {
-            "column": 40,
-            "row": 88
+            "column": 23,
+            "row": 14
           }
-        }
-      ],
-      "message": "Convert to `X | Y`"
-    },
-    "location": {
-      "column": 22,
-      "row": 88
-    },
-    "message": "Use `X | Y` in `issubclass` call instead of `(X, Y)`",
-    "noqa_row": 88,
-    "url": "https://docs.astral.sh/ruff/rules/non-pep604-isinstance"
-  },
-  {
-    "cell": null,
-    "code": "UP015",
-    "end_location": {
-      "column": 31,
-      "row": 96
-    },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\scripts\\readme_updater.py",
-    "fix": {
-      "applicability": "safe",
-      "edits": [
+        },
         {
           "content": "",
           "end_location": {
-            "column": 31,
-            "row": 96
+            "column": 38,
+            "row": 14
           },
           "location": {
-            "column": 26,
-            "row": 96
+            "column": 23,
+            "row": 14
           }
         }
       ],
-      "message": "Remove mode argument"
+      "message": "Use type parameters"
     },
     "location": {
-      "column": 28,
-      "row": 96
+      "column": 24,
+      "row": 14
     },
-    "message": "Unnecessary mode argument",
-    "noqa_row": 96,
-    "url": "https://docs.astral.sh/ruff/rules/redundant-open-modes"
+    "message": "Generic class `ExecutionCounter` uses `Generic` subclass instead of type parameters",
+    "noqa_row": 14,
+    "url": "https://docs.astral.sh/ruff/rules/non-pep695-generic-class"
+  },
+  {
+    "cell": null,
+    "code": "UP047",
+    "end_location": {
+      "column": 47,
+      "row": 43
+    },
+    "filename": "/Users/karldebiec/Code/PipeScaler/pipescaler/testing/execution_counter.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "[**P, R]",
+          "end_location": {
+            "column": 21,
+            "row": 43
+          },
+          "location": {
+            "column": 21,
+            "row": 43
+          }
+        }
+      ],
+      "message": "Use type parameters"
+    },
+    "location": {
+      "column": 5,
+      "row": 43
+    },
+    "message": "Generic function `count_executions` should use type parameters",
+    "noqa_row": 43,
+    "url": "https://docs.astral.sh/ruff/rules/non-pep695-generic-function"
   },
   {
     "cell": null,
@@ -342,7 +185,7 @@
       "column": 14,
       "row": 28
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\cli\\test_pipescaler_cli.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/cli/test_pipescaler_cli.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -359,7 +202,7 @@
       "column": 15,
       "row": 52
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\cli\\test_pipescaler_cli.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/cli/test_pipescaler_cli.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -376,7 +219,7 @@
       "column": 14,
       "row": 27
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_cli.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/cli/test_image_cli.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -393,7 +236,7 @@
       "column": 15,
       "row": 52
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_cli.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/cli/test_image_cli.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -410,7 +253,7 @@
       "column": 9,
       "row": 31
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_mergers_cli.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/cli/test_image_mergers_cli.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -427,7 +270,7 @@
       "column": 14,
       "row": 50
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_mergers_cli.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/cli/test_image_mergers_cli.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -444,7 +287,7 @@
       "column": 15,
       "row": 77
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_mergers_cli.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/cli/test_image_mergers_cli.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -461,7 +304,7 @@
       "column": 9,
       "row": 67
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_processors_cli.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/cli/test_image_processors_cli.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -478,7 +321,7 @@
       "column": 14,
       "row": 102
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_processors_cli.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/cli/test_image_processors_cli.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -495,7 +338,7 @@
       "column": 15,
       "row": 147
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_processors_cli.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/cli/test_image_processors_cli.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -512,7 +355,7 @@
       "column": 9,
       "row": 28
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_splitters_cli.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/cli/test_image_splitters_cli.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -529,7 +372,7 @@
       "column": 14,
       "row": 46
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_splitters_cli.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/cli/test_image_splitters_cli.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -546,7 +389,7 @@
       "column": 15,
       "row": 71
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_splitters_cli.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/cli/test_image_splitters_cli.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -563,7 +406,7 @@
       "column": 9,
       "row": 38
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_utilities_cli.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/cli/test_image_utilities_cli.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -580,7 +423,7 @@
       "column": 14,
       "row": 55
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_utilities_cli.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/cli/test_image_utilities_cli.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -597,7 +440,7 @@
       "column": 15,
       "row": 82
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\cli\\test_image_utilities_cli.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/cli/test_image_utilities_cli.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -614,7 +457,7 @@
       "column": 11,
       "row": 23
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\mergers\\test_alpha_merger.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/mergers/test_alpha_merger.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -631,7 +474,7 @@
       "column": 9,
       "row": 40
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\mergers\\test_alpha_merger.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/mergers/test_alpha_merger.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -643,45 +486,12 @@
   },
   {
     "cell": null,
-    "code": "D415",
-    "end_location": {
-      "column": 37,
-      "row": 3
-    },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\mergers\\test_histogram_match_merger.py",
-    "fix": {
-      "applicability": "unsafe",
-      "edits": [
-        {
-          "content": ".",
-          "end_location": {
-            "column": 34,
-            "row": 3
-          },
-          "location": {
-            "column": 34,
-            "row": 3
-          }
-        }
-      ],
-      "message": "Add closing punctuation"
-    },
-    "location": {
-      "column": 1,
-      "row": 3
-    },
-    "message": "First line should end with a period, question mark, or exclamation point",
-    "noqa_row": 3,
-    "url": "https://docs.astral.sh/ruff/rules/missing-terminal-punctuation"
-  },
-  {
-    "cell": null,
     "code": "D103",
     "end_location": {
       "column": 11,
       "row": 20
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\mergers\\test_histogram_match_merger.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/mergers/test_histogram_match_merger.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -698,7 +508,7 @@
       "column": 9,
       "row": 37
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\mergers\\test_histogram_match_merger.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/mergers/test_histogram_match_merger.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -715,7 +525,7 @@
       "column": 29,
       "row": 3
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\mergers\\test_normal_merger.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/mergers/test_normal_merger.py",
     "fix": {
       "applicability": "unsafe",
       "edits": [
@@ -748,7 +558,7 @@
       "column": 11,
       "row": 20
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\mergers\\test_normal_merger.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/mergers/test_normal_merger.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -765,7 +575,7 @@
       "column": 9,
       "row": 34
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\mergers\\test_normal_merger.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/mergers/test_normal_merger.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -777,45 +587,12 @@
   },
   {
     "cell": null,
-    "code": "D415",
-    "end_location": {
-      "column": 35,
-      "row": 3
-    },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\mergers\\test_palette_match_merger.py",
-    "fix": {
-      "applicability": "unsafe",
-      "edits": [
-        {
-          "content": ".",
-          "end_location": {
-            "column": 32,
-            "row": 3
-          },
-          "location": {
-            "column": 32,
-            "row": 3
-          }
-        }
-      ],
-      "message": "Add closing punctuation"
-    },
-    "location": {
-      "column": 1,
-      "row": 3
-    },
-    "message": "First line should end with a period, question mark, or exclamation point",
-    "noqa_row": 3,
-    "url": "https://docs.astral.sh/ruff/rules/missing-terminal-punctuation"
-  },
-  {
-    "cell": null,
     "code": "D103",
     "end_location": {
       "column": 11,
       "row": 26
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\mergers\\test_palette_match_merger.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/mergers/test_palette_match_merger.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -832,7 +609,7 @@
       "column": 9,
       "row": 39
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\mergers\\test_palette_match_merger.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/mergers/test_palette_match_merger.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -849,7 +626,7 @@
       "column": 14,
       "row": 20
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_crop_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_crop_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -866,7 +643,7 @@
       "column": 9,
       "row": 38
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_crop_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_crop_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -883,7 +660,7 @@
       "column": 9,
       "row": 46
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_esrgan_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_esrgan_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -900,7 +677,7 @@
       "column": 14,
       "row": 20
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_expand_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_expand_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -917,7 +694,7 @@
       "column": 9,
       "row": 38
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_expand_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_expand_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -934,7 +711,7 @@
       "column": 14,
       "row": 19
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_height_to_normal_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_height_to_normal_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -951,7 +728,7 @@
       "column": 9,
       "row": 37
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_height_to_normal_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_height_to_normal_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -968,7 +745,7 @@
       "column": 14,
       "row": 23
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_mode_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_mode_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -985,7 +762,7 @@
       "column": 9,
       "row": 41
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_mode_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_mode_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1002,7 +779,7 @@
       "column": 14,
       "row": 21
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_potrace_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_potrace_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1019,7 +796,7 @@
       "column": 9,
       "row": 39
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_potrace_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_potrace_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1036,7 +813,7 @@
       "column": 14,
       "row": 19
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_resize_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_resize_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1053,7 +830,7 @@
       "column": 9,
       "row": 37
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_resize_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_resize_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1070,7 +847,7 @@
       "column": 14,
       "row": 23
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_sharpen_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_sharpen_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1087,7 +864,7 @@
       "column": 9,
       "row": 41
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_sharpen_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_sharpen_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1104,7 +881,7 @@
       "column": 14,
       "row": 20
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_solid_color_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_solid_color_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1121,7 +898,7 @@
       "column": 9,
       "row": 38
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_solid_color_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_solid_color_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1138,7 +915,7 @@
       "column": 9,
       "row": 42
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_spandrel_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_spandrel_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1155,7 +932,7 @@
       "column": 14,
       "row": 22
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_threshold_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_threshold_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1172,7 +949,7 @@
       "column": 9,
       "row": 40
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_threshold_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_threshold_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1189,7 +966,7 @@
       "column": 9,
       "row": 35
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_waifu_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_waifu_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1206,7 +983,7 @@
       "column": 14,
       "row": 20
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_xbrz_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_xbrz_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1223,7 +1000,7 @@
       "column": 9,
       "row": 37
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\processors\\test_xbrz_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/processors/test_xbrz_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1240,7 +1017,7 @@
       "column": 13,
       "row": 39
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\splitters\\test_alpha_splitter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/splitters/test_alpha_splitter.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1257,7 +1034,7 @@
       "column": 9,
       "row": 56
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\splitters\\test_alpha_splitter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/splitters/test_alpha_splitter.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1269,45 +1046,12 @@
   },
   {
     "cell": null,
-    "code": "D415",
-    "end_location": {
-      "column": 31,
-      "row": 3
-    },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\splitters\\test_normal_splitter.py",
-    "fix": {
-      "applicability": "unsafe",
-      "edits": [
-        {
-          "content": ".",
-          "end_location": {
-            "column": 28,
-            "row": 3
-          },
-          "location": {
-            "column": 28,
-            "row": 3
-          }
-        }
-      ],
-      "message": "Add closing punctuation"
-    },
-    "location": {
-      "column": 1,
-      "row": 3
-    },
-    "message": "First line should end with a period, question mark, or exclamation point",
-    "noqa_row": 3,
-    "url": "https://docs.astral.sh/ruff/rules/missing-terminal-punctuation"
-  },
-  {
-    "cell": null,
     "code": "D103",
     "end_location": {
       "column": 13,
       "row": 20
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\splitters\\test_normal_splitter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/splitters/test_normal_splitter.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1324,7 +1068,7 @@
       "column": 9,
       "row": 36
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\operators\\splitters\\test_normal_splitter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/operators/splitters/test_normal_splitter.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1336,45 +1080,12 @@
   },
   {
     "cell": null,
-    "code": "D415",
-    "end_location": {
-      "column": 28,
-      "row": 3
-    },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\pipelines\\sorters\\test_alpha_sorter.py",
-    "fix": {
-      "applicability": "unsafe",
-      "edits": [
-        {
-          "content": ".",
-          "end_location": {
-            "column": 25,
-            "row": 3
-          },
-          "location": {
-            "column": 25,
-            "row": 3
-          }
-        }
-      ],
-      "message": "Add closing punctuation"
-    },
-    "location": {
-      "column": 1,
-      "row": 3
-    },
-    "message": "First line should end with a period, question mark, or exclamation point",
-    "noqa_row": 3,
-    "url": "https://docs.astral.sh/ruff/rules/missing-terminal-punctuation"
-  },
-  {
-    "cell": null,
     "code": "D103",
     "end_location": {
       "column": 11,
       "row": 19
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\pipelines\\sorters\\test_alpha_sorter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/pipelines/sorters/test_alpha_sorter.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1391,7 +1102,7 @@
       "column": 9,
       "row": 38
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\pipelines\\sorters\\test_alpha_sorter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/pipelines/sorters/test_alpha_sorter.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1403,45 +1114,12 @@
   },
   {
     "cell": null,
-    "code": "D415",
-    "end_location": {
-      "column": 32,
-      "row": 3
-    },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\pipelines\\sorters\\test_grayscale_sorter.py",
-    "fix": {
-      "applicability": "unsafe",
-      "edits": [
-        {
-          "content": ".",
-          "end_location": {
-            "column": 29,
-            "row": 3
-          },
-          "location": {
-            "column": 29,
-            "row": 3
-          }
-        }
-      ],
-      "message": "Add closing punctuation"
-    },
-    "location": {
-      "column": 1,
-      "row": 3
-    },
-    "message": "First line should end with a period, question mark, or exclamation point",
-    "noqa_row": 3,
-    "url": "https://docs.astral.sh/ruff/rules/missing-terminal-punctuation"
-  },
-  {
-    "cell": null,
     "code": "D103",
     "end_location": {
       "column": 11,
       "row": 19
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\pipelines\\sorters\\test_grayscale_sorter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/pipelines/sorters/test_grayscale_sorter.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1458,7 +1136,7 @@
       "column": 9,
       "row": 36
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\pipelines\\sorters\\test_grayscale_sorter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/pipelines/sorters/test_grayscale_sorter.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1475,7 +1153,7 @@
       "column": 11,
       "row": 19
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\pipelines\\sorters\\test_mode_sorter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/pipelines/sorters/test_mode_sorter.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1492,7 +1170,7 @@
       "column": 9,
       "row": 37
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\pipelines\\sorters\\test_mode_sorter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/pipelines/sorters/test_mode_sorter.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1504,45 +1182,12 @@
   },
   {
     "cell": null,
-    "code": "D415",
-    "end_location": {
-      "column": 33,
-      "row": 3
-    },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\pipelines\\sorters\\test_monochrome_sorter.py",
-    "fix": {
-      "applicability": "unsafe",
-      "edits": [
-        {
-          "content": ".",
-          "end_location": {
-            "column": 30,
-            "row": 3
-          },
-          "location": {
-            "column": 30,
-            "row": 3
-          }
-        }
-      ],
-      "message": "Add closing punctuation"
-    },
-    "location": {
-      "column": 1,
-      "row": 3
-    },
-    "message": "First line should end with a period, question mark, or exclamation point",
-    "noqa_row": 3,
-    "url": "https://docs.astral.sh/ruff/rules/missing-terminal-punctuation"
-  },
-  {
-    "cell": null,
     "code": "D103",
     "end_location": {
       "column": 11,
       "row": 19
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\pipelines\\sorters\\test_monochrome_sorter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/pipelines/sorters/test_monochrome_sorter.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1559,7 +1204,7 @@
       "column": 9,
       "row": 31
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\pipelines\\sorters\\test_monochrome_sorter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/pipelines/sorters/test_monochrome_sorter.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1571,45 +1216,12 @@
   },
   {
     "cell": null,
-    "code": "D415",
-    "end_location": {
-      "column": 27,
-      "row": 3
-    },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\pipelines\\sorters\\test_size_sorter.py",
-    "fix": {
-      "applicability": "unsafe",
-      "edits": [
-        {
-          "content": ".",
-          "end_location": {
-            "column": 24,
-            "row": 3
-          },
-          "location": {
-            "column": 24,
-            "row": 3
-          }
-        }
-      ],
-      "message": "Add closing punctuation"
-    },
-    "location": {
-      "column": 1,
-      "row": 3
-    },
-    "message": "First line should end with a period, question mark, or exclamation point",
-    "noqa_row": 3,
-    "url": "https://docs.astral.sh/ruff/rules/missing-terminal-punctuation"
-  },
-  {
-    "cell": null,
     "code": "D103",
     "end_location": {
       "column": 11,
       "row": 19
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\pipelines\\sorters\\test_size_sorter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/pipelines/sorters/test_size_sorter.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1626,7 +1238,7 @@
       "column": 9,
       "row": 29
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\pipelines\\sorters\\test_size_sorter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/pipelines/sorters/test_size_sorter.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1638,45 +1250,12 @@
   },
   {
     "cell": null,
-    "code": "D415",
-    "end_location": {
-      "column": 33,
-      "row": 3
-    },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\pipelines\\sorters\\test_solid_color_sorter.py",
-    "fix": {
-      "applicability": "unsafe",
-      "edits": [
-        {
-          "content": ".",
-          "end_location": {
-            "column": 30,
-            "row": 3
-          },
-          "location": {
-            "column": 30,
-            "row": 3
-          }
-        }
-      ],
-      "message": "Add closing punctuation"
-    },
-    "location": {
-      "column": 1,
-      "row": 3
-    },
-    "message": "First line should end with a period, question mark, or exclamation point",
-    "noqa_row": 3,
-    "url": "https://docs.astral.sh/ruff/rules/missing-terminal-punctuation"
-  },
-  {
-    "cell": null,
     "code": "D103",
     "end_location": {
       "column": 11,
       "row": 19
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\pipelines\\sorters\\test_solid_color_sorter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/pipelines/sorters/test_solid_color_sorter.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1693,7 +1272,7 @@
       "column": 9,
       "row": 44
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\pipelines\\sorters\\test_solid_color_sorter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/pipelines/sorters/test_solid_color_sorter.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1710,7 +1289,7 @@
       "column": 9,
       "row": 18
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\pipelines\\sources\\test_image_directory_source.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/pipelines/sources/test_image_directory_source.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1727,7 +1306,7 @@
       "column": 9,
       "row": 12
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\pipelines\\termini\\test_copy_file_processor.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/pipelines/termini/test_copy_file_processor.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1744,7 +1323,7 @@
       "column": 11,
       "row": 26
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\runners\\test_pngquant_runner.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/runners/test_pngquant_runner.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1761,7 +1340,7 @@
       "column": 9,
       "row": 36
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\runners\\test_pngquant_runner.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/runners/test_pngquant_runner.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1778,7 +1357,7 @@
       "column": 11,
       "row": 22
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\runners\\test_potrace_runner.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/runners/test_potrace_runner.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1795,7 +1374,7 @@
       "column": 9,
       "row": 32
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\runners\\test_potrace_runner.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/runners/test_potrace_runner.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1812,7 +1391,7 @@
       "column": 11,
       "row": 23
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\runners\\test_texconv_runner.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/runners/test_texconv_runner.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1829,7 +1408,7 @@
       "column": 9,
       "row": 41
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\runners\\test_texconv_runner.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/runners/test_texconv_runner.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1846,7 +1425,7 @@
       "column": 16,
       "row": 20
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\test_scaled_pair_identifier.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/test_scaled_pair_identifier.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1863,7 +1442,7 @@
       "column": 27,
       "row": 22
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\test_subdivided_image.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/test_subdivided_image.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1880,7 +1459,7 @@
       "column": 26,
       "row": 29
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\test_subdivided_image.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/test_subdivided_image.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1897,7 +1476,7 @@
       "column": 20,
       "row": 36
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\test_subdivided_image.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/test_subdivided_image.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1914,7 +1493,7 @@
       "column": 19,
       "row": 41
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\test_subdivided_image.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/test_subdivided_image.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1931,7 +1510,7 @@
       "column": 22,
       "row": 46
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\test_subdivided_image.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/test_subdivided_image.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1948,7 +1527,7 @@
       "column": 20,
       "row": 64
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\test_subdivided_image.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/test_subdivided_image.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1965,7 +1544,7 @@
       "column": 12,
       "row": 16
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\utilities\\test_esrgan_serializer.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/utilities/test_esrgan_serializer.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1982,7 +1561,7 @@
       "column": 9,
       "row": 28
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\utilities\\test_esrgan_serializer.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/utilities/test_esrgan_serializer.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -1999,7 +1578,7 @@
       "column": 12,
       "row": 16
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\utilities\\test_waifu_serializer.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/utilities/test_waifu_serializer.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -2016,7 +1595,7 @@
       "column": 9,
       "row": 27
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\image\\utilities\\test_waifu_serializer.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/image/utilities/test_waifu_serializer.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -2028,69 +1607,19 @@
   },
   {
     "cell": null,
-    "code": "D205",
-    "end_location": {
-      "column": 8,
-      "row": 32
-    },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\segments\\test_post_checkpointed_segment.py",
-    "fix": null,
-    "location": {
-      "column": 5,
-      "row": 28
-    },
-    "message": "1 blank line required between summary line and description",
-    "noqa_row": 32,
-    "url": "https://docs.astral.sh/ruff/rules/missing-blank-line-after-summary"
-  },
-  {
-    "cell": null,
-    "code": "D415",
-    "end_location": {
-      "column": 8,
-      "row": 32
-    },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\segments\\test_post_checkpointed_segment.py",
-    "fix": {
-      "applicability": "unsafe",
-      "edits": [
-        {
-          "content": ".",
-          "end_location": {
-            "column": 43,
-            "row": 31
-          },
-          "location": {
-            "column": 43,
-            "row": 31
-          }
-        }
-      ],
-      "message": "Add closing punctuation"
-    },
-    "location": {
-      "column": 5,
-      "row": 28
-    },
-    "message": "First line should end with a period, question mark, or exclamation point",
-    "noqa_row": 32,
-    "url": "https://docs.astral.sh/ruff/rules/missing-terminal-punctuation"
-  },
-  {
-    "cell": null,
     "code": "D103",
     "end_location": {
       "column": 9,
-      "row": 39
+      "row": 40
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\segments\\test_post_checkpointed_segment.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/pipelines/segments/test_post_checkpointed_segment.py",
     "fix": null,
     "location": {
       "column": 5,
-      "row": 39
+      "row": 40
     },
     "message": "Missing docstring in public function",
-    "noqa_row": 39,
+    "noqa_row": 40,
     "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
   },
   {
@@ -2100,7 +1629,7 @@
       "column": 9,
       "row": 27
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\segments\\test_pre_checkpointed_segment.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/pipelines/segments/test_pre_checkpointed_segment.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -2117,7 +1646,7 @@
       "column": 11,
       "row": 26
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\sorters\\test_list_sorter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/pipelines/sorters/test_list_sorter.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -2134,7 +1663,7 @@
       "column": 9,
       "row": 39
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\sorters\\test_list_sorter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/pipelines/sorters/test_list_sorter.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -2151,7 +1680,7 @@
       "column": 19,
       "row": 59
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\sorters\\test_list_sorter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/pipelines/sorters/test_list_sorter.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -2168,7 +1697,7 @@
       "column": 20,
       "row": 79
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\sorters\\test_list_sorter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/pipelines/sorters/test_list_sorter.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -2185,7 +1714,7 @@
       "column": 11,
       "row": 23
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\sorters\\test_regex_sorter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/pipelines/sorters/test_regex_sorter.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -2202,7 +1731,7 @@
       "column": 9,
       "row": 37
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\sorters\\test_regex_sorter.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/pipelines/sorters/test_regex_sorter.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -2214,69 +1743,19 @@
   },
   {
     "cell": null,
-    "code": "D205",
-    "end_location": {
-      "column": 8,
-      "row": 39
-    },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\test_checkpoint_manager.py",
-    "fix": null,
-    "location": {
-      "column": 5,
-      "row": 35
-    },
-    "message": "1 blank line required between summary line and description",
-    "noqa_row": 39,
-    "url": "https://docs.astral.sh/ruff/rules/missing-blank-line-after-summary"
-  },
-  {
-    "cell": null,
-    "code": "D415",
-    "end_location": {
-      "column": 8,
-      "row": 39
-    },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\test_checkpoint_manager.py",
-    "fix": {
-      "applicability": "unsafe",
-      "edits": [
-        {
-          "content": ".",
-          "end_location": {
-            "column": 43,
-            "row": 38
-          },
-          "location": {
-            "column": 43,
-            "row": 38
-          }
-        }
-      ],
-      "message": "Add closing punctuation"
-    },
-    "location": {
-      "column": 5,
-      "row": 35
-    },
-    "message": "First line should end with a period, question mark, or exclamation point",
-    "noqa_row": 39,
-    "url": "https://docs.astral.sh/ruff/rules/missing-terminal-punctuation"
-  },
-  {
-    "cell": null,
     "code": "D103",
     "end_location": {
       "column": 19,
-      "row": 46
+      "row": 47
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\test_checkpoint_manager.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/pipelines/test_checkpoint_manager.py",
     "fix": null,
     "location": {
       "column": 5,
-      "row": 46
+      "row": 47
     },
     "message": "Missing docstring in public function",
-    "noqa_row": 46,
+    "noqa_row": 47,
     "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
   },
   {
@@ -2284,16 +1763,16 @@
     "code": "D103",
     "end_location": {
       "column": 21,
-      "row": 110
+      "row": 111
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\test_checkpoint_manager.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/pipelines/test_checkpoint_manager.py",
     "fix": null,
     "location": {
       "column": 5,
-      "row": 110
+      "row": 111
     },
     "message": "Missing docstring in public function",
-    "noqa_row": 110,
+    "noqa_row": 111,
     "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
   },
   {
@@ -2301,16 +1780,16 @@
     "code": "D103",
     "end_location": {
       "column": 22,
-      "row": 116
+      "row": 117
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\test_checkpoint_manager.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/pipelines/test_checkpoint_manager.py",
     "fix": null,
     "location": {
       "column": 5,
-      "row": 116
+      "row": 117
     },
     "message": "Missing docstring in public function",
-    "noqa_row": 116,
+    "noqa_row": 117,
     "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
   },
   {
@@ -2318,16 +1797,16 @@
     "code": "D103",
     "end_location": {
       "column": 15,
-      "row": 122
+      "row": 123
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\pipelines\\test_checkpoint_manager.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/pipelines/test_checkpoint_manager.py",
     "fix": null,
     "location": {
       "column": 5,
-      "row": 122
+      "row": 123
     },
     "message": "Missing docstring in public function",
-    "noqa_row": 122,
+    "noqa_row": 123,
     "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
   },
   {
@@ -2337,7 +1816,7 @@
       "column": 16,
       "row": 14
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\utilities\\test_file_scanner.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/utilities/test_file_scanner.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -2354,7 +1833,7 @@
       "column": 9,
       "row": 39
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\utilities\\test_file_scanner.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/utilities/test_file_scanner.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -2371,7 +1850,7 @@
       "column": 23,
       "row": 58
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\utilities\\test_file_scanner.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/utilities/test_file_scanner.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -2388,7 +1867,7 @@
       "column": 23,
       "row": 78
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\utilities\\test_file_scanner.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/utilities/test_file_scanner.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -2405,7 +1884,7 @@
       "column": 11,
       "row": 24
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\video\\runners\\test_apngasm_runner.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/video/runners/test_apngasm_runner.py",
     "fix": null,
     "location": {
       "column": 5,
@@ -2422,7 +1901,7 @@
       "column": 9,
       "row": 36
     },
-    "filename": "C:\\Users\\karls\\Code\\PipeScaler\\test\\video\\runners\\test_apngasm_runner.py",
+    "filename": "/Users/karldebiec/Code/PipeScaler/test/video/runners/test_apngasm_runner.py",
     "fix": null,
     "location": {
       "column": 5,
