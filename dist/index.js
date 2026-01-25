@@ -25780,11 +25780,9 @@ function parsePyright (infile) {
       continue
     }
 
-    const level = diagnostic.severity === 'error'
-      ? 'error'
-      : diagnostic.severity === 'information'
-        ? 'notice'
-        : 'warning'
+    const level = diagnostic.severity === 'information'
+      ? 'notice'
+      : 'warning'
 
     annotations.push({
       source: 'pyright',
