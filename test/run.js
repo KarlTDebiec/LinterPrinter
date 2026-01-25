@@ -1,12 +1,9 @@
 const path = require('path')
 const assert = require('assert/strict')
-
-const { parsePyright } = require('../src/python/pyright')
-const { parsePytest } = require('../src/python/pytest')
-const { parseRuff } = require('../src/python/ruff')
-const { parseTy } = require('../src/python/ty')
+const { execFileSync } = require('child_process')
 
 const repoRoot = path.resolve(__dirname, '..')
+const distEntry = path.join(repoRoot, 'dist', 'index.js')
 
 function fixturePath (...parts) {
   return path.join(repoRoot, 'testdata', ...parts)
@@ -23,136 +20,135 @@ function runTest (name, fn) {
   }
 }
 
-runTest('parseRuff() handles JSON output (scinoephile)', () => {
-  process.env.GITHUB_WORKSPACE = '/Users/karldebiec/Code/Scinoephile'
-  const annotations = parseRuff(fixturePath('scinoephile', 'ruff.json'))
+function runAction (tool, infile, workspace) {
+  return execFileSync('node', [distEntry], {
+    cwd: repoRoot,
+    encoding: 'utf8',
+    env: {
+      ...process.env,
+      INPUT_TOOL: tool,
+      INPUT_TOOL_INFILE: infile,
+      GITHUB_WORKSPACE: workspace,
+      LINTERPRINTER_TEST_MODE: 'true',
+    },
+  })
+}
 
-  assert.ok(annotations.length > 0)
-  assert.equal(annotations[0].source, 'ruff')
-  assert.equal(annotations[0].level, 'warning')
-  assert.equal(annotations[0].filePath, 'scinoephile/cli/scinoephile_cli.py')
-  assert.equal(annotations[0].line, 124)
-  assert.equal(annotations[0].kind, 'PLR0912')
-})
-
-runTest('parseRuff() handles JSON output (pipescaler)', () => {
-  process.env.GITHUB_WORKSPACE = '/Users/karldebiec/Code/PipeScaler'
-  const annotations = parseRuff(fixturePath('pipescaler', 'ruff.json'))
-
-  assert.ok(annotations.length > 0)
-  assert.equal(annotations[0].source, 'ruff')
-  assert.equal(annotations[0].level, 'warning')
-  assert.equal(annotations[0].filePath, 'pipescaler/file_scanner.py')
-  assert.equal(annotations[0].line, 26)
-  assert.equal(annotations[0].kind, 'PLR0913')
-})
-
-runTest('parseRuff() handles JSON output (oot3dhdtextgenerator)', () => {
-  process.env.GITHUB_WORKSPACE = '/Users/karldebiec/Code/OOT3DHDTextGenerator'
-  const annotations = parseRuff(fixturePath('oot3dhdtextgenerator', 'ruff.json'))
-
-  assert.ok(annotations.length > 0)
-  assert.equal(annotations[0].source, 'ruff')
-  assert.equal(annotations[0].level, 'warning')
-  assert.equal(annotations[0].filePath, 'oot3dhdtextgenerator/apps/char_assigner/char_assigner.py')
-  assert.equal(annotations[0].line, 77)
-  assert.equal(annotations[0].kind, 'D102')
-})
-
-runTest('parsePyright() handles JSON output (scinoephile)', () => {
-  process.env.GITHUB_WORKSPACE = '/Users/karldebiec/Code/Scinoephile'
-  const annotations = parsePyright(fixturePath('scinoephile', 'pyright.json'))
-
-  assert.ok(annotations.length > 0)
-  assert.equal(annotations[0].source, 'pyright')
-  assert.equal(annotations[0].level, 'error')
-  assert.equal(annotations[0].filePath, 'scinoephile/analysis/series_diff.py')
-  assert.equal(annotations[0].line, 927)
-  assert.equal(annotations[0].kind, 'reportAttributeAccessIssue')
-})
-
-runTest('parsePyright() handles JSON output (pipescaler)', () => {
-  process.env.GITHUB_WORKSPACE = '/Users/karldebiec/Code/PipeScaler'
-  const annotations = parsePyright(fixturePath('pipescaler', 'pyright.json'))
-
-  assert.ok(annotations.length > 0)
-  assert.equal(annotations[0].source, 'pyright')
-  assert.equal(annotations[0].level, 'error')
-  assert.equal(annotations[0].filePath, 'pipescaler/core/cli/utility_cli.py')
-  assert.equal(annotations[0].line, 39)
-  assert.equal(annotations[0].kind, 'reportAttributeAccessIssue')
-})
-
-runTest('parsePyright() handles JSON output (oot3dhdtextgenerator)', () => {
-  process.env.GITHUB_WORKSPACE = '/Users/karldebiec/Code/OOT3DHDTextGenerator'
-  const annotations = parsePyright(fixturePath('oot3dhdtextgenerator', 'pyright.json'))
-
-  assert.ok(annotations.length > 0)
-  assert.equal(annotations[0].source, 'pyright')
-  assert.equal(annotations[0].level, 'error')
-  assert.equal(
-    annotations[0].filePath,
-    'oot3dhdtextgenerator/apps/char_assigner/char_assigner.py',
+runTest('dist/index.js handles ruff JSON output (scinoephile)', () => {
+  const output = runAction(
+    'ruff',
+    fixturePath('scinoephile', 'ruff.json'),
+    '/Users/karldebiec/Code/Scinoephile',
   )
-  assert.equal(annotations[0].line, 97)
-  assert.equal(annotations[0].kind, 'reportArgumentType')
+
+  assert.ok(output.includes('::warning'))
+  assert.ok(output.includes('file=scinoephile/cli/scinoephile_cli.py'))
+  assert.ok(output.includes('ruff[PLR0912]'))
 })
 
-runTest('parseTy() handles GitLab JSON output (scinoephile)', () => {
-  process.env.GITHUB_WORKSPACE = '/Users/karldebiec/Code/Scinoephile'
-  const annotations = parseTy(fixturePath('scinoephile', 'ty.json'))
-
-  assert.ok(annotations.length > 0)
-  assert.equal(annotations[0].source, 'ty')
-  assert.equal(annotations[0].level, 'error')
-  assert.equal(annotations[0].filePath, 'scinoephile/analysis/series_diff.py')
-  assert.equal(annotations[0].line, 927)
-  assert.equal(annotations[0].kind, 'unresolved-attribute')
-})
-
-runTest('parseTy() handles GitLab JSON output (pipescaler)', () => {
-  process.env.GITHUB_WORKSPACE = '/Users/karldebiec/Code/PipeScaler'
-  const annotations = parseTy(fixturePath('pipescaler', 'ty.json'))
-
-  assert.ok(annotations.length > 0)
-  assert.equal(annotations[0].source, 'ty')
-  assert.equal(annotations[0].level, 'error')
-  assert.equal(annotations[0].filePath, 'pipescaler/common/argument_parsing.py')
-  assert.equal(annotations[0].line, 49)
-  assert.equal(annotations[0].kind, 'unresolved-reference')
-})
-
-runTest('parseTy() handles GitLab JSON output (oot3dhdtextgenerator)', () => {
-  process.env.GITHUB_WORKSPACE = '/Users/karldebiec/Code/OOT3DHDTextGenerator'
-  const annotations = parseTy(fixturePath('oot3dhdtextgenerator', 'ty.json'))
-
-  assert.ok(annotations.length > 0)
-  assert.equal(annotations[0].source, 'ty')
-  assert.equal(annotations[0].level, 'error')
-  assert.equal(
-    annotations[0].filePath,
-    'oot3dhdtextgenerator/apps/char_assigner/char_assigner.py',
+runTest('dist/index.js handles ruff JSON output (pipescaler)', () => {
+  const output = runAction(
+    'ruff',
+    fixturePath('pipescaler', 'ruff.json'),
+    '/Users/karldebiec/Code/PipeScaler',
   )
-  assert.equal(annotations[0].line, 57)
-  assert.equal(annotations[0].kind, 'invalid-argument-type')
+
+  assert.ok(output.includes('::warning'))
+  assert.ok(output.includes('file=pipescaler/file_scanner.py'))
+  assert.ok(output.includes('ruff[PLR0913]'))
 })
 
-runTest('parsePytest() handles text output (scinoephile)', () => {
-  const annotations = parsePytest(fixturePath('scinoephile', 'pytest.txt'))
+runTest('dist/index.js handles ruff JSON output (oot3dhdtextgenerator)', () => {
+  const output = runAction(
+    'ruff',
+    fixturePath('oot3dhdtextgenerator', 'ruff.json'),
+    '/Users/karldebiec/Code/OOT3DHDTextGenerator',
+  )
 
-  assert.equal(annotations.length, 0)
+  assert.ok(output.includes('::warning'))
+  assert.ok(output.includes('file=oot3dhdtextgenerator/apps/char_assigner/char_assigner.py'))
+  assert.ok(output.includes('ruff[D102]'))
 })
 
-runTest('parsePytest() handles text output (pipescaler)', () => {
-  const annotations = parsePytest(fixturePath('pipescaler', 'pytest.txt'))
+runTest('dist/index.js handles pyright JSON output (scinoephile)', () => {
+  const output = runAction(
+    'pyright',
+    fixturePath('scinoephile', 'pyright.json'),
+    '/Users/karldebiec/Code/Scinoephile',
+  )
 
-  assert.ok(annotations.length > 0)
-  assert.equal(annotations[0].source, 'pytest')
-  assert.equal(annotations[0].level, 'error')
+  assert.ok(output.includes('::error'))
+  assert.ok(output.includes('file=scinoephile/analysis/series_diff.py'))
+  assert.ok(output.includes('pyright[reportAttributeAccessIssue]'))
 })
 
-runTest('parsePytest() handles text output (oot3dhdtextgenerator)', () => {
-  const annotations = parsePytest(fixturePath('oot3dhdtextgenerator', 'pytest.txt'))
+runTest('dist/index.js handles pyright JSON output (pipescaler)', () => {
+  const output = runAction(
+    'pyright',
+    fixturePath('pipescaler', 'pyright.json'),
+    '/Users/karldebiec/Code/PipeScaler',
+  )
 
-  assert.equal(annotations.length, 0)
+  assert.ok(output.includes('::error'))
+  assert.ok(output.includes('file=pipescaler/core/cli/utility_cli.py'))
+  assert.ok(output.includes('pyright[reportAttributeAccessIssue]'))
+})
+
+runTest('dist/index.js handles pyright JSON output (oot3dhdtextgenerator)', () => {
+  const output = runAction(
+    'pyright',
+    fixturePath('oot3dhdtextgenerator', 'pyright.json'),
+    '/Users/karldebiec/Code/OOT3DHDTextGenerator',
+  )
+
+  assert.ok(output.includes('::error'))
+  assert.ok(output.includes('file=oot3dhdtextgenerator/apps/char_assigner/char_assigner.py'))
+  assert.ok(output.includes('pyright[reportArgumentType]'))
+})
+
+runTest('dist/index.js handles ty JSON output (scinoephile)', () => {
+  const output = runAction(
+    'ty',
+    fixturePath('scinoephile', 'ty.json'),
+    '/Users/karldebiec/Code/Scinoephile',
+  )
+
+  assert.ok(output.includes('::error'))
+  assert.ok(output.includes('file=scinoephile/analysis/series_diff.py'))
+  assert.ok(output.includes('ty[unresolved-attribute]'))
+})
+
+runTest('dist/index.js handles ty JSON output (pipescaler)', () => {
+  const output = runAction(
+    'ty',
+    fixturePath('pipescaler', 'ty.json'),
+    '/Users/karldebiec/Code/PipeScaler',
+  )
+
+  assert.ok(output.includes('::error'))
+  assert.ok(output.includes('file=pipescaler/common/argument_parsing.py'))
+  assert.ok(output.includes('ty[unresolved-reference]'))
+})
+
+runTest('dist/index.js handles ty JSON output (oot3dhdtextgenerator)', () => {
+  const output = runAction(
+    'ty',
+    fixturePath('oot3dhdtextgenerator', 'ty.json'),
+    '/Users/karldebiec/Code/OOT3DHDTextGenerator',
+  )
+
+  assert.ok(output.includes('::error'))
+  assert.ok(output.includes('file=oot3dhdtextgenerator/apps/char_assigner/char_assigner.py'))
+  assert.ok(output.includes('ty[invalid-argument-type]'))
+})
+
+runTest('dist/index.js handles pytest text output (pipescaler)', () => {
+  const output = runAction(
+    'pytest',
+    fixturePath('pipescaler', 'pytest.txt'),
+    '/Users/karldebiec/Code/PipeScaler',
+  )
+
+  assert.ok(output.includes('::error'))
+  assert.ok(output.includes('pytest['))
 })

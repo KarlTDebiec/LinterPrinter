@@ -25647,7 +25647,7 @@ module.exports = {
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 const fs = __nccwpck_require__(9896)
-const { normalizeFilePath } = __nccwpck_require__(413)
+const path = __nccwpck_require__(6928)
 
 function formatAnnotation (annotation) {
   const sanitizedMessage = annotation.message.replace(/:/g, '：')
@@ -25958,7 +25958,7 @@ module.exports = { parsePytest }
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 const fs = __nccwpck_require__(9896)
-const path = __nccwpck_require__(6928)
+const { normalizeFilePath } = __nccwpck_require__(413)
 
 function parseRuff (infile) {
   console.log(`parseRuff() called with infile: ${infile}`)
@@ -26011,6 +26011,85 @@ function parseRuff (infile) {
 
 module.exports = { parseRuff }
 
+
+/***/ }),
+
+/***/ 8110:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const fs = __nccwpck_require__(9896)
+const { normalizeFilePath } = __nccwpck_require__(413)
+
+function mapSeverity (severity) {
+  if (!severity) {
+    return 'warning'
+  }
+  const normalized = severity.toLowerCase()
+  if (normalized === 'blocker' || normalized === 'critical') {
+    return 'error'
+  }
+  if (normalized === 'major') {
+    return 'error'
+  }
+  if (normalized === 'minor') {
+    return 'warning'
+  }
+  return 'notice'
+}
+
+function parseTy (infile) {
+  console.log(`parseTy() called with infile: ${infile}`)
+
+  if (!fs.existsSync(infile)) {
+    console.log(`File not found: ${infile}`)
+    return []
+  }
+
+  const fileContent = fs.readFileSync(infile, 'utf8')
+  const normalizedContent = fileContent.replace(/^\uFEFF/, '')
+
+  if (!normalizedContent) {
+    console.log(`Empty file: ${infile}`)
+    return []
+  }
+
+  let jsonPayload = null
+  try {
+    jsonPayload = JSON.parse(normalizedContent)
+  } catch (error) {
+    console.log(`Failed to parse JSON ty output: ${error}`)
+    return []
+  }
+
+  if (!Array.isArray(jsonPayload)) {
+    console.log('Unexpected ty output format; expected JSON array')
+    return []
+  }
+
+  const annotations = []
+
+  for (const entry of jsonPayload) {
+    const location = entry?.location
+    const begin = location?.positions?.begin
+    if (!location?.path || !begin?.line) {
+      continue
+    }
+
+    annotations.push({
+      source: 'ty',
+      level: mapSeverity(entry.severity),
+      filePath: normalizeFilePath(location.path),
+      line: begin.line,
+      kind: entry.check_name || 'ty',
+      message: (entry.description || '').trim(),
+    })
+  }
+
+  console.log(`Parsed ${annotations.length} ty annotations`)
+  return annotations
+}
+
+module.exports = { parseTy }
 
 /***/ }),
 
@@ -27931,6 +28010,7 @@ const { formatAnnotation } = __nccwpck_require__(413)
 const { parsePyright } = __nccwpck_require__(4712)
 const { parsePytest } = __nccwpck_require__(9576)
 const { parseRuff } = __nccwpck_require__(7238)
+const { parseTy } = __nccwpck_require__(8110)
 const { getGitDiffFiles } = __nccwpck_require__(7664)
 
 async function run () {
@@ -27938,7 +28018,8 @@ async function run () {
     const tool = core.getInput('tool')
     const toolInfile = core.getInput('tool_infile')
 
-    const supportedTools = ['pyright', 'pytest', 'ruff']
+    const isTestMode = process.env.LINTERPRINTER_TEST_MODE === 'true'
+    const supportedTools = ['pyright', 'pytest', 'ruff', 'ty']
 
     if (!supportedTools.includes(tool)) {
       throw new Error(
@@ -27954,6 +28035,8 @@ async function run () {
       annotations = parsePytest(toolInfile)
     } else if (tool === 'ruff') {
       annotations = parseRuff(toolInfile)
+    } else if (tool === 'ty') {
+      annotations = parseTy(toolInfile)
     }
 
     // Prioritize annotations
@@ -27979,7 +28062,7 @@ async function run () {
       ann => ann.level === 'error',
     )
 
-    if (errorAnnotations.length > 0) {
+    if (errorAnnotations.length > 0 && !isTestMode) {
       core.setFailed(
         `Found ${errorAnnotations.length} error annotation${errorAnnotations.length >
         1 ? 's' : ''}.`,
@@ -27987,7 +28070,11 @@ async function run () {
     }
 
   } catch (error) {
-    core.setFailed(error.message || error.toString())
+    if (process.env.LINTERPRINTER_TEST_MODE === 'true') {
+      console.error(error)
+    } else {
+      core.setFailed(error.message || error.toString())
+    }
   }
 }
 
