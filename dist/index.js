@@ -26027,16 +26027,10 @@ function mapSeverity (severity) {
     return 'warning'
   }
   const normalized = severity.toLowerCase()
-  if (normalized === 'blocker' || normalized === 'critical') {
-    return 'error'
+  if (normalized === 'info' || normalized === 'information' || normalized === 'note') {
+    return 'notice'
   }
-  if (normalized === 'major') {
-    return 'error'
-  }
-  if (normalized === 'minor') {
-    return 'warning'
-  }
-  return 'notice'
+  return 'warning'
 }
 
 function parseTy (infile) {
