@@ -25818,9 +25818,10 @@ const headerRegexes = {
 }
 
 const errorRegex = /^_+ ERROR collecting (?<filePath>.*) _+$\n(^[^E_]+.*$\n)+^E\s+(?<kind>[^:\n]+):\s+(?<message>[^\n]+)$/gm
-const failureRegex = /^E\s+(?<kind>[^:\n]+):\s+(?<message>[^\n]+)$\n^\s*$\n^(?<filePath>([A-Z]:)?[^:]+):(?<line>\d+):\s+(?<kind2>[^:\n]+$)/gm
+const failureRegex = /^E\s+(?<kind>[^:\n]+)(?::\s+(?<message>[^\n]+))?$\n^\s*$\n^(?<filePath>([A-Z]:)?[^:]+):(?<line>\d+):\s+(?<kind2>[^\n]+$)/gm
 const warningRegex = /^\s*(?<filePath>([A-Z]:)?[^:]+):(?<line>\d+):(?<kind>[^:]+):(?<message>[^\n]+)\n(?<code>[^\n]+)/gm
 const tracebackLineRegex = /^\s*(?<filePath>[^\s:]+):(?<line>\d+):\s+in\s+/gm
+const summaryFailureRegex = /^(?<outcome>FAILED|ERROR) (?<nodeid>\S+)(?: - (?<detail>[^\n]+))?$/gm
 
 function parseErrorsSection (body) {
   const annotations = []
@@ -25869,7 +25870,8 @@ function parseFailuresSection (body) {
   const annotations = []
 
   for (const match of body.matchAll(failureRegex)) {
-    const { filePath, line, kind, message } = match.groups
+    const { filePath, line, kind } = match.groups
+    const message = match.groups.message || kind
 
     annotations.push({
       source: 'pytest',
@@ -25878,6 +25880,28 @@ function parseFailuresSection (body) {
       line: parseInt(line),
       kind: kind.trim(),
       message: message.trim(),
+    })
+  }
+
+  return annotations
+}
+
+function parseSummarySection (body) {
+  const annotations = []
+
+  for (const match of body.matchAll(summaryFailureRegex)) {
+    const { detail, nodeid, outcome } = match.groups
+    const filePath = nodeid.split('::')[0]
+    const message = (detail || `${outcome} ${nodeid}`).trim()
+    const kind = (detail ? detail.split(':')[0] : outcome).trim()
+
+    annotations.push({
+      source: 'pytest',
+      level: 'error',
+      filePath,
+      line: 1,
+      kind,
+      message,
     })
   }
 
@@ -25946,6 +25970,18 @@ function parsePytest (infile) {
   if (bodies.warnings) {
     annotations.push(...parseWarningsSection(
       fileContent.slice(bodies.warnings.start, bodies.warnings.end)))
+  }
+  if (bodies.summary) {
+    const summaryAnnotations = parseSummarySection(
+      fileContent.slice(bodies.summary.start, bodies.summary.end))
+    for (const summaryAnnotation of summaryAnnotations) {
+      if (!annotations.some(annotation =>
+        annotation.source === summaryAnnotation.source &&
+        annotation.level === 'error' &&
+        annotation.filePath === summaryAnnotation.filePath)) {
+        annotations.push(summaryAnnotation)
+      }
+    }
   }
 
   return annotations
