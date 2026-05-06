@@ -152,3 +152,15 @@ runTest('dist/index.js handles pytest text output (pipescaler)', () => {
   assert.ok(output.includes('::error'))
   assert.ok(output.includes('pytest['))
 })
+
+runTest('dist/index.js handles pytest failures reported only in the short summary', () => {
+  const output = runAction(
+    'pytest',
+    fixturePath('scinoephile', 'pytest-failed-summary.txt'),
+    '/home/runner/work/Scinoephile/Scinoephile',
+  )
+
+  assert.ok(output.includes('::error'))
+  assert.ok(output.includes('file=cli/dictionary/test_dictionary_cli.py'))
+  assert.ok(output.includes('pytest[AssertionError]'))
+})
