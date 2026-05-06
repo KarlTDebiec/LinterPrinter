@@ -1,0 +1,18 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.13, pytest-9.0.2, pluggy-1.6.0
+rootdir: /home/runner/work/Scinoephile/Scinoephile
+collected 880 items
+
+cli/dictionary/test_dictionary_cli.py::test_dictionary_usage[cli0] FAILED [100%]
+
+=================================== FAILURES ===================================
+_________________________ test_dictionary_usage[cli0] __________________________
+
+cli = <scinoephile.cli.dictionary.DictionaryCli object at 0x7f0000000000>
+
+    def test_dictionary_usage(cli):
+>       assert False
+E       AssertionError
+=========================== short test summary info ============================
+FAILED cli/dictionary/test_dictionary_cli.py::test_dictionary_usage[cli0] - AssertionError
+============ 1 failed, 879 passed, 2 warnings in 122.56s (0:02:02) ============
